@@ -1,0 +1,1777 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Swagger Chargebee"
+    },
+    "host": "site.chargebee.com",
+    "basePath": "/api/v2",
+    "schemes": [
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/customers": {
+            "post": {
+                "operationId": "createCustomer",
+                "parameters": [
+                    {
+                        "name": "CustomerCreateRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerCreateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "createCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "operationId": "listCustomer",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "listCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}": {
+            "get": {
+                "operationId": "retrieveCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "retrieveCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "operationId": "updateCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerUpdateRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerUpdateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "updateCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/update_payment_method": {
+            "post": {
+                "operationId": "updatePaymentMethodCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerUpdatePaymentMethodRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerUpdatePaymentMethodRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "updatePaymentMethodCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/update_billing_info": {
+            "post": {
+                "operationId": "updateBillingInfoCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerUpdateBillingInfoRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerUpdateBillingInfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "updateBillingInfoCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/assign_payment_role": {
+            "post": {
+                "operationId": "assignPaymentRoleCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerAssignPaymentRoleRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerAssignPaymentRoleRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "assignPaymentRoleCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/add_contact": {
+            "post": {
+                "operationId": "addContactCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerAddContactRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerAddContactRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "addContactCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/update_contact": {
+            "post": {
+                "operationId": "updateContactCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerUpdateContactRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerUpdateContactRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "updateContactCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/delete_contact": {
+            "post": {
+                "operationId": "deleteContactCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerDeleteContactRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerDeleteContactRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "deleteContactCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/add_promotional_credits": {
+            "post": {
+                "operationId": "addPromotionalCreditsCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerAddPromotionalCreditsRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerAddPromotionalCreditsRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "addPromotionalCreditsCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/deduct_promotional_credits": {
+            "post": {
+                "operationId": "deductPromotionalCreditsCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerDeductPromotionalCreditsRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerDeductPromotionalCreditsRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "deductPromotionalCreditsCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/set_promotional_credits": {
+            "post": {
+                "operationId": "setPromotionalCreditsCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerSetPromotionalCreditsRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerSetPromotionalCreditsRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "setPromotionalCreditsCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/record_excess_payment": {
+            "post": {
+                "operationId": "recordExcessPaymentCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerRecordExcessPaymentRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerRecordExcessPaymentRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "recordExcessPaymentCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/collect_payment": {
+            "post": {
+                "operationId": "collectPaymentCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerCollectPaymentRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerCollectPaymentRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "collectPaymentCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/delete": {
+            "post": {
+                "operationId": "deleteCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerDeleteRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerDeleteRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "deleteCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/move": {
+            "post": {
+                "operationId": "moveCustomer",
+                "parameters": [
+                    {
+                        "name": "CustomerMoveRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerMoveRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "moveCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers/{id}/change_billing_date": {
+            "post": {
+                "operationId": "changeBillingDateCustomer",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "CustomerChangeBillingDateRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerChangeBillingDateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "changeBillingDateCustomer response",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "BillingAddress": {
+            "type": "object",
+            "properties": {
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "company": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "line1": {
+                    "type": "string"
+                },
+                "line2": {
+                    "type": "string"
+                },
+                "line3": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state_code": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "zip": {
+                    "type": "string"
+                },
+                "validation_status": {
+                    "type": "string",
+                    "enum": [
+                        "not_validated",
+                        "valid",
+                        "partially_valid",
+                        "invalid"
+                    ]
+                }
+            }
+        },
+        "ReferralUrl": {
+            "type": "object",
+            "properties": {
+                "external_customer_id": {
+                    "type": "string"
+                },
+                "referral_sharing_url": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "updated_at": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "referral_campaign_id": {
+                    "type": "string"
+                },
+                "referral_account_id": {
+                    "type": "string"
+                },
+                "referral_external_campaign_id": {
+                    "type": "string"
+                },
+                "referral_system": {
+                    "type": "string",
+                    "enum": [
+                        "referral_candy",
+                        "referral_saasquatch",
+                        "friendbuy"
+                    ]
+                }
+            }
+        },
+        "Contact": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "send_account_email": {
+                    "type": "boolean"
+                },
+                "send_billing_email": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "PaymentMethod": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
+                    ]
+                },
+                "gateway": {
+                    "type": "string",
+                    "enum": [
+                        "chargebee",
+                        "stripe",
+                        "wepay",
+                        "braintree",
+                        "authorize_net",
+                        "paypal_pro",
+                        "pin",
+                        "eway",
+                        "eway_rapid",
+                        "worldpay",
+                        "balanced_payments",
+                        "beanstream",
+                        "bluepay",
+                        "elavon",
+                        "first_data_global",
+                        "hdfc",
+                        "migs",
+                        "nmi",
+                        "ogone",
+                        "paymill",
+                        "paypal_payflow_pro",
+                        "sage_pay",
+                        "tco",
+                        "wirecard",
+                        "amazon_payments",
+                        "paypal_express_checkout",
+                        "gocardless",
+                        "adyen",
+                        "orbital",
+                        "moneris_us",
+                        "moneris",
+                        "not_applicable"
+                    ]
+                },
+                "gateway_account_id": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
+                    ]
+                },
+                "reference_id": {
+                    "type": "string"
+                }
+            }
+        },
+        "Balance": {
+            "type": "object",
+            "properties": {
+                "promotional_credits": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "excess_payments": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "refundable_credits": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "unbilled_charges": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "balance_currency_code": {
+                    "type": "string"
+                }
+            }
+        },
+        "Customer": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "company": {
+                    "type": "string"
+                },
+                "vat_number": {
+                    "type": "string"
+                },
+                "auto_collection": {
+                    "type": "string",
+                    "enum": [
+                        "on",
+                        "off"
+                    ]
+                },
+                "net_term_days": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "allow_direct_debit": {
+                    "type": "boolean"
+                },
+                "created_at": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "created_from_ip": {
+                    "type": "string"
+                },
+                "taxability": {
+                    "type": "string",
+                    "enum": [
+                        "taxable",
+                        "exempt"
+                    ]
+                },
+                "entity_code": {
+                    "type": "string",
+                    "enum": [
+                        "a",
+                        "b",
+                        "c",
+                        "d",
+                        "e",
+                        "f",
+                        "g",
+                        "h",
+                        "i",
+                        "j",
+                        "k",
+                        "l",
+                        "n",
+                        "p",
+                        "q",
+                        "r",
+                        "med1",
+                        "med2"
+                    ]
+                },
+                "exempt_number": {
+                    "type": "string"
+                },
+                "resource_version": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "updated_at": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "locale": {
+                    "type": "string"
+                },
+                "consolidated_invoicing": {
+                    "type": "boolean"
+                },
+                "billing_date": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "billing_date_mode": {
+                    "type": "string",
+                    "enum": [
+                        "using_defaults",
+                        "manually_set"
+                    ]
+                },
+                "billing_day_of_week": {
+                    "type": "string",
+                    "enum": [
+                        "sunday",
+                        "monday",
+                        "tuesday",
+                        "wednesday",
+                        "thursday",
+                        "friday",
+                        "saturday"
+                    ]
+                },
+                "billing_day_of_week_mode": {
+                    "type": "string",
+                    "enum": [
+                        "using_defaults",
+                        "manually_set"
+                    ]
+                },
+                "card_status": {
+                    "type": "string",
+                    "enum": [
+                        "no_card",
+                        "valid",
+                        "expiring",
+                        "expired",
+                        "pending_verification",
+                        "invalid"
+                    ]
+                },
+                "fraud_flag": {
+                    "type": "string",
+                    "enum": [
+                        "safe",
+                        "suspicious",
+                        "fraudulent"
+                    ]
+                },
+                "primary_payment_source_id": {
+                    "type": "string"
+                },
+                "backup_payment_source_id": {
+                    "type": "string"
+                },
+                "billing_address": {
+                    "type": "Customer"
+                },
+                "referral_urls": {
+                    "type": "List"
+                },
+                "contacts": {
+                    "type": "List"
+                },
+                "payment_method": {
+                    "type": "Customer"
+                },
+                "invoice_notes": {
+                    "type": "string"
+                },
+                "preferred_currency_code": {
+                    "type": "string"
+                },
+                "promotional_credits": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "unbilled_charges": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "refundable_credits": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "excess_payments": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "balances": {
+                    "type": "List"
+                },
+                "meta_data": {
+                    "type": "string"
+                },
+                "deleted": {
+                    "type": "boolean"
+                },
+                "registered_for_gst": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "CustomerCreateRequest": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "preferred_currency_code": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "company": {
+                    "type": "string"
+                },
+                "auto_collection": {
+                    "type": "string",
+                    "enum": [
+                        "on",
+                        "off"
+                    ]
+                },
+                "net_term_days": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "allow_direct_debit": {
+                    "type": "boolean"
+                },
+                "vat_number": {
+                    "type": "string"
+                },
+                "registered_for_gst": {
+                    "type": "boolean"
+                },
+                "taxability": {
+                    "type": "string",
+                    "enum": [
+                        "taxable",
+                        "exempt"
+                    ]
+                },
+                "locale": {
+                    "type": "string"
+                },
+                "entity_code": {
+                    "type": "string",
+                    "enum": [
+                        "a",
+                        "b",
+                        "c",
+                        "d",
+                        "e",
+                        "f",
+                        "g",
+                        "h",
+                        "i",
+                        "j",
+                        "k",
+                        "l",
+                        "n",
+                        "p",
+                        "q",
+                        "r",
+                        "med1",
+                        "med2"
+                    ]
+                },
+                "exempt_number": {
+                    "type": "string"
+                },
+                "meta_data": {
+                    "type": "string"
+                },
+                "consolidated_invoicing": {
+                    "type": "boolean"
+                },
+                "created_from_ip": {
+                    "type": "string"
+                },
+                "invoice_notes": {
+                    "type": "string"
+                },
+                "card[gateway]": {
+                    "type": "string",
+                    "enum": [
+                        "chargebee",
+                        "stripe",
+                        "wepay",
+                        "braintree",
+                        "authorize_net",
+                        "paypal_pro",
+                        "pin",
+                        "eway",
+                        "eway_rapid",
+                        "worldpay",
+                        "balanced_payments",
+                        "beanstream",
+                        "bluepay",
+                        "elavon",
+                        "first_data_global",
+                        "hdfc",
+                        "migs",
+                        "nmi",
+                        "ogone",
+                        "paymill",
+                        "paypal_payflow_pro",
+                        "sage_pay",
+                        "tco",
+                        "wirecard",
+                        "amazon_payments",
+                        "paypal_express_checkout",
+                        "gocardless",
+                        "adyen",
+                        "orbital",
+                        "moneris_us",
+                        "moneris",
+                        "not_applicable"
+                    ]
+                },
+                "card[gateway_account_id]": {
+                    "type": "string"
+                },
+                "card[tmp_token]": {
+                    "type": "string"
+                },
+                "payment_method[type]": {
+                    "type": "string",
+                    "enum": [
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
+                    ]
+                },
+                "payment_method[gateway]": {
+                    "type": "string",
+                    "enum": [
+                        "chargebee",
+                        "stripe",
+                        "wepay",
+                        "braintree",
+                        "authorize_net",
+                        "paypal_pro",
+                        "pin",
+                        "eway",
+                        "eway_rapid",
+                        "worldpay",
+                        "balanced_payments",
+                        "beanstream",
+                        "bluepay",
+                        "elavon",
+                        "first_data_global",
+                        "hdfc",
+                        "migs",
+                        "nmi",
+                        "ogone",
+                        "paymill",
+                        "paypal_payflow_pro",
+                        "sage_pay",
+                        "tco",
+                        "wirecard",
+                        "amazon_payments",
+                        "paypal_express_checkout",
+                        "gocardless",
+                        "adyen",
+                        "orbital",
+                        "moneris_us",
+                        "moneris",
+                        "not_applicable"
+                    ]
+                },
+                "payment_method[gateway_account_id]": {
+                    "type": "string"
+                },
+                "payment_method[reference_id]": {
+                    "type": "string"
+                },
+                "payment_method[tmp_token]": {
+                    "type": "string"
+                },
+                "payment_method[issuing_country]": {
+                    "type": "string"
+                },
+                "card[first_name]": {
+                    "type": "string"
+                },
+                "card[last_name]": {
+                    "type": "string"
+                },
+                "card[number]": {
+                    "type": "string"
+                },
+                "card[expiry_month]": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "card[expiry_year]": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "card[cvv]": {
+                    "type": "string"
+                },
+                "card[billing_addr1]": {
+                    "type": "string"
+                },
+                "card[billing_addr2]": {
+                    "type": "string"
+                },
+                "card[billing_city]": {
+                    "type": "string"
+                },
+                "card[billing_state_code]": {
+                    "type": "string"
+                },
+                "card[billing_state]": {
+                    "type": "string"
+                },
+                "card[billing_zip]": {
+                    "type": "string"
+                },
+                "card[billing_country]": {
+                    "type": "string"
+                },
+                "card[ip_address]": {
+                    "type": "string"
+                },
+                "billing_address[first_name]": {
+                    "type": "string"
+                },
+                "billing_address[last_name]": {
+                    "type": "string"
+                },
+                "billing_address[email]": {
+                    "type": "string"
+                },
+                "billing_address[company]": {
+                    "type": "string"
+                },
+                "billing_address[phone]": {
+                    "type": "string"
+                },
+                "billing_address[line1]": {
+                    "type": "string"
+                },
+                "billing_address[line2]": {
+                    "type": "string"
+                },
+                "billing_address[line3]": {
+                    "type": "string"
+                },
+                "billing_address[city]": {
+                    "type": "string"
+                },
+                "billing_address[state_code]": {
+                    "type": "string"
+                },
+                "billing_address[state]": {
+                    "type": "string"
+                },
+                "billing_address[zip]": {
+                    "type": "string"
+                },
+                "billing_address[country]": {
+                    "type": "string"
+                },
+                "billing_address[validation_status]": {
+                    "type": "string",
+                    "enum": [
+                        "not_validated",
+                        "valid",
+                        "partially_valid",
+                        "invalid"
+                    ]
+                }
+            }
+        },
+        "CustomerUpdateRequest": {
+            "type": "object",
+            "properties": {
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "preferred_currency_code": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "company": {
+                    "type": "string"
+                },
+                "auto_collection": {
+                    "type": "string",
+                    "enum": [
+                        "on",
+                        "off"
+                    ]
+                },
+                "allow_direct_debit": {
+                    "type": "boolean"
+                },
+                "net_term_days": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "taxability": {
+                    "type": "string",
+                    "enum": [
+                        "taxable",
+                        "exempt"
+                    ]
+                },
+                "locale": {
+                    "type": "string"
+                },
+                "entity_code": {
+                    "type": "string",
+                    "enum": [
+                        "a",
+                        "b",
+                        "c",
+                        "d",
+                        "e",
+                        "f",
+                        "g",
+                        "h",
+                        "i",
+                        "j",
+                        "k",
+                        "l",
+                        "n",
+                        "p",
+                        "q",
+                        "r",
+                        "med1",
+                        "med2"
+                    ]
+                },
+                "exempt_number": {
+                    "type": "string"
+                },
+                "invoice_notes": {
+                    "type": "string"
+                },
+                "meta_data": {
+                    "type": "string"
+                },
+                "fraud_flag": {
+                    "type": "string",
+                    "enum": [
+                        "safe",
+                        "suspicious",
+                        "fraudulent"
+                    ]
+                },
+                "consolidated_invoicing": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "CustomerUpdatePaymentMethodRequest": {
+            "type": "object",
+            "properties": {
+                "payment_method[type]": {
+                    "type": "string",
+                    "enum": [
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
+                    ]
+                },
+                "payment_method[gateway]": {
+                    "type": "string",
+                    "enum": [
+                        "chargebee",
+                        "stripe",
+                        "wepay",
+                        "braintree",
+                        "authorize_net",
+                        "paypal_pro",
+                        "pin",
+                        "eway",
+                        "eway_rapid",
+                        "worldpay",
+                        "balanced_payments",
+                        "beanstream",
+                        "bluepay",
+                        "elavon",
+                        "first_data_global",
+                        "hdfc",
+                        "migs",
+                        "nmi",
+                        "ogone",
+                        "paymill",
+                        "paypal_payflow_pro",
+                        "sage_pay",
+                        "tco",
+                        "wirecard",
+                        "amazon_payments",
+                        "paypal_express_checkout",
+                        "gocardless",
+                        "adyen",
+                        "orbital",
+                        "moneris_us",
+                        "moneris",
+                        "not_applicable"
+                    ]
+                },
+                "payment_method[gateway_account_id]": {
+                    "type": "string"
+                },
+                "payment_method[reference_id]": {
+                    "type": "string"
+                },
+                "payment_method[tmp_token]": {
+                    "type": "string"
+                },
+                "payment_method[issuing_country]": {
+                    "type": "string"
+                }
+            }
+        },
+        "CustomerUpdateBillingInfoRequest": {
+            "type": "object",
+            "properties": {
+                "vat_number": {
+                    "type": "string"
+                },
+                "registered_for_gst": {
+                    "type": "boolean"
+                },
+                "billing_address[first_name]": {
+                    "type": "string"
+                },
+                "billing_address[last_name]": {
+                    "type": "string"
+                },
+                "billing_address[email]": {
+                    "type": "string"
+                },
+                "billing_address[company]": {
+                    "type": "string"
+                },
+                "billing_address[phone]": {
+                    "type": "string"
+                },
+                "billing_address[line1]": {
+                    "type": "string"
+                },
+                "billing_address[line2]": {
+                    "type": "string"
+                },
+                "billing_address[line3]": {
+                    "type": "string"
+                },
+                "billing_address[city]": {
+                    "type": "string"
+                },
+                "billing_address[state_code]": {
+                    "type": "string"
+                },
+                "billing_address[state]": {
+                    "type": "string"
+                },
+                "billing_address[zip]": {
+                    "type": "string"
+                },
+                "billing_address[country]": {
+                    "type": "string"
+                },
+                "billing_address[validation_status]": {
+                    "type": "string",
+                    "enum": [
+                        "not_validated",
+                        "valid",
+                        "partially_valid",
+                        "invalid"
+                    ]
+                }
+            }
+        },
+        "CustomerAssignPaymentRoleRequest": {
+            "type": "object",
+            "properties": {
+                "payment_source_id": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string",
+                    "enum": [
+                        "primary",
+                        "backup",
+                        "none"
+                    ]
+                }
+            }
+        },
+        "CustomerAddContactRequest": {
+            "type": "object",
+            "properties": {
+                "contact[id]": {
+                    "type": "string"
+                },
+                "contact[first_name]": {
+                    "type": "string"
+                },
+                "contact[last_name]": {
+                    "type": "string"
+                },
+                "contact[email]": {
+                    "type": "string"
+                },
+                "contact[phone]": {
+                    "type": "string"
+                },
+                "contact[label]": {
+                    "type": "string"
+                },
+                "contact[enabled]": {
+                    "type": "boolean"
+                },
+                "contact[send_billing_email]": {
+                    "type": "boolean"
+                },
+                "contact[send_account_email]": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "CustomerUpdateContactRequest": {
+            "type": "object",
+            "properties": {
+                "contact[id]": {
+                    "type": "string"
+                },
+                "contact[first_name]": {
+                    "type": "string"
+                },
+                "contact[last_name]": {
+                    "type": "string"
+                },
+                "contact[email]": {
+                    "type": "string"
+                },
+                "contact[phone]": {
+                    "type": "string"
+                },
+                "contact[label]": {
+                    "type": "string"
+                },
+                "contact[enabled]": {
+                    "type": "boolean"
+                },
+                "contact[send_billing_email]": {
+                    "type": "boolean"
+                },
+                "contact[send_account_email]": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "CustomerDeleteContactRequest": {
+            "type": "object",
+            "properties": {
+                "contact[id]": {
+                    "type": "string"
+                }
+            }
+        },
+        "CustomerAddPromotionalCreditsRequest": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "currency_code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "credit_type": {
+                    "type": "string",
+                    "enum": [
+                        "loyalty_credits",
+                        "referral_rewards",
+                        "general"
+                    ]
+                },
+                "reference": {
+                    "type": "string"
+                }
+            }
+        },
+        "CustomerDeductPromotionalCreditsRequest": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "currency_code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "credit_type": {
+                    "type": "string",
+                    "enum": [
+                        "loyalty_credits",
+                        "referral_rewards",
+                        "general"
+                    ]
+                },
+                "reference": {
+                    "type": "string"
+                }
+            }
+        },
+        "CustomerSetPromotionalCreditsRequest": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "currency_code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "credit_type": {
+                    "type": "string",
+                    "enum": [
+                        "loyalty_credits",
+                        "referral_rewards",
+                        "general"
+                    ]
+                },
+                "reference": {
+                    "type": "string"
+                }
+            }
+        },
+        "CustomerRecordExcessPaymentRequest": {
+            "type": "object",
+            "properties": {
+                "comment": {
+                    "type": "string"
+                },
+                "transaction[amount]": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "transaction[currency_code]": {
+                    "type": "string"
+                },
+                "transaction[date]": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "transaction[payment_method]": {
+                    "type": "string",
+                    "enum": [
+                        "card",
+                        "cash",
+                        "check",
+                        "chargeback",
+                        "bank_transfer",
+                        "amazon_payments",
+                        "paypal_express_checkout",
+                        "direct_debit",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay",
+                        "other"
+                    ]
+                },
+                "transaction[reference_number]": {
+                    "type": "string"
+                }
+            }
+        },
+        "CustomerCollectPaymentRequest": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "payment_source_id": {
+                    "type": "string"
+                },
+                "replace_primary_payment_source": {
+                    "type": "boolean"
+                },
+                "retain_payment_source": {
+                    "type": "boolean"
+                },
+                "payment_method[type]": {
+                    "type": "string",
+                    "enum": [
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
+                    ]
+                },
+                "payment_method[gateway_account_id]": {
+                    "type": "string"
+                },
+                "payment_method[reference_id]": {
+                    "type": "string"
+                },
+                "payment_method[tmp_token]": {
+                    "type": "string"
+                },
+                "card[gateway_account_id]": {
+                    "type": "string"
+                },
+                "card[first_name]": {
+                    "type": "string"
+                },
+                "card[last_name]": {
+                    "type": "string"
+                },
+                "card[number]": {
+                    "type": "string"
+                },
+                "card[expiry_month]": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "card[expiry_year]": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "card[cvv]": {
+                    "type": "string"
+                },
+                "card[billing_addr1]": {
+                    "type": "string"
+                },
+                "card[billing_addr2]": {
+                    "type": "string"
+                },
+                "card[billing_city]": {
+                    "type": "string"
+                },
+                "card[billing_state_code]": {
+                    "type": "string"
+                },
+                "card[billing_state]": {
+                    "type": "string"
+                },
+                "card[billing_zip]": {
+                    "type": "string"
+                },
+                "card[billing_country]": {
+                    "type": "string"
+                }
+            }
+        },
+        "CustomerDeleteRequest": {
+            "type": "object",
+            "properties": {
+                "delete_payment_method": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "CustomerMoveRequest": {
+            "type": "object",
+            "properties": {
+                "id_at_from_site": {
+                    "type": "string"
+                },
+                "from_site": {
+                    "type": "string"
+                }
+            }
+        },
+        "CustomerChangeBillingDateRequest": {
+            "type": "object",
+            "properties": {
+                "billing_date": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "billing_date_mode": {
+                    "type": "string",
+                    "enum": [
+                        "using_defaults",
+                        "manually_set"
+                    ]
+                },
+                "billing_day_of_week": {
+                    "type": "string",
+                    "enum": [
+                        "sunday",
+                        "monday",
+                        "tuesday",
+                        "wednesday",
+                        "thursday",
+                        "friday",
+                        "saturday"
+                    ]
+                },
+                "billing_day_of_week_mode": {
+                    "type": "string",
+                    "enum": [
+                        "using_defaults",
+                        "manually_set"
+                    ]
+                }
+            }
+        }
+    },
+    "security": [
+        {
+            "HTTPBasic": []
+        }
+    ],
+    "securityDefinitions": {
+        "HTTPBasic": {
+            "description": "HTTP Basic authentication",
+            "type": "basic"
+        }
+    }
+}

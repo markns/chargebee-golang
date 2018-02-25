@@ -1,0 +1,6 @@
+package: bitbucket.org/gridarrow/chargebee-api
+import:
+- package: github.com/emicklei/go-restful
+  version: 26b41036311f2da8242db402557a0dbd09dc83da
+- package: github.com/emicklei/go-restful-openapi
+  version: 70524064aab17ece0fb3d63ff713db8853f38862
