@@ -406,7 +406,7 @@ var invoiceImportInvoiceRequestTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -415,18 +415,16 @@ func init() {
 }
 
 const (
-	// InvoiceImportInvoiceRequestStatusInProgress captures enum value "in_progress"
-	InvoiceImportInvoiceRequestStatusInProgress string = "in_progress"
-	// InvoiceImportInvoiceRequestStatusSuccess captures enum value "success"
-	InvoiceImportInvoiceRequestStatusSuccess string = "success"
-	// InvoiceImportInvoiceRequestStatusVoided captures enum value "voided"
-	InvoiceImportInvoiceRequestStatusVoided string = "voided"
-	// InvoiceImportInvoiceRequestStatusFailure captures enum value "failure"
-	InvoiceImportInvoiceRequestStatusFailure string = "failure"
-	// InvoiceImportInvoiceRequestStatusTimeout captures enum value "timeout"
-	InvoiceImportInvoiceRequestStatusTimeout string = "timeout"
-	// InvoiceImportInvoiceRequestStatusNeedsAttention captures enum value "needs_attention"
-	InvoiceImportInvoiceRequestStatusNeedsAttention string = "needs_attention"
+	// InvoiceImportInvoiceRequestStatusFuture captures enum value "future"
+	InvoiceImportInvoiceRequestStatusFuture string = "future"
+	// InvoiceImportInvoiceRequestStatusInTrial captures enum value "in_trial"
+	InvoiceImportInvoiceRequestStatusInTrial string = "in_trial"
+	// InvoiceImportInvoiceRequestStatusActive captures enum value "active"
+	InvoiceImportInvoiceRequestStatusActive string = "active"
+	// InvoiceImportInvoiceRequestStatusNonRenewing captures enum value "non_renewing"
+	InvoiceImportInvoiceRequestStatusNonRenewing string = "non_renewing"
+	// InvoiceImportInvoiceRequestStatusCancelled captures enum value "cancelled"
+	InvoiceImportInvoiceRequestStatusCancelled string = "cancelled"
 )
 
 // prop value enum

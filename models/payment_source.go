@@ -312,7 +312,7 @@ var paymentSourceTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -321,18 +321,16 @@ func init() {
 }
 
 const (
-	// PaymentSourceStatusInProgress captures enum value "in_progress"
-	PaymentSourceStatusInProgress string = "in_progress"
-	// PaymentSourceStatusSuccess captures enum value "success"
-	PaymentSourceStatusSuccess string = "success"
-	// PaymentSourceStatusVoided captures enum value "voided"
-	PaymentSourceStatusVoided string = "voided"
-	// PaymentSourceStatusFailure captures enum value "failure"
-	PaymentSourceStatusFailure string = "failure"
-	// PaymentSourceStatusTimeout captures enum value "timeout"
-	PaymentSourceStatusTimeout string = "timeout"
-	// PaymentSourceStatusNeedsAttention captures enum value "needs_attention"
-	PaymentSourceStatusNeedsAttention string = "needs_attention"
+	// PaymentSourceStatusFuture captures enum value "future"
+	PaymentSourceStatusFuture string = "future"
+	// PaymentSourceStatusInTrial captures enum value "in_trial"
+	PaymentSourceStatusInTrial string = "in_trial"
+	// PaymentSourceStatusActive captures enum value "active"
+	PaymentSourceStatusActive string = "active"
+	// PaymentSourceStatusNonRenewing captures enum value "non_renewing"
+	PaymentSourceStatusNonRenewing string = "non_renewing"
+	// PaymentSourceStatusCancelled captures enum value "cancelled"
+	PaymentSourceStatusCancelled string = "cancelled"
 )
 
 // prop value enum
@@ -361,7 +359,7 @@ var paymentSourceTypeTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -370,14 +368,22 @@ func init() {
 }
 
 const (
-	// PaymentSourceTypeAuthorization captures enum value "authorization"
-	PaymentSourceTypeAuthorization string = "authorization"
-	// PaymentSourceTypePayment captures enum value "payment"
-	PaymentSourceTypePayment string = "payment"
-	// PaymentSourceTypeRefund captures enum value "refund"
-	PaymentSourceTypeRefund string = "refund"
-	// PaymentSourceTypePaymentReversal captures enum value "payment_reversal"
-	PaymentSourceTypePaymentReversal string = "payment_reversal"
+	// PaymentSourceTypeCard captures enum value "card"
+	PaymentSourceTypeCard string = "card"
+	// PaymentSourceTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	PaymentSourceTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// PaymentSourceTypeAmazonPayments captures enum value "amazon_payments"
+	PaymentSourceTypeAmazonPayments string = "amazon_payments"
+	// PaymentSourceTypeDirectDebit captures enum value "direct_debit"
+	PaymentSourceTypeDirectDebit string = "direct_debit"
+	// PaymentSourceTypeGeneric captures enum value "generic"
+	PaymentSourceTypeGeneric string = "generic"
+	// PaymentSourceTypeAlipay captures enum value "alipay"
+	PaymentSourceTypeAlipay string = "alipay"
+	// PaymentSourceTypeUnionpay captures enum value "unionpay"
+	PaymentSourceTypeUnionpay string = "unionpay"
+	// PaymentSourceTypeApplePay captures enum value "apple_pay"
+	PaymentSourceTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

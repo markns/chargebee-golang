@@ -70,7 +70,7 @@ var linkedInvoiceTypeInvoiceStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -79,18 +79,16 @@ func init() {
 }
 
 const (
-	// LinkedInvoiceInvoiceStatusInProgress captures enum value "in_progress"
-	LinkedInvoiceInvoiceStatusInProgress string = "in_progress"
-	// LinkedInvoiceInvoiceStatusSuccess captures enum value "success"
-	LinkedInvoiceInvoiceStatusSuccess string = "success"
-	// LinkedInvoiceInvoiceStatusVoided captures enum value "voided"
-	LinkedInvoiceInvoiceStatusVoided string = "voided"
-	// LinkedInvoiceInvoiceStatusFailure captures enum value "failure"
-	LinkedInvoiceInvoiceStatusFailure string = "failure"
-	// LinkedInvoiceInvoiceStatusTimeout captures enum value "timeout"
-	LinkedInvoiceInvoiceStatusTimeout string = "timeout"
-	// LinkedInvoiceInvoiceStatusNeedsAttention captures enum value "needs_attention"
-	LinkedInvoiceInvoiceStatusNeedsAttention string = "needs_attention"
+	// LinkedInvoiceInvoiceStatusFuture captures enum value "future"
+	LinkedInvoiceInvoiceStatusFuture string = "future"
+	// LinkedInvoiceInvoiceStatusInTrial captures enum value "in_trial"
+	LinkedInvoiceInvoiceStatusInTrial string = "in_trial"
+	// LinkedInvoiceInvoiceStatusActive captures enum value "active"
+	LinkedInvoiceInvoiceStatusActive string = "active"
+	// LinkedInvoiceInvoiceStatusNonRenewing captures enum value "non_renewing"
+	LinkedInvoiceInvoiceStatusNonRenewing string = "non_renewing"
+	// LinkedInvoiceInvoiceStatusCancelled captures enum value "cancelled"
+	LinkedInvoiceInvoiceStatusCancelled string = "cancelled"
 )
 
 // prop value enum

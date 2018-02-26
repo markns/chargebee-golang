@@ -109,7 +109,7 @@ var invoiceRecordPaymentRequestTypeTransactionStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -118,18 +118,16 @@ func init() {
 }
 
 const (
-	// InvoiceRecordPaymentRequestTransactionStatusInProgress captures enum value "in_progress"
-	InvoiceRecordPaymentRequestTransactionStatusInProgress string = "in_progress"
-	// InvoiceRecordPaymentRequestTransactionStatusSuccess captures enum value "success"
-	InvoiceRecordPaymentRequestTransactionStatusSuccess string = "success"
-	// InvoiceRecordPaymentRequestTransactionStatusVoided captures enum value "voided"
-	InvoiceRecordPaymentRequestTransactionStatusVoided string = "voided"
-	// InvoiceRecordPaymentRequestTransactionStatusFailure captures enum value "failure"
-	InvoiceRecordPaymentRequestTransactionStatusFailure string = "failure"
-	// InvoiceRecordPaymentRequestTransactionStatusTimeout captures enum value "timeout"
-	InvoiceRecordPaymentRequestTransactionStatusTimeout string = "timeout"
-	// InvoiceRecordPaymentRequestTransactionStatusNeedsAttention captures enum value "needs_attention"
-	InvoiceRecordPaymentRequestTransactionStatusNeedsAttention string = "needs_attention"
+	// InvoiceRecordPaymentRequestTransactionStatusFuture captures enum value "future"
+	InvoiceRecordPaymentRequestTransactionStatusFuture string = "future"
+	// InvoiceRecordPaymentRequestTransactionStatusInTrial captures enum value "in_trial"
+	InvoiceRecordPaymentRequestTransactionStatusInTrial string = "in_trial"
+	// InvoiceRecordPaymentRequestTransactionStatusActive captures enum value "active"
+	InvoiceRecordPaymentRequestTransactionStatusActive string = "active"
+	// InvoiceRecordPaymentRequestTransactionStatusNonRenewing captures enum value "non_renewing"
+	InvoiceRecordPaymentRequestTransactionStatusNonRenewing string = "non_renewing"
+	// InvoiceRecordPaymentRequestTransactionStatusCancelled captures enum value "cancelled"
+	InvoiceRecordPaymentRequestTransactionStatusCancelled string = "cancelled"
 )
 
 // prop value enum

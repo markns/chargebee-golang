@@ -26,9 +26,17 @@ type_map = dict(
 def process_request_param(meth: tree.MethodDeclaration):
     name = meth.body[0].children[1].arguments[0].value.replace('"', '')
     _type = meth.parameters[0].type
+
+    parent = None
     while _type.sub_type:
+        parent = _type.name
         _type = _type.sub_type
-    return name, {"type": _type.name}
+
+    typename = _type.name
+    if parent == 'enum':
+        typename += 'Enum'
+
+    return name, {"type": typename}
 
 
 def process_request(resource, request_decl: tree.ClassDeclaration):
@@ -141,21 +149,33 @@ def process_field(meth: tree.MethodDeclaration):
     print('processing field', meth.name)
     name = meth.body[0].expression.arguments[0].value.replace('"', '')
 
+    parent = None
     _type = meth.return_type
 
     if _type.name == 'List':
         _type = _type.arguments[0].type
         while _type.sub_type:
+            parent = _type.name
             _type = _type.sub_type
+
+        typename = _type.name
+        if parent == 'enum':
+            typename += 'Enum'
 
         return name, {"type": "array",
                       "items": {
-                          "$ref": "#/definitions/{}".format(_type.name)
+                          "$ref": "#/definitions/{}".format(typename)
                       }}
     else:
         while _type.sub_type:
+            parent = _type.name
             _type = _type.sub_type
-        return name, {"type": _type.name}
+
+        typename = _type.name
+        if parent == 'enum':
+            typename += 'Enum'
+
+        return name, {"type": typename}
 
 
 def process_constructor(child: tree.ConstructorDeclaration):
@@ -237,10 +257,12 @@ def main(chargebee_java_path):
     for f in glob.glob(chargebee_java_path + '/models/enums/*.java'):
         print(f)
         enum_code = parse.parse(open(f).read())
-        e, p, d = process_compilation_unit(enum_code)
-        enums.update(e)
-        paths.update(p)
-        definitions.update(d)
+        e, _, _ = process_compilation_unit(enum_code)
+        enums.update({k + "Enum": v for k, v in e.items()})
+
+        # enums.update(e)
+        # paths.update(p)
+        # definitions.update(d)
 
     for f in glob.glob(chargebee_java_path + '/models/*.java'):
         print(f)
@@ -277,6 +299,8 @@ def main(chargebee_java_path):
                 definition['properties'][key] = {
                     "$ref": "#/definitions/{}".format(prop['type'])
                 }
+            elif prop['type'] + 'Enum' in enums:
+                definition['properties'][key] = enums[prop['type'] + 'Enum']
             elif prop['type'] in enums:
                 definition['properties'][key] = enums[prop['type']]
 
@@ -288,6 +312,8 @@ def main(chargebee_java_path):
                     continue
                 if param['type'] in type_map:
                     param.update(type_map[param['type']])
+                elif param['type'] + 'Enum' in enums:
+                    param.update(enums[param['type'] + 'Enum'])
                 elif param['type'] in enums:
                     param.update(enums[param['type']])
 

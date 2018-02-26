@@ -89,7 +89,7 @@ var subscriptionEstimateTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -98,18 +98,16 @@ func init() {
 }
 
 const (
-	// SubscriptionEstimateStatusInProgress captures enum value "in_progress"
-	SubscriptionEstimateStatusInProgress string = "in_progress"
-	// SubscriptionEstimateStatusSuccess captures enum value "success"
-	SubscriptionEstimateStatusSuccess string = "success"
-	// SubscriptionEstimateStatusVoided captures enum value "voided"
-	SubscriptionEstimateStatusVoided string = "voided"
-	// SubscriptionEstimateStatusFailure captures enum value "failure"
-	SubscriptionEstimateStatusFailure string = "failure"
-	// SubscriptionEstimateStatusTimeout captures enum value "timeout"
-	SubscriptionEstimateStatusTimeout string = "timeout"
-	// SubscriptionEstimateStatusNeedsAttention captures enum value "needs_attention"
-	SubscriptionEstimateStatusNeedsAttention string = "needs_attention"
+	// SubscriptionEstimateStatusFuture captures enum value "future"
+	SubscriptionEstimateStatusFuture string = "future"
+	// SubscriptionEstimateStatusInTrial captures enum value "in_trial"
+	SubscriptionEstimateStatusInTrial string = "in_trial"
+	// SubscriptionEstimateStatusActive captures enum value "active"
+	SubscriptionEstimateStatusActive string = "active"
+	// SubscriptionEstimateStatusNonRenewing captures enum value "non_renewing"
+	SubscriptionEstimateStatusNonRenewing string = "non_renewing"
+	// SubscriptionEstimateStatusCancelled captures enum value "cancelled"
+	SubscriptionEstimateStatusCancelled string = "cancelled"
 )
 
 // prop value enum

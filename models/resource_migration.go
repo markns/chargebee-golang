@@ -80,7 +80,7 @@ var resourceMigrationTypeEntityTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["plan_setup","plan","addon","adhoc"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["customer","subscription","invoice","credit_note","transaction","plan","addon","coupon"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -89,14 +89,22 @@ func init() {
 }
 
 const (
-	// ResourceMigrationEntityTypePlanSetup captures enum value "plan_setup"
-	ResourceMigrationEntityTypePlanSetup string = "plan_setup"
+	// ResourceMigrationEntityTypeCustomer captures enum value "customer"
+	ResourceMigrationEntityTypeCustomer string = "customer"
+	// ResourceMigrationEntityTypeSubscription captures enum value "subscription"
+	ResourceMigrationEntityTypeSubscription string = "subscription"
+	// ResourceMigrationEntityTypeInvoice captures enum value "invoice"
+	ResourceMigrationEntityTypeInvoice string = "invoice"
+	// ResourceMigrationEntityTypeCreditNote captures enum value "credit_note"
+	ResourceMigrationEntityTypeCreditNote string = "credit_note"
+	// ResourceMigrationEntityTypeTransaction captures enum value "transaction"
+	ResourceMigrationEntityTypeTransaction string = "transaction"
 	// ResourceMigrationEntityTypePlan captures enum value "plan"
 	ResourceMigrationEntityTypePlan string = "plan"
 	// ResourceMigrationEntityTypeAddon captures enum value "addon"
 	ResourceMigrationEntityTypeAddon string = "addon"
-	// ResourceMigrationEntityTypeAdhoc captures enum value "adhoc"
-	ResourceMigrationEntityTypeAdhoc string = "adhoc"
+	// ResourceMigrationEntityTypeCoupon captures enum value "coupon"
+	ResourceMigrationEntityTypeCoupon string = "coupon"
 )
 
 // prop value enum
@@ -125,7 +133,7 @@ var resourceMigrationTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -134,18 +142,16 @@ func init() {
 }
 
 const (
-	// ResourceMigrationStatusInProgress captures enum value "in_progress"
-	ResourceMigrationStatusInProgress string = "in_progress"
-	// ResourceMigrationStatusSuccess captures enum value "success"
-	ResourceMigrationStatusSuccess string = "success"
-	// ResourceMigrationStatusVoided captures enum value "voided"
-	ResourceMigrationStatusVoided string = "voided"
-	// ResourceMigrationStatusFailure captures enum value "failure"
-	ResourceMigrationStatusFailure string = "failure"
-	// ResourceMigrationStatusTimeout captures enum value "timeout"
-	ResourceMigrationStatusTimeout string = "timeout"
-	// ResourceMigrationStatusNeedsAttention captures enum value "needs_attention"
-	ResourceMigrationStatusNeedsAttention string = "needs_attention"
+	// ResourceMigrationStatusFuture captures enum value "future"
+	ResourceMigrationStatusFuture string = "future"
+	// ResourceMigrationStatusInTrial captures enum value "in_trial"
+	ResourceMigrationStatusInTrial string = "in_trial"
+	// ResourceMigrationStatusActive captures enum value "active"
+	ResourceMigrationStatusActive string = "active"
+	// ResourceMigrationStatusNonRenewing captures enum value "non_renewing"
+	ResourceMigrationStatusNonRenewing string = "non_renewing"
+	// ResourceMigrationStatusCancelled captures enum value "cancelled"
+	ResourceMigrationStatusCancelled string = "cancelled"
 )
 
 // prop value enum

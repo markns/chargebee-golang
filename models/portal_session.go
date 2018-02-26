@@ -138,7 +138,7 @@ var portalSessionTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -147,18 +147,16 @@ func init() {
 }
 
 const (
-	// PortalSessionStatusInProgress captures enum value "in_progress"
-	PortalSessionStatusInProgress string = "in_progress"
-	// PortalSessionStatusSuccess captures enum value "success"
-	PortalSessionStatusSuccess string = "success"
-	// PortalSessionStatusVoided captures enum value "voided"
-	PortalSessionStatusVoided string = "voided"
-	// PortalSessionStatusFailure captures enum value "failure"
-	PortalSessionStatusFailure string = "failure"
-	// PortalSessionStatusTimeout captures enum value "timeout"
-	PortalSessionStatusTimeout string = "timeout"
-	// PortalSessionStatusNeedsAttention captures enum value "needs_attention"
-	PortalSessionStatusNeedsAttention string = "needs_attention"
+	// PortalSessionStatusFuture captures enum value "future"
+	PortalSessionStatusFuture string = "future"
+	// PortalSessionStatusInTrial captures enum value "in_trial"
+	PortalSessionStatusInTrial string = "in_trial"
+	// PortalSessionStatusActive captures enum value "active"
+	PortalSessionStatusActive string = "active"
+	// PortalSessionStatusNonRenewing captures enum value "non_renewing"
+	PortalSessionStatusNonRenewing string = "non_renewing"
+	// PortalSessionStatusCancelled captures enum value "cancelled"
+	PortalSessionStatusCancelled string = "cancelled"
 )
 
 // prop value enum

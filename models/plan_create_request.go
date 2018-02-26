@@ -195,7 +195,7 @@ var planCreateRequestTypeChargeModelPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["flat_fee","per_unit"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["full_charge","prorate"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -204,10 +204,10 @@ func init() {
 }
 
 const (
-	// PlanCreateRequestChargeModelFlatFee captures enum value "flat_fee"
-	PlanCreateRequestChargeModelFlatFee string = "flat_fee"
-	// PlanCreateRequestChargeModelPerUnit captures enum value "per_unit"
-	PlanCreateRequestChargeModelPerUnit string = "per_unit"
+	// PlanCreateRequestChargeModelFullCharge captures enum value "full_charge"
+	PlanCreateRequestChargeModelFullCharge string = "full_charge"
+	// PlanCreateRequestChargeModelProrate captures enum value "prorate"
+	PlanCreateRequestChargeModelProrate string = "prorate"
 )
 
 // prop value enum
@@ -279,7 +279,7 @@ var planCreateRequestTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -288,18 +288,16 @@ func init() {
 }
 
 const (
-	// PlanCreateRequestStatusInProgress captures enum value "in_progress"
-	PlanCreateRequestStatusInProgress string = "in_progress"
-	// PlanCreateRequestStatusSuccess captures enum value "success"
-	PlanCreateRequestStatusSuccess string = "success"
-	// PlanCreateRequestStatusVoided captures enum value "voided"
-	PlanCreateRequestStatusVoided string = "voided"
-	// PlanCreateRequestStatusFailure captures enum value "failure"
-	PlanCreateRequestStatusFailure string = "failure"
-	// PlanCreateRequestStatusTimeout captures enum value "timeout"
-	PlanCreateRequestStatusTimeout string = "timeout"
-	// PlanCreateRequestStatusNeedsAttention captures enum value "needs_attention"
-	PlanCreateRequestStatusNeedsAttention string = "needs_attention"
+	// PlanCreateRequestStatusFuture captures enum value "future"
+	PlanCreateRequestStatusFuture string = "future"
+	// PlanCreateRequestStatusInTrial captures enum value "in_trial"
+	PlanCreateRequestStatusInTrial string = "in_trial"
+	// PlanCreateRequestStatusActive captures enum value "active"
+	PlanCreateRequestStatusActive string = "active"
+	// PlanCreateRequestStatusNonRenewing captures enum value "non_renewing"
+	PlanCreateRequestStatusNonRenewing string = "non_renewing"
+	// PlanCreateRequestStatusCancelled captures enum value "cancelled"
+	PlanCreateRequestStatusCancelled string = "cancelled"
 )
 
 // prop value enum

@@ -60,7 +60,7 @@ var discountTypeEntityTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["plan_setup","plan","addon","adhoc"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["customer","subscription","invoice","credit_note","transaction","plan","addon","coupon"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -69,14 +69,22 @@ func init() {
 }
 
 const (
-	// DiscountEntityTypePlanSetup captures enum value "plan_setup"
-	DiscountEntityTypePlanSetup string = "plan_setup"
+	// DiscountEntityTypeCustomer captures enum value "customer"
+	DiscountEntityTypeCustomer string = "customer"
+	// DiscountEntityTypeSubscription captures enum value "subscription"
+	DiscountEntityTypeSubscription string = "subscription"
+	// DiscountEntityTypeInvoice captures enum value "invoice"
+	DiscountEntityTypeInvoice string = "invoice"
+	// DiscountEntityTypeCreditNote captures enum value "credit_note"
+	DiscountEntityTypeCreditNote string = "credit_note"
+	// DiscountEntityTypeTransaction captures enum value "transaction"
+	DiscountEntityTypeTransaction string = "transaction"
 	// DiscountEntityTypePlan captures enum value "plan"
 	DiscountEntityTypePlan string = "plan"
 	// DiscountEntityTypeAddon captures enum value "addon"
 	DiscountEntityTypeAddon string = "addon"
-	// DiscountEntityTypeAdhoc captures enum value "adhoc"
-	DiscountEntityTypeAdhoc string = "adhoc"
+	// DiscountEntityTypeCoupon captures enum value "coupon"
+	DiscountEntityTypeCoupon string = "coupon"
 )
 
 // prop value enum

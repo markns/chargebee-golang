@@ -138,7 +138,7 @@ var promotionalCreditTypeTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -147,14 +147,22 @@ func init() {
 }
 
 const (
-	// PromotionalCreditTypeAuthorization captures enum value "authorization"
-	PromotionalCreditTypeAuthorization string = "authorization"
-	// PromotionalCreditTypePayment captures enum value "payment"
-	PromotionalCreditTypePayment string = "payment"
-	// PromotionalCreditTypeRefund captures enum value "refund"
-	PromotionalCreditTypeRefund string = "refund"
-	// PromotionalCreditTypePaymentReversal captures enum value "payment_reversal"
-	PromotionalCreditTypePaymentReversal string = "payment_reversal"
+	// PromotionalCreditTypeCard captures enum value "card"
+	PromotionalCreditTypeCard string = "card"
+	// PromotionalCreditTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	PromotionalCreditTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// PromotionalCreditTypeAmazonPayments captures enum value "amazon_payments"
+	PromotionalCreditTypeAmazonPayments string = "amazon_payments"
+	// PromotionalCreditTypeDirectDebit captures enum value "direct_debit"
+	PromotionalCreditTypeDirectDebit string = "direct_debit"
+	// PromotionalCreditTypeGeneric captures enum value "generic"
+	PromotionalCreditTypeGeneric string = "generic"
+	// PromotionalCreditTypeAlipay captures enum value "alipay"
+	PromotionalCreditTypeAlipay string = "alipay"
+	// PromotionalCreditTypeUnionpay captures enum value "unionpay"
+	PromotionalCreditTypeUnionpay string = "unionpay"
+	// PromotionalCreditTypeApplePay captures enum value "apple_pay"
+	PromotionalCreditTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

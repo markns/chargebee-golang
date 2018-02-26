@@ -120,7 +120,7 @@ var unbilledChargeTypeEntityTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["plan_setup","plan","addon","adhoc"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["customer","subscription","invoice","credit_note","transaction","plan","addon","coupon"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -129,14 +129,22 @@ func init() {
 }
 
 const (
-	// UnbilledChargeEntityTypePlanSetup captures enum value "plan_setup"
-	UnbilledChargeEntityTypePlanSetup string = "plan_setup"
+	// UnbilledChargeEntityTypeCustomer captures enum value "customer"
+	UnbilledChargeEntityTypeCustomer string = "customer"
+	// UnbilledChargeEntityTypeSubscription captures enum value "subscription"
+	UnbilledChargeEntityTypeSubscription string = "subscription"
+	// UnbilledChargeEntityTypeInvoice captures enum value "invoice"
+	UnbilledChargeEntityTypeInvoice string = "invoice"
+	// UnbilledChargeEntityTypeCreditNote captures enum value "credit_note"
+	UnbilledChargeEntityTypeCreditNote string = "credit_note"
+	// UnbilledChargeEntityTypeTransaction captures enum value "transaction"
+	UnbilledChargeEntityTypeTransaction string = "transaction"
 	// UnbilledChargeEntityTypePlan captures enum value "plan"
 	UnbilledChargeEntityTypePlan string = "plan"
 	// UnbilledChargeEntityTypeAddon captures enum value "addon"
 	UnbilledChargeEntityTypeAddon string = "addon"
-	// UnbilledChargeEntityTypeAdhoc captures enum value "adhoc"
-	UnbilledChargeEntityTypeAdhoc string = "adhoc"
+	// UnbilledChargeEntityTypeCoupon captures enum value "coupon"
+	UnbilledChargeEntityTypeCoupon string = "coupon"
 )
 
 // prop value enum

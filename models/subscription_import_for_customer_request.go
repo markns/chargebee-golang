@@ -306,7 +306,7 @@ var subscriptionImportForCustomerRequestTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -315,18 +315,16 @@ func init() {
 }
 
 const (
-	// SubscriptionImportForCustomerRequestStatusInProgress captures enum value "in_progress"
-	SubscriptionImportForCustomerRequestStatusInProgress string = "in_progress"
-	// SubscriptionImportForCustomerRequestStatusSuccess captures enum value "success"
-	SubscriptionImportForCustomerRequestStatusSuccess string = "success"
-	// SubscriptionImportForCustomerRequestStatusVoided captures enum value "voided"
-	SubscriptionImportForCustomerRequestStatusVoided string = "voided"
-	// SubscriptionImportForCustomerRequestStatusFailure captures enum value "failure"
-	SubscriptionImportForCustomerRequestStatusFailure string = "failure"
-	// SubscriptionImportForCustomerRequestStatusTimeout captures enum value "timeout"
-	SubscriptionImportForCustomerRequestStatusTimeout string = "timeout"
-	// SubscriptionImportForCustomerRequestStatusNeedsAttention captures enum value "needs_attention"
-	SubscriptionImportForCustomerRequestStatusNeedsAttention string = "needs_attention"
+	// SubscriptionImportForCustomerRequestStatusFuture captures enum value "future"
+	SubscriptionImportForCustomerRequestStatusFuture string = "future"
+	// SubscriptionImportForCustomerRequestStatusInTrial captures enum value "in_trial"
+	SubscriptionImportForCustomerRequestStatusInTrial string = "in_trial"
+	// SubscriptionImportForCustomerRequestStatusActive captures enum value "active"
+	SubscriptionImportForCustomerRequestStatusActive string = "active"
+	// SubscriptionImportForCustomerRequestStatusNonRenewing captures enum value "non_renewing"
+	SubscriptionImportForCustomerRequestStatusNonRenewing string = "non_renewing"
+	// SubscriptionImportForCustomerRequestStatusCancelled captures enum value "cancelled"
+	SubscriptionImportForCustomerRequestStatusCancelled string = "cancelled"
 )
 
 // prop value enum

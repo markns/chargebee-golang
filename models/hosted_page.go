@@ -149,7 +149,7 @@ var hostedPageTypeTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -158,14 +158,22 @@ func init() {
 }
 
 const (
-	// HostedPageTypeAuthorization captures enum value "authorization"
-	HostedPageTypeAuthorization string = "authorization"
-	// HostedPageTypePayment captures enum value "payment"
-	HostedPageTypePayment string = "payment"
-	// HostedPageTypeRefund captures enum value "refund"
-	HostedPageTypeRefund string = "refund"
-	// HostedPageTypePaymentReversal captures enum value "payment_reversal"
-	HostedPageTypePaymentReversal string = "payment_reversal"
+	// HostedPageTypeCard captures enum value "card"
+	HostedPageTypeCard string = "card"
+	// HostedPageTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	HostedPageTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// HostedPageTypeAmazonPayments captures enum value "amazon_payments"
+	HostedPageTypeAmazonPayments string = "amazon_payments"
+	// HostedPageTypeDirectDebit captures enum value "direct_debit"
+	HostedPageTypeDirectDebit string = "direct_debit"
+	// HostedPageTypeGeneric captures enum value "generic"
+	HostedPageTypeGeneric string = "generic"
+	// HostedPageTypeAlipay captures enum value "alipay"
+	HostedPageTypeAlipay string = "alipay"
+	// HostedPageTypeUnionpay captures enum value "unionpay"
+	HostedPageTypeUnionpay string = "unionpay"
+	// HostedPageTypeApplePay captures enum value "apple_pay"
+	HostedPageTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

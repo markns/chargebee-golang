@@ -249,7 +249,7 @@ var addonCreateRequestTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -258,18 +258,16 @@ func init() {
 }
 
 const (
-	// AddonCreateRequestStatusInProgress captures enum value "in_progress"
-	AddonCreateRequestStatusInProgress string = "in_progress"
-	// AddonCreateRequestStatusSuccess captures enum value "success"
-	AddonCreateRequestStatusSuccess string = "success"
-	// AddonCreateRequestStatusVoided captures enum value "voided"
-	AddonCreateRequestStatusVoided string = "voided"
-	// AddonCreateRequestStatusFailure captures enum value "failure"
-	AddonCreateRequestStatusFailure string = "failure"
-	// AddonCreateRequestStatusTimeout captures enum value "timeout"
-	AddonCreateRequestStatusTimeout string = "timeout"
-	// AddonCreateRequestStatusNeedsAttention captures enum value "needs_attention"
-	AddonCreateRequestStatusNeedsAttention string = "needs_attention"
+	// AddonCreateRequestStatusFuture captures enum value "future"
+	AddonCreateRequestStatusFuture string = "future"
+	// AddonCreateRequestStatusInTrial captures enum value "in_trial"
+	AddonCreateRequestStatusInTrial string = "in_trial"
+	// AddonCreateRequestStatusActive captures enum value "active"
+	AddonCreateRequestStatusActive string = "active"
+	// AddonCreateRequestStatusNonRenewing captures enum value "non_renewing"
+	AddonCreateRequestStatusNonRenewing string = "non_renewing"
+	// AddonCreateRequestStatusCancelled captures enum value "cancelled"
+	AddonCreateRequestStatusCancelled string = "cancelled"
 )
 
 // prop value enum
@@ -298,7 +296,7 @@ var addonCreateRequestTypeTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -307,14 +305,22 @@ func init() {
 }
 
 const (
-	// AddonCreateRequestTypeAuthorization captures enum value "authorization"
-	AddonCreateRequestTypeAuthorization string = "authorization"
-	// AddonCreateRequestTypePayment captures enum value "payment"
-	AddonCreateRequestTypePayment string = "payment"
-	// AddonCreateRequestTypeRefund captures enum value "refund"
-	AddonCreateRequestTypeRefund string = "refund"
-	// AddonCreateRequestTypePaymentReversal captures enum value "payment_reversal"
-	AddonCreateRequestTypePaymentReversal string = "payment_reversal"
+	// AddonCreateRequestTypeCard captures enum value "card"
+	AddonCreateRequestTypeCard string = "card"
+	// AddonCreateRequestTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	AddonCreateRequestTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// AddonCreateRequestTypeAmazonPayments captures enum value "amazon_payments"
+	AddonCreateRequestTypeAmazonPayments string = "amazon_payments"
+	// AddonCreateRequestTypeDirectDebit captures enum value "direct_debit"
+	AddonCreateRequestTypeDirectDebit string = "direct_debit"
+	// AddonCreateRequestTypeGeneric captures enum value "generic"
+	AddonCreateRequestTypeGeneric string = "generic"
+	// AddonCreateRequestTypeAlipay captures enum value "alipay"
+	AddonCreateRequestTypeAlipay string = "alipay"
+	// AddonCreateRequestTypeUnionpay captures enum value "unionpay"
+	AddonCreateRequestTypeUnionpay string = "unionpay"
+	// AddonCreateRequestTypeApplePay captures enum value "apple_pay"
+	AddonCreateRequestTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

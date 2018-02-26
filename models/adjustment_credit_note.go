@@ -129,7 +129,7 @@ var adjustmentCreditNoteTypeCnStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -138,18 +138,16 @@ func init() {
 }
 
 const (
-	// AdjustmentCreditNoteCnStatusInProgress captures enum value "in_progress"
-	AdjustmentCreditNoteCnStatusInProgress string = "in_progress"
-	// AdjustmentCreditNoteCnStatusSuccess captures enum value "success"
-	AdjustmentCreditNoteCnStatusSuccess string = "success"
-	// AdjustmentCreditNoteCnStatusVoided captures enum value "voided"
-	AdjustmentCreditNoteCnStatusVoided string = "voided"
-	// AdjustmentCreditNoteCnStatusFailure captures enum value "failure"
-	AdjustmentCreditNoteCnStatusFailure string = "failure"
-	// AdjustmentCreditNoteCnStatusTimeout captures enum value "timeout"
-	AdjustmentCreditNoteCnStatusTimeout string = "timeout"
-	// AdjustmentCreditNoteCnStatusNeedsAttention captures enum value "needs_attention"
-	AdjustmentCreditNoteCnStatusNeedsAttention string = "needs_attention"
+	// AdjustmentCreditNoteCnStatusFuture captures enum value "future"
+	AdjustmentCreditNoteCnStatusFuture string = "future"
+	// AdjustmentCreditNoteCnStatusInTrial captures enum value "in_trial"
+	AdjustmentCreditNoteCnStatusInTrial string = "in_trial"
+	// AdjustmentCreditNoteCnStatusActive captures enum value "active"
+	AdjustmentCreditNoteCnStatusActive string = "active"
+	// AdjustmentCreditNoteCnStatusNonRenewing captures enum value "non_renewing"
+	AdjustmentCreditNoteCnStatusNonRenewing string = "non_renewing"
+	// AdjustmentCreditNoteCnStatusCancelled captures enum value "cancelled"
+	AdjustmentCreditNoteCnStatusCancelled string = "cancelled"
 )
 
 // prop value enum

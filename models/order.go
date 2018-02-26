@@ -95,7 +95,7 @@ var orderTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -104,18 +104,16 @@ func init() {
 }
 
 const (
-	// OrderStatusInProgress captures enum value "in_progress"
-	OrderStatusInProgress string = "in_progress"
-	// OrderStatusSuccess captures enum value "success"
-	OrderStatusSuccess string = "success"
-	// OrderStatusVoided captures enum value "voided"
-	OrderStatusVoided string = "voided"
-	// OrderStatusFailure captures enum value "failure"
-	OrderStatusFailure string = "failure"
-	// OrderStatusTimeout captures enum value "timeout"
-	OrderStatusTimeout string = "timeout"
-	// OrderStatusNeedsAttention captures enum value "needs_attention"
-	OrderStatusNeedsAttention string = "needs_attention"
+	// OrderStatusFuture captures enum value "future"
+	OrderStatusFuture string = "future"
+	// OrderStatusInTrial captures enum value "in_trial"
+	OrderStatusInTrial string = "in_trial"
+	// OrderStatusActive captures enum value "active"
+	OrderStatusActive string = "active"
+	// OrderStatusNonRenewing captures enum value "non_renewing"
+	OrderStatusNonRenewing string = "non_renewing"
+	// OrderStatusCancelled captures enum value "cancelled"
+	OrderStatusCancelled string = "cancelled"
 )
 
 // prop value enum

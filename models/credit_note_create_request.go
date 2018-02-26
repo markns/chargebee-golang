@@ -134,7 +134,7 @@ var creditNoteCreateRequestTypeTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -143,14 +143,22 @@ func init() {
 }
 
 const (
-	// CreditNoteCreateRequestTypeAuthorization captures enum value "authorization"
-	CreditNoteCreateRequestTypeAuthorization string = "authorization"
-	// CreditNoteCreateRequestTypePayment captures enum value "payment"
-	CreditNoteCreateRequestTypePayment string = "payment"
-	// CreditNoteCreateRequestTypeRefund captures enum value "refund"
-	CreditNoteCreateRequestTypeRefund string = "refund"
-	// CreditNoteCreateRequestTypePaymentReversal captures enum value "payment_reversal"
-	CreditNoteCreateRequestTypePaymentReversal string = "payment_reversal"
+	// CreditNoteCreateRequestTypeCard captures enum value "card"
+	CreditNoteCreateRequestTypeCard string = "card"
+	// CreditNoteCreateRequestTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	CreditNoteCreateRequestTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// CreditNoteCreateRequestTypeAmazonPayments captures enum value "amazon_payments"
+	CreditNoteCreateRequestTypeAmazonPayments string = "amazon_payments"
+	// CreditNoteCreateRequestTypeDirectDebit captures enum value "direct_debit"
+	CreditNoteCreateRequestTypeDirectDebit string = "direct_debit"
+	// CreditNoteCreateRequestTypeGeneric captures enum value "generic"
+	CreditNoteCreateRequestTypeGeneric string = "generic"
+	// CreditNoteCreateRequestTypeAlipay captures enum value "alipay"
+	CreditNoteCreateRequestTypeAlipay string = "alipay"
+	// CreditNoteCreateRequestTypeUnionpay captures enum value "unionpay"
+	CreditNoteCreateRequestTypeUnionpay string = "unionpay"
+	// CreditNoteCreateRequestTypeApplePay captures enum value "apple_pay"
+	CreditNoteCreateRequestTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

@@ -730,7 +730,7 @@ var invoiceTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -739,18 +739,16 @@ func init() {
 }
 
 const (
-	// InvoiceStatusInProgress captures enum value "in_progress"
-	InvoiceStatusInProgress string = "in_progress"
-	// InvoiceStatusSuccess captures enum value "success"
-	InvoiceStatusSuccess string = "success"
-	// InvoiceStatusVoided captures enum value "voided"
-	InvoiceStatusVoided string = "voided"
-	// InvoiceStatusFailure captures enum value "failure"
-	InvoiceStatusFailure string = "failure"
-	// InvoiceStatusTimeout captures enum value "timeout"
-	InvoiceStatusTimeout string = "timeout"
-	// InvoiceStatusNeedsAttention captures enum value "needs_attention"
-	InvoiceStatusNeedsAttention string = "needs_attention"
+	// InvoiceStatusFuture captures enum value "future"
+	InvoiceStatusFuture string = "future"
+	// InvoiceStatusInTrial captures enum value "in_trial"
+	InvoiceStatusInTrial string = "in_trial"
+	// InvoiceStatusActive captures enum value "active"
+	InvoiceStatusActive string = "active"
+	// InvoiceStatusNonRenewing captures enum value "non_renewing"
+	InvoiceStatusNonRenewing string = "non_renewing"
+	// InvoiceStatusCancelled captures enum value "cancelled"
+	InvoiceStatusCancelled string = "cancelled"
 )
 
 // prop value enum

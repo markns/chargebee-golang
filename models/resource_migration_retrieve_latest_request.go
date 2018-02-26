@@ -55,7 +55,7 @@ var resourceMigrationRetrieveLatestRequestTypeEntityTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["plan_setup","plan","addon","adhoc"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["customer","subscription","invoice","credit_note","transaction","plan","addon","coupon"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -64,14 +64,22 @@ func init() {
 }
 
 const (
-	// ResourceMigrationRetrieveLatestRequestEntityTypePlanSetup captures enum value "plan_setup"
-	ResourceMigrationRetrieveLatestRequestEntityTypePlanSetup string = "plan_setup"
+	// ResourceMigrationRetrieveLatestRequestEntityTypeCustomer captures enum value "customer"
+	ResourceMigrationRetrieveLatestRequestEntityTypeCustomer string = "customer"
+	// ResourceMigrationRetrieveLatestRequestEntityTypeSubscription captures enum value "subscription"
+	ResourceMigrationRetrieveLatestRequestEntityTypeSubscription string = "subscription"
+	// ResourceMigrationRetrieveLatestRequestEntityTypeInvoice captures enum value "invoice"
+	ResourceMigrationRetrieveLatestRequestEntityTypeInvoice string = "invoice"
+	// ResourceMigrationRetrieveLatestRequestEntityTypeCreditNote captures enum value "credit_note"
+	ResourceMigrationRetrieveLatestRequestEntityTypeCreditNote string = "credit_note"
+	// ResourceMigrationRetrieveLatestRequestEntityTypeTransaction captures enum value "transaction"
+	ResourceMigrationRetrieveLatestRequestEntityTypeTransaction string = "transaction"
 	// ResourceMigrationRetrieveLatestRequestEntityTypePlan captures enum value "plan"
 	ResourceMigrationRetrieveLatestRequestEntityTypePlan string = "plan"
 	// ResourceMigrationRetrieveLatestRequestEntityTypeAddon captures enum value "addon"
 	ResourceMigrationRetrieveLatestRequestEntityTypeAddon string = "addon"
-	// ResourceMigrationRetrieveLatestRequestEntityTypeAdhoc captures enum value "adhoc"
-	ResourceMigrationRetrieveLatestRequestEntityTypeAdhoc string = "adhoc"
+	// ResourceMigrationRetrieveLatestRequestEntityTypeCoupon captures enum value "coupon"
+	ResourceMigrationRetrieveLatestRequestEntityTypeCoupon string = "coupon"
 )
 
 // prop value enum

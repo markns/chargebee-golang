@@ -388,7 +388,7 @@ var couponCreateRequestTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -397,18 +397,16 @@ func init() {
 }
 
 const (
-	// CouponCreateRequestStatusInProgress captures enum value "in_progress"
-	CouponCreateRequestStatusInProgress string = "in_progress"
-	// CouponCreateRequestStatusSuccess captures enum value "success"
-	CouponCreateRequestStatusSuccess string = "success"
-	// CouponCreateRequestStatusVoided captures enum value "voided"
-	CouponCreateRequestStatusVoided string = "voided"
-	// CouponCreateRequestStatusFailure captures enum value "failure"
-	CouponCreateRequestStatusFailure string = "failure"
-	// CouponCreateRequestStatusTimeout captures enum value "timeout"
-	CouponCreateRequestStatusTimeout string = "timeout"
-	// CouponCreateRequestStatusNeedsAttention captures enum value "needs_attention"
-	CouponCreateRequestStatusNeedsAttention string = "needs_attention"
+	// CouponCreateRequestStatusFuture captures enum value "future"
+	CouponCreateRequestStatusFuture string = "future"
+	// CouponCreateRequestStatusInTrial captures enum value "in_trial"
+	CouponCreateRequestStatusInTrial string = "in_trial"
+	// CouponCreateRequestStatusActive captures enum value "active"
+	CouponCreateRequestStatusActive string = "active"
+	// CouponCreateRequestStatusNonRenewing captures enum value "non_renewing"
+	CouponCreateRequestStatusNonRenewing string = "non_renewing"
+	// CouponCreateRequestStatusCancelled captures enum value "cancelled"
+	CouponCreateRequestStatusCancelled string = "cancelled"
 )
 
 // prop value enum

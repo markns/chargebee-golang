@@ -60,7 +60,7 @@ var commentCreateRequestTypeEntityTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["plan_setup","plan","addon","adhoc"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["customer","subscription","invoice","credit_note","transaction","plan","addon","coupon"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -69,14 +69,22 @@ func init() {
 }
 
 const (
-	// CommentCreateRequestEntityTypePlanSetup captures enum value "plan_setup"
-	CommentCreateRequestEntityTypePlanSetup string = "plan_setup"
+	// CommentCreateRequestEntityTypeCustomer captures enum value "customer"
+	CommentCreateRequestEntityTypeCustomer string = "customer"
+	// CommentCreateRequestEntityTypeSubscription captures enum value "subscription"
+	CommentCreateRequestEntityTypeSubscription string = "subscription"
+	// CommentCreateRequestEntityTypeInvoice captures enum value "invoice"
+	CommentCreateRequestEntityTypeInvoice string = "invoice"
+	// CommentCreateRequestEntityTypeCreditNote captures enum value "credit_note"
+	CommentCreateRequestEntityTypeCreditNote string = "credit_note"
+	// CommentCreateRequestEntityTypeTransaction captures enum value "transaction"
+	CommentCreateRequestEntityTypeTransaction string = "transaction"
 	// CommentCreateRequestEntityTypePlan captures enum value "plan"
 	CommentCreateRequestEntityTypePlan string = "plan"
 	// CommentCreateRequestEntityTypeAddon captures enum value "addon"
 	CommentCreateRequestEntityTypeAddon string = "addon"
-	// CommentCreateRequestEntityTypeAdhoc captures enum value "adhoc"
-	CommentCreateRequestEntityTypeAdhoc string = "adhoc"
+	// CommentCreateRequestEntityTypeCoupon captures enum value "coupon"
+	CommentCreateRequestEntityTypeCoupon string = "coupon"
 )
 
 // prop value enum

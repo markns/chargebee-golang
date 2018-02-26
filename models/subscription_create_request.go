@@ -999,7 +999,7 @@ var subscriptionCreateRequestTypePaymentMethodTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -1008,14 +1008,22 @@ func init() {
 }
 
 const (
-	// SubscriptionCreateRequestPaymentMethodTypeAuthorization captures enum value "authorization"
-	SubscriptionCreateRequestPaymentMethodTypeAuthorization string = "authorization"
-	// SubscriptionCreateRequestPaymentMethodTypePayment captures enum value "payment"
-	SubscriptionCreateRequestPaymentMethodTypePayment string = "payment"
-	// SubscriptionCreateRequestPaymentMethodTypeRefund captures enum value "refund"
-	SubscriptionCreateRequestPaymentMethodTypeRefund string = "refund"
-	// SubscriptionCreateRequestPaymentMethodTypePaymentReversal captures enum value "payment_reversal"
-	SubscriptionCreateRequestPaymentMethodTypePaymentReversal string = "payment_reversal"
+	// SubscriptionCreateRequestPaymentMethodTypeCard captures enum value "card"
+	SubscriptionCreateRequestPaymentMethodTypeCard string = "card"
+	// SubscriptionCreateRequestPaymentMethodTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	SubscriptionCreateRequestPaymentMethodTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// SubscriptionCreateRequestPaymentMethodTypeAmazonPayments captures enum value "amazon_payments"
+	SubscriptionCreateRequestPaymentMethodTypeAmazonPayments string = "amazon_payments"
+	// SubscriptionCreateRequestPaymentMethodTypeDirectDebit captures enum value "direct_debit"
+	SubscriptionCreateRequestPaymentMethodTypeDirectDebit string = "direct_debit"
+	// SubscriptionCreateRequestPaymentMethodTypeGeneric captures enum value "generic"
+	SubscriptionCreateRequestPaymentMethodTypeGeneric string = "generic"
+	// SubscriptionCreateRequestPaymentMethodTypeAlipay captures enum value "alipay"
+	SubscriptionCreateRequestPaymentMethodTypeAlipay string = "alipay"
+	// SubscriptionCreateRequestPaymentMethodTypeUnionpay captures enum value "unionpay"
+	SubscriptionCreateRequestPaymentMethodTypeUnionpay string = "unionpay"
+	// SubscriptionCreateRequestPaymentMethodTypeApplePay captures enum value "apple_pay"
+	SubscriptionCreateRequestPaymentMethodTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

@@ -55,7 +55,7 @@ var noteTypeEntityTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["plan_setup","plan","addon","adhoc"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["customer","subscription","invoice","credit_note","transaction","plan","addon","coupon"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -64,14 +64,22 @@ func init() {
 }
 
 const (
-	// NoteEntityTypePlanSetup captures enum value "plan_setup"
-	NoteEntityTypePlanSetup string = "plan_setup"
+	// NoteEntityTypeCustomer captures enum value "customer"
+	NoteEntityTypeCustomer string = "customer"
+	// NoteEntityTypeSubscription captures enum value "subscription"
+	NoteEntityTypeSubscription string = "subscription"
+	// NoteEntityTypeInvoice captures enum value "invoice"
+	NoteEntityTypeInvoice string = "invoice"
+	// NoteEntityTypeCreditNote captures enum value "credit_note"
+	NoteEntityTypeCreditNote string = "credit_note"
+	// NoteEntityTypeTransaction captures enum value "transaction"
+	NoteEntityTypeTransaction string = "transaction"
 	// NoteEntityTypePlan captures enum value "plan"
 	NoteEntityTypePlan string = "plan"
 	// NoteEntityTypeAddon captures enum value "addon"
 	NoteEntityTypeAddon string = "addon"
-	// NoteEntityTypeAdhoc captures enum value "adhoc"
-	NoteEntityTypeAdhoc string = "adhoc"
+	// NoteEntityTypeCoupon captures enum value "coupon"
+	NoteEntityTypeCoupon string = "coupon"
 )
 
 // prop value enum

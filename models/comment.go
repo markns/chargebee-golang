@@ -80,7 +80,7 @@ var commentTypeEntityTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["plan_setup","plan","addon","adhoc"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["customer","subscription","invoice","credit_note","transaction","plan","addon","coupon"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -89,14 +89,22 @@ func init() {
 }
 
 const (
-	// CommentEntityTypePlanSetup captures enum value "plan_setup"
-	CommentEntityTypePlanSetup string = "plan_setup"
+	// CommentEntityTypeCustomer captures enum value "customer"
+	CommentEntityTypeCustomer string = "customer"
+	// CommentEntityTypeSubscription captures enum value "subscription"
+	CommentEntityTypeSubscription string = "subscription"
+	// CommentEntityTypeInvoice captures enum value "invoice"
+	CommentEntityTypeInvoice string = "invoice"
+	// CommentEntityTypeCreditNote captures enum value "credit_note"
+	CommentEntityTypeCreditNote string = "credit_note"
+	// CommentEntityTypeTransaction captures enum value "transaction"
+	CommentEntityTypeTransaction string = "transaction"
 	// CommentEntityTypePlan captures enum value "plan"
 	CommentEntityTypePlan string = "plan"
 	// CommentEntityTypeAddon captures enum value "addon"
 	CommentEntityTypeAddon string = "addon"
-	// CommentEntityTypeAdhoc captures enum value "adhoc"
-	CommentEntityTypeAdhoc string = "adhoc"
+	// CommentEntityTypeCoupon captures enum value "coupon"
+	CommentEntityTypeCoupon string = "coupon"
 )
 
 // prop value enum
@@ -125,7 +133,7 @@ var commentTypeTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -134,14 +142,22 @@ func init() {
 }
 
 const (
-	// CommentTypeAuthorization captures enum value "authorization"
-	CommentTypeAuthorization string = "authorization"
-	// CommentTypePayment captures enum value "payment"
-	CommentTypePayment string = "payment"
-	// CommentTypeRefund captures enum value "refund"
-	CommentTypeRefund string = "refund"
-	// CommentTypePaymentReversal captures enum value "payment_reversal"
-	CommentTypePaymentReversal string = "payment_reversal"
+	// CommentTypeCard captures enum value "card"
+	CommentTypeCard string = "card"
+	// CommentTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	CommentTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// CommentTypeAmazonPayments captures enum value "amazon_payments"
+	CommentTypeAmazonPayments string = "amazon_payments"
+	// CommentTypeDirectDebit captures enum value "direct_debit"
+	CommentTypeDirectDebit string = "direct_debit"
+	// CommentTypeGeneric captures enum value "generic"
+	CommentTypeGeneric string = "generic"
+	// CommentTypeAlipay captures enum value "alipay"
+	CommentTypeAlipay string = "alipay"
+	// CommentTypeUnionpay captures enum value "unionpay"
+	CommentTypeUnionpay string = "unionpay"
+	// CommentTypeApplePay captures enum value "apple_pay"
+	CommentTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

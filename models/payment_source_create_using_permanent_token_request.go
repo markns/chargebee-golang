@@ -70,7 +70,7 @@ var paymentSourceCreateUsingPermanentTokenRequestTypeTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -79,14 +79,22 @@ func init() {
 }
 
 const (
-	// PaymentSourceCreateUsingPermanentTokenRequestTypeAuthorization captures enum value "authorization"
-	PaymentSourceCreateUsingPermanentTokenRequestTypeAuthorization string = "authorization"
-	// PaymentSourceCreateUsingPermanentTokenRequestTypePayment captures enum value "payment"
-	PaymentSourceCreateUsingPermanentTokenRequestTypePayment string = "payment"
-	// PaymentSourceCreateUsingPermanentTokenRequestTypeRefund captures enum value "refund"
-	PaymentSourceCreateUsingPermanentTokenRequestTypeRefund string = "refund"
-	// PaymentSourceCreateUsingPermanentTokenRequestTypePaymentReversal captures enum value "payment_reversal"
-	PaymentSourceCreateUsingPermanentTokenRequestTypePaymentReversal string = "payment_reversal"
+	// PaymentSourceCreateUsingPermanentTokenRequestTypeCard captures enum value "card"
+	PaymentSourceCreateUsingPermanentTokenRequestTypeCard string = "card"
+	// PaymentSourceCreateUsingPermanentTokenRequestTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	PaymentSourceCreateUsingPermanentTokenRequestTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// PaymentSourceCreateUsingPermanentTokenRequestTypeAmazonPayments captures enum value "amazon_payments"
+	PaymentSourceCreateUsingPermanentTokenRequestTypeAmazonPayments string = "amazon_payments"
+	// PaymentSourceCreateUsingPermanentTokenRequestTypeDirectDebit captures enum value "direct_debit"
+	PaymentSourceCreateUsingPermanentTokenRequestTypeDirectDebit string = "direct_debit"
+	// PaymentSourceCreateUsingPermanentTokenRequestTypeGeneric captures enum value "generic"
+	PaymentSourceCreateUsingPermanentTokenRequestTypeGeneric string = "generic"
+	// PaymentSourceCreateUsingPermanentTokenRequestTypeAlipay captures enum value "alipay"
+	PaymentSourceCreateUsingPermanentTokenRequestTypeAlipay string = "alipay"
+	// PaymentSourceCreateUsingPermanentTokenRequestTypeUnionpay captures enum value "unionpay"
+	PaymentSourceCreateUsingPermanentTokenRequestTypeUnionpay string = "unionpay"
+	// PaymentSourceCreateUsingPermanentTokenRequestTypeApplePay captures enum value "apple_pay"
+	PaymentSourceCreateUsingPermanentTokenRequestTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

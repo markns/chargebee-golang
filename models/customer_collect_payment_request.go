@@ -150,7 +150,7 @@ var customerCollectPaymentRequestTypePaymentMethodTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -159,14 +159,22 @@ func init() {
 }
 
 const (
-	// CustomerCollectPaymentRequestPaymentMethodTypeAuthorization captures enum value "authorization"
-	CustomerCollectPaymentRequestPaymentMethodTypeAuthorization string = "authorization"
-	// CustomerCollectPaymentRequestPaymentMethodTypePayment captures enum value "payment"
-	CustomerCollectPaymentRequestPaymentMethodTypePayment string = "payment"
-	// CustomerCollectPaymentRequestPaymentMethodTypeRefund captures enum value "refund"
-	CustomerCollectPaymentRequestPaymentMethodTypeRefund string = "refund"
-	// CustomerCollectPaymentRequestPaymentMethodTypePaymentReversal captures enum value "payment_reversal"
-	CustomerCollectPaymentRequestPaymentMethodTypePaymentReversal string = "payment_reversal"
+	// CustomerCollectPaymentRequestPaymentMethodTypeCard captures enum value "card"
+	CustomerCollectPaymentRequestPaymentMethodTypeCard string = "card"
+	// CustomerCollectPaymentRequestPaymentMethodTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	CustomerCollectPaymentRequestPaymentMethodTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// CustomerCollectPaymentRequestPaymentMethodTypeAmazonPayments captures enum value "amazon_payments"
+	CustomerCollectPaymentRequestPaymentMethodTypeAmazonPayments string = "amazon_payments"
+	// CustomerCollectPaymentRequestPaymentMethodTypeDirectDebit captures enum value "direct_debit"
+	CustomerCollectPaymentRequestPaymentMethodTypeDirectDebit string = "direct_debit"
+	// CustomerCollectPaymentRequestPaymentMethodTypeGeneric captures enum value "generic"
+	CustomerCollectPaymentRequestPaymentMethodTypeGeneric string = "generic"
+	// CustomerCollectPaymentRequestPaymentMethodTypeAlipay captures enum value "alipay"
+	CustomerCollectPaymentRequestPaymentMethodTypeAlipay string = "alipay"
+	// CustomerCollectPaymentRequestPaymentMethodTypeUnionpay captures enum value "unionpay"
+	CustomerCollectPaymentRequestPaymentMethodTypeUnionpay string = "unionpay"
+	// CustomerCollectPaymentRequestPaymentMethodTypeApplePay captures enum value "apple_pay"
+	CustomerCollectPaymentRequestPaymentMethodTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

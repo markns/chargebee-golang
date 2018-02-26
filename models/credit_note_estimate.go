@@ -312,7 +312,7 @@ var creditNoteEstimateTypeTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -321,14 +321,22 @@ func init() {
 }
 
 const (
-	// CreditNoteEstimateTypeAuthorization captures enum value "authorization"
-	CreditNoteEstimateTypeAuthorization string = "authorization"
-	// CreditNoteEstimateTypePayment captures enum value "payment"
-	CreditNoteEstimateTypePayment string = "payment"
-	// CreditNoteEstimateTypeRefund captures enum value "refund"
-	CreditNoteEstimateTypeRefund string = "refund"
-	// CreditNoteEstimateTypePaymentReversal captures enum value "payment_reversal"
-	CreditNoteEstimateTypePaymentReversal string = "payment_reversal"
+	// CreditNoteEstimateTypeCard captures enum value "card"
+	CreditNoteEstimateTypeCard string = "card"
+	// CreditNoteEstimateTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	CreditNoteEstimateTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// CreditNoteEstimateTypeAmazonPayments captures enum value "amazon_payments"
+	CreditNoteEstimateTypeAmazonPayments string = "amazon_payments"
+	// CreditNoteEstimateTypeDirectDebit captures enum value "direct_debit"
+	CreditNoteEstimateTypeDirectDebit string = "direct_debit"
+	// CreditNoteEstimateTypeGeneric captures enum value "generic"
+	CreditNoteEstimateTypeGeneric string = "generic"
+	// CreditNoteEstimateTypeAlipay captures enum value "alipay"
+	CreditNoteEstimateTypeAlipay string = "alipay"
+	// CreditNoteEstimateTypeUnionpay captures enum value "unionpay"
+	CreditNoteEstimateTypeUnionpay string = "unionpay"
+	// CreditNoteEstimateTypeApplePay captures enum value "apple_pay"
+	CreditNoteEstimateTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

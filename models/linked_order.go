@@ -70,7 +70,7 @@ var linkedOrderTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -79,18 +79,16 @@ func init() {
 }
 
 const (
-	// LinkedOrderStatusInProgress captures enum value "in_progress"
-	LinkedOrderStatusInProgress string = "in_progress"
-	// LinkedOrderStatusSuccess captures enum value "success"
-	LinkedOrderStatusSuccess string = "success"
-	// LinkedOrderStatusVoided captures enum value "voided"
-	LinkedOrderStatusVoided string = "voided"
-	// LinkedOrderStatusFailure captures enum value "failure"
-	LinkedOrderStatusFailure string = "failure"
-	// LinkedOrderStatusTimeout captures enum value "timeout"
-	LinkedOrderStatusTimeout string = "timeout"
-	// LinkedOrderStatusNeedsAttention captures enum value "needs_attention"
-	LinkedOrderStatusNeedsAttention string = "needs_attention"
+	// LinkedOrderStatusFuture captures enum value "future"
+	LinkedOrderStatusFuture string = "future"
+	// LinkedOrderStatusInTrial captures enum value "in_trial"
+	LinkedOrderStatusInTrial string = "in_trial"
+	// LinkedOrderStatusActive captures enum value "active"
+	LinkedOrderStatusActive string = "active"
+	// LinkedOrderStatusNonRenewing captures enum value "non_renewing"
+	LinkedOrderStatusNonRenewing string = "non_renewing"
+	// LinkedOrderStatusCancelled captures enum value "cancelled"
+	LinkedOrderStatusCancelled string = "cancelled"
 )
 
 // prop value enum

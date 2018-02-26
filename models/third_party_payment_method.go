@@ -166,7 +166,7 @@ var thirdPartyPaymentMethodTypeTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -175,14 +175,22 @@ func init() {
 }
 
 const (
-	// ThirdPartyPaymentMethodTypeAuthorization captures enum value "authorization"
-	ThirdPartyPaymentMethodTypeAuthorization string = "authorization"
-	// ThirdPartyPaymentMethodTypePayment captures enum value "payment"
-	ThirdPartyPaymentMethodTypePayment string = "payment"
-	// ThirdPartyPaymentMethodTypeRefund captures enum value "refund"
-	ThirdPartyPaymentMethodTypeRefund string = "refund"
-	// ThirdPartyPaymentMethodTypePaymentReversal captures enum value "payment_reversal"
-	ThirdPartyPaymentMethodTypePaymentReversal string = "payment_reversal"
+	// ThirdPartyPaymentMethodTypeCard captures enum value "card"
+	ThirdPartyPaymentMethodTypeCard string = "card"
+	// ThirdPartyPaymentMethodTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	ThirdPartyPaymentMethodTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// ThirdPartyPaymentMethodTypeAmazonPayments captures enum value "amazon_payments"
+	ThirdPartyPaymentMethodTypeAmazonPayments string = "amazon_payments"
+	// ThirdPartyPaymentMethodTypeDirectDebit captures enum value "direct_debit"
+	ThirdPartyPaymentMethodTypeDirectDebit string = "direct_debit"
+	// ThirdPartyPaymentMethodTypeGeneric captures enum value "generic"
+	ThirdPartyPaymentMethodTypeGeneric string = "generic"
+	// ThirdPartyPaymentMethodTypeAlipay captures enum value "alipay"
+	ThirdPartyPaymentMethodTypeAlipay string = "alipay"
+	// ThirdPartyPaymentMethodTypeUnionpay captures enum value "unionpay"
+	ThirdPartyPaymentMethodTypeUnionpay string = "unionpay"
+	// ThirdPartyPaymentMethodTypeApplePay captures enum value "apple_pay"
+	ThirdPartyPaymentMethodTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

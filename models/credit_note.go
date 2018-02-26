@@ -498,7 +498,7 @@ var creditNoteTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -507,18 +507,16 @@ func init() {
 }
 
 const (
-	// CreditNoteStatusInProgress captures enum value "in_progress"
-	CreditNoteStatusInProgress string = "in_progress"
-	// CreditNoteStatusSuccess captures enum value "success"
-	CreditNoteStatusSuccess string = "success"
-	// CreditNoteStatusVoided captures enum value "voided"
-	CreditNoteStatusVoided string = "voided"
-	// CreditNoteStatusFailure captures enum value "failure"
-	CreditNoteStatusFailure string = "failure"
-	// CreditNoteStatusTimeout captures enum value "timeout"
-	CreditNoteStatusTimeout string = "timeout"
-	// CreditNoteStatusNeedsAttention captures enum value "needs_attention"
-	CreditNoteStatusNeedsAttention string = "needs_attention"
+	// CreditNoteStatusFuture captures enum value "future"
+	CreditNoteStatusFuture string = "future"
+	// CreditNoteStatusInTrial captures enum value "in_trial"
+	CreditNoteStatusInTrial string = "in_trial"
+	// CreditNoteStatusActive captures enum value "active"
+	CreditNoteStatusActive string = "active"
+	// CreditNoteStatusNonRenewing captures enum value "non_renewing"
+	CreditNoteStatusNonRenewing string = "non_renewing"
+	// CreditNoteStatusCancelled captures enum value "cancelled"
+	CreditNoteStatusCancelled string = "cancelled"
 )
 
 // prop value enum
@@ -574,7 +572,7 @@ var creditNoteTypeTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -583,14 +581,22 @@ func init() {
 }
 
 const (
-	// CreditNoteTypeAuthorization captures enum value "authorization"
-	CreditNoteTypeAuthorization string = "authorization"
-	// CreditNoteTypePayment captures enum value "payment"
-	CreditNoteTypePayment string = "payment"
-	// CreditNoteTypeRefund captures enum value "refund"
-	CreditNoteTypeRefund string = "refund"
-	// CreditNoteTypePaymentReversal captures enum value "payment_reversal"
-	CreditNoteTypePaymentReversal string = "payment_reversal"
+	// CreditNoteTypeCard captures enum value "card"
+	CreditNoteTypeCard string = "card"
+	// CreditNoteTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	CreditNoteTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// CreditNoteTypeAmazonPayments captures enum value "amazon_payments"
+	CreditNoteTypeAmazonPayments string = "amazon_payments"
+	// CreditNoteTypeDirectDebit captures enum value "direct_debit"
+	CreditNoteTypeDirectDebit string = "direct_debit"
+	// CreditNoteTypeGeneric captures enum value "generic"
+	CreditNoteTypeGeneric string = "generic"
+	// CreditNoteTypeAlipay captures enum value "alipay"
+	CreditNoteTypeAlipay string = "alipay"
+	// CreditNoteTypeUnionpay captures enum value "unionpay"
+	CreditNoteTypeUnionpay string = "unionpay"
+	// CreditNoteTypeApplePay captures enum value "apple_pay"
+	CreditNoteTypeApplePay string = "apple_pay"
 )
 
 // prop value enum

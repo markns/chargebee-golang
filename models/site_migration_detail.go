@@ -75,7 +75,7 @@ var siteMigrationDetailTypeEntityTypePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["plan_setup","plan","addon","adhoc"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["customer","subscription","invoice","credit_note","transaction","plan","addon","coupon"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -84,14 +84,22 @@ func init() {
 }
 
 const (
-	// SiteMigrationDetailEntityTypePlanSetup captures enum value "plan_setup"
-	SiteMigrationDetailEntityTypePlanSetup string = "plan_setup"
+	// SiteMigrationDetailEntityTypeCustomer captures enum value "customer"
+	SiteMigrationDetailEntityTypeCustomer string = "customer"
+	// SiteMigrationDetailEntityTypeSubscription captures enum value "subscription"
+	SiteMigrationDetailEntityTypeSubscription string = "subscription"
+	// SiteMigrationDetailEntityTypeInvoice captures enum value "invoice"
+	SiteMigrationDetailEntityTypeInvoice string = "invoice"
+	// SiteMigrationDetailEntityTypeCreditNote captures enum value "credit_note"
+	SiteMigrationDetailEntityTypeCreditNote string = "credit_note"
+	// SiteMigrationDetailEntityTypeTransaction captures enum value "transaction"
+	SiteMigrationDetailEntityTypeTransaction string = "transaction"
 	// SiteMigrationDetailEntityTypePlan captures enum value "plan"
 	SiteMigrationDetailEntityTypePlan string = "plan"
 	// SiteMigrationDetailEntityTypeAddon captures enum value "addon"
 	SiteMigrationDetailEntityTypeAddon string = "addon"
-	// SiteMigrationDetailEntityTypeAdhoc captures enum value "adhoc"
-	SiteMigrationDetailEntityTypeAdhoc string = "adhoc"
+	// SiteMigrationDetailEntityTypeCoupon captures enum value "coupon"
+	SiteMigrationDetailEntityTypeCoupon string = "coupon"
 )
 
 // prop value enum
@@ -120,7 +128,7 @@ var siteMigrationDetailTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -129,18 +137,16 @@ func init() {
 }
 
 const (
-	// SiteMigrationDetailStatusInProgress captures enum value "in_progress"
-	SiteMigrationDetailStatusInProgress string = "in_progress"
-	// SiteMigrationDetailStatusSuccess captures enum value "success"
-	SiteMigrationDetailStatusSuccess string = "success"
-	// SiteMigrationDetailStatusVoided captures enum value "voided"
-	SiteMigrationDetailStatusVoided string = "voided"
-	// SiteMigrationDetailStatusFailure captures enum value "failure"
-	SiteMigrationDetailStatusFailure string = "failure"
-	// SiteMigrationDetailStatusTimeout captures enum value "timeout"
-	SiteMigrationDetailStatusTimeout string = "timeout"
-	// SiteMigrationDetailStatusNeedsAttention captures enum value "needs_attention"
-	SiteMigrationDetailStatusNeedsAttention string = "needs_attention"
+	// SiteMigrationDetailStatusFuture captures enum value "future"
+	SiteMigrationDetailStatusFuture string = "future"
+	// SiteMigrationDetailStatusInTrial captures enum value "in_trial"
+	SiteMigrationDetailStatusInTrial string = "in_trial"
+	// SiteMigrationDetailStatusActive captures enum value "active"
+	SiteMigrationDetailStatusActive string = "active"
+	// SiteMigrationDetailStatusNonRenewing captures enum value "non_renewing"
+	SiteMigrationDetailStatusNonRenewing string = "non_renewing"
+	// SiteMigrationDetailStatusCancelled captures enum value "cancelled"
+	SiteMigrationDetailStatusCancelled string = "cancelled"
 )
 
 // prop value enum

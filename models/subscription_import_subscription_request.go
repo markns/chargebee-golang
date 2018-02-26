@@ -943,7 +943,7 @@ var subscriptionImportSubscriptionRequestTypePaymentMethodTypePropEnum []interfa
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["authorization","payment","refund","payment_reversal"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["card","paypal_express_checkout","amazon_payments","direct_debit","generic","alipay","unionpay","apple_pay"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -952,14 +952,22 @@ func init() {
 }
 
 const (
-	// SubscriptionImportSubscriptionRequestPaymentMethodTypeAuthorization captures enum value "authorization"
-	SubscriptionImportSubscriptionRequestPaymentMethodTypeAuthorization string = "authorization"
-	// SubscriptionImportSubscriptionRequestPaymentMethodTypePayment captures enum value "payment"
-	SubscriptionImportSubscriptionRequestPaymentMethodTypePayment string = "payment"
-	// SubscriptionImportSubscriptionRequestPaymentMethodTypeRefund captures enum value "refund"
-	SubscriptionImportSubscriptionRequestPaymentMethodTypeRefund string = "refund"
-	// SubscriptionImportSubscriptionRequestPaymentMethodTypePaymentReversal captures enum value "payment_reversal"
-	SubscriptionImportSubscriptionRequestPaymentMethodTypePaymentReversal string = "payment_reversal"
+	// SubscriptionImportSubscriptionRequestPaymentMethodTypeCard captures enum value "card"
+	SubscriptionImportSubscriptionRequestPaymentMethodTypeCard string = "card"
+	// SubscriptionImportSubscriptionRequestPaymentMethodTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
+	SubscriptionImportSubscriptionRequestPaymentMethodTypePaypalExpressCheckout string = "paypal_express_checkout"
+	// SubscriptionImportSubscriptionRequestPaymentMethodTypeAmazonPayments captures enum value "amazon_payments"
+	SubscriptionImportSubscriptionRequestPaymentMethodTypeAmazonPayments string = "amazon_payments"
+	// SubscriptionImportSubscriptionRequestPaymentMethodTypeDirectDebit captures enum value "direct_debit"
+	SubscriptionImportSubscriptionRequestPaymentMethodTypeDirectDebit string = "direct_debit"
+	// SubscriptionImportSubscriptionRequestPaymentMethodTypeGeneric captures enum value "generic"
+	SubscriptionImportSubscriptionRequestPaymentMethodTypeGeneric string = "generic"
+	// SubscriptionImportSubscriptionRequestPaymentMethodTypeAlipay captures enum value "alipay"
+	SubscriptionImportSubscriptionRequestPaymentMethodTypeAlipay string = "alipay"
+	// SubscriptionImportSubscriptionRequestPaymentMethodTypeUnionpay captures enum value "unionpay"
+	SubscriptionImportSubscriptionRequestPaymentMethodTypeUnionpay string = "unionpay"
+	// SubscriptionImportSubscriptionRequestPaymentMethodTypeApplePay captures enum value "apple_pay"
+	SubscriptionImportSubscriptionRequestPaymentMethodTypeApplePay string = "apple_pay"
 )
 
 // prop value enum
@@ -1033,7 +1041,7 @@ var subscriptionImportSubscriptionRequestTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -1042,18 +1050,16 @@ func init() {
 }
 
 const (
-	// SubscriptionImportSubscriptionRequestStatusInProgress captures enum value "in_progress"
-	SubscriptionImportSubscriptionRequestStatusInProgress string = "in_progress"
-	// SubscriptionImportSubscriptionRequestStatusSuccess captures enum value "success"
-	SubscriptionImportSubscriptionRequestStatusSuccess string = "success"
-	// SubscriptionImportSubscriptionRequestStatusVoided captures enum value "voided"
-	SubscriptionImportSubscriptionRequestStatusVoided string = "voided"
-	// SubscriptionImportSubscriptionRequestStatusFailure captures enum value "failure"
-	SubscriptionImportSubscriptionRequestStatusFailure string = "failure"
-	// SubscriptionImportSubscriptionRequestStatusTimeout captures enum value "timeout"
-	SubscriptionImportSubscriptionRequestStatusTimeout string = "timeout"
-	// SubscriptionImportSubscriptionRequestStatusNeedsAttention captures enum value "needs_attention"
-	SubscriptionImportSubscriptionRequestStatusNeedsAttention string = "needs_attention"
+	// SubscriptionImportSubscriptionRequestStatusFuture captures enum value "future"
+	SubscriptionImportSubscriptionRequestStatusFuture string = "future"
+	// SubscriptionImportSubscriptionRequestStatusInTrial captures enum value "in_trial"
+	SubscriptionImportSubscriptionRequestStatusInTrial string = "in_trial"
+	// SubscriptionImportSubscriptionRequestStatusActive captures enum value "active"
+	SubscriptionImportSubscriptionRequestStatusActive string = "active"
+	// SubscriptionImportSubscriptionRequestStatusNonRenewing captures enum value "non_renewing"
+	SubscriptionImportSubscriptionRequestStatusNonRenewing string = "non_renewing"
+	// SubscriptionImportSubscriptionRequestStatusCancelled captures enum value "cancelled"
+	SubscriptionImportSubscriptionRequestStatusCancelled string = "cancelled"
 )
 
 // prop value enum

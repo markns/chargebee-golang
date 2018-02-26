@@ -60,7 +60,7 @@ var linkedRefundTypeTxnStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -69,18 +69,16 @@ func init() {
 }
 
 const (
-	// LinkedRefundTxnStatusInProgress captures enum value "in_progress"
-	LinkedRefundTxnStatusInProgress string = "in_progress"
-	// LinkedRefundTxnStatusSuccess captures enum value "success"
-	LinkedRefundTxnStatusSuccess string = "success"
-	// LinkedRefundTxnStatusVoided captures enum value "voided"
-	LinkedRefundTxnStatusVoided string = "voided"
-	// LinkedRefundTxnStatusFailure captures enum value "failure"
-	LinkedRefundTxnStatusFailure string = "failure"
-	// LinkedRefundTxnStatusTimeout captures enum value "timeout"
-	LinkedRefundTxnStatusTimeout string = "timeout"
-	// LinkedRefundTxnStatusNeedsAttention captures enum value "needs_attention"
-	LinkedRefundTxnStatusNeedsAttention string = "needs_attention"
+	// LinkedRefundTxnStatusFuture captures enum value "future"
+	LinkedRefundTxnStatusFuture string = "future"
+	// LinkedRefundTxnStatusInTrial captures enum value "in_trial"
+	LinkedRefundTxnStatusInTrial string = "in_trial"
+	// LinkedRefundTxnStatusActive captures enum value "active"
+	LinkedRefundTxnStatusActive string = "active"
+	// LinkedRefundTxnStatusNonRenewing captures enum value "non_renewing"
+	LinkedRefundTxnStatusNonRenewing string = "non_renewing"
+	// LinkedRefundTxnStatusCancelled captures enum value "cancelled"
+	LinkedRefundTxnStatusCancelled string = "cancelled"
 )
 
 // prop value enum

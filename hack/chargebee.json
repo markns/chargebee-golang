@@ -108,12 +108,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -128,10 +127,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 },
@@ -218,10 +221,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 },
@@ -395,12 +402,11 @@
                 },
                 "cn_status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -430,12 +436,11 @@
                 },
                 "invoice_status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 }
@@ -488,12 +493,11 @@
                 },
                 "cn_status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 }
@@ -839,10 +843,14 @@
                 },
                 "entity_type": {
                     "enum": [
-                        "plan_setup",
+                        "customer",
+                        "subscription",
+                        "invoice",
+                        "credit_note",
+                        "transaction",
                         "plan",
                         "addon",
-                        "adhoc"
+                        "coupon"
                     ],
                     "type": "string"
                 },
@@ -854,10 +862,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 }
@@ -874,10 +886,14 @@
                 },
                 "entity_type": {
                     "enum": [
-                        "plan_setup",
+                        "customer",
+                        "subscription",
+                        "invoice",
+                        "credit_note",
+                        "transaction",
                         "plan",
                         "addon",
-                        "adhoc"
+                        "coupon"
                     ],
                     "type": "string"
                 },
@@ -962,12 +978,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 }
@@ -1105,12 +1120,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -1308,12 +1322,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -1336,10 +1349,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 },
@@ -1391,10 +1408,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 }
@@ -1472,10 +1493,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 }
@@ -1883,10 +1908,14 @@
                 },
                 "payment_method[type]": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 },
@@ -2160,10 +2189,14 @@
                 },
                 "payment_method[type]": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 },
@@ -2445,10 +2478,14 @@
                 },
                 "payment_method[type]": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 }
@@ -2559,10 +2596,14 @@
                 },
                 "entity_type": {
                     "enum": [
-                        "plan_setup",
+                        "customer",
+                        "subscription",
+                        "invoice",
+                        "credit_note",
+                        "transaction",
                         "plan",
                         "addon",
-                        "adhoc"
+                        "coupon"
                     ],
                     "type": "string"
                 }
@@ -3253,10 +3294,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 },
@@ -4034,12 +4079,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -4486,12 +4530,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -4548,12 +4591,11 @@
                 },
                 "transaction[status]": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 }
@@ -4806,12 +4848,11 @@
                 },
                 "cn_status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -4848,10 +4889,14 @@
                 },
                 "entity_type": {
                     "enum": [
-                        "plan_setup",
+                        "customer",
+                        "subscription",
+                        "invoice",
+                        "credit_note",
+                        "transaction",
                         "plan",
                         "addon",
-                        "adhoc"
+                        "coupon"
                     ],
                     "type": "string"
                 },
@@ -4997,12 +5042,11 @@
                 },
                 "cn_status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -5052,12 +5096,11 @@
                 },
                 "invoice_status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -5088,12 +5131,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 }
@@ -5123,12 +5165,11 @@
                 },
                 "txn_status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 }
@@ -5150,12 +5191,11 @@
                 },
                 "txn_status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 }
@@ -5169,10 +5209,14 @@
                 },
                 "entity_type": {
                     "enum": [
-                        "plan_setup",
+                        "customer",
+                        "subscription",
+                        "invoice",
+                        "credit_note",
+                        "transaction",
                         "plan",
                         "addon",
-                        "adhoc"
+                        "coupon"
                     ],
                     "type": "string"
                 },
@@ -5211,12 +5255,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -5252,12 +5295,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -5291,12 +5333,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -5353,21 +5394,24 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 }
@@ -5445,21 +5489,24 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 }
@@ -5540,10 +5587,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 }
@@ -5569,10 +5620,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 }
@@ -5678,8 +5733,8 @@
                 },
                 "charge_model": {
                     "enum": [
-                        "flat_fee",
-                        "per_unit"
+                        "full_charge",
+                        "prorate"
                     ],
                     "type": "string"
                 },
@@ -5746,12 +5801,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -5816,8 +5870,8 @@
                 },
                 "charge_model": {
                     "enum": [
-                        "flat_fee",
-                        "per_unit"
+                        "full_charge",
+                        "prorate"
                     ],
                     "type": "string"
                 },
@@ -5884,12 +5938,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -5941,8 +5994,8 @@
                 },
                 "charge_model": {
                     "enum": [
-                        "flat_fee",
-                        "per_unit"
+                        "full_charge",
+                        "prorate"
                     ],
                     "type": "string"
                 },
@@ -6071,12 +6124,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -6155,10 +6207,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 }
@@ -6380,10 +6436,14 @@
                 },
                 "entity_type": {
                     "enum": [
-                        "plan_setup",
+                        "customer",
+                        "subscription",
+                        "invoice",
+                        "credit_note",
+                        "transaction",
                         "plan",
                         "addon",
-                        "adhoc"
+                        "coupon"
                     ],
                     "type": "string"
                 },
@@ -6395,12 +6455,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -6426,10 +6485,14 @@
                 },
                 "entity_type": {
                     "enum": [
-                        "plan_setup",
+                        "customer",
+                        "subscription",
+                        "invoice",
+                        "credit_note",
+                        "transaction",
                         "plan",
                         "addon",
-                        "adhoc"
+                        "coupon"
                     ],
                     "type": "string"
                 },
@@ -6502,10 +6565,14 @@
                 },
                 "entity_type": {
                     "enum": [
-                        "plan_setup",
+                        "customer",
+                        "subscription",
+                        "invoice",
+                        "credit_note",
+                        "transaction",
                         "plan",
                         "addon",
-                        "adhoc"
+                        "coupon"
                     ],
                     "type": "string"
                 },
@@ -6518,12 +6585,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 }
@@ -6701,12 +6767,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -7248,10 +7313,14 @@
                 },
                 "payment_method[type]": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 },
@@ -7353,12 +7422,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 }
@@ -7481,12 +7549,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -7792,10 +7859,14 @@
                 },
                 "payment_method[type]": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 },
@@ -7875,12 +7946,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -8196,10 +8266,14 @@
                 },
                 "payment_method[type]": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 },
@@ -8362,10 +8436,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 }
@@ -8570,12 +8648,11 @@
                 },
                 "status": {
                     "enum": [
-                        "in_progress",
-                        "success",
-                        "voided",
-                        "failure",
-                        "timeout",
-                        "needs_attention"
+                        "future",
+                        "in_trial",
+                        "active",
+                        "non_renewing",
+                        "cancelled"
                     ],
                     "type": "string"
                 },
@@ -8584,10 +8661,14 @@
                 },
                 "type": {
                     "enum": [
-                        "authorization",
-                        "payment",
-                        "refund",
-                        "payment_reversal"
+                        "card",
+                        "paypal_express_checkout",
+                        "amazon_payments",
+                        "direct_debit",
+                        "generic",
+                        "alipay",
+                        "unionpay",
+                        "apple_pay"
                     ],
                     "type": "string"
                 },
@@ -8645,10 +8726,14 @@
                 },
                 "entity_type": {
                     "enum": [
-                        "plan_setup",
+                        "customer",
+                        "subscription",
+                        "invoice",
+                        "credit_note",
+                        "transaction",
                         "plan",
                         "addon",
-                        "adhoc"
+                        "coupon"
                     ],
                     "type": "string"
                 },

@@ -70,7 +70,7 @@ var linkedPaymentTypeTxnStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -79,18 +79,16 @@ func init() {
 }
 
 const (
-	// LinkedPaymentTxnStatusInProgress captures enum value "in_progress"
-	LinkedPaymentTxnStatusInProgress string = "in_progress"
-	// LinkedPaymentTxnStatusSuccess captures enum value "success"
-	LinkedPaymentTxnStatusSuccess string = "success"
-	// LinkedPaymentTxnStatusVoided captures enum value "voided"
-	LinkedPaymentTxnStatusVoided string = "voided"
-	// LinkedPaymentTxnStatusFailure captures enum value "failure"
-	LinkedPaymentTxnStatusFailure string = "failure"
-	// LinkedPaymentTxnStatusTimeout captures enum value "timeout"
-	LinkedPaymentTxnStatusTimeout string = "timeout"
-	// LinkedPaymentTxnStatusNeedsAttention captures enum value "needs_attention"
-	LinkedPaymentTxnStatusNeedsAttention string = "needs_attention"
+	// LinkedPaymentTxnStatusFuture captures enum value "future"
+	LinkedPaymentTxnStatusFuture string = "future"
+	// LinkedPaymentTxnStatusInTrial captures enum value "in_trial"
+	LinkedPaymentTxnStatusInTrial string = "in_trial"
+	// LinkedPaymentTxnStatusActive captures enum value "active"
+	LinkedPaymentTxnStatusActive string = "active"
+	// LinkedPaymentTxnStatusNonRenewing captures enum value "non_renewing"
+	LinkedPaymentTxnStatusNonRenewing string = "non_renewing"
+	// LinkedPaymentTxnStatusCancelled captures enum value "cancelled"
+	LinkedPaymentTxnStatusCancelled string = "cancelled"
 )
 
 // prop value enum

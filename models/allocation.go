@@ -65,7 +65,7 @@ var allocationTypeInvoiceStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -74,18 +74,16 @@ func init() {
 }
 
 const (
-	// AllocationInvoiceStatusInProgress captures enum value "in_progress"
-	AllocationInvoiceStatusInProgress string = "in_progress"
-	// AllocationInvoiceStatusSuccess captures enum value "success"
-	AllocationInvoiceStatusSuccess string = "success"
-	// AllocationInvoiceStatusVoided captures enum value "voided"
-	AllocationInvoiceStatusVoided string = "voided"
-	// AllocationInvoiceStatusFailure captures enum value "failure"
-	AllocationInvoiceStatusFailure string = "failure"
-	// AllocationInvoiceStatusTimeout captures enum value "timeout"
-	AllocationInvoiceStatusTimeout string = "timeout"
-	// AllocationInvoiceStatusNeedsAttention captures enum value "needs_attention"
-	AllocationInvoiceStatusNeedsAttention string = "needs_attention"
+	// AllocationInvoiceStatusFuture captures enum value "future"
+	AllocationInvoiceStatusFuture string = "future"
+	// AllocationInvoiceStatusInTrial captures enum value "in_trial"
+	AllocationInvoiceStatusInTrial string = "in_trial"
+	// AllocationInvoiceStatusActive captures enum value "active"
+	AllocationInvoiceStatusActive string = "active"
+	// AllocationInvoiceStatusNonRenewing captures enum value "non_renewing"
+	AllocationInvoiceStatusNonRenewing string = "non_renewing"
+	// AllocationInvoiceStatusCancelled captures enum value "cancelled"
+	AllocationInvoiceStatusCancelled string = "cancelled"
 )
 
 // prop value enum

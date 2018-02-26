@@ -180,7 +180,7 @@ var planUpdateRequestTypeChargeModelPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["flat_fee","per_unit"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["full_charge","prorate"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -189,10 +189,10 @@ func init() {
 }
 
 const (
-	// PlanUpdateRequestChargeModelFlatFee captures enum value "flat_fee"
-	PlanUpdateRequestChargeModelFlatFee string = "flat_fee"
-	// PlanUpdateRequestChargeModelPerUnit captures enum value "per_unit"
-	PlanUpdateRequestChargeModelPerUnit string = "per_unit"
+	// PlanUpdateRequestChargeModelFullCharge captures enum value "full_charge"
+	PlanUpdateRequestChargeModelFullCharge string = "full_charge"
+	// PlanUpdateRequestChargeModelProrate captures enum value "prorate"
+	PlanUpdateRequestChargeModelProrate string = "prorate"
 )
 
 // prop value enum

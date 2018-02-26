@@ -205,7 +205,7 @@ var planTypeChargeModelPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["flat_fee","per_unit"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["full_charge","prorate"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -214,10 +214,10 @@ func init() {
 }
 
 const (
-	// PlanChargeModelFlatFee captures enum value "flat_fee"
-	PlanChargeModelFlatFee string = "flat_fee"
-	// PlanChargeModelPerUnit captures enum value "per_unit"
-	PlanChargeModelPerUnit string = "per_unit"
+	// PlanChargeModelFullCharge captures enum value "full_charge"
+	PlanChargeModelFullCharge string = "full_charge"
+	// PlanChargeModelProrate captures enum value "prorate"
+	PlanChargeModelProrate string = "prorate"
 )
 
 // prop value enum
@@ -289,7 +289,7 @@ var planTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["future","in_trial","active","non_renewing","cancelled"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -298,18 +298,16 @@ func init() {
 }
 
 const (
-	// PlanStatusInProgress captures enum value "in_progress"
-	PlanStatusInProgress string = "in_progress"
-	// PlanStatusSuccess captures enum value "success"
-	PlanStatusSuccess string = "success"
-	// PlanStatusVoided captures enum value "voided"
-	PlanStatusVoided string = "voided"
-	// PlanStatusFailure captures enum value "failure"
-	PlanStatusFailure string = "failure"
-	// PlanStatusTimeout captures enum value "timeout"
-	PlanStatusTimeout string = "timeout"
-	// PlanStatusNeedsAttention captures enum value "needs_attention"
-	PlanStatusNeedsAttention string = "needs_attention"
+	// PlanStatusFuture captures enum value "future"
+	PlanStatusFuture string = "future"
+	// PlanStatusInTrial captures enum value "in_trial"
+	PlanStatusInTrial string = "in_trial"
+	// PlanStatusActive captures enum value "active"
+	PlanStatusActive string = "active"
+	// PlanStatusNonRenewing captures enum value "non_renewing"
+	PlanStatusNonRenewing string = "non_renewing"
+	// PlanStatusCancelled captures enum value "cancelled"
+	PlanStatusCancelled string = "cancelled"
 )
 
 // prop value enum
