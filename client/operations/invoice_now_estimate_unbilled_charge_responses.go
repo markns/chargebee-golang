@@ -47,7 +47,7 @@ func NewInvoiceNowEstimateUnbilledChargeOK() *InvoiceNowEstimateUnbilledChargeOK
 invoiceNowEstimateUnbilledCharge response
 */
 type InvoiceNowEstimateUnbilledChargeOK struct {
-	Payload *models.UnbilledCharge
+	Payload *models.UnbilledChargeResponse
 }
 
 func (o *InvoiceNowEstimateUnbilledChargeOK) Error() string {
@@ -56,7 +56,7 @@ func (o *InvoiceNowEstimateUnbilledChargeOK) Error() string {
 
 func (o *InvoiceNowEstimateUnbilledChargeOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.UnbilledCharge)
+	o.Payload = new(models.UnbilledChargeResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

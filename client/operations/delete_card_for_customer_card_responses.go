@@ -47,7 +47,7 @@ func NewDeleteCardForCustomerCardOK() *DeleteCardForCustomerCardOK {
 deleteCardForCustomerCard response
 */
 type DeleteCardForCustomerCardOK struct {
-	Payload *models.Card
+	Payload *models.CardResponse
 }
 
 func (o *DeleteCardForCustomerCardOK) Error() string {
@@ -56,7 +56,7 @@ func (o *DeleteCardForCustomerCardOK) Error() string {
 
 func (o *DeleteCardForCustomerCardOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Card)
+	o.Payload = new(models.CardResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

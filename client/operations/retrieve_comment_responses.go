@@ -47,7 +47,7 @@ func NewRetrieveCommentOK() *RetrieveCommentOK {
 retrieveComment response
 */
 type RetrieveCommentOK struct {
-	Payload *models.Comment
+	Payload *models.CommentResponse
 }
 
 func (o *RetrieveCommentOK) Error() string {
@@ -56,7 +56,7 @@ func (o *RetrieveCommentOK) Error() string {
 
 func (o *RetrieveCommentOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Comment)
+	o.Payload = new(models.CommentResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

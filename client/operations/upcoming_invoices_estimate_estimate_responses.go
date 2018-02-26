@@ -47,7 +47,7 @@ func NewUpcomingInvoicesEstimateEstimateOK() *UpcomingInvoicesEstimateEstimateOK
 upcomingInvoicesEstimateEstimate response
 */
 type UpcomingInvoicesEstimateEstimateOK struct {
-	Payload *models.Estimate
+	Payload *models.EstimateResponse
 }
 
 func (o *UpcomingInvoicesEstimateEstimateOK) Error() string {
@@ -56,7 +56,7 @@ func (o *UpcomingInvoicesEstimateEstimateOK) Error() string {
 
 func (o *UpcomingInvoicesEstimateEstimateOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Estimate)
+	o.Payload = new(models.EstimateResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

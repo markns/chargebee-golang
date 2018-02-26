@@ -47,7 +47,7 @@ func NewDeleteUnbilledChargeOK() *DeleteUnbilledChargeOK {
 deleteUnbilledCharge response
 */
 type DeleteUnbilledChargeOK struct {
-	Payload *models.UnbilledCharge
+	Payload *models.UnbilledChargeResponse
 }
 
 func (o *DeleteUnbilledChargeOK) Error() string {
@@ -56,7 +56,7 @@ func (o *DeleteUnbilledChargeOK) Error() string {
 
 func (o *DeleteUnbilledChargeOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.UnbilledCharge)
+	o.Payload = new(models.UnbilledChargeResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

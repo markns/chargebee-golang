@@ -47,7 +47,7 @@ func NewDeletePlanOK() *DeletePlanOK {
 deletePlan response
 */
 type DeletePlanOK struct {
-	Payload *models.Plan
+	Payload *models.PlanResponse
 }
 
 func (o *DeletePlanOK) Error() string {
@@ -56,7 +56,7 @@ func (o *DeletePlanOK) Error() string {
 
 func (o *DeletePlanOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Plan)
+	o.Payload = new(models.PlanResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

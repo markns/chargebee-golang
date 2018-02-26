@@ -47,7 +47,7 @@ func NewRetrieveAddressOK() *RetrieveAddressOK {
 retrieveAddress response
 */
 type RetrieveAddressOK struct {
-	Payload *models.Address
+	Payload *models.AddressResponse
 }
 
 func (o *RetrieveAddressOK) Error() string {
@@ -56,7 +56,7 @@ func (o *RetrieveAddressOK) Error() string {
 
 func (o *RetrieveAddressOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Address)
+	o.Payload = new(models.AddressResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

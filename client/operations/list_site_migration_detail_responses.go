@@ -47,7 +47,7 @@ func NewListSiteMigrationDetailOK() *ListSiteMigrationDetailOK {
 listSiteMigrationDetail response
 */
 type ListSiteMigrationDetailOK struct {
-	Payload *models.SiteMigrationDetail
+	Payload *models.SiteMigrationDetailResponse
 }
 
 func (o *ListSiteMigrationDetailOK) Error() string {
@@ -56,7 +56,7 @@ func (o *ListSiteMigrationDetailOK) Error() string {
 
 func (o *ListSiteMigrationDetailOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.SiteMigrationDetail)
+	o.Payload = new(models.SiteMigrationDetailResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

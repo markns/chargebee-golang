@@ -47,7 +47,7 @@ func NewCreateSubscriptionEstimateOK() *CreateSubscriptionEstimateOK {
 createSubscriptionEstimate response
 */
 type CreateSubscriptionEstimateOK struct {
-	Payload *models.Estimate
+	Payload *models.EstimateResponse
 }
 
 func (o *CreateSubscriptionEstimateOK) Error() string {
@@ -56,7 +56,7 @@ func (o *CreateSubscriptionEstimateOK) Error() string {
 
 func (o *CreateSubscriptionEstimateOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Estimate)
+	o.Payload = new(models.EstimateResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

@@ -47,7 +47,7 @@ func NewRetrieveTransactionOK() *RetrieveTransactionOK {
 retrieveTransaction response
 */
 type RetrieveTransactionOK struct {
-	Payload *models.Transaction
+	Payload *models.TransactionResponse
 }
 
 func (o *RetrieveTransactionOK) Error() string {
@@ -56,7 +56,7 @@ func (o *RetrieveTransactionOK) Error() string {
 
 func (o *RetrieveTransactionOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Transaction)
+	o.Payload = new(models.TransactionResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

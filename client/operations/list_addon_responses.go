@@ -47,7 +47,7 @@ func NewListAddonOK() *ListAddonOK {
 listAddon response
 */
 type ListAddonOK struct {
-	Payload *models.Addon
+	Payload *models.AddonResponse
 }
 
 func (o *ListAddonOK) Error() string {
@@ -56,7 +56,7 @@ func (o *ListAddonOK) Error() string {
 
 func (o *ListAddonOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Addon)
+	o.Payload = new(models.AddonResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

@@ -47,7 +47,7 @@ func NewRetrieveCouponCodeOK() *RetrieveCouponCodeOK {
 retrieveCouponCode response
 */
 type RetrieveCouponCodeOK struct {
-	Payload *models.CouponCode
+	Payload *models.CouponCodeResponse
 }
 
 func (o *RetrieveCouponCodeOK) Error() string {
@@ -56,7 +56,7 @@ func (o *RetrieveCouponCodeOK) Error() string {
 
 func (o *RetrieveCouponCodeOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.CouponCode)
+	o.Payload = new(models.CouponCodeResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

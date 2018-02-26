@@ -47,7 +47,7 @@ func NewPaymentsForInvoiceTransactionOK() *PaymentsForInvoiceTransactionOK {
 paymentsForInvoiceTransaction response
 */
 type PaymentsForInvoiceTransactionOK struct {
-	Payload *models.Transaction
+	Payload *models.TransactionResponse
 }
 
 func (o *PaymentsForInvoiceTransactionOK) Error() string {
@@ -56,7 +56,7 @@ func (o *PaymentsForInvoiceTransactionOK) Error() string {
 
 func (o *PaymentsForInvoiceTransactionOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Transaction)
+	o.Payload = new(models.TransactionResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

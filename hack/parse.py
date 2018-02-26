@@ -109,12 +109,12 @@ def process_operation(resource, method_decl: tree.MethodDeclaration):
             "200": {
                 "description": "{} response".format(operation['operationId']),
                 "schema": {
-                    "$ref": "#/definitions/{}".format(resource)
+                    "$ref": "#/definitions/{}".format(resource + "Response")
                 }
             }
         }
 
-    return uri, method, operation
+    return uri, method, operation, resource
 
 
 def process_field(meth: tree.MethodDeclaration):
@@ -148,6 +148,8 @@ def process_resource(resource: tree.ClassDeclaration):
     paths = defaultdict(dict)
     definitions = defaultdict(lambda: dict(type='object', properties=dict()))
 
+    responses = []
+
     for child in resource.body:
         if isinstance(child, tree.EnumDeclaration):
             enum_name, enum_values = process_enum(child)
@@ -156,8 +158,9 @@ def process_resource(resource: tree.ClassDeclaration):
             process_constructor(child)
         elif isinstance(child, tree.MethodDeclaration):
             if 'Request' in child.return_type.name:
-                url, method, operation = process_operation(resource.name, child)
+                url, method, operation, response = process_operation(resource.name, child)
                 paths[url][method] = operation
+                responses.append(response)
             else:
                 try:
                     prop_name, props = process_field(child)
@@ -176,6 +179,13 @@ def process_resource(resource: tree.ClassDeclaration):
             elif child.extends.name == 'ListRequest':
                 # TODO: List requests?
                 process_list_request(child)
+
+    for response in responses:
+        definitions[response + 'Response']['properties'] = {
+            response.lower(): {
+                "$ref": "#/definitions/{}".format(response)
+            }
+        }
 
     return enums, paths, definitions
 
@@ -289,7 +299,7 @@ def main(chargebee_java_path):
         },
     }
     # TODO: Remove deprecated
-    print(json.dumps(swagger, indent=4, separators=(',', ': ')),
+    print(json.dumps(swagger, indent=4, separators=(',', ': '), sort_keys=True),
           file=sys.stderr)
 
 

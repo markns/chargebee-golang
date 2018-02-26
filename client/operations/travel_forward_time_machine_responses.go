@@ -47,7 +47,7 @@ func NewTravelForwardTimeMachineOK() *TravelForwardTimeMachineOK {
 travelForwardTimeMachine response
 */
 type TravelForwardTimeMachineOK struct {
-	Payload *models.TimeMachine
+	Payload *models.TimeMachineResponse
 }
 
 func (o *TravelForwardTimeMachineOK) Error() string {
@@ -56,7 +56,7 @@ func (o *TravelForwardTimeMachineOK) Error() string {
 
 func (o *TravelForwardTimeMachineOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.TimeMachine)
+	o.Payload = new(models.TimeMachineResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

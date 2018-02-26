@@ -47,7 +47,7 @@ func NewDeleteSubscriptionOK() *DeleteSubscriptionOK {
 deleteSubscription response
 */
 type DeleteSubscriptionOK struct {
-	Payload *models.Subscription
+	Payload *models.SubscriptionResponse
 }
 
 func (o *DeleteSubscriptionOK) Error() string {
@@ -56,7 +56,7 @@ func (o *DeleteSubscriptionOK) Error() string {
 
 func (o *DeleteSubscriptionOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Subscription)
+	o.Payload = new(models.SubscriptionResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

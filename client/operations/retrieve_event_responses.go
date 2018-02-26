@@ -47,7 +47,7 @@ func NewRetrieveEventOK() *RetrieveEventOK {
 retrieveEvent response
 */
 type RetrieveEventOK struct {
-	Payload *models.Event
+	Payload *models.EventResponse
 }
 
 func (o *RetrieveEventOK) Error() string {
@@ -56,7 +56,7 @@ func (o *RetrieveEventOK) Error() string {
 
 func (o *RetrieveEventOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Event)
+	o.Payload = new(models.EventResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

@@ -47,7 +47,7 @@ func NewSubscriptionsForCustomerSubscriptionOK() *SubscriptionsForCustomerSubscr
 subscriptionsForCustomerSubscription response
 */
 type SubscriptionsForCustomerSubscriptionOK struct {
-	Payload *models.Subscription
+	Payload *models.SubscriptionResponse
 }
 
 func (o *SubscriptionsForCustomerSubscriptionOK) Error() string {
@@ -56,7 +56,7 @@ func (o *SubscriptionsForCustomerSubscriptionOK) Error() string {
 
 func (o *SubscriptionsForCustomerSubscriptionOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Subscription)
+	o.Payload = new(models.SubscriptionResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

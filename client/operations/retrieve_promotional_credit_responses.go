@@ -47,7 +47,7 @@ func NewRetrievePromotionalCreditOK() *RetrievePromotionalCreditOK {
 retrievePromotionalCredit response
 */
 type RetrievePromotionalCreditOK struct {
-	Payload *models.PromotionalCredit
+	Payload *models.PromotionalCreditResponse
 }
 
 func (o *RetrievePromotionalCreditOK) Error() string {
@@ -56,7 +56,7 @@ func (o *RetrievePromotionalCreditOK) Error() string {
 
 func (o *RetrievePromotionalCreditOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.PromotionalCredit)
+	o.Payload = new(models.PromotionalCreditResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

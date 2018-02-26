@@ -47,7 +47,7 @@ func NewUpdateCardPaymentSourceOK() *UpdateCardPaymentSourceOK {
 updateCardPaymentSource response
 */
 type UpdateCardPaymentSourceOK struct {
-	Payload *models.PaymentSource
+	Payload *models.PaymentSourceResponse
 }
 
 func (o *UpdateCardPaymentSourceOK) Error() string {
@@ -56,7 +56,7 @@ func (o *UpdateCardPaymentSourceOK) Error() string {
 
 func (o *UpdateCardPaymentSourceOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.PaymentSource)
+	o.Payload = new(models.PaymentSourceResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

@@ -47,7 +47,7 @@ func NewVoidCreditNoteCreditNoteOK() *VoidCreditNoteCreditNoteOK {
 voidCreditNoteCreditNote response
 */
 type VoidCreditNoteCreditNoteOK struct {
-	Payload *models.CreditNote
+	Payload *models.CreditNoteResponse
 }
 
 func (o *VoidCreditNoteCreditNoteOK) Error() string {
@@ -56,7 +56,7 @@ func (o *VoidCreditNoteCreditNoteOK) Error() string {
 
 func (o *VoidCreditNoteCreditNoteOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.CreditNote)
+	o.Payload = new(models.CreditNoteResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

@@ -47,7 +47,7 @@ func NewAcknowledgeHostedPageOK() *AcknowledgeHostedPageOK {
 acknowledgeHostedPage response
 */
 type AcknowledgeHostedPageOK struct {
-	Payload *models.HostedPage
+	Payload *models.HostedPageResponse
 }
 
 func (o *AcknowledgeHostedPageOK) Error() string {
@@ -56,7 +56,7 @@ func (o *AcknowledgeHostedPageOK) Error() string {
 
 func (o *AcknowledgeHostedPageOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.HostedPage)
+	o.Payload = new(models.HostedPageResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

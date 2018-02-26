@@ -47,7 +47,7 @@ func NewUpdateAddressOK() *UpdateAddressOK {
 updateAddress response
 */
 type UpdateAddressOK struct {
-	Payload *models.Address
+	Payload *models.AddressResponse
 }
 
 func (o *UpdateAddressOK) Error() string {
@@ -56,7 +56,7 @@ func (o *UpdateAddressOK) Error() string {
 
 func (o *UpdateAddressOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Address)
+	o.Payload = new(models.AddressResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

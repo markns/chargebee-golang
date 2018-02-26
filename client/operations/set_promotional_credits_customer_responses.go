@@ -47,7 +47,7 @@ func NewSetPromotionalCreditsCustomerOK() *SetPromotionalCreditsCustomerOK {
 setPromotionalCreditsCustomer response
 */
 type SetPromotionalCreditsCustomerOK struct {
-	Payload *models.Customer
+	Payload *models.CustomerResponse
 }
 
 func (o *SetPromotionalCreditsCustomerOK) Error() string {
@@ -56,7 +56,7 @@ func (o *SetPromotionalCreditsCustomerOK) Error() string {
 
 func (o *SetPromotionalCreditsCustomerOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Customer)
+	o.Payload = new(models.CustomerResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

@@ -47,7 +47,7 @@ func NewCreateUsingPermanentTokenPaymentSourceOK() *CreateUsingPermanentTokenPay
 createUsingPermanentTokenPaymentSource response
 */
 type CreateUsingPermanentTokenPaymentSourceOK struct {
-	Payload *models.PaymentSource
+	Payload *models.PaymentSourceResponse
 }
 
 func (o *CreateUsingPermanentTokenPaymentSourceOK) Error() string {
@@ -56,7 +56,7 @@ func (o *CreateUsingPermanentTokenPaymentSourceOK) Error() string {
 
 func (o *CreateUsingPermanentTokenPaymentSourceOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.PaymentSource)
+	o.Payload = new(models.PaymentSourceResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

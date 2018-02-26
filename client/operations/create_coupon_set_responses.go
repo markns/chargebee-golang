@@ -47,7 +47,7 @@ func NewCreateCouponSetOK() *CreateCouponSetOK {
 createCouponSet response
 */
 type CreateCouponSetOK struct {
-	Payload *models.CouponSet
+	Payload *models.CouponSetResponse
 }
 
 func (o *CreateCouponSetOK) Error() string {
@@ -56,7 +56,7 @@ func (o *CreateCouponSetOK) Error() string {
 
 func (o *CreateCouponSetOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.CouponSet)
+	o.Payload = new(models.CouponSetResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

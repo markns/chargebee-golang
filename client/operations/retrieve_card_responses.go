@@ -47,7 +47,7 @@ func NewRetrieveCardOK() *RetrieveCardOK {
 retrieveCard response
 */
 type RetrieveCardOK struct {
-	Payload *models.Card
+	Payload *models.CardResponse
 }
 
 func (o *RetrieveCardOK) Error() string {
@@ -56,7 +56,7 @@ func (o *RetrieveCardOK) Error() string {
 
 func (o *RetrieveCardOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Card)
+	o.Payload = new(models.CardResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

@@ -47,7 +47,7 @@ func NewListTransactionOK() *ListTransactionOK {
 listTransaction response
 */
 type ListTransactionOK struct {
-	Payload *models.Transaction
+	Payload *models.TransactionResponse
 }
 
 func (o *ListTransactionOK) Error() string {
@@ -56,7 +56,7 @@ func (o *ListTransactionOK) Error() string {
 
 func (o *ListTransactionOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Transaction)
+	o.Payload = new(models.TransactionResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

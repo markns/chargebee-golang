@@ -47,7 +47,7 @@ func NewCreateCommentOK() *CreateCommentOK {
 createComment response
 */
 type CreateCommentOK struct {
-	Payload *models.Comment
+	Payload *models.CommentResponse
 }
 
 func (o *CreateCommentOK) Error() string {
@@ -56,7 +56,7 @@ func (o *CreateCommentOK) Error() string {
 
 func (o *CreateCommentOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Comment)
+	o.Payload = new(models.CommentResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

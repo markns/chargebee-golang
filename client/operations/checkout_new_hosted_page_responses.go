@@ -47,7 +47,7 @@ func NewCheckoutNewHostedPageOK() *CheckoutNewHostedPageOK {
 checkoutNewHostedPage response
 */
 type CheckoutNewHostedPageOK struct {
-	Payload *models.HostedPage
+	Payload *models.HostedPageResponse
 }
 
 func (o *CheckoutNewHostedPageOK) Error() string {
@@ -56,7 +56,7 @@ func (o *CheckoutNewHostedPageOK) Error() string {
 
 func (o *CheckoutNewHostedPageOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.HostedPage)
+	o.Payload = new(models.HostedPageResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

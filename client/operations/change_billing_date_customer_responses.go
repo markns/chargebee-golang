@@ -47,7 +47,7 @@ func NewChangeBillingDateCustomerOK() *ChangeBillingDateCustomerOK {
 changeBillingDateCustomer response
 */
 type ChangeBillingDateCustomerOK struct {
-	Payload *models.Customer
+	Payload *models.CustomerResponse
 }
 
 func (o *ChangeBillingDateCustomerOK) Error() string {
@@ -56,7 +56,7 @@ func (o *ChangeBillingDateCustomerOK) Error() string {
 
 func (o *ChangeBillingDateCustomerOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Customer)
+	o.Payload = new(models.CustomerResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

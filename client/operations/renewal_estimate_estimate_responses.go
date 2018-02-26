@@ -47,7 +47,7 @@ func NewRenewalEstimateEstimateOK() *RenewalEstimateEstimateOK {
 renewalEstimateEstimate response
 */
 type RenewalEstimateEstimateOK struct {
-	Payload *models.Estimate
+	Payload *models.EstimateResponse
 }
 
 func (o *RenewalEstimateEstimateOK) Error() string {
@@ -56,7 +56,7 @@ func (o *RenewalEstimateEstimateOK) Error() string {
 
 func (o *RenewalEstimateEstimateOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Estimate)
+	o.Payload = new(models.EstimateResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

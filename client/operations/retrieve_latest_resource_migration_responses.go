@@ -47,7 +47,7 @@ func NewRetrieveLatestResourceMigrationOK() *RetrieveLatestResourceMigrationOK {
 retrieveLatestResourceMigration response
 */
 type RetrieveLatestResourceMigrationOK struct {
-	Payload *models.ResourceMigration
+	Payload *models.ResourceMigrationResponse
 }
 
 func (o *RetrieveLatestResourceMigrationOK) Error() string {
@@ -56,7 +56,7 @@ func (o *RetrieveLatestResourceMigrationOK) Error() string {
 
 func (o *RetrieveLatestResourceMigrationOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.ResourceMigration)
+	o.Payload = new(models.ResourceMigrationResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

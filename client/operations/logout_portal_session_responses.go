@@ -47,7 +47,7 @@ func NewLogoutPortalSessionOK() *LogoutPortalSessionOK {
 logoutPortalSession response
 */
 type LogoutPortalSessionOK struct {
-	Payload *models.PortalSession
+	Payload *models.PortalSessionResponse
 }
 
 func (o *LogoutPortalSessionOK) Error() string {
@@ -56,7 +56,7 @@ func (o *LogoutPortalSessionOK) Error() string {
 
 func (o *LogoutPortalSessionOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.PortalSession)
+	o.Payload = new(models.PortalSessionResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

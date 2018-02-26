@@ -47,7 +47,7 @@ func NewChargeAddonInvoiceOK() *ChargeAddonInvoiceOK {
 chargeAddonInvoice response
 */
 type ChargeAddonInvoiceOK struct {
-	Payload *models.Invoice
+	Payload *models.InvoiceResponse
 }
 
 func (o *ChargeAddonInvoiceOK) Error() string {
@@ -56,7 +56,7 @@ func (o *ChargeAddonInvoiceOK) Error() string {
 
 func (o *ChargeAddonInvoiceOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Invoice)
+	o.Payload = new(models.InvoiceResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

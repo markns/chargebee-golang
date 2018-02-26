@@ -47,7 +47,7 @@ func NewDeductPromotionalCreditsCustomerOK() *DeductPromotionalCreditsCustomerOK
 deductPromotionalCreditsCustomer response
 */
 type DeductPromotionalCreditsCustomerOK struct {
-	Payload *models.Customer
+	Payload *models.CustomerResponse
 }
 
 func (o *DeductPromotionalCreditsCustomerOK) Error() string {
@@ -56,7 +56,7 @@ func (o *DeductPromotionalCreditsCustomerOK) Error() string {
 
 func (o *DeductPromotionalCreditsCustomerOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Customer)
+	o.Payload = new(models.CustomerResponse)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
