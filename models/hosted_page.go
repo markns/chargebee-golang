@@ -32,9 +32,6 @@ type HostedPage struct {
 	// expires at
 	ExpiresAt int64 `json:"expires_at,omitempty"`
 
-	// failure reason
-	FailureReason string `json:"failure_reason,omitempty"`
-
 	// id
 	ID string `json:"id,omitempty"`
 
@@ -65,8 +62,6 @@ type HostedPage struct {
 
 /* polymorph HostedPage expires_at false */
 
-/* polymorph HostedPage failure_reason false */
-
 /* polymorph HostedPage id false */
 
 /* polymorph HostedPage pass_thru_content false */
@@ -85,11 +80,6 @@ type HostedPage struct {
 func (m *HostedPage) Validate(formats strfmt.Registry) error {
 	var res []error
 
-	if err := m.validateFailureReason(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
 	if err := m.validateState(formats); err != nil {
 		// prop
 		res = append(res, err)
@@ -103,47 +93,6 @@ func (m *HostedPage) Validate(formats strfmt.Registry) error {
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
-	return nil
-}
-
-var hostedPageTypeFailureReasonPropEnum []interface{}
-
-func init() {
-	var res []string
-	if err := json.Unmarshal([]byte(`["card_error","server_error"]`), &res); err != nil {
-		panic(err)
-	}
-	for _, v := range res {
-		hostedPageTypeFailureReasonPropEnum = append(hostedPageTypeFailureReasonPropEnum, v)
-	}
-}
-
-const (
-	// HostedPageFailureReasonCardError captures enum value "card_error"
-	HostedPageFailureReasonCardError string = "card_error"
-	// HostedPageFailureReasonServerError captures enum value "server_error"
-	HostedPageFailureReasonServerError string = "server_error"
-)
-
-// prop value enum
-func (m *HostedPage) validateFailureReasonEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, hostedPageTypeFailureReasonPropEnum); err != nil {
-		return err
-	}
-	return nil
-}
-
-func (m *HostedPage) validateFailureReason(formats strfmt.Registry) error {
-
-	if swag.IsZero(m.FailureReason) { // not required
-		return nil
-	}
-
-	// value enum
-	if err := m.validateFailureReasonEnum("failure_reason", "body", m.FailureReason); err != nil {
-		return err
-	}
-
 	return nil
 }
 

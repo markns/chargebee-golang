@@ -8,8 +8,12 @@ package operations
 import (
 	"fmt"
 	"io"
+	"strconv"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
+	"github.com/go-openapi/swag"
+	"github.com/go-openapi/validate"
 
 	strfmt "github.com/go-openapi/strfmt"
 
@@ -47,7 +51,7 @@ func NewTransactionsForSubscriptionTransactionOK() *TransactionsForSubscriptionT
 transactionsForSubscriptionTransaction response
 */
 type TransactionsForSubscriptionTransactionOK struct {
-	Payload *models.TransactionResponse
+	Payload TransactionsForSubscriptionTransactionOKBody
 }
 
 func (o *TransactionsForSubscriptionTransactionOK) Error() string {
@@ -56,12 +60,103 @@ func (o *TransactionsForSubscriptionTransactionOK) Error() string {
 
 func (o *TransactionsForSubscriptionTransactionOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.TransactionResponse)
-
 	// response payload
-	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
+	return nil
+}
+
+/*TransactionsForSubscriptionTransactionOKBody transactions for subscription transaction o k body
+swagger:model TransactionsForSubscriptionTransactionOKBody
+*/
+
+type TransactionsForSubscriptionTransactionOKBody struct {
+
+	// list
+	// Required: true
+	List []*models.TransactionResponse `json:"list"`
+
+	// next offset
+	// Required: true
+	NextOffset *string `json:"next_offset"`
+}
+
+/* polymorph TransactionsForSubscriptionTransactionOKBody list false */
+
+/* polymorph TransactionsForSubscriptionTransactionOKBody next_offset false */
+
+// Validate validates this transactions for subscription transaction o k body
+func (o *TransactionsForSubscriptionTransactionOKBody) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateList(formats); err != nil {
+		// prop
+		res = append(res, err)
+	}
+
+	if err := o.validateNextOffset(formats); err != nil {
+		// prop
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *TransactionsForSubscriptionTransactionOKBody) validateList(formats strfmt.Registry) error {
+
+	if err := validate.Required("transactionsForSubscriptionTransactionOK"+"."+"list", "body", o.List); err != nil {
+		return err
+	}
+
+	for i := 0; i < len(o.List); i++ {
+
+		if swag.IsZero(o.List[i]) { // not required
+			continue
+		}
+
+		if o.List[i] != nil {
+
+			if err := o.List[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("transactionsForSubscriptionTransactionOK" + "." + "list" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+func (o *TransactionsForSubscriptionTransactionOKBody) validateNextOffset(formats strfmt.Registry) error {
+
+	if err := validate.Required("transactionsForSubscriptionTransactionOK"+"."+"next_offset", "body", o.NextOffset); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *TransactionsForSubscriptionTransactionOKBody) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *TransactionsForSubscriptionTransactionOKBody) UnmarshalBinary(b []byte) error {
+	var res TransactionsForSubscriptionTransactionOKBody
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
 	return nil
 }

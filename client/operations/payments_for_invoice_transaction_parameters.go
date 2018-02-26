@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -64,6 +65,10 @@ type PaymentsForInvoiceTransactionParams struct {
 
 	/*ID*/
 	ID string
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
 
 	timeout    time.Duration
 	Context    context.Context
@@ -114,6 +119,28 @@ func (o *PaymentsForInvoiceTransactionParams) SetID(id string) {
 	o.ID = id
 }
 
+// WithLimit adds the limit to the payments for invoice transaction params
+func (o *PaymentsForInvoiceTransactionParams) WithLimit(limit *int32) *PaymentsForInvoiceTransactionParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the payments for invoice transaction params
+func (o *PaymentsForInvoiceTransactionParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the payments for invoice transaction params
+func (o *PaymentsForInvoiceTransactionParams) WithOffset(offset *string) *PaymentsForInvoiceTransactionParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the payments for invoice transaction params
+func (o *PaymentsForInvoiceTransactionParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *PaymentsForInvoiceTransactionParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -125,6 +152,38 @@ func (o *PaymentsForInvoiceTransactionParams) WriteToRequest(r runtime.ClientReq
 	// path param id
 	if err := r.SetPathParam("id", o.ID); err != nil {
 		return err
+	}
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
 	}
 
 	if len(res) > 0 {

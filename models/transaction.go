@@ -76,7 +76,7 @@ type Transaction struct {
 	MaskedCardNumber string `json:"masked_card_number,omitempty"`
 
 	// payment method
-	PaymentMethod string `json:"payment_method,omitempty"`
+	PaymentMethod *PaymentMethod `json:"payment_method,omitempty"`
 
 	// payment source id
 	PaymentSourceID string `json:"payment_source_id,omitempty"`
@@ -452,62 +452,20 @@ func (m *Transaction) validateLinkedRefunds(formats strfmt.Registry) error {
 	return nil
 }
 
-var transactionTypePaymentMethodPropEnum []interface{}
-
-func init() {
-	var res []string
-	if err := json.Unmarshal([]byte(`["card","cash","check","chargeback","bank_transfer","amazon_payments","paypal_express_checkout","direct_debit","alipay","unionpay","apple_pay","other"]`), &res); err != nil {
-		panic(err)
-	}
-	for _, v := range res {
-		transactionTypePaymentMethodPropEnum = append(transactionTypePaymentMethodPropEnum, v)
-	}
-}
-
-const (
-	// TransactionPaymentMethodCard captures enum value "card"
-	TransactionPaymentMethodCard string = "card"
-	// TransactionPaymentMethodCash captures enum value "cash"
-	TransactionPaymentMethodCash string = "cash"
-	// TransactionPaymentMethodCheck captures enum value "check"
-	TransactionPaymentMethodCheck string = "check"
-	// TransactionPaymentMethodChargeback captures enum value "chargeback"
-	TransactionPaymentMethodChargeback string = "chargeback"
-	// TransactionPaymentMethodBankTransfer captures enum value "bank_transfer"
-	TransactionPaymentMethodBankTransfer string = "bank_transfer"
-	// TransactionPaymentMethodAmazonPayments captures enum value "amazon_payments"
-	TransactionPaymentMethodAmazonPayments string = "amazon_payments"
-	// TransactionPaymentMethodPaypalExpressCheckout captures enum value "paypal_express_checkout"
-	TransactionPaymentMethodPaypalExpressCheckout string = "paypal_express_checkout"
-	// TransactionPaymentMethodDirectDebit captures enum value "direct_debit"
-	TransactionPaymentMethodDirectDebit string = "direct_debit"
-	// TransactionPaymentMethodAlipay captures enum value "alipay"
-	TransactionPaymentMethodAlipay string = "alipay"
-	// TransactionPaymentMethodUnionpay captures enum value "unionpay"
-	TransactionPaymentMethodUnionpay string = "unionpay"
-	// TransactionPaymentMethodApplePay captures enum value "apple_pay"
-	TransactionPaymentMethodApplePay string = "apple_pay"
-	// TransactionPaymentMethodOther captures enum value "other"
-	TransactionPaymentMethodOther string = "other"
-)
-
-// prop value enum
-func (m *Transaction) validatePaymentMethodEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, transactionTypePaymentMethodPropEnum); err != nil {
-		return err
-	}
-	return nil
-}
-
 func (m *Transaction) validatePaymentMethod(formats strfmt.Registry) error {
 
 	if swag.IsZero(m.PaymentMethod) { // not required
 		return nil
 	}
 
-	// value enum
-	if err := m.validatePaymentMethodEnum("payment_method", "body", m.PaymentMethod); err != nil {
-		return err
+	if m.PaymentMethod != nil {
+
+		if err := m.PaymentMethod.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("payment_method")
+			}
+			return err
+		}
 	}
 
 	return nil

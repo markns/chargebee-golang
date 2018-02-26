@@ -8,8 +8,12 @@ package operations
 import (
 	"fmt"
 	"io"
+	"strconv"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
+	"github.com/go-openapi/swag"
+	"github.com/go-openapi/validate"
 
 	strfmt "github.com/go-openapi/strfmt"
 
@@ -47,7 +51,7 @@ func NewListCustomerOK() *ListCustomerOK {
 listCustomer response
 */
 type ListCustomerOK struct {
-	Payload *models.CustomerResponse
+	Payload ListCustomerOKBody
 }
 
 func (o *ListCustomerOK) Error() string {
@@ -56,12 +60,103 @@ func (o *ListCustomerOK) Error() string {
 
 func (o *ListCustomerOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.CustomerResponse)
-
 	// response payload
-	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
+	return nil
+}
+
+/*ListCustomerOKBody list customer o k body
+swagger:model ListCustomerOKBody
+*/
+
+type ListCustomerOKBody struct {
+
+	// list
+	// Required: true
+	List []*models.CustomerResponse `json:"list"`
+
+	// next offset
+	// Required: true
+	NextOffset *string `json:"next_offset"`
+}
+
+/* polymorph ListCustomerOKBody list false */
+
+/* polymorph ListCustomerOKBody next_offset false */
+
+// Validate validates this list customer o k body
+func (o *ListCustomerOKBody) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateList(formats); err != nil {
+		// prop
+		res = append(res, err)
+	}
+
+	if err := o.validateNextOffset(formats); err != nil {
+		// prop
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *ListCustomerOKBody) validateList(formats strfmt.Registry) error {
+
+	if err := validate.Required("listCustomerOK"+"."+"list", "body", o.List); err != nil {
+		return err
+	}
+
+	for i := 0; i < len(o.List); i++ {
+
+		if swag.IsZero(o.List[i]) { // not required
+			continue
+		}
+
+		if o.List[i] != nil {
+
+			if err := o.List[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("listCustomerOK" + "." + "list" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+func (o *ListCustomerOKBody) validateNextOffset(formats strfmt.Registry) error {
+
+	if err := validate.Required("listCustomerOK"+"."+"next_offset", "body", o.NextOffset); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *ListCustomerOKBody) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *ListCustomerOKBody) UnmarshalBinary(b []byte) error {
+	var res ListCustomerOKBody
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
 	return nil
 }

@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListSiteMigrationDetailParams creates a new ListSiteMigrationDetailParams object
 // with the default values initialized.
 func NewListSiteMigrationDetailParams() *ListSiteMigrationDetailParams {
-
+	var ()
 	return &ListSiteMigrationDetailParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListSiteMigrationDetailParams() *ListSiteMigrationDetailParams {
 // NewListSiteMigrationDetailParamsWithTimeout creates a new ListSiteMigrationDetailParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListSiteMigrationDetailParamsWithTimeout(timeout time.Duration) *ListSiteMigrationDetailParams {
-
+	var ()
 	return &ListSiteMigrationDetailParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListSiteMigrationDetailParamsWithTimeout(timeout time.Duration) *ListSit
 // NewListSiteMigrationDetailParamsWithContext creates a new ListSiteMigrationDetailParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListSiteMigrationDetailParamsWithContext(ctx context.Context) *ListSiteMigrationDetailParams {
-
+	var ()
 	return &ListSiteMigrationDetailParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListSiteMigrationDetailParamsWithContext(ctx context.Context) *ListSiteM
 // NewListSiteMigrationDetailParamsWithHTTPClient creates a new ListSiteMigrationDetailParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListSiteMigrationDetailParamsWithHTTPClient(client *http.Client) *ListSiteMigrationDetailParams {
-
+	var ()
 	return &ListSiteMigrationDetailParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListSiteMigrationDetailParamsWithHTTPClient(client *http.Client) *ListSi
 for the list site migration detail operation typically these are written to a http.Request
 */
 type ListSiteMigrationDetailParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListSiteMigrationDetailParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list site migration detail params
+func (o *ListSiteMigrationDetailParams) WithLimit(limit *int32) *ListSiteMigrationDetailParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list site migration detail params
+func (o *ListSiteMigrationDetailParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list site migration detail params
+func (o *ListSiteMigrationDetailParams) WithOffset(offset *string) *ListSiteMigrationDetailParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list site migration detail params
+func (o *ListSiteMigrationDetailParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListSiteMigrationDetailParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListSiteMigrationDetailParams) WriteToRequest(r runtime.ClientRequest, 
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

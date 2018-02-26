@@ -39,12 +39,6 @@ type Event struct {
 	// user
 	User string `json:"user,omitempty"`
 
-	// webhook failure reason
-	WebhookFailureReason string `json:"webhook_failure_reason,omitempty"`
-
-	// webhook status
-	WebhookStatus string `json:"webhook_status,omitempty"`
-
 	// webhooks
 	Webhooks []*Webhook `json:"webhooks"`
 }
@@ -60,10 +54,6 @@ type Event struct {
 /* polymorph Event source false */
 
 /* polymorph Event user false */
-
-/* polymorph Event webhook_failure_reason false */
-
-/* polymorph Event webhook_status false */
 
 /* polymorph Event webhooks false */
 
@@ -82,11 +72,6 @@ func (m *Event) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateSource(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
-	if err := m.validateWebhookStatus(formats); err != nil {
 		// prop
 		res = append(res, err)
 	}
@@ -367,57 +352,6 @@ func (m *Event) validateSource(formats strfmt.Registry) error {
 
 	// value enum
 	if err := m.validateSourceEnum("source", "body", m.Source); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-var eventTypeWebhookStatusPropEnum []interface{}
-
-func init() {
-	var res []string
-	if err := json.Unmarshal([]byte(`["not_configured","scheduled","succeeded","re_scheduled","failed","skipped","not_applicable"]`), &res); err != nil {
-		panic(err)
-	}
-	for _, v := range res {
-		eventTypeWebhookStatusPropEnum = append(eventTypeWebhookStatusPropEnum, v)
-	}
-}
-
-const (
-	// EventWebhookStatusNotConfigured captures enum value "not_configured"
-	EventWebhookStatusNotConfigured string = "not_configured"
-	// EventWebhookStatusScheduled captures enum value "scheduled"
-	EventWebhookStatusScheduled string = "scheduled"
-	// EventWebhookStatusSucceeded captures enum value "succeeded"
-	EventWebhookStatusSucceeded string = "succeeded"
-	// EventWebhookStatusReScheduled captures enum value "re_scheduled"
-	EventWebhookStatusReScheduled string = "re_scheduled"
-	// EventWebhookStatusFailed captures enum value "failed"
-	EventWebhookStatusFailed string = "failed"
-	// EventWebhookStatusSkipped captures enum value "skipped"
-	EventWebhookStatusSkipped string = "skipped"
-	// EventWebhookStatusNotApplicable captures enum value "not_applicable"
-	EventWebhookStatusNotApplicable string = "not_applicable"
-)
-
-// prop value enum
-func (m *Event) validateWebhookStatusEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, eventTypeWebhookStatusPropEnum); err != nil {
-		return err
-	}
-	return nil
-}
-
-func (m *Event) validateWebhookStatus(formats strfmt.Registry) error {
-
-	if swag.IsZero(m.WebhookStatus) { // not required
-		return nil
-	}
-
-	// value enum
-	if err := m.validateWebhookStatusEnum("webhook_status", "body", m.WebhookStatus); err != nil {
 		return err
 	}
 

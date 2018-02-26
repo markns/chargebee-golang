@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListInvoiceParams creates a new ListInvoiceParams object
 // with the default values initialized.
 func NewListInvoiceParams() *ListInvoiceParams {
-
+	var ()
 	return &ListInvoiceParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListInvoiceParams() *ListInvoiceParams {
 // NewListInvoiceParamsWithTimeout creates a new ListInvoiceParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListInvoiceParamsWithTimeout(timeout time.Duration) *ListInvoiceParams {
-
+	var ()
 	return &ListInvoiceParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListInvoiceParamsWithTimeout(timeout time.Duration) *ListInvoiceParams {
 // NewListInvoiceParamsWithContext creates a new ListInvoiceParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListInvoiceParamsWithContext(ctx context.Context) *ListInvoiceParams {
-
+	var ()
 	return &ListInvoiceParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListInvoiceParamsWithContext(ctx context.Context) *ListInvoiceParams {
 // NewListInvoiceParamsWithHTTPClient creates a new ListInvoiceParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListInvoiceParamsWithHTTPClient(client *http.Client) *ListInvoiceParams {
-
+	var ()
 	return &ListInvoiceParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListInvoiceParamsWithHTTPClient(client *http.Client) *ListInvoiceParams 
 for the list invoice operation typically these are written to a http.Request
 */
 type ListInvoiceParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListInvoiceParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list invoice params
+func (o *ListInvoiceParams) WithLimit(limit *int32) *ListInvoiceParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list invoice params
+func (o *ListInvoiceParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list invoice params
+func (o *ListInvoiceParams) WithOffset(offset *string) *ListInvoiceParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list invoice params
+func (o *ListInvoiceParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListInvoiceParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListInvoiceParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.R
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListCustomerParams creates a new ListCustomerParams object
 // with the default values initialized.
 func NewListCustomerParams() *ListCustomerParams {
-
+	var ()
 	return &ListCustomerParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListCustomerParams() *ListCustomerParams {
 // NewListCustomerParamsWithTimeout creates a new ListCustomerParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListCustomerParamsWithTimeout(timeout time.Duration) *ListCustomerParams {
-
+	var ()
 	return &ListCustomerParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListCustomerParamsWithTimeout(timeout time.Duration) *ListCustomerParams
 // NewListCustomerParamsWithContext creates a new ListCustomerParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListCustomerParamsWithContext(ctx context.Context) *ListCustomerParams {
-
+	var ()
 	return &ListCustomerParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListCustomerParamsWithContext(ctx context.Context) *ListCustomerParams {
 // NewListCustomerParamsWithHTTPClient creates a new ListCustomerParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListCustomerParamsWithHTTPClient(client *http.Client) *ListCustomerParams {
-
+	var ()
 	return &ListCustomerParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListCustomerParamsWithHTTPClient(client *http.Client) *ListCustomerParam
 for the list customer operation typically these are written to a http.Request
 */
 type ListCustomerParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListCustomerParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list customer params
+func (o *ListCustomerParams) WithLimit(limit *int32) *ListCustomerParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list customer params
+func (o *ListCustomerParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list customer params
+func (o *ListCustomerParams) WithOffset(offset *string) *ListCustomerParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list customer params
+func (o *ListCustomerParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListCustomerParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListCustomerParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

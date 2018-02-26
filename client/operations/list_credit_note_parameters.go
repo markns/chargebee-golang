@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListCreditNoteParams creates a new ListCreditNoteParams object
 // with the default values initialized.
 func NewListCreditNoteParams() *ListCreditNoteParams {
-
+	var ()
 	return &ListCreditNoteParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListCreditNoteParams() *ListCreditNoteParams {
 // NewListCreditNoteParamsWithTimeout creates a new ListCreditNoteParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListCreditNoteParamsWithTimeout(timeout time.Duration) *ListCreditNoteParams {
-
+	var ()
 	return &ListCreditNoteParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListCreditNoteParamsWithTimeout(timeout time.Duration) *ListCreditNotePa
 // NewListCreditNoteParamsWithContext creates a new ListCreditNoteParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListCreditNoteParamsWithContext(ctx context.Context) *ListCreditNoteParams {
-
+	var ()
 	return &ListCreditNoteParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListCreditNoteParamsWithContext(ctx context.Context) *ListCreditNotePara
 // NewListCreditNoteParamsWithHTTPClient creates a new ListCreditNoteParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListCreditNoteParamsWithHTTPClient(client *http.Client) *ListCreditNoteParams {
-
+	var ()
 	return &ListCreditNoteParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListCreditNoteParamsWithHTTPClient(client *http.Client) *ListCreditNoteP
 for the list credit note operation typically these are written to a http.Request
 */
 type ListCreditNoteParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListCreditNoteParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list credit note params
+func (o *ListCreditNoteParams) WithLimit(limit *int32) *ListCreditNoteParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list credit note params
+func (o *ListCreditNoteParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list credit note params
+func (o *ListCreditNoteParams) WithOffset(offset *string) *ListCreditNoteParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list credit note params
+func (o *ListCreditNoteParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListCreditNoteParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListCreditNoteParams) WriteToRequest(r runtime.ClientRequest, reg strfm
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

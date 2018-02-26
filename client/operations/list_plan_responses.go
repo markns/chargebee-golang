@@ -8,8 +8,12 @@ package operations
 import (
 	"fmt"
 	"io"
+	"strconv"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
+	"github.com/go-openapi/swag"
+	"github.com/go-openapi/validate"
 
 	strfmt "github.com/go-openapi/strfmt"
 
@@ -47,7 +51,7 @@ func NewListPlanOK() *ListPlanOK {
 listPlan response
 */
 type ListPlanOK struct {
-	Payload *models.PlanResponse
+	Payload ListPlanOKBody
 }
 
 func (o *ListPlanOK) Error() string {
@@ -56,12 +60,103 @@ func (o *ListPlanOK) Error() string {
 
 func (o *ListPlanOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.PlanResponse)
-
 	// response payload
-	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
+	return nil
+}
+
+/*ListPlanOKBody list plan o k body
+swagger:model ListPlanOKBody
+*/
+
+type ListPlanOKBody struct {
+
+	// list
+	// Required: true
+	List []*models.PlanResponse `json:"list"`
+
+	// next offset
+	// Required: true
+	NextOffset *string `json:"next_offset"`
+}
+
+/* polymorph ListPlanOKBody list false */
+
+/* polymorph ListPlanOKBody next_offset false */
+
+// Validate validates this list plan o k body
+func (o *ListPlanOKBody) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateList(formats); err != nil {
+		// prop
+		res = append(res, err)
+	}
+
+	if err := o.validateNextOffset(formats); err != nil {
+		// prop
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *ListPlanOKBody) validateList(formats strfmt.Registry) error {
+
+	if err := validate.Required("listPlanOK"+"."+"list", "body", o.List); err != nil {
+		return err
+	}
+
+	for i := 0; i < len(o.List); i++ {
+
+		if swag.IsZero(o.List[i]) { // not required
+			continue
+		}
+
+		if o.List[i] != nil {
+
+			if err := o.List[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("listPlanOK" + "." + "list" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+func (o *ListPlanOKBody) validateNextOffset(formats strfmt.Registry) error {
+
+	if err := validate.Required("listPlanOK"+"."+"next_offset", "body", o.NextOffset); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *ListPlanOKBody) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *ListPlanOKBody) UnmarshalBinary(b []byte) error {
+	var res ListPlanOKBody
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
 	return nil
 }

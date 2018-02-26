@@ -8,8 +8,12 @@ package operations
 import (
 	"fmt"
 	"io"
+	"strconv"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
+	"github.com/go-openapi/swag"
+	"github.com/go-openapi/validate"
 
 	strfmt "github.com/go-openapi/strfmt"
 
@@ -47,7 +51,7 @@ func NewListSubscriptionOK() *ListSubscriptionOK {
 listSubscription response
 */
 type ListSubscriptionOK struct {
-	Payload *models.SubscriptionResponse
+	Payload ListSubscriptionOKBody
 }
 
 func (o *ListSubscriptionOK) Error() string {
@@ -56,12 +60,103 @@ func (o *ListSubscriptionOK) Error() string {
 
 func (o *ListSubscriptionOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.SubscriptionResponse)
-
 	// response payload
-	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
+	return nil
+}
+
+/*ListSubscriptionOKBody list subscription o k body
+swagger:model ListSubscriptionOKBody
+*/
+
+type ListSubscriptionOKBody struct {
+
+	// list
+	// Required: true
+	List []*models.SubscriptionResponse `json:"list"`
+
+	// next offset
+	// Required: true
+	NextOffset *string `json:"next_offset"`
+}
+
+/* polymorph ListSubscriptionOKBody list false */
+
+/* polymorph ListSubscriptionOKBody next_offset false */
+
+// Validate validates this list subscription o k body
+func (o *ListSubscriptionOKBody) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateList(formats); err != nil {
+		// prop
+		res = append(res, err)
+	}
+
+	if err := o.validateNextOffset(formats); err != nil {
+		// prop
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *ListSubscriptionOKBody) validateList(formats strfmt.Registry) error {
+
+	if err := validate.Required("listSubscriptionOK"+"."+"list", "body", o.List); err != nil {
+		return err
+	}
+
+	for i := 0; i < len(o.List); i++ {
+
+		if swag.IsZero(o.List[i]) { // not required
+			continue
+		}
+
+		if o.List[i] != nil {
+
+			if err := o.List[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("listSubscriptionOK" + "." + "list" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+func (o *ListSubscriptionOKBody) validateNextOffset(formats strfmt.Registry) error {
+
+	if err := validate.Required("listSubscriptionOK"+"."+"next_offset", "body", o.NextOffset); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *ListSubscriptionOKBody) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *ListSubscriptionOKBody) UnmarshalBinary(b []byte) error {
+	var res ListSubscriptionOKBody
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
 	return nil
 }

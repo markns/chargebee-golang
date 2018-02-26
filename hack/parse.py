@@ -81,25 +81,45 @@ def process_operation(resource, method_decl: tree.MethodDeclaration):
     else:
         method = 'get'
 
-    operation = dict(operationId=method_decl.name + resource, parameters=params)
+    operation = {'operationId': method_decl.name + resource,
+                 'parameters': params}
 
-    if 'ListRequest' in method_decl.return_type:
-        pass
-        # if method_decl.return_type.name != 'ListRequest':
-        #     operation['body_params'] = resource + method_decl.return_type.name
-        # else:
-        #     pass
-        # operation['responses'] = {
-        #     "200": {
-        #         "description":  "{} list response".format(operation['operationId']),
-        #         "schema": {
-        #             "type": "array",
-        #             "items": {
-        #                 "$ref": "#/definitions/{}".format(resource)
-        #             }
-        #         }
-        #     },
-        # }
+    if 'ListRequest' in method_decl.return_type.name:
+        operation['parameters'].extend([
+            {
+                "in": "query",
+                "name": "limit",
+                "format": "int32",
+                "type": "integer"
+            },
+            {
+                "in": "query",
+                "name": "offset",
+                "type": "string"
+            },
+        ])
+        if method_decl.return_type.name != 'ListRequest':
+            operation['body_params'] = resource + method_decl.return_type.name
+
+        operation['responses'] = {
+            "200": {
+                "description": "{} response".format(operation['operationId']),
+                "schema": {
+                    "type": 'object',
+                    "properties": {
+                        "list": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/{}".format(resource + "Response")
+                            },
+                        },
+                        "next_offset": {
+                            "type": "string",
+                        }
+                    }
+                }
+            },
+        }
     else:
         if method_decl.return_type.name != 'Request':
             operation['body_params'] = resource + method_decl.return_type.name
@@ -110,7 +130,7 @@ def process_operation(resource, method_decl: tree.MethodDeclaration):
                 "description": "{} response".format(operation['operationId']),
                 "schema": {
                     "$ref": "#/definitions/{}".format(resource + "Response")
-                }
+                },
             }
         }
 
@@ -163,6 +183,8 @@ def process_resource(resource: tree.ClassDeclaration):
                 responses.append(response)
             else:
                 try:
+                    if len(child.annotations) > 0 and child.annotations[0].name == 'Deprecated':
+                        continue
                     prop_name, props = process_field(child)
                     definitions[resource.name]['properties'][prop_name] = props
                 except AttributeError as e:
@@ -173,6 +195,10 @@ def process_resource(resource: tree.ClassDeclaration):
                 enums.update(sub_enums)
                 paths.update(sub_paths)
                 definitions.update(sub_definitions)
+
+                # enums.update({resource.name + "." + k: v for k, v in sub_enums.items()})
+                # paths.update({resource.name + "." + k: v for k, v in sub_paths.items()})
+                # definitions.update({resource.name + "." + k: v for k, v in sub_definitions.items()})
             elif child.extends.name == 'Request':
                 name, params = process_request(resource.name, child)
                 definitions[name]['properties'].update(params)
@@ -247,12 +273,12 @@ def main(chargebee_java_path):
                 continue
             if prop['type'] in type_map:
                 prop.update(type_map[prop['type']])
-            elif prop['type'] in enums:
-                definition['properties'][key] = enums[prop['type']]
             elif prop['type'] in definitions:
                 definition['properties'][key] = {
                     "$ref": "#/definitions/{}".format(prop['type'])
                 }
+            elif prop['type'] in enums:
+                definition['properties'][key] = enums[prop['type']]
 
     # Replace type in path param
     for path, operations in paths.items():
@@ -264,8 +290,6 @@ def main(chargebee_java_path):
                     param.update(type_map[param['type']])
                 elif param['type'] in enums:
                     param.update(enums[param['type']])
-                else:
-                    print("**** handle  ", param['type'])
 
     swagger = {
         "swagger": "2.0",
@@ -298,7 +322,6 @@ def main(chargebee_java_path):
             }
         },
     }
-    # TODO: Remove deprecated
     print(json.dumps(swagger, indent=4, separators=(',', ': '), sort_keys=True),
           file=sys.stderr)
 

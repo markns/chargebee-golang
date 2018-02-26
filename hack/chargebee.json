@@ -1496,21 +1496,7 @@
                     "type": "integer"
                 },
                 "transaction[payment_method]": {
-                    "enum": [
-                        "card",
-                        "cash",
-                        "check",
-                        "chargeback",
-                        "bank_transfer",
-                        "amazon_payments",
-                        "paypal_express_checkout",
-                        "direct_debit",
-                        "alipay",
-                        "unionpay",
-                        "apple_pay",
-                        "other"
-                    ],
-                    "type": "string"
+                    "$ref": "#/definitions/PaymentMethod"
                 },
                 "transaction[reference_number]": {
                     "type": "string"
@@ -1585,17 +1571,6 @@
                     "enum": [
                         "using_defaults",
                         "manually_set"
-                    ],
-                    "type": "string"
-                },
-                "card_status": {
-                    "enum": [
-                        "no_card",
-                        "valid",
-                        "expiring",
-                        "expired",
-                        "pending_verification",
-                        "invalid"
                     ],
                     "type": "string"
                 },
@@ -1685,21 +1660,7 @@
                     "type": "integer"
                 },
                 "payment_method": {
-                    "enum": [
-                        "card",
-                        "cash",
-                        "check",
-                        "chargeback",
-                        "bank_transfer",
-                        "amazon_payments",
-                        "paypal_express_checkout",
-                        "direct_debit",
-                        "alipay",
-                        "unionpay",
-                        "apple_pay",
-                        "other"
-                    ],
-                    "type": "string"
+                    "$ref": "#/definitions/PaymentMethod"
                 },
                 "phone": {
                     "type": "string"
@@ -2298,21 +2259,7 @@
                     "type": "integer"
                 },
                 "transaction[payment_method]": {
-                    "enum": [
-                        "card",
-                        "cash",
-                        "check",
-                        "chargeback",
-                        "bank_transfer",
-                        "amazon_payments",
-                        "paypal_express_checkout",
-                        "direct_debit",
-                        "alipay",
-                        "unionpay",
-                        "apple_pay",
-                        "other"
-                    ],
-                    "type": "string"
+                    "$ref": "#/definitions/PaymentMethod"
                 },
                 "transaction[reference_number]": {
                     "type": "string"
@@ -3250,21 +3197,6 @@
                 "user": {
                     "type": "string"
                 },
-                "webhook_failure_reason": {
-                    "type": "string"
-                },
-                "webhook_status": {
-                    "enum": [
-                        "not_configured",
-                        "scheduled",
-                        "succeeded",
-                        "re_scheduled",
-                        "failed",
-                        "skipped",
-                        "not_applicable"
-                    ],
-                    "type": "string"
-                },
                 "webhooks": {
                     "items": {
                         "$ref": "#/definitions/Webhook"
@@ -3297,13 +3229,6 @@
                 "expires_at": {
                     "format": "int64",
                     "type": "integer"
-                },
-                "failure_reason": {
-                    "enum": [
-                        "card_error",
-                        "server_error"
-                    ],
-                    "type": "string"
                 },
                 "id": {
                     "type": "string"
@@ -4616,21 +4541,7 @@
                     "type": "string"
                 },
                 "transaction[payment_method]": {
-                    "enum": [
-                        "card",
-                        "cash",
-                        "check",
-                        "chargeback",
-                        "bank_transfer",
-                        "amazon_payments",
-                        "paypal_express_checkout",
-                        "direct_debit",
-                        "alipay",
-                        "unionpay",
-                        "apple_pay",
-                        "other"
-                    ],
-                    "type": "string"
+                    "$ref": "#/definitions/PaymentMethod"
                 },
                 "transaction[reference_number]": {
                     "type": "string"
@@ -4682,21 +4593,7 @@
                     "type": "integer"
                 },
                 "transaction[payment_method]": {
-                    "enum": [
-                        "card",
-                        "cash",
-                        "check",
-                        "chargeback",
-                        "bank_transfer",
-                        "amazon_payments",
-                        "paypal_express_checkout",
-                        "direct_debit",
-                        "alipay",
-                        "unionpay",
-                        "apple_pay",
-                        "other"
-                    ],
-                    "type": "string"
+                    "$ref": "#/definitions/PaymentMethod"
                 },
                 "transaction[reference_number]": {
                     "type": "string"
@@ -5792,10 +5689,6 @@
                 "description": {
                     "type": "string"
                 },
-                "downgrade_penalty": {
-                    "format": "double",
-                    "type": "number"
-                },
                 "enabled_in_hosted_pages": {
                     "type": "boolean"
                 },
@@ -6697,9 +6590,6 @@
                 "cancelled_at": {
                     "format": "int64",
                     "type": "integer"
-                },
-                "coupon": {
-                    "type": "string"
                 },
                 "coupons": {
                     "items": {
@@ -8653,21 +8543,7 @@
                     "type": "string"
                 },
                 "payment_method": {
-                    "enum": [
-                        "card",
-                        "cash",
-                        "check",
-                        "chargeback",
-                        "bank_transfer",
-                        "amazon_payments",
-                        "paypal_express_checkout",
-                        "direct_debit",
-                        "alipay",
-                        "unionpay",
-                        "apple_pay",
-                        "other"
-                    ],
-                    "type": "string"
+                    "$ref": "#/definitions/PaymentMethod"
                 },
                 "payment_source_id": {
                     "type": "string"
@@ -8860,12 +8736,35 @@
         "/addons": {
             "get": {
                 "operationId": "listAddon",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listAddon response",
                         "schema": {
-                            "$ref": "#/definitions/AddonResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/AddonResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -9073,12 +8972,35 @@
         "/comments": {
             "get": {
                 "operationId": "listComment",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listComment response",
                         "schema": {
-                            "$ref": "#/definitions/CommentResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/CommentResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -9150,12 +9072,35 @@
         "/coupon_codes": {
             "get": {
                 "operationId": "listCouponCode",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listCouponCode response",
                         "schema": {
-                            "$ref": "#/definitions/CouponCodeResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/CouponCodeResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -9227,12 +9172,35 @@
         "/coupon_sets": {
             "get": {
                 "operationId": "listCouponSet",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listCouponSet response",
                         "schema": {
-                            "$ref": "#/definitions/CouponSetResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/CouponSetResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -9383,12 +9351,35 @@
         "/coupons": {
             "get": {
                 "operationId": "listCoupon",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listCoupon response",
                         "schema": {
-                            "$ref": "#/definitions/CouponResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/CouponResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -9504,12 +9495,35 @@
         "/credit_notes": {
             "get": {
                 "operationId": "listCreditNote",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listCreditNote response",
                         "schema": {
-                            "$ref": "#/definitions/CreditNoteResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/CreditNoteResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -9668,12 +9682,35 @@
         "/customers": {
             "get": {
                 "operationId": "listCustomer",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listCustomer response",
                         "schema": {
-                            "$ref": "#/definitions/CustomerResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/CustomerResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -10012,13 +10049,35 @@
                         "name": "id",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "creditNotesForCustomerCreditNote response",
                         "schema": {
-                            "$ref": "#/definitions/CreditNoteResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/CreditNoteResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -10170,13 +10229,35 @@
                         "name": "id",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "invoicesForCustomerInvoice response",
                         "schema": {
-                            "$ref": "#/definitions/InvoiceResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/InvoiceResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -10249,13 +10330,35 @@
                         "name": "id",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "subscriptionsForCustomerSubscription response",
                         "schema": {
-                            "$ref": "#/definitions/SubscriptionResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/SubscriptionResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -10326,13 +10429,35 @@
                         "name": "id",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "transactionsForCustomerTransaction response",
                         "schema": {
-                            "$ref": "#/definitions/TransactionResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/TransactionResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -10495,12 +10620,35 @@
         "/events": {
             "get": {
                 "operationId": "listEvent",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listEvent response",
                         "schema": {
-                            "$ref": "#/definitions/EventResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/EventResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -10530,12 +10678,35 @@
         "/hosted_pages": {
             "get": {
                 "operationId": "listHostedPage",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listHostedPage response",
                         "schema": {
-                            "$ref": "#/definitions/HostedPageResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/HostedPageResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -10724,12 +10895,35 @@
         "/invoices": {
             "get": {
                 "operationId": "listInvoice",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listInvoice response",
                         "schema": {
-                            "$ref": "#/definitions/InvoiceResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/InvoiceResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -11050,13 +11244,35 @@
                         "name": "id",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "ordersForInvoiceOrder response",
                         "schema": {
-                            "$ref": "#/definitions/OrderResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/OrderResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -11071,13 +11287,35 @@
                         "name": "id",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "paymentsForInvoiceTransaction response",
                         "schema": {
-                            "$ref": "#/definitions/TransactionResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/TransactionResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -11360,12 +11598,35 @@
         "/orders": {
             "get": {
                 "operationId": "listOrder",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listOrder response",
                         "schema": {
-                            "$ref": "#/definitions/OrderResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/OrderResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -11443,12 +11704,35 @@
         "/payment_sources": {
             "get": {
                 "operationId": "listPaymentSource",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listPaymentSource response",
                         "schema": {
-                            "$ref": "#/definitions/PaymentSourceResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/PaymentSourceResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -11655,12 +11939,35 @@
         "/plans": {
             "get": {
                 "operationId": "listPlan",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listPlan response",
                         "schema": {
-                            "$ref": "#/definitions/PlanResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/PlanResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -11897,12 +12204,35 @@
         "/promotional_credits": {
             "get": {
                 "operationId": "listPromotionalCredit",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listPromotionalCredit response",
                         "schema": {
-                            "$ref": "#/definitions/PromotionalCreditResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/PromotionalCreditResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -12024,12 +12354,35 @@
         "/site_migration_details": {
             "get": {
                 "operationId": "listSiteMigrationDetail",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listSiteMigrationDetail response",
                         "schema": {
-                            "$ref": "#/definitions/SiteMigrationDetailResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/SiteMigrationDetailResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -12038,12 +12391,35 @@
         "/subscriptions": {
             "get": {
                 "operationId": "listSubscription",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listSubscription response",
                         "schema": {
-                            "$ref": "#/definitions/SubscriptionResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/SubscriptionResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -12374,13 +12750,35 @@
                         "name": "id",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "invoicesForSubscriptionInvoice response",
                         "schema": {
-                            "$ref": "#/definitions/InvoiceResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/InvoiceResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -12582,13 +12980,35 @@
                         "name": "id",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "transactionsForSubscriptionTransaction response",
                         "schema": {
-                            "$ref": "#/definitions/TransactionResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/TransactionResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -12676,12 +13096,35 @@
         "/transactions": {
             "get": {
                 "operationId": "listTransaction",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listTransaction response",
                         "schema": {
-                            "$ref": "#/definitions/TransactionResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/TransactionResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }
@@ -12711,12 +13154,35 @@
         "/unbilled_charges": {
             "get": {
                 "operationId": "listUnbilledCharge",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "format": "int32",
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "listUnbilledCharge response",
                         "schema": {
-                            "$ref": "#/definitions/UnbilledChargeResponse"
+                            "properties": {
+                                "list": {
+                                    "items": {
+                                        "$ref": "#/definitions/UnbilledChargeResponse"
+                                    },
+                                    "type": "array"
+                                },
+                                "next_offset": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
                         }
                     }
                 }

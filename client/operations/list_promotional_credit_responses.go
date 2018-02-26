@@ -8,8 +8,12 @@ package operations
 import (
 	"fmt"
 	"io"
+	"strconv"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
+	"github.com/go-openapi/swag"
+	"github.com/go-openapi/validate"
 
 	strfmt "github.com/go-openapi/strfmt"
 
@@ -47,7 +51,7 @@ func NewListPromotionalCreditOK() *ListPromotionalCreditOK {
 listPromotionalCredit response
 */
 type ListPromotionalCreditOK struct {
-	Payload *models.PromotionalCreditResponse
+	Payload ListPromotionalCreditOKBody
 }
 
 func (o *ListPromotionalCreditOK) Error() string {
@@ -56,12 +60,103 @@ func (o *ListPromotionalCreditOK) Error() string {
 
 func (o *ListPromotionalCreditOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.PromotionalCreditResponse)
-
 	// response payload
-	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
+	return nil
+}
+
+/*ListPromotionalCreditOKBody list promotional credit o k body
+swagger:model ListPromotionalCreditOKBody
+*/
+
+type ListPromotionalCreditOKBody struct {
+
+	// list
+	// Required: true
+	List []*models.PromotionalCreditResponse `json:"list"`
+
+	// next offset
+	// Required: true
+	NextOffset *string `json:"next_offset"`
+}
+
+/* polymorph ListPromotionalCreditOKBody list false */
+
+/* polymorph ListPromotionalCreditOKBody next_offset false */
+
+// Validate validates this list promotional credit o k body
+func (o *ListPromotionalCreditOKBody) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateList(formats); err != nil {
+		// prop
+		res = append(res, err)
+	}
+
+	if err := o.validateNextOffset(formats); err != nil {
+		// prop
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *ListPromotionalCreditOKBody) validateList(formats strfmt.Registry) error {
+
+	if err := validate.Required("listPromotionalCreditOK"+"."+"list", "body", o.List); err != nil {
+		return err
+	}
+
+	for i := 0; i < len(o.List); i++ {
+
+		if swag.IsZero(o.List[i]) { // not required
+			continue
+		}
+
+		if o.List[i] != nil {
+
+			if err := o.List[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("listPromotionalCreditOK" + "." + "list" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+func (o *ListPromotionalCreditOKBody) validateNextOffset(formats strfmt.Registry) error {
+
+	if err := validate.Required("listPromotionalCreditOK"+"."+"next_offset", "body", o.NextOffset); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *ListPromotionalCreditOKBody) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *ListPromotionalCreditOKBody) UnmarshalBinary(b []byte) error {
+	var res ListPromotionalCreditOKBody
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
 	return nil
 }

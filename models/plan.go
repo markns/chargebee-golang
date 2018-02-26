@@ -44,9 +44,6 @@ type Plan struct {
 	// description
 	Description string `json:"description,omitempty"`
 
-	// downgrade penalty
-	DowngradePenalty float64 `json:"downgrade_penalty,omitempty"`
-
 	// enabled in hosted pages
 	EnabledInHostedPages bool `json:"enabled_in_hosted_pages,omitempty"`
 
@@ -129,8 +126,6 @@ type Plan struct {
 /* polymorph Plan currency_code false */
 
 /* polymorph Plan description false */
-
-/* polymorph Plan downgrade_penalty false */
 
 /* polymorph Plan enabled_in_hosted_pages false */
 

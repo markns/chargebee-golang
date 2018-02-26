@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListTransactionParams creates a new ListTransactionParams object
 // with the default values initialized.
 func NewListTransactionParams() *ListTransactionParams {
-
+	var ()
 	return &ListTransactionParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListTransactionParams() *ListTransactionParams {
 // NewListTransactionParamsWithTimeout creates a new ListTransactionParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListTransactionParamsWithTimeout(timeout time.Duration) *ListTransactionParams {
-
+	var ()
 	return &ListTransactionParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListTransactionParamsWithTimeout(timeout time.Duration) *ListTransaction
 // NewListTransactionParamsWithContext creates a new ListTransactionParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListTransactionParamsWithContext(ctx context.Context) *ListTransactionParams {
-
+	var ()
 	return &ListTransactionParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListTransactionParamsWithContext(ctx context.Context) *ListTransactionPa
 // NewListTransactionParamsWithHTTPClient creates a new ListTransactionParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListTransactionParamsWithHTTPClient(client *http.Client) *ListTransactionParams {
-
+	var ()
 	return &ListTransactionParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListTransactionParamsWithHTTPClient(client *http.Client) *ListTransactio
 for the list transaction operation typically these are written to a http.Request
 */
 type ListTransactionParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListTransactionParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list transaction params
+func (o *ListTransactionParams) WithLimit(limit *int32) *ListTransactionParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list transaction params
+func (o *ListTransactionParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list transaction params
+func (o *ListTransactionParams) WithOffset(offset *string) *ListTransactionParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list transaction params
+func (o *ListTransactionParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListTransactionParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListTransactionParams) WriteToRequest(r runtime.ClientRequest, reg strf
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

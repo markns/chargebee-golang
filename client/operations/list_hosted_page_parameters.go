@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListHostedPageParams creates a new ListHostedPageParams object
 // with the default values initialized.
 func NewListHostedPageParams() *ListHostedPageParams {
-
+	var ()
 	return &ListHostedPageParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListHostedPageParams() *ListHostedPageParams {
 // NewListHostedPageParamsWithTimeout creates a new ListHostedPageParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListHostedPageParamsWithTimeout(timeout time.Duration) *ListHostedPageParams {
-
+	var ()
 	return &ListHostedPageParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListHostedPageParamsWithTimeout(timeout time.Duration) *ListHostedPagePa
 // NewListHostedPageParamsWithContext creates a new ListHostedPageParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListHostedPageParamsWithContext(ctx context.Context) *ListHostedPageParams {
-
+	var ()
 	return &ListHostedPageParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListHostedPageParamsWithContext(ctx context.Context) *ListHostedPagePara
 // NewListHostedPageParamsWithHTTPClient creates a new ListHostedPageParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListHostedPageParamsWithHTTPClient(client *http.Client) *ListHostedPageParams {
-
+	var ()
 	return &ListHostedPageParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListHostedPageParamsWithHTTPClient(client *http.Client) *ListHostedPageP
 for the list hosted page operation typically these are written to a http.Request
 */
 type ListHostedPageParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListHostedPageParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list hosted page params
+func (o *ListHostedPageParams) WithLimit(limit *int32) *ListHostedPageParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list hosted page params
+func (o *ListHostedPageParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list hosted page params
+func (o *ListHostedPageParams) WithOffset(offset *string) *ListHostedPageParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list hosted page params
+func (o *ListHostedPageParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListHostedPageParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListHostedPageParams) WriteToRequest(r runtime.ClientRequest, reg strfm
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

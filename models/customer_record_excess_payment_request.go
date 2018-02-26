@@ -6,13 +6,10 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	"encoding/json"
-
 	strfmt "github.com/go-openapi/strfmt"
 
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/swag"
-	"github.com/go-openapi/validate"
 )
 
 // CustomerRecordExcessPaymentRequest customer record excess payment request
@@ -33,7 +30,7 @@ type CustomerRecordExcessPaymentRequest struct {
 	TransactionDate int64 `json:"transaction[date],omitempty"`
 
 	// transaction payment method
-	TransactionPaymentMethod string `json:"transaction[payment_method],omitempty"`
+	TransactionPaymentMethod *PaymentMethod `json:"transaction[payment_method],omitempty"`
 
 	// transaction reference number
 	TransactionReferenceNumber string `json:"transaction[reference_number],omitempty"`
@@ -66,62 +63,20 @@ func (m *CustomerRecordExcessPaymentRequest) Validate(formats strfmt.Registry) e
 	return nil
 }
 
-var customerRecordExcessPaymentRequestTypeTransactionPaymentMethodPropEnum []interface{}
-
-func init() {
-	var res []string
-	if err := json.Unmarshal([]byte(`["card","cash","check","chargeback","bank_transfer","amazon_payments","paypal_express_checkout","direct_debit","alipay","unionpay","apple_pay","other"]`), &res); err != nil {
-		panic(err)
-	}
-	for _, v := range res {
-		customerRecordExcessPaymentRequestTypeTransactionPaymentMethodPropEnum = append(customerRecordExcessPaymentRequestTypeTransactionPaymentMethodPropEnum, v)
-	}
-}
-
-const (
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodCard captures enum value "card"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodCard string = "card"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodCash captures enum value "cash"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodCash string = "cash"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodCheck captures enum value "check"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodCheck string = "check"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodChargeback captures enum value "chargeback"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodChargeback string = "chargeback"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodBankTransfer captures enum value "bank_transfer"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodBankTransfer string = "bank_transfer"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodAmazonPayments captures enum value "amazon_payments"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodAmazonPayments string = "amazon_payments"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodPaypalExpressCheckout captures enum value "paypal_express_checkout"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodPaypalExpressCheckout string = "paypal_express_checkout"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodDirectDebit captures enum value "direct_debit"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodDirectDebit string = "direct_debit"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodAlipay captures enum value "alipay"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodAlipay string = "alipay"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodUnionpay captures enum value "unionpay"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodUnionpay string = "unionpay"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodApplePay captures enum value "apple_pay"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodApplePay string = "apple_pay"
-	// CustomerRecordExcessPaymentRequestTransactionPaymentMethodOther captures enum value "other"
-	CustomerRecordExcessPaymentRequestTransactionPaymentMethodOther string = "other"
-)
-
-// prop value enum
-func (m *CustomerRecordExcessPaymentRequest) validateTransactionPaymentMethodEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, customerRecordExcessPaymentRequestTypeTransactionPaymentMethodPropEnum); err != nil {
-		return err
-	}
-	return nil
-}
-
 func (m *CustomerRecordExcessPaymentRequest) validateTransactionPaymentMethod(formats strfmt.Registry) error {
 
 	if swag.IsZero(m.TransactionPaymentMethod) { // not required
 		return nil
 	}
 
-	// value enum
-	if err := m.validateTransactionPaymentMethodEnum("transaction[payment_method]", "body", m.TransactionPaymentMethod); err != nil {
-		return err
+	if m.TransactionPaymentMethod != nil {
+
+		if err := m.TransactionPaymentMethod.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("transaction[payment_method]")
+			}
+			return err
+		}
 	}
 
 	return nil

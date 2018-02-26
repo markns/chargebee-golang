@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListCouponCodeParams creates a new ListCouponCodeParams object
 // with the default values initialized.
 func NewListCouponCodeParams() *ListCouponCodeParams {
-
+	var ()
 	return &ListCouponCodeParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListCouponCodeParams() *ListCouponCodeParams {
 // NewListCouponCodeParamsWithTimeout creates a new ListCouponCodeParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListCouponCodeParamsWithTimeout(timeout time.Duration) *ListCouponCodeParams {
-
+	var ()
 	return &ListCouponCodeParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListCouponCodeParamsWithTimeout(timeout time.Duration) *ListCouponCodePa
 // NewListCouponCodeParamsWithContext creates a new ListCouponCodeParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListCouponCodeParamsWithContext(ctx context.Context) *ListCouponCodeParams {
-
+	var ()
 	return &ListCouponCodeParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListCouponCodeParamsWithContext(ctx context.Context) *ListCouponCodePara
 // NewListCouponCodeParamsWithHTTPClient creates a new ListCouponCodeParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListCouponCodeParamsWithHTTPClient(client *http.Client) *ListCouponCodeParams {
-
+	var ()
 	return &ListCouponCodeParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListCouponCodeParamsWithHTTPClient(client *http.Client) *ListCouponCodeP
 for the list coupon code operation typically these are written to a http.Request
 */
 type ListCouponCodeParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListCouponCodeParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list coupon code params
+func (o *ListCouponCodeParams) WithLimit(limit *int32) *ListCouponCodeParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list coupon code params
+func (o *ListCouponCodeParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list coupon code params
+func (o *ListCouponCodeParams) WithOffset(offset *string) *ListCouponCodeParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list coupon code params
+func (o *ListCouponCodeParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListCouponCodeParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListCouponCodeParams) WriteToRequest(r runtime.ClientRequest, reg strfm
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

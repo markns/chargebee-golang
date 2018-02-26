@@ -48,9 +48,6 @@ type Subscription struct {
 	// cancelled at
 	CancelledAt int64 `json:"cancelled_at,omitempty"`
 
-	// coupon
-	Coupon string `json:"coupon,omitempty"`
-
 	// coupons
 	Coupons []*Coupon `json:"coupons"`
 
@@ -174,8 +171,6 @@ type Subscription struct {
 /* polymorph Subscription cancel_reason false */
 
 /* polymorph Subscription cancelled_at false */
-
-/* polymorph Subscription coupon false */
 
 /* polymorph Subscription coupons false */
 

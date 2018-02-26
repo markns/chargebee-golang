@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListAddonParams creates a new ListAddonParams object
 // with the default values initialized.
 func NewListAddonParams() *ListAddonParams {
-
+	var ()
 	return &ListAddonParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListAddonParams() *ListAddonParams {
 // NewListAddonParamsWithTimeout creates a new ListAddonParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListAddonParamsWithTimeout(timeout time.Duration) *ListAddonParams {
-
+	var ()
 	return &ListAddonParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListAddonParamsWithTimeout(timeout time.Duration) *ListAddonParams {
 // NewListAddonParamsWithContext creates a new ListAddonParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListAddonParamsWithContext(ctx context.Context) *ListAddonParams {
-
+	var ()
 	return &ListAddonParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListAddonParamsWithContext(ctx context.Context) *ListAddonParams {
 // NewListAddonParamsWithHTTPClient creates a new ListAddonParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListAddonParamsWithHTTPClient(client *http.Client) *ListAddonParams {
-
+	var ()
 	return &ListAddonParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListAddonParamsWithHTTPClient(client *http.Client) *ListAddonParams {
 for the list addon operation typically these are written to a http.Request
 */
 type ListAddonParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListAddonParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list addon params
+func (o *ListAddonParams) WithLimit(limit *int32) *ListAddonParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list addon params
+func (o *ListAddonParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list addon params
+func (o *ListAddonParams) WithOffset(offset *string) *ListAddonParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list addon params
+func (o *ListAddonParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListAddonParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListAddonParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Reg
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListCommentParams creates a new ListCommentParams object
 // with the default values initialized.
 func NewListCommentParams() *ListCommentParams {
-
+	var ()
 	return &ListCommentParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListCommentParams() *ListCommentParams {
 // NewListCommentParamsWithTimeout creates a new ListCommentParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListCommentParamsWithTimeout(timeout time.Duration) *ListCommentParams {
-
+	var ()
 	return &ListCommentParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListCommentParamsWithTimeout(timeout time.Duration) *ListCommentParams {
 // NewListCommentParamsWithContext creates a new ListCommentParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListCommentParamsWithContext(ctx context.Context) *ListCommentParams {
-
+	var ()
 	return &ListCommentParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListCommentParamsWithContext(ctx context.Context) *ListCommentParams {
 // NewListCommentParamsWithHTTPClient creates a new ListCommentParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListCommentParamsWithHTTPClient(client *http.Client) *ListCommentParams {
-
+	var ()
 	return &ListCommentParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListCommentParamsWithHTTPClient(client *http.Client) *ListCommentParams 
 for the list comment operation typically these are written to a http.Request
 */
 type ListCommentParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListCommentParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list comment params
+func (o *ListCommentParams) WithLimit(limit *int32) *ListCommentParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list comment params
+func (o *ListCommentParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list comment params
+func (o *ListCommentParams) WithOffset(offset *string) *ListCommentParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list comment params
+func (o *ListCommentParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListCommentParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListCommentParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.R
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

@@ -48,9 +48,6 @@ type Customer struct {
 	// billing day of week mode
 	BillingDayOfWeekMode string `json:"billing_day_of_week_mode,omitempty"`
 
-	// card status
-	CardStatus string `json:"card_status,omitempty"`
-
 	// company
 	Company string `json:"company,omitempty"`
 
@@ -106,7 +103,7 @@ type Customer struct {
 	NetTermDays int32 `json:"net_term_days,omitempty"`
 
 	// payment method
-	PaymentMethod string `json:"payment_method,omitempty"`
+	PaymentMethod *PaymentMethod `json:"payment_method,omitempty"`
 
 	// phone
 	Phone string `json:"phone,omitempty"`
@@ -162,8 +159,6 @@ type Customer struct {
 /* polymorph Customer billing_day_of_week false */
 
 /* polymorph Customer billing_day_of_week_mode false */
-
-/* polymorph Customer card_status false */
 
 /* polymorph Customer company false */
 
@@ -257,11 +252,6 @@ func (m *Customer) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateBillingDayOfWeekMode(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
-	if err := m.validateCardStatus(formats); err != nil {
 		// prop
 		res = append(res, err)
 	}
@@ -522,55 +512,6 @@ func (m *Customer) validateBillingDayOfWeekMode(formats strfmt.Registry) error {
 	return nil
 }
 
-var customerTypeCardStatusPropEnum []interface{}
-
-func init() {
-	var res []string
-	if err := json.Unmarshal([]byte(`["no_card","valid","expiring","expired","pending_verification","invalid"]`), &res); err != nil {
-		panic(err)
-	}
-	for _, v := range res {
-		customerTypeCardStatusPropEnum = append(customerTypeCardStatusPropEnum, v)
-	}
-}
-
-const (
-	// CustomerCardStatusNoCard captures enum value "no_card"
-	CustomerCardStatusNoCard string = "no_card"
-	// CustomerCardStatusValid captures enum value "valid"
-	CustomerCardStatusValid string = "valid"
-	// CustomerCardStatusExpiring captures enum value "expiring"
-	CustomerCardStatusExpiring string = "expiring"
-	// CustomerCardStatusExpired captures enum value "expired"
-	CustomerCardStatusExpired string = "expired"
-	// CustomerCardStatusPendingVerification captures enum value "pending_verification"
-	CustomerCardStatusPendingVerification string = "pending_verification"
-	// CustomerCardStatusInvalid captures enum value "invalid"
-	CustomerCardStatusInvalid string = "invalid"
-)
-
-// prop value enum
-func (m *Customer) validateCardStatusEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, customerTypeCardStatusPropEnum); err != nil {
-		return err
-	}
-	return nil
-}
-
-func (m *Customer) validateCardStatus(formats strfmt.Registry) error {
-
-	if swag.IsZero(m.CardStatus) { // not required
-		return nil
-	}
-
-	// value enum
-	if err := m.validateCardStatusEnum("card_status", "body", m.CardStatus); err != nil {
-		return err
-	}
-
-	return nil
-}
-
 func (m *Customer) validateContacts(formats strfmt.Registry) error {
 
 	if swag.IsZero(m.Contacts) { // not required
@@ -714,62 +655,20 @@ func (m *Customer) validateFraudFlag(formats strfmt.Registry) error {
 	return nil
 }
 
-var customerTypePaymentMethodPropEnum []interface{}
-
-func init() {
-	var res []string
-	if err := json.Unmarshal([]byte(`["card","cash","check","chargeback","bank_transfer","amazon_payments","paypal_express_checkout","direct_debit","alipay","unionpay","apple_pay","other"]`), &res); err != nil {
-		panic(err)
-	}
-	for _, v := range res {
-		customerTypePaymentMethodPropEnum = append(customerTypePaymentMethodPropEnum, v)
-	}
-}
-
-const (
-	// CustomerPaymentMethodCard captures enum value "card"
-	CustomerPaymentMethodCard string = "card"
-	// CustomerPaymentMethodCash captures enum value "cash"
-	CustomerPaymentMethodCash string = "cash"
-	// CustomerPaymentMethodCheck captures enum value "check"
-	CustomerPaymentMethodCheck string = "check"
-	// CustomerPaymentMethodChargeback captures enum value "chargeback"
-	CustomerPaymentMethodChargeback string = "chargeback"
-	// CustomerPaymentMethodBankTransfer captures enum value "bank_transfer"
-	CustomerPaymentMethodBankTransfer string = "bank_transfer"
-	// CustomerPaymentMethodAmazonPayments captures enum value "amazon_payments"
-	CustomerPaymentMethodAmazonPayments string = "amazon_payments"
-	// CustomerPaymentMethodPaypalExpressCheckout captures enum value "paypal_express_checkout"
-	CustomerPaymentMethodPaypalExpressCheckout string = "paypal_express_checkout"
-	// CustomerPaymentMethodDirectDebit captures enum value "direct_debit"
-	CustomerPaymentMethodDirectDebit string = "direct_debit"
-	// CustomerPaymentMethodAlipay captures enum value "alipay"
-	CustomerPaymentMethodAlipay string = "alipay"
-	// CustomerPaymentMethodUnionpay captures enum value "unionpay"
-	CustomerPaymentMethodUnionpay string = "unionpay"
-	// CustomerPaymentMethodApplePay captures enum value "apple_pay"
-	CustomerPaymentMethodApplePay string = "apple_pay"
-	// CustomerPaymentMethodOther captures enum value "other"
-	CustomerPaymentMethodOther string = "other"
-)
-
-// prop value enum
-func (m *Customer) validatePaymentMethodEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, customerTypePaymentMethodPropEnum); err != nil {
-		return err
-	}
-	return nil
-}
-
 func (m *Customer) validatePaymentMethod(formats strfmt.Registry) error {
 
 	if swag.IsZero(m.PaymentMethod) { // not required
 		return nil
 	}
 
-	// value enum
-	if err := m.validatePaymentMethodEnum("payment_method", "body", m.PaymentMethod); err != nil {
-		return err
+	if m.PaymentMethod != nil {
+
+		if err := m.PaymentMethod.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("payment_method")
+			}
+			return err
+		}
 	}
 
 	return nil

@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListSubscriptionParams creates a new ListSubscriptionParams object
 // with the default values initialized.
 func NewListSubscriptionParams() *ListSubscriptionParams {
-
+	var ()
 	return &ListSubscriptionParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListSubscriptionParams() *ListSubscriptionParams {
 // NewListSubscriptionParamsWithTimeout creates a new ListSubscriptionParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListSubscriptionParamsWithTimeout(timeout time.Duration) *ListSubscriptionParams {
-
+	var ()
 	return &ListSubscriptionParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListSubscriptionParamsWithTimeout(timeout time.Duration) *ListSubscripti
 // NewListSubscriptionParamsWithContext creates a new ListSubscriptionParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListSubscriptionParamsWithContext(ctx context.Context) *ListSubscriptionParams {
-
+	var ()
 	return &ListSubscriptionParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListSubscriptionParamsWithContext(ctx context.Context) *ListSubscription
 // NewListSubscriptionParamsWithHTTPClient creates a new ListSubscriptionParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListSubscriptionParamsWithHTTPClient(client *http.Client) *ListSubscriptionParams {
-
+	var ()
 	return &ListSubscriptionParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListSubscriptionParamsWithHTTPClient(client *http.Client) *ListSubscript
 for the list subscription operation typically these are written to a http.Request
 */
 type ListSubscriptionParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListSubscriptionParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list subscription params
+func (o *ListSubscriptionParams) WithLimit(limit *int32) *ListSubscriptionParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list subscription params
+func (o *ListSubscriptionParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list subscription params
+func (o *ListSubscriptionParams) WithOffset(offset *string) *ListSubscriptionParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list subscription params
+func (o *ListSubscriptionParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListSubscriptionParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListSubscriptionParams) WriteToRequest(r runtime.ClientRequest, reg str
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

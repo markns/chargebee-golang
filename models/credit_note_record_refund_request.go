@@ -6,13 +6,10 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	"encoding/json"
-
 	strfmt "github.com/go-openapi/strfmt"
 
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/swag"
-	"github.com/go-openapi/validate"
 )
 
 // CreditNoteRecordRefundRequest credit note record refund request
@@ -30,7 +27,7 @@ type CreditNoteRecordRefundRequest struct {
 	TransactionDate int64 `json:"transaction[date],omitempty"`
 
 	// transaction payment method
-	TransactionPaymentMethod string `json:"transaction[payment_method],omitempty"`
+	TransactionPaymentMethod *PaymentMethod `json:"transaction[payment_method],omitempty"`
 
 	// transaction reference number
 	TransactionReferenceNumber string `json:"transaction[reference_number],omitempty"`
@@ -61,62 +58,20 @@ func (m *CreditNoteRecordRefundRequest) Validate(formats strfmt.Registry) error 
 	return nil
 }
 
-var creditNoteRecordRefundRequestTypeTransactionPaymentMethodPropEnum []interface{}
-
-func init() {
-	var res []string
-	if err := json.Unmarshal([]byte(`["card","cash","check","chargeback","bank_transfer","amazon_payments","paypal_express_checkout","direct_debit","alipay","unionpay","apple_pay","other"]`), &res); err != nil {
-		panic(err)
-	}
-	for _, v := range res {
-		creditNoteRecordRefundRequestTypeTransactionPaymentMethodPropEnum = append(creditNoteRecordRefundRequestTypeTransactionPaymentMethodPropEnum, v)
-	}
-}
-
-const (
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodCard captures enum value "card"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodCard string = "card"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodCash captures enum value "cash"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodCash string = "cash"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodCheck captures enum value "check"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodCheck string = "check"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodChargeback captures enum value "chargeback"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodChargeback string = "chargeback"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodBankTransfer captures enum value "bank_transfer"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodBankTransfer string = "bank_transfer"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodAmazonPayments captures enum value "amazon_payments"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodAmazonPayments string = "amazon_payments"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodPaypalExpressCheckout captures enum value "paypal_express_checkout"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodPaypalExpressCheckout string = "paypal_express_checkout"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodDirectDebit captures enum value "direct_debit"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodDirectDebit string = "direct_debit"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodAlipay captures enum value "alipay"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodAlipay string = "alipay"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodUnionpay captures enum value "unionpay"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodUnionpay string = "unionpay"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodApplePay captures enum value "apple_pay"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodApplePay string = "apple_pay"
-	// CreditNoteRecordRefundRequestTransactionPaymentMethodOther captures enum value "other"
-	CreditNoteRecordRefundRequestTransactionPaymentMethodOther string = "other"
-)
-
-// prop value enum
-func (m *CreditNoteRecordRefundRequest) validateTransactionPaymentMethodEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, creditNoteRecordRefundRequestTypeTransactionPaymentMethodPropEnum); err != nil {
-		return err
-	}
-	return nil
-}
-
 func (m *CreditNoteRecordRefundRequest) validateTransactionPaymentMethod(formats strfmt.Registry) error {
 
 	if swag.IsZero(m.TransactionPaymentMethod) { // not required
 		return nil
 	}
 
-	// value enum
-	if err := m.validateTransactionPaymentMethodEnum("transaction[payment_method]", "body", m.TransactionPaymentMethod); err != nil {
-		return err
+	if m.TransactionPaymentMethod != nil {
+
+		if err := m.TransactionPaymentMethod.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("transaction[payment_method]")
+			}
+			return err
+		}
 	}
 
 	return nil

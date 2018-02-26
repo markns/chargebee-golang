@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListPaymentSourceParams creates a new ListPaymentSourceParams object
 // with the default values initialized.
 func NewListPaymentSourceParams() *ListPaymentSourceParams {
-
+	var ()
 	return &ListPaymentSourceParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListPaymentSourceParams() *ListPaymentSourceParams {
 // NewListPaymentSourceParamsWithTimeout creates a new ListPaymentSourceParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListPaymentSourceParamsWithTimeout(timeout time.Duration) *ListPaymentSourceParams {
-
+	var ()
 	return &ListPaymentSourceParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListPaymentSourceParamsWithTimeout(timeout time.Duration) *ListPaymentSo
 // NewListPaymentSourceParamsWithContext creates a new ListPaymentSourceParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListPaymentSourceParamsWithContext(ctx context.Context) *ListPaymentSourceParams {
-
+	var ()
 	return &ListPaymentSourceParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListPaymentSourceParamsWithContext(ctx context.Context) *ListPaymentSour
 // NewListPaymentSourceParamsWithHTTPClient creates a new ListPaymentSourceParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListPaymentSourceParamsWithHTTPClient(client *http.Client) *ListPaymentSourceParams {
-
+	var ()
 	return &ListPaymentSourceParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListPaymentSourceParamsWithHTTPClient(client *http.Client) *ListPaymentS
 for the list payment source operation typically these are written to a http.Request
 */
 type ListPaymentSourceParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListPaymentSourceParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list payment source params
+func (o *ListPaymentSourceParams) WithLimit(limit *int32) *ListPaymentSourceParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list payment source params
+func (o *ListPaymentSourceParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list payment source params
+func (o *ListPaymentSourceParams) WithOffset(offset *string) *ListPaymentSourceParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list payment source params
+func (o *ListPaymentSourceParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListPaymentSourceParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListPaymentSourceParams) WriteToRequest(r runtime.ClientRequest, reg st
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

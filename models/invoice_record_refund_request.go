@@ -36,7 +36,7 @@ type InvoiceRecordRefundRequest struct {
 	TransactionDate int64 `json:"transaction[date],omitempty"`
 
 	// transaction payment method
-	TransactionPaymentMethod string `json:"transaction[payment_method],omitempty"`
+	TransactionPaymentMethod *PaymentMethod `json:"transaction[payment_method],omitempty"`
 
 	// transaction reference number
 	TransactionReferenceNumber string `json:"transaction[reference_number],omitempty"`
@@ -135,62 +135,20 @@ func (m *InvoiceRecordRefundRequest) validateCreditNoteReasonCode(formats strfmt
 	return nil
 }
 
-var invoiceRecordRefundRequestTypeTransactionPaymentMethodPropEnum []interface{}
-
-func init() {
-	var res []string
-	if err := json.Unmarshal([]byte(`["card","cash","check","chargeback","bank_transfer","amazon_payments","paypal_express_checkout","direct_debit","alipay","unionpay","apple_pay","other"]`), &res); err != nil {
-		panic(err)
-	}
-	for _, v := range res {
-		invoiceRecordRefundRequestTypeTransactionPaymentMethodPropEnum = append(invoiceRecordRefundRequestTypeTransactionPaymentMethodPropEnum, v)
-	}
-}
-
-const (
-	// InvoiceRecordRefundRequestTransactionPaymentMethodCard captures enum value "card"
-	InvoiceRecordRefundRequestTransactionPaymentMethodCard string = "card"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodCash captures enum value "cash"
-	InvoiceRecordRefundRequestTransactionPaymentMethodCash string = "cash"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodCheck captures enum value "check"
-	InvoiceRecordRefundRequestTransactionPaymentMethodCheck string = "check"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodChargeback captures enum value "chargeback"
-	InvoiceRecordRefundRequestTransactionPaymentMethodChargeback string = "chargeback"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodBankTransfer captures enum value "bank_transfer"
-	InvoiceRecordRefundRequestTransactionPaymentMethodBankTransfer string = "bank_transfer"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodAmazonPayments captures enum value "amazon_payments"
-	InvoiceRecordRefundRequestTransactionPaymentMethodAmazonPayments string = "amazon_payments"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodPaypalExpressCheckout captures enum value "paypal_express_checkout"
-	InvoiceRecordRefundRequestTransactionPaymentMethodPaypalExpressCheckout string = "paypal_express_checkout"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodDirectDebit captures enum value "direct_debit"
-	InvoiceRecordRefundRequestTransactionPaymentMethodDirectDebit string = "direct_debit"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodAlipay captures enum value "alipay"
-	InvoiceRecordRefundRequestTransactionPaymentMethodAlipay string = "alipay"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodUnionpay captures enum value "unionpay"
-	InvoiceRecordRefundRequestTransactionPaymentMethodUnionpay string = "unionpay"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodApplePay captures enum value "apple_pay"
-	InvoiceRecordRefundRequestTransactionPaymentMethodApplePay string = "apple_pay"
-	// InvoiceRecordRefundRequestTransactionPaymentMethodOther captures enum value "other"
-	InvoiceRecordRefundRequestTransactionPaymentMethodOther string = "other"
-)
-
-// prop value enum
-func (m *InvoiceRecordRefundRequest) validateTransactionPaymentMethodEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, invoiceRecordRefundRequestTypeTransactionPaymentMethodPropEnum); err != nil {
-		return err
-	}
-	return nil
-}
-
 func (m *InvoiceRecordRefundRequest) validateTransactionPaymentMethod(formats strfmt.Registry) error {
 
 	if swag.IsZero(m.TransactionPaymentMethod) { // not required
 		return nil
 	}
 
-	// value enum
-	if err := m.validateTransactionPaymentMethodEnum("transaction[payment_method]", "body", m.TransactionPaymentMethod); err != nil {
-		return err
+	if m.TransactionPaymentMethod != nil {
+
+		if err := m.TransactionPaymentMethod.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("transaction[payment_method]")
+			}
+			return err
+		}
 	}
 
 	return nil

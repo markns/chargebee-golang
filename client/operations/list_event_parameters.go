@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
+	"github.com/go-openapi/swag"
 
 	strfmt "github.com/go-openapi/strfmt"
 )
@@ -21,7 +22,7 @@ import (
 // NewListEventParams creates a new ListEventParams object
 // with the default values initialized.
 func NewListEventParams() *ListEventParams {
-
+	var ()
 	return &ListEventParams{
 
 		timeout: cr.DefaultTimeout,
@@ -31,7 +32,7 @@ func NewListEventParams() *ListEventParams {
 // NewListEventParamsWithTimeout creates a new ListEventParams object
 // with the default values initialized, and the ability to set a timeout on a request
 func NewListEventParamsWithTimeout(timeout time.Duration) *ListEventParams {
-
+	var ()
 	return &ListEventParams{
 
 		timeout: timeout,
@@ -41,7 +42,7 @@ func NewListEventParamsWithTimeout(timeout time.Duration) *ListEventParams {
 // NewListEventParamsWithContext creates a new ListEventParams object
 // with the default values initialized, and the ability to set a context for a request
 func NewListEventParamsWithContext(ctx context.Context) *ListEventParams {
-
+	var ()
 	return &ListEventParams{
 
 		Context: ctx,
@@ -51,7 +52,7 @@ func NewListEventParamsWithContext(ctx context.Context) *ListEventParams {
 // NewListEventParamsWithHTTPClient creates a new ListEventParams object
 // with the default values initialized, and the ability to set a custom HTTPClient for a request
 func NewListEventParamsWithHTTPClient(client *http.Client) *ListEventParams {
-
+	var ()
 	return &ListEventParams{
 		HTTPClient: client,
 	}
@@ -61,6 +62,12 @@ func NewListEventParamsWithHTTPClient(client *http.Client) *ListEventParams {
 for the list event operation typically these are written to a http.Request
 */
 type ListEventParams struct {
+
+	/*Limit*/
+	Limit *int32
+	/*Offset*/
+	Offset *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -99,6 +106,28 @@ func (o *ListEventParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
+// WithLimit adds the limit to the list event params
+func (o *ListEventParams) WithLimit(limit *int32) *ListEventParams {
+	o.SetLimit(limit)
+	return o
+}
+
+// SetLimit adds the limit to the list event params
+func (o *ListEventParams) SetLimit(limit *int32) {
+	o.Limit = limit
+}
+
+// WithOffset adds the offset to the list event params
+func (o *ListEventParams) WithOffset(offset *string) *ListEventParams {
+	o.SetOffset(offset)
+	return o
+}
+
+// SetOffset adds the offset to the list event params
+func (o *ListEventParams) SetOffset(offset *string) {
+	o.Offset = offset
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *ListEventParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -106,6 +135,38 @@ func (o *ListEventParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Reg
 		return err
 	}
 	var res []error
+
+	if o.Limit != nil {
+
+		// query param limit
+		var qrLimit int32
+		if o.Limit != nil {
+			qrLimit = *o.Limit
+		}
+		qLimit := swag.FormatInt32(qrLimit)
+		if qLimit != "" {
+			if err := r.SetQueryParam("limit", qLimit); err != nil {
+				return err
+			}
+		}
+
+	}
+
+	if o.Offset != nil {
+
+		// query param offset
+		var qrOffset string
+		if o.Offset != nil {
+			qrOffset = *o.Offset
+		}
+		qOffset := qrOffset
+		if qOffset != "" {
+			if err := r.SetQueryParam("offset", qOffset); err != nil {
+				return err
+			}
+		}
+
+	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
