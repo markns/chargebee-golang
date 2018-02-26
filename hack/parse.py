@@ -6,9 +6,6 @@ from os.path import join
 
 from javalang import tree, parse
 
-CHARGEBEE_JAVA = "/Volumes/Users/markns/Projects/src/bitbucket.org/gridarrow/chargebee-api/" \
-                 "hack/chargebee-java/src/main/java/com/chargebee"
-
 type_map = dict(
     Integer=dict(type="integer", format="int32"),
     Long=dict(type="integer", format="int64"),
@@ -175,12 +172,13 @@ def process_compilation_unit(unit: tree.CompilationUnit):
                         return process_resource(c)
 
 
-def main():
+def main(chargebee_java_path):
+    chargebee_java_path = join(chargebee_java_path, "src/main/java/com/chargebee")
     enums = dict()
     paths = dict()
     definitions = dict()
 
-    enum_dir = CHARGEBEE_JAVA + '/models/enums'
+    enum_dir = chargebee_java_path + '/models/enums'
     for f in listdir(enum_dir):
         enum_code = parse.parse(open(join(enum_dir, f)).read())
         e, p, d = process_compilation_unit(enum_code)
@@ -188,7 +186,7 @@ def main():
         paths.update(p)
         definitions.update(d)
 
-    jcode = open(CHARGEBEE_JAVA + "/models/Customer.java").read()
+    jcode = open(chargebee_java_path + "/models/Customer.java").read()
     jcode = parse.parse(jcode)
     e, p, d = process_compilation_unit(jcode)
     enums.update(e)
@@ -270,4 +268,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1])
