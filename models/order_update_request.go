@@ -70,7 +70,7 @@ var orderUpdateRequestTypeStatusPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["new","processing","complete","cancelled","voided"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["in_progress","success","voided","failure","timeout","needs_attention"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -79,16 +79,18 @@ func init() {
 }
 
 const (
-	// OrderUpdateRequestStatusNew captures enum value "new"
-	OrderUpdateRequestStatusNew string = "new"
-	// OrderUpdateRequestStatusProcessing captures enum value "processing"
-	OrderUpdateRequestStatusProcessing string = "processing"
-	// OrderUpdateRequestStatusComplete captures enum value "complete"
-	OrderUpdateRequestStatusComplete string = "complete"
-	// OrderUpdateRequestStatusCancelled captures enum value "cancelled"
-	OrderUpdateRequestStatusCancelled string = "cancelled"
+	// OrderUpdateRequestStatusInProgress captures enum value "in_progress"
+	OrderUpdateRequestStatusInProgress string = "in_progress"
+	// OrderUpdateRequestStatusSuccess captures enum value "success"
+	OrderUpdateRequestStatusSuccess string = "success"
 	// OrderUpdateRequestStatusVoided captures enum value "voided"
 	OrderUpdateRequestStatusVoided string = "voided"
+	// OrderUpdateRequestStatusFailure captures enum value "failure"
+	OrderUpdateRequestStatusFailure string = "failure"
+	// OrderUpdateRequestStatusTimeout captures enum value "timeout"
+	OrderUpdateRequestStatusTimeout string = "timeout"
+	// OrderUpdateRequestStatusNeedsAttention captures enum value "needs_attention"
+	OrderUpdateRequestStatusNeedsAttention string = "needs_attention"
 )
 
 // prop value enum

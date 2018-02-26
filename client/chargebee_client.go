@@ -11,7 +11,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"bitbucket.org/gridarrow/chargebee-api/client/operations"
+	"github.com/markns/chargebee-golang/client/operations"
 )
 
 // Default chargebee HTTP client.

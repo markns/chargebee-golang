@@ -1,7 +1,7 @@
+import glob
 import json
 import sys
 from collections import defaultdict
-from os import listdir
 from os.path import join
 
 from javalang import tree, parse
@@ -18,7 +18,8 @@ type_map = dict(
     Date=dict(type="date", format="date"),
     DateTime=dict(type="dateTime", format="date-time"),
     Timestamp=(dict(type="integer", format="int64")),
-    JSONObject=(dict(type="string"))
+    JSONObject=(dict(type="string")),
+    BigDecimal=(dict(type="number")),
 )
 
 
@@ -116,10 +117,25 @@ def process_operation(resource, method_decl: tree.MethodDeclaration):
     return uri, method, operation
 
 
-def process_field(child: tree.MethodDeclaration):
-    print('processing field', child.name)
-    name = child.body[0].expression.arguments[0].value.replace('"', '')
-    return name, {"type": child.return_type.name}
+def process_field(meth: tree.MethodDeclaration):
+    print('processing field', meth.name)
+    name = meth.body[0].expression.arguments[0].value.replace('"', '')
+
+    _type = meth.return_type
+
+    if _type.name == 'List':
+        _type = _type.arguments[0].type
+        while _type.sub_type:
+            _type = _type.sub_type
+
+        return name, {"type": "array",
+                      "items": {
+                          "$ref": "#/definitions/{}".format(_type.name)
+                      }}
+    else:
+        while _type.sub_type:
+            _type = _type.sub_type
+        return name, {"type": _type.name}
 
 
 def process_constructor(child: tree.ConstructorDeclaration):
@@ -143,11 +159,15 @@ def process_resource(resource: tree.ClassDeclaration):
                 url, method, operation = process_operation(resource.name, child)
                 paths[url][method] = operation
             else:
-                prop_name, props = process_field(child)
-                definitions[resource.name]['properties'][prop_name] = props
+                try:
+                    prop_name, props = process_field(child)
+                    definitions[resource.name]['properties'][prop_name] = props
+                except AttributeError as e:
+                    print("Unable to process {} field {} - {}".format(resource.name, child.name, e))
         elif isinstance(child, tree.ClassDeclaration):
             if child.extends.name == 'Resource':
                 sub_enums, sub_paths, sub_definitions = process_resource(child)
+                enums.update(sub_enums)
                 paths.update(sub_paths)
                 definitions.update(sub_definitions)
             elif child.extends.name == 'Request':
@@ -178,20 +198,21 @@ def main(chargebee_java_path):
     paths = dict()
     definitions = dict()
 
-    enum_dir = chargebee_java_path + '/models/enums'
-    for f in listdir(enum_dir):
-        enum_code = parse.parse(open(join(enum_dir, f)).read())
+    for f in glob.glob(chargebee_java_path + '/models/enums/*.java'):
+        print(f)
+        enum_code = parse.parse(open(f).read())
         e, p, d = process_compilation_unit(enum_code)
         enums.update(e)
         paths.update(p)
         definitions.update(d)
 
-    jcode = open(chargebee_java_path + "/models/Customer.java").read()
-    jcode = parse.parse(jcode)
-    e, p, d = process_compilation_unit(jcode)
-    enums.update(e)
-    paths.update(p)
-    definitions.update(d)
+    for f in glob.glob(chargebee_java_path + '/models/*.java'):
+        print(f)
+        model_code = parse.parse(open(f).read())
+        e, p, d = process_compilation_unit(model_code)
+        enums.update(e)
+        paths.update(p)
+        definitions.update(d)
 
     # Replace body params from request object
     for path, operations in paths.items():
@@ -218,6 +239,10 @@ def main(chargebee_java_path):
                 prop.update(type_map[prop['type']])
             elif prop['type'] in enums:
                 definition['properties'][key] = enums[prop['type']]
+            elif prop['type'] in definitions:
+                definition['properties'][key] = {
+                    "$ref": "#/definitions/{}".format(prop['type'])
+                }
 
     # Replace type in path param
     for path, operations in paths.items():
@@ -263,6 +288,7 @@ def main(chargebee_java_path):
             }
         },
     }
+    # TODO: Remove deprecated
     print(json.dumps(swagger, indent=4, separators=(',', ': ')),
           file=sys.stderr)
 

@@ -25,6 +25,1224 @@ type Client struct {
 }
 
 /*
+AcknowledgeHostedPage acknowledge hosted page API
+*/
+func (a *Client) AcknowledgeHostedPage(params *AcknowledgeHostedPageParams, authInfo runtime.ClientAuthInfoWriter) (*AcknowledgeHostedPageOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewAcknowledgeHostedPageParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "acknowledgeHostedPage",
+		Method:             "POST",
+		PathPattern:        "/hosted_pages/{id}/acknowledge",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &AcknowledgeHostedPageReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*AcknowledgeHostedPageOK), nil
+
+}
+
+/*
+ActivatePortalSession activate portal session API
+*/
+func (a *Client) ActivatePortalSession(params *ActivatePortalSessionParams, authInfo runtime.ClientAuthInfoWriter) (*ActivatePortalSessionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewActivatePortalSessionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "activatePortalSession",
+		Method:             "POST",
+		PathPattern:        "/portal_sessions/{id}/activate",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ActivatePortalSessionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ActivatePortalSessionOK), nil
+
+}
+
+/*
+AddAddonChargeInvoice add addon charge invoice API
+*/
+func (a *Client) AddAddonChargeInvoice(params *AddAddonChargeInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*AddAddonChargeInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewAddAddonChargeInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "addAddonChargeInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/add_addon_charge",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &AddAddonChargeInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*AddAddonChargeInvoiceOK), nil
+
+}
+
+/*
+AddChargeAtTermEndSubscription add charge at term end subscription API
+*/
+func (a *Client) AddChargeAtTermEndSubscription(params *AddChargeAtTermEndSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*AddChargeAtTermEndSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewAddChargeAtTermEndSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "addChargeAtTermEndSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/add_charge_at_term_end",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &AddChargeAtTermEndSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*AddChargeAtTermEndSubscriptionOK), nil
+
+}
+
+/*
+AddChargeInvoice add charge invoice API
+*/
+func (a *Client) AddChargeInvoice(params *AddChargeInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*AddChargeInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewAddChargeInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "addChargeInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/add_charge",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &AddChargeInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*AddChargeInvoiceOK), nil
+
+}
+
+/*
+AddContactCustomer add contact customer API
+*/
+func (a *Client) AddContactCustomer(params *AddContactCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*AddContactCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewAddContactCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "addContactCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/add_contact",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &AddContactCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*AddContactCustomerOK), nil
+
+}
+
+/*
+AddCouponCodesCouponSet add coupon codes coupon set API
+*/
+func (a *Client) AddCouponCodesCouponSet(params *AddCouponCodesCouponSetParams, authInfo runtime.ClientAuthInfoWriter) (*AddCouponCodesCouponSetOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewAddCouponCodesCouponSetParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "addCouponCodesCouponSet",
+		Method:             "POST",
+		PathPattern:        "/coupon_sets/{id}/add_coupon_codes",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &AddCouponCodesCouponSetReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*AddCouponCodesCouponSetOK), nil
+
+}
+
+/*
+AddPromotionalCredit add promotional credit API
+*/
+func (a *Client) AddPromotionalCredit(params *AddPromotionalCreditParams, authInfo runtime.ClientAuthInfoWriter) (*AddPromotionalCreditOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewAddPromotionalCreditParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "addPromotionalCredit",
+		Method:             "POST",
+		PathPattern:        "/promotional_credits/add",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &AddPromotionalCreditReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*AddPromotionalCreditOK), nil
+
+}
+
+/*
+AddPromotionalCreditsCustomer add promotional credits customer API
+*/
+func (a *Client) AddPromotionalCreditsCustomer(params *AddPromotionalCreditsCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*AddPromotionalCreditsCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewAddPromotionalCreditsCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "addPromotionalCreditsCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/add_promotional_credits",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &AddPromotionalCreditsCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*AddPromotionalCreditsCustomerOK), nil
+
+}
+
+/*
+ApplyCreditsInvoice apply credits invoice API
+*/
+func (a *Client) ApplyCreditsInvoice(params *ApplyCreditsInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*ApplyCreditsInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewApplyCreditsInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "applyCreditsInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/apply_credits",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ApplyCreditsInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ApplyCreditsInvoiceOK), nil
+
+}
+
+/*
+ApplyPaymentsInvoice apply payments invoice API
+*/
+func (a *Client) ApplyPaymentsInvoice(params *ApplyPaymentsInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*ApplyPaymentsInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewApplyPaymentsInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "applyPaymentsInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/apply_payments",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ApplyPaymentsInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ApplyPaymentsInvoiceOK), nil
+
+}
+
+/*
+ArchiveCouponCode archive coupon code API
+*/
+func (a *Client) ArchiveCouponCode(params *ArchiveCouponCodeParams, authInfo runtime.ClientAuthInfoWriter) (*ArchiveCouponCodeOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewArchiveCouponCodeParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "archiveCouponCode",
+		Method:             "POST",
+		PathPattern:        "/coupon_codes/{id}/archive",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ArchiveCouponCodeReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ArchiveCouponCodeOK), nil
+
+}
+
+/*
+AssignPaymentRoleCustomer assign payment role customer API
+*/
+func (a *Client) AssignPaymentRoleCustomer(params *AssignPaymentRoleCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*AssignPaymentRoleCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewAssignPaymentRoleCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "assignPaymentRoleCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/assign_payment_role",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &AssignPaymentRoleCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*AssignPaymentRoleCustomerOK), nil
+
+}
+
+/*
+CancelSubscription cancel subscription API
+*/
+func (a *Client) CancelSubscription(params *CancelSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*CancelSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCancelSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "cancelSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/cancel",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CancelSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CancelSubscriptionOK), nil
+
+}
+
+/*
+CancelSubscriptionEstimate cancel subscription estimate API
+*/
+func (a *Client) CancelSubscriptionEstimate(params *CancelSubscriptionEstimateParams, authInfo runtime.ClientAuthInfoWriter) (*CancelSubscriptionEstimateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCancelSubscriptionEstimateParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "cancelSubscriptionEstimate",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/cancel_subscription_estimate",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CancelSubscriptionEstimateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CancelSubscriptionEstimateOK), nil
+
+}
+
+/*
+ChangeBillingDateCustomer change billing date customer API
+*/
+func (a *Client) ChangeBillingDateCustomer(params *ChangeBillingDateCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*ChangeBillingDateCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewChangeBillingDateCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "changeBillingDateCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/change_billing_date",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ChangeBillingDateCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ChangeBillingDateCustomerOK), nil
+
+}
+
+/*
+ChangeTermEndEstimate change term end estimate API
+*/
+func (a *Client) ChangeTermEndEstimate(params *ChangeTermEndEstimateParams, authInfo runtime.ClientAuthInfoWriter) (*ChangeTermEndEstimateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewChangeTermEndEstimateParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "changeTermEndEstimate",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/change_term_end_estimate",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ChangeTermEndEstimateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ChangeTermEndEstimateOK), nil
+
+}
+
+/*
+ChangeTermEndSubscription change term end subscription API
+*/
+func (a *Client) ChangeTermEndSubscription(params *ChangeTermEndSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*ChangeTermEndSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewChangeTermEndSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "changeTermEndSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/change_term_end",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ChangeTermEndSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ChangeTermEndSubscriptionOK), nil
+
+}
+
+/*
+ChargeAddonAtTermEndSubscription charge addon at term end subscription API
+*/
+func (a *Client) ChargeAddonAtTermEndSubscription(params *ChargeAddonAtTermEndSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*ChargeAddonAtTermEndSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewChargeAddonAtTermEndSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "chargeAddonAtTermEndSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/charge_addon_at_term_end",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ChargeAddonAtTermEndSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ChargeAddonAtTermEndSubscriptionOK), nil
+
+}
+
+/*
+ChargeAddonInvoice charge addon invoice API
+*/
+func (a *Client) ChargeAddonInvoice(params *ChargeAddonInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*ChargeAddonInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewChargeAddonInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "chargeAddonInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/charge_addon",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ChargeAddonInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ChargeAddonInvoiceOK), nil
+
+}
+
+/*
+ChargeFutureRenewalsSubscription charge future renewals subscription API
+*/
+func (a *Client) ChargeFutureRenewalsSubscription(params *ChargeFutureRenewalsSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*ChargeFutureRenewalsSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewChargeFutureRenewalsSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "chargeFutureRenewalsSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/charge_future_renewals",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ChargeFutureRenewalsSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ChargeFutureRenewalsSubscriptionOK), nil
+
+}
+
+/*
+ChargeInvoice charge invoice API
+*/
+func (a *Client) ChargeInvoice(params *ChargeInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*ChargeInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewChargeInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "chargeInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/charge",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ChargeInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ChargeInvoiceOK), nil
+
+}
+
+/*
+CheckoutExistingHostedPage checkout existing hosted page API
+*/
+func (a *Client) CheckoutExistingHostedPage(params *CheckoutExistingHostedPageParams, authInfo runtime.ClientAuthInfoWriter) (*CheckoutExistingHostedPageOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCheckoutExistingHostedPageParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "checkoutExistingHostedPage",
+		Method:             "POST",
+		PathPattern:        "/hosted_pages/checkout_existing",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CheckoutExistingHostedPageReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CheckoutExistingHostedPageOK), nil
+
+}
+
+/*
+CheckoutNewHostedPage checkout new hosted page API
+*/
+func (a *Client) CheckoutNewHostedPage(params *CheckoutNewHostedPageParams, authInfo runtime.ClientAuthInfoWriter) (*CheckoutNewHostedPageOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCheckoutNewHostedPageParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "checkoutNewHostedPage",
+		Method:             "POST",
+		PathPattern:        "/hosted_pages/checkout_new",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CheckoutNewHostedPageReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CheckoutNewHostedPageOK), nil
+
+}
+
+/*
+CloseInvoice close invoice API
+*/
+func (a *Client) CloseInvoice(params *CloseInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*CloseInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCloseInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "closeInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/close",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CloseInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CloseInvoiceOK), nil
+
+}
+
+/*
+CollectNowHostedPage collect now hosted page API
+*/
+func (a *Client) CollectNowHostedPage(params *CollectNowHostedPageParams, authInfo runtime.ClientAuthInfoWriter) (*CollectNowHostedPageOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCollectNowHostedPageParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "collectNowHostedPage",
+		Method:             "POST",
+		PathPattern:        "/hosted_pages/collect_now",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CollectNowHostedPageReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CollectNowHostedPageOK), nil
+
+}
+
+/*
+CollectPaymentCustomer collect payment customer API
+*/
+func (a *Client) CollectPaymentCustomer(params *CollectPaymentCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*CollectPaymentCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCollectPaymentCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "collectPaymentCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/collect_payment",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CollectPaymentCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CollectPaymentCustomerOK), nil
+
+}
+
+/*
+CollectPaymentInvoice collect payment invoice API
+*/
+func (a *Client) CollectPaymentInvoice(params *CollectPaymentInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*CollectPaymentInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCollectPaymentInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "collectPaymentInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/collect_payment",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CollectPaymentInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CollectPaymentInvoiceOK), nil
+
+}
+
+/*
+CopyAddon copy addon API
+*/
+func (a *Client) CopyAddon(params *CopyAddonParams, authInfo runtime.ClientAuthInfoWriter) (*CopyAddonOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCopyAddonParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "copyAddon",
+		Method:             "POST",
+		PathPattern:        "/addons/copy",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CopyAddonReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CopyAddonOK), nil
+
+}
+
+/*
+CopyCardForCustomerCard copy card for customer card API
+*/
+func (a *Client) CopyCardForCustomerCard(params *CopyCardForCustomerCardParams, authInfo runtime.ClientAuthInfoWriter) (*CopyCardForCustomerCardOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCopyCardForCustomerCardParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "copyCardForCustomerCard",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/copy_card",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CopyCardForCustomerCardReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CopyCardForCustomerCardOK), nil
+
+}
+
+/*
+CopyCoupon copy coupon API
+*/
+func (a *Client) CopyCoupon(params *CopyCouponParams, authInfo runtime.ClientAuthInfoWriter) (*CopyCouponOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCopyCouponParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "copyCoupon",
+		Method:             "POST",
+		PathPattern:        "/coupons/copy",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CopyCouponReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CopyCouponOK), nil
+
+}
+
+/*
+CopyPlan copy plan API
+*/
+func (a *Client) CopyPlan(params *CopyPlanParams, authInfo runtime.ClientAuthInfoWriter) (*CopyPlanOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCopyPlanParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "copyPlan",
+		Method:             "POST",
+		PathPattern:        "/plans/copy",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CopyPlanReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CopyPlanOK), nil
+
+}
+
+/*
+CreateAddon create addon API
+*/
+func (a *Client) CreateAddon(params *CreateAddonParams, authInfo runtime.ClientAuthInfoWriter) (*CreateAddonOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateAddonParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createAddon",
+		Method:             "POST",
+		PathPattern:        "/addons",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateAddonReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateAddonOK), nil
+
+}
+
+/*
+CreateCardPaymentSource create card payment source API
+*/
+func (a *Client) CreateCardPaymentSource(params *CreateCardPaymentSourceParams, authInfo runtime.ClientAuthInfoWriter) (*CreateCardPaymentSourceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateCardPaymentSourceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createCardPaymentSource",
+		Method:             "POST",
+		PathPattern:        "/payment_sources/create_card",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateCardPaymentSourceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateCardPaymentSourceOK), nil
+
+}
+
+/*
+CreateComment create comment API
+*/
+func (a *Client) CreateComment(params *CreateCommentParams, authInfo runtime.ClientAuthInfoWriter) (*CreateCommentOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateCommentParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createComment",
+		Method:             "POST",
+		PathPattern:        "/comments",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateCommentReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateCommentOK), nil
+
+}
+
+/*
+CreateCoupon create coupon API
+*/
+func (a *Client) CreateCoupon(params *CreateCouponParams, authInfo runtime.ClientAuthInfoWriter) (*CreateCouponOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateCouponParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createCoupon",
+		Method:             "POST",
+		PathPattern:        "/coupons",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateCouponReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateCouponOK), nil
+
+}
+
+/*
+CreateCouponCode create coupon code API
+*/
+func (a *Client) CreateCouponCode(params *CreateCouponCodeParams, authInfo runtime.ClientAuthInfoWriter) (*CreateCouponCodeOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateCouponCodeParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createCouponCode",
+		Method:             "POST",
+		PathPattern:        "/coupon_codes",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateCouponCodeReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateCouponCodeOK), nil
+
+}
+
+/*
+CreateCouponSet create coupon set API
+*/
+func (a *Client) CreateCouponSet(params *CreateCouponSetParams, authInfo runtime.ClientAuthInfoWriter) (*CreateCouponSetOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateCouponSetParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createCouponSet",
+		Method:             "POST",
+		PathPattern:        "/coupon_sets",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateCouponSetReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateCouponSetOK), nil
+
+}
+
+/*
+CreateCreditNote create credit note API
+*/
+func (a *Client) CreateCreditNote(params *CreateCreditNoteParams, authInfo runtime.ClientAuthInfoWriter) (*CreateCreditNoteOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateCreditNoteParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createCreditNote",
+		Method:             "POST",
+		PathPattern:        "/credit_notes",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateCreditNoteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateCreditNoteOK), nil
+
+}
+
+/*
+CreateCustomer create customer API
+*/
+func (a *Client) CreateCustomer(params *CreateCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*CreateCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateCustomerOK), nil
+
+}
+
+/*
+CreateForCustomerSubscription create for customer subscription API
+*/
+func (a *Client) CreateForCustomerSubscription(params *CreateForCustomerSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*CreateForCustomerSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateForCustomerSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createForCustomerSubscription",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/subscriptions",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateForCustomerSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateForCustomerSubscriptionOK), nil
+
+}
+
+/*
+CreateInvoice create invoice API
+*/
+func (a *Client) CreateInvoice(params *CreateInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*CreateInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateInvoiceOK), nil
+
+}
+
+/*
 CreateOrder create order API
 */
 func (a *Client) CreateOrder(params *CreateOrderParams, authInfo runtime.ClientAuthInfoWriter) (*CreateOrderOK, error) {
@@ -50,6 +1268,1224 @@ func (a *Client) CreateOrder(params *CreateOrderParams, authInfo runtime.ClientA
 		return nil, err
 	}
 	return result.(*CreateOrderOK), nil
+
+}
+
+/*
+CreatePlan create plan API
+*/
+func (a *Client) CreatePlan(params *CreatePlanParams, authInfo runtime.ClientAuthInfoWriter) (*CreatePlanOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreatePlanParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createPlan",
+		Method:             "POST",
+		PathPattern:        "/plans",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreatePlanReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreatePlanOK), nil
+
+}
+
+/*
+CreatePortalSession create portal session API
+*/
+func (a *Client) CreatePortalSession(params *CreatePortalSessionParams, authInfo runtime.ClientAuthInfoWriter) (*CreatePortalSessionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreatePortalSessionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createPortalSession",
+		Method:             "POST",
+		PathPattern:        "/portal_sessions",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreatePortalSessionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreatePortalSessionOK), nil
+
+}
+
+/*
+CreateSubForCustomerEstimateEstimate create sub for customer estimate estimate API
+*/
+func (a *Client) CreateSubForCustomerEstimateEstimate(params *CreateSubForCustomerEstimateEstimateParams, authInfo runtime.ClientAuthInfoWriter) (*CreateSubForCustomerEstimateEstimateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateSubForCustomerEstimateEstimateParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createSubForCustomerEstimateEstimate",
+		Method:             "GET",
+		PathPattern:        "/customers/{id}/create_subscription_estimate",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateSubForCustomerEstimateEstimateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateSubForCustomerEstimateEstimateOK), nil
+
+}
+
+/*
+CreateSubscription create subscription API
+*/
+func (a *Client) CreateSubscription(params *CreateSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*CreateSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateSubscriptionOK), nil
+
+}
+
+/*
+CreateSubscriptionEstimate create subscription estimate API
+*/
+func (a *Client) CreateSubscriptionEstimate(params *CreateSubscriptionEstimateParams, authInfo runtime.ClientAuthInfoWriter) (*CreateSubscriptionEstimateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateSubscriptionEstimateParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createSubscriptionEstimate",
+		Method:             "POST",
+		PathPattern:        "/estimates/create_subscription",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateSubscriptionEstimateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateSubscriptionEstimateOK), nil
+
+}
+
+/*
+CreateUsingPermanentTokenPaymentSource create using permanent token payment source API
+*/
+func (a *Client) CreateUsingPermanentTokenPaymentSource(params *CreateUsingPermanentTokenPaymentSourceParams, authInfo runtime.ClientAuthInfoWriter) (*CreateUsingPermanentTokenPaymentSourceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateUsingPermanentTokenPaymentSourceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createUsingPermanentTokenPaymentSource",
+		Method:             "POST",
+		PathPattern:        "/payment_sources/create_using_permanent_token",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateUsingPermanentTokenPaymentSourceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateUsingPermanentTokenPaymentSourceOK), nil
+
+}
+
+/*
+CreateUsingTempTokenPaymentSource create using temp token payment source API
+*/
+func (a *Client) CreateUsingTempTokenPaymentSource(params *CreateUsingTempTokenPaymentSourceParams, authInfo runtime.ClientAuthInfoWriter) (*CreateUsingTempTokenPaymentSourceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateUsingTempTokenPaymentSourceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createUsingTempTokenPaymentSource",
+		Method:             "POST",
+		PathPattern:        "/payment_sources/create_using_temp_token",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateUsingTempTokenPaymentSourceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreateUsingTempTokenPaymentSourceOK), nil
+
+}
+
+/*
+CreditNotesForCustomerCreditNote credit notes for customer credit note API
+*/
+func (a *Client) CreditNotesForCustomerCreditNote(params *CreditNotesForCustomerCreditNoteParams, authInfo runtime.ClientAuthInfoWriter) (*CreditNotesForCustomerCreditNoteOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreditNotesForCustomerCreditNoteParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "creditNotesForCustomerCreditNote",
+		Method:             "GET",
+		PathPattern:        "/customers/{id}/credit_notes",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreditNotesForCustomerCreditNoteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*CreditNotesForCustomerCreditNoteOK), nil
+
+}
+
+/*
+DeductPromotionalCredit deduct promotional credit API
+*/
+func (a *Client) DeductPromotionalCredit(params *DeductPromotionalCreditParams, authInfo runtime.ClientAuthInfoWriter) (*DeductPromotionalCreditOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeductPromotionalCreditParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deductPromotionalCredit",
+		Method:             "POST",
+		PathPattern:        "/promotional_credits/deduct",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeductPromotionalCreditReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeductPromotionalCreditOK), nil
+
+}
+
+/*
+DeductPromotionalCreditsCustomer deduct promotional credits customer API
+*/
+func (a *Client) DeductPromotionalCreditsCustomer(params *DeductPromotionalCreditsCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*DeductPromotionalCreditsCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeductPromotionalCreditsCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deductPromotionalCreditsCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/deduct_promotional_credits",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeductPromotionalCreditsCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeductPromotionalCreditsCustomerOK), nil
+
+}
+
+/*
+DeleteAddon delete addon API
+*/
+func (a *Client) DeleteAddon(params *DeleteAddonParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteAddonOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteAddonParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteAddon",
+		Method:             "POST",
+		PathPattern:        "/addons/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteAddonReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteAddonOK), nil
+
+}
+
+/*
+DeleteCardForCustomerCard delete card for customer card API
+*/
+func (a *Client) DeleteCardForCustomerCard(params *DeleteCardForCustomerCardParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteCardForCustomerCardOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteCardForCustomerCardParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteCardForCustomerCard",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/delete_card",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteCardForCustomerCardReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteCardForCustomerCardOK), nil
+
+}
+
+/*
+DeleteComment delete comment API
+*/
+func (a *Client) DeleteComment(params *DeleteCommentParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteCommentOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteCommentParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteComment",
+		Method:             "POST",
+		PathPattern:        "/comments/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteCommentReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteCommentOK), nil
+
+}
+
+/*
+DeleteContactCustomer delete contact customer API
+*/
+func (a *Client) DeleteContactCustomer(params *DeleteContactCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteContactCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteContactCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteContactCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/delete_contact",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteContactCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteContactCustomerOK), nil
+
+}
+
+/*
+DeleteCoupon delete coupon API
+*/
+func (a *Client) DeleteCoupon(params *DeleteCouponParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteCouponOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteCouponParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteCoupon",
+		Method:             "POST",
+		PathPattern:        "/coupons/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteCouponReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteCouponOK), nil
+
+}
+
+/*
+DeleteCouponSet delete coupon set API
+*/
+func (a *Client) DeleteCouponSet(params *DeleteCouponSetParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteCouponSetOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteCouponSetParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteCouponSet",
+		Method:             "POST",
+		PathPattern:        "/coupon_sets/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteCouponSetReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteCouponSetOK), nil
+
+}
+
+/*
+DeleteCreditNote delete credit note API
+*/
+func (a *Client) DeleteCreditNote(params *DeleteCreditNoteParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteCreditNoteOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteCreditNoteParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteCreditNote",
+		Method:             "POST",
+		PathPattern:        "/credit_notes/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteCreditNoteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteCreditNoteOK), nil
+
+}
+
+/*
+DeleteCustomer delete customer API
+*/
+func (a *Client) DeleteCustomer(params *DeleteCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteCustomerOK), nil
+
+}
+
+/*
+DeleteInvoice delete invoice API
+*/
+func (a *Client) DeleteInvoice(params *DeleteInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteInvoiceOK), nil
+
+}
+
+/*
+DeletePaymentSource delete payment source API
+*/
+func (a *Client) DeletePaymentSource(params *DeletePaymentSourceParams, authInfo runtime.ClientAuthInfoWriter) (*DeletePaymentSourceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeletePaymentSourceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deletePaymentSource",
+		Method:             "POST",
+		PathPattern:        "/payment_sources/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeletePaymentSourceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeletePaymentSourceOK), nil
+
+}
+
+/*
+DeletePlan delete plan API
+*/
+func (a *Client) DeletePlan(params *DeletePlanParams, authInfo runtime.ClientAuthInfoWriter) (*DeletePlanOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeletePlanParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deletePlan",
+		Method:             "POST",
+		PathPattern:        "/plans/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeletePlanReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeletePlanOK), nil
+
+}
+
+/*
+DeleteSubscription delete subscription API
+*/
+func (a *Client) DeleteSubscription(params *DeleteSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteSubscriptionOK), nil
+
+}
+
+/*
+DeleteUnbilledCharge delete unbilled charge API
+*/
+func (a *Client) DeleteUnbilledCharge(params *DeleteUnbilledChargeParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteUnbilledChargeOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteUnbilledChargeParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteUnbilledCharge",
+		Method:             "POST",
+		PathPattern:        "/unbilled_charges/{id}/delete",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteUnbilledChargeReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteUnbilledChargeOK), nil
+
+}
+
+/*
+DeleteUnusedCouponCodesCouponSet delete unused coupon codes coupon set API
+*/
+func (a *Client) DeleteUnusedCouponCodesCouponSet(params *DeleteUnusedCouponCodesCouponSetParams, authInfo runtime.ClientAuthInfoWriter) (*DeleteUnusedCouponCodesCouponSetOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteUnusedCouponCodesCouponSetParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteUnusedCouponCodesCouponSet",
+		Method:             "POST",
+		PathPattern:        "/coupon_sets/{id}/delete_unused_coupon_codes",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteUnusedCouponCodesCouponSetReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteUnusedCouponCodesCouponSetOK), nil
+
+}
+
+/*
+ExportPaymentSourcePaymentSource export payment source payment source API
+*/
+func (a *Client) ExportPaymentSourcePaymentSource(params *ExportPaymentSourcePaymentSourceParams, authInfo runtime.ClientAuthInfoWriter) (*ExportPaymentSourcePaymentSourceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewExportPaymentSourcePaymentSourceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "exportPaymentSourcePaymentSource",
+		Method:             "POST",
+		PathPattern:        "/payment_sources/{id}/export_payment_source",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ExportPaymentSourcePaymentSourceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ExportPaymentSourcePaymentSourceOK), nil
+
+}
+
+/*
+ImportForCustomerSubscription import for customer subscription API
+*/
+func (a *Client) ImportForCustomerSubscription(params *ImportForCustomerSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*ImportForCustomerSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewImportForCustomerSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "importForCustomerSubscription",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/import_subscription",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ImportForCustomerSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ImportForCustomerSubscriptionOK), nil
+
+}
+
+/*
+ImportInvoiceInvoice import invoice invoice API
+*/
+func (a *Client) ImportInvoiceInvoice(params *ImportInvoiceInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*ImportInvoiceInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewImportInvoiceInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "importInvoiceInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/import_invoice",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ImportInvoiceInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ImportInvoiceInvoiceOK), nil
+
+}
+
+/*
+ImportSubscriptionSubscription import subscription subscription API
+*/
+func (a *Client) ImportSubscriptionSubscription(params *ImportSubscriptionSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*ImportSubscriptionSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewImportSubscriptionSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "importSubscriptionSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/import_subscription",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ImportSubscriptionSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ImportSubscriptionSubscriptionOK), nil
+
+}
+
+/*
+InvoiceNowEstimateUnbilledCharge invoice now estimate unbilled charge API
+*/
+func (a *Client) InvoiceNowEstimateUnbilledCharge(params *InvoiceNowEstimateUnbilledChargeParams, authInfo runtime.ClientAuthInfoWriter) (*InvoiceNowEstimateUnbilledChargeOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewInvoiceNowEstimateUnbilledChargeParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "invoiceNowEstimateUnbilledCharge",
+		Method:             "POST",
+		PathPattern:        "/unbilled_charges/invoice_now_estimate",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &InvoiceNowEstimateUnbilledChargeReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*InvoiceNowEstimateUnbilledChargeOK), nil
+
+}
+
+/*
+InvoiceUnbilledChargesUnbilledCharge invoice unbilled charges unbilled charge API
+*/
+func (a *Client) InvoiceUnbilledChargesUnbilledCharge(params *InvoiceUnbilledChargesUnbilledChargeParams, authInfo runtime.ClientAuthInfoWriter) (*InvoiceUnbilledChargesUnbilledChargeOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewInvoiceUnbilledChargesUnbilledChargeParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "invoiceUnbilledChargesUnbilledCharge",
+		Method:             "POST",
+		PathPattern:        "/unbilled_charges/invoice_unbilled_charges",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &InvoiceUnbilledChargesUnbilledChargeReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*InvoiceUnbilledChargesUnbilledChargeOK), nil
+
+}
+
+/*
+InvoicesForCustomerInvoice invoices for customer invoice API
+*/
+func (a *Client) InvoicesForCustomerInvoice(params *InvoicesForCustomerInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*InvoicesForCustomerInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewInvoicesForCustomerInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "invoicesForCustomerInvoice",
+		Method:             "GET",
+		PathPattern:        "/customers/{id}/invoices",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &InvoicesForCustomerInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*InvoicesForCustomerInvoiceOK), nil
+
+}
+
+/*
+InvoicesForSubscriptionInvoice invoices for subscription invoice API
+*/
+func (a *Client) InvoicesForSubscriptionInvoice(params *InvoicesForSubscriptionInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*InvoicesForSubscriptionInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewInvoicesForSubscriptionInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "invoicesForSubscriptionInvoice",
+		Method:             "GET",
+		PathPattern:        "/subscriptions/{id}/invoices",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &InvoicesForSubscriptionInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*InvoicesForSubscriptionInvoiceOK), nil
+
+}
+
+/*
+ListAddon list addon API
+*/
+func (a *Client) ListAddon(params *ListAddonParams, authInfo runtime.ClientAuthInfoWriter) (*ListAddonOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListAddonParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listAddon",
+		Method:             "GET",
+		PathPattern:        "/addons",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListAddonReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListAddonOK), nil
+
+}
+
+/*
+ListComment list comment API
+*/
+func (a *Client) ListComment(params *ListCommentParams, authInfo runtime.ClientAuthInfoWriter) (*ListCommentOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListCommentParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listComment",
+		Method:             "GET",
+		PathPattern:        "/comments",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListCommentReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListCommentOK), nil
+
+}
+
+/*
+ListCoupon list coupon API
+*/
+func (a *Client) ListCoupon(params *ListCouponParams, authInfo runtime.ClientAuthInfoWriter) (*ListCouponOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListCouponParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listCoupon",
+		Method:             "GET",
+		PathPattern:        "/coupons",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListCouponReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListCouponOK), nil
+
+}
+
+/*
+ListCouponCode list coupon code API
+*/
+func (a *Client) ListCouponCode(params *ListCouponCodeParams, authInfo runtime.ClientAuthInfoWriter) (*ListCouponCodeOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListCouponCodeParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listCouponCode",
+		Method:             "GET",
+		PathPattern:        "/coupon_codes",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListCouponCodeReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListCouponCodeOK), nil
+
+}
+
+/*
+ListCouponSet list coupon set API
+*/
+func (a *Client) ListCouponSet(params *ListCouponSetParams, authInfo runtime.ClientAuthInfoWriter) (*ListCouponSetOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListCouponSetParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listCouponSet",
+		Method:             "GET",
+		PathPattern:        "/coupon_sets",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListCouponSetReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListCouponSetOK), nil
+
+}
+
+/*
+ListCreditNote list credit note API
+*/
+func (a *Client) ListCreditNote(params *ListCreditNoteParams, authInfo runtime.ClientAuthInfoWriter) (*ListCreditNoteOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListCreditNoteParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listCreditNote",
+		Method:             "GET",
+		PathPattern:        "/credit_notes",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListCreditNoteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListCreditNoteOK), nil
+
+}
+
+/*
+ListCustomer list customer API
+*/
+func (a *Client) ListCustomer(params *ListCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*ListCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listCustomer",
+		Method:             "GET",
+		PathPattern:        "/customers",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListCustomerOK), nil
+
+}
+
+/*
+ListEvent list event API
+*/
+func (a *Client) ListEvent(params *ListEventParams, authInfo runtime.ClientAuthInfoWriter) (*ListEventOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListEventParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listEvent",
+		Method:             "GET",
+		PathPattern:        "/events",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListEventReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListEventOK), nil
+
+}
+
+/*
+ListHostedPage list hosted page API
+*/
+func (a *Client) ListHostedPage(params *ListHostedPageParams, authInfo runtime.ClientAuthInfoWriter) (*ListHostedPageOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListHostedPageParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listHostedPage",
+		Method:             "GET",
+		PathPattern:        "/hosted_pages",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListHostedPageReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListHostedPageOK), nil
+
+}
+
+/*
+ListInvoice list invoice API
+*/
+func (a *Client) ListInvoice(params *ListInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*ListInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listInvoice",
+		Method:             "GET",
+		PathPattern:        "/invoices",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListInvoiceOK), nil
 
 }
 
@@ -83,6 +2519,296 @@ func (a *Client) ListOrder(params *ListOrderParams, authInfo runtime.ClientAuthI
 }
 
 /*
+ListPaymentSource list payment source API
+*/
+func (a *Client) ListPaymentSource(params *ListPaymentSourceParams, authInfo runtime.ClientAuthInfoWriter) (*ListPaymentSourceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListPaymentSourceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listPaymentSource",
+		Method:             "GET",
+		PathPattern:        "/payment_sources",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListPaymentSourceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListPaymentSourceOK), nil
+
+}
+
+/*
+ListPlan list plan API
+*/
+func (a *Client) ListPlan(params *ListPlanParams, authInfo runtime.ClientAuthInfoWriter) (*ListPlanOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListPlanParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listPlan",
+		Method:             "GET",
+		PathPattern:        "/plans",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListPlanReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListPlanOK), nil
+
+}
+
+/*
+ListPromotionalCredit list promotional credit API
+*/
+func (a *Client) ListPromotionalCredit(params *ListPromotionalCreditParams, authInfo runtime.ClientAuthInfoWriter) (*ListPromotionalCreditOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListPromotionalCreditParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listPromotionalCredit",
+		Method:             "GET",
+		PathPattern:        "/promotional_credits",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListPromotionalCreditReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListPromotionalCreditOK), nil
+
+}
+
+/*
+ListSiteMigrationDetail list site migration detail API
+*/
+func (a *Client) ListSiteMigrationDetail(params *ListSiteMigrationDetailParams, authInfo runtime.ClientAuthInfoWriter) (*ListSiteMigrationDetailOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListSiteMigrationDetailParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listSiteMigrationDetail",
+		Method:             "GET",
+		PathPattern:        "/site_migration_details",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListSiteMigrationDetailReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListSiteMigrationDetailOK), nil
+
+}
+
+/*
+ListSubscription list subscription API
+*/
+func (a *Client) ListSubscription(params *ListSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*ListSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listSubscription",
+		Method:             "GET",
+		PathPattern:        "/subscriptions",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListSubscriptionOK), nil
+
+}
+
+/*
+ListTransaction list transaction API
+*/
+func (a *Client) ListTransaction(params *ListTransactionParams, authInfo runtime.ClientAuthInfoWriter) (*ListTransactionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListTransactionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listTransaction",
+		Method:             "GET",
+		PathPattern:        "/transactions",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListTransactionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListTransactionOK), nil
+
+}
+
+/*
+ListUnbilledCharge list unbilled charge API
+*/
+func (a *Client) ListUnbilledCharge(params *ListUnbilledChargeParams, authInfo runtime.ClientAuthInfoWriter) (*ListUnbilledChargeOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListUnbilledChargeParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listUnbilledCharge",
+		Method:             "GET",
+		PathPattern:        "/unbilled_charges",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListUnbilledChargeReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListUnbilledChargeOK), nil
+
+}
+
+/*
+LogoutPortalSession logout portal session API
+*/
+func (a *Client) LogoutPortalSession(params *LogoutPortalSessionParams, authInfo runtime.ClientAuthInfoWriter) (*LogoutPortalSessionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewLogoutPortalSessionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "logoutPortalSession",
+		Method:             "POST",
+		PathPattern:        "/portal_sessions/{id}/logout",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &LogoutPortalSessionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*LogoutPortalSessionOK), nil
+
+}
+
+/*
+ManagePaymentSourcesHostedPage manage payment sources hosted page API
+*/
+func (a *Client) ManagePaymentSourcesHostedPage(params *ManagePaymentSourcesHostedPageParams, authInfo runtime.ClientAuthInfoWriter) (*ManagePaymentSourcesHostedPageOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewManagePaymentSourcesHostedPageParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "managePaymentSourcesHostedPage",
+		Method:             "POST",
+		PathPattern:        "/hosted_pages/manage_payment_sources",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ManagePaymentSourcesHostedPageReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ManagePaymentSourcesHostedPageOK), nil
+
+}
+
+/*
+MoveCustomer move customer API
+*/
+func (a *Client) MoveCustomer(params *MoveCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*MoveCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewMoveCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "moveCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/move",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &MoveCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*MoveCustomerOK), nil
+
+}
+
+/*
 OrdersForInvoiceOrder orders for invoice order API
 */
 func (a *Client) OrdersForInvoiceOrder(params *OrdersForInvoiceOrderParams, authInfo runtime.ClientAuthInfoWriter) (*OrdersForInvoiceOrderOK, error) {
@@ -108,6 +2834,847 @@ func (a *Client) OrdersForInvoiceOrder(params *OrdersForInvoiceOrderParams, auth
 		return nil, err
 	}
 	return result.(*OrdersForInvoiceOrderOK), nil
+
+}
+
+/*
+OverrideBillingProfileSubscription override billing profile subscription API
+*/
+func (a *Client) OverrideBillingProfileSubscription(params *OverrideBillingProfileSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*OverrideBillingProfileSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewOverrideBillingProfileSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "overrideBillingProfileSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/override_billing_profile",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &OverrideBillingProfileSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*OverrideBillingProfileSubscriptionOK), nil
+
+}
+
+/*
+PaymentsForInvoiceTransaction payments for invoice transaction API
+*/
+func (a *Client) PaymentsForInvoiceTransaction(params *PaymentsForInvoiceTransactionParams, authInfo runtime.ClientAuthInfoWriter) (*PaymentsForInvoiceTransactionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewPaymentsForInvoiceTransactionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "paymentsForInvoiceTransaction",
+		Method:             "GET",
+		PathPattern:        "/invoices/{id}/payments",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &PaymentsForInvoiceTransactionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*PaymentsForInvoiceTransactionOK), nil
+
+}
+
+/*
+PdfCreditNote pdf credit note API
+*/
+func (a *Client) PdfCreditNote(params *PdfCreditNoteParams, authInfo runtime.ClientAuthInfoWriter) (*PdfCreditNoteOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewPdfCreditNoteParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "pdfCreditNote",
+		Method:             "POST",
+		PathPattern:        "/credit_notes/{id}/pdf",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &PdfCreditNoteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*PdfCreditNoteOK), nil
+
+}
+
+/*
+PdfInvoice pdf invoice API
+*/
+func (a *Client) PdfInvoice(params *PdfInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*PdfInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewPdfInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "pdfInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/pdf",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &PdfInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*PdfInvoiceOK), nil
+
+}
+
+/*
+ReactivateSubscription reactivate subscription API
+*/
+func (a *Client) ReactivateSubscription(params *ReactivateSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*ReactivateSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewReactivateSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "reactivateSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/reactivate",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ReactivateSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ReactivateSubscriptionOK), nil
+
+}
+
+/*
+RecordExcessPaymentCustomer record excess payment customer API
+*/
+func (a *Client) RecordExcessPaymentCustomer(params *RecordExcessPaymentCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*RecordExcessPaymentCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRecordExcessPaymentCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "recordExcessPaymentCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/record_excess_payment",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RecordExcessPaymentCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RecordExcessPaymentCustomerOK), nil
+
+}
+
+/*
+RecordPaymentInvoice record payment invoice API
+*/
+func (a *Client) RecordPaymentInvoice(params *RecordPaymentInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*RecordPaymentInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRecordPaymentInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "recordPaymentInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/record_payment",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RecordPaymentInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RecordPaymentInvoiceOK), nil
+
+}
+
+/*
+RecordRefundCreditNote record refund credit note API
+*/
+func (a *Client) RecordRefundCreditNote(params *RecordRefundCreditNoteParams, authInfo runtime.ClientAuthInfoWriter) (*RecordRefundCreditNoteOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRecordRefundCreditNoteParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "recordRefundCreditNote",
+		Method:             "POST",
+		PathPattern:        "/credit_notes/{id}/record_refund",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RecordRefundCreditNoteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RecordRefundCreditNoteOK), nil
+
+}
+
+/*
+RecordRefundInvoice record refund invoice API
+*/
+func (a *Client) RecordRefundInvoice(params *RecordRefundInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*RecordRefundInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRecordRefundInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "recordRefundInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/record_refund",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RecordRefundInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RecordRefundInvoiceOK), nil
+
+}
+
+/*
+RefundInvoice refund invoice API
+*/
+func (a *Client) RefundInvoice(params *RefundInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*RefundInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRefundInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "refundInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/refund",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RefundInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RefundInvoiceOK), nil
+
+}
+
+/*
+RemoveCouponsSubscription remove coupons subscription API
+*/
+func (a *Client) RemoveCouponsSubscription(params *RemoveCouponsSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*RemoveCouponsSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRemoveCouponsSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "removeCouponsSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/remove_coupons",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RemoveCouponsSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RemoveCouponsSubscriptionOK), nil
+
+}
+
+/*
+RemoveCreditNoteInvoice remove credit note invoice API
+*/
+func (a *Client) RemoveCreditNoteInvoice(params *RemoveCreditNoteInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*RemoveCreditNoteInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRemoveCreditNoteInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "removeCreditNoteInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/remove_credit_note",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RemoveCreditNoteInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RemoveCreditNoteInvoiceOK), nil
+
+}
+
+/*
+RemovePaymentInvoice remove payment invoice API
+*/
+func (a *Client) RemovePaymentInvoice(params *RemovePaymentInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*RemovePaymentInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRemovePaymentInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "removePaymentInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/remove_payment",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RemovePaymentInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RemovePaymentInvoiceOK), nil
+
+}
+
+/*
+RemoveScheduledCancellationSubscription remove scheduled cancellation subscription API
+*/
+func (a *Client) RemoveScheduledCancellationSubscription(params *RemoveScheduledCancellationSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*RemoveScheduledCancellationSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRemoveScheduledCancellationSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "removeScheduledCancellationSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/remove_scheduled_cancellation",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RemoveScheduledCancellationSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RemoveScheduledCancellationSubscriptionOK), nil
+
+}
+
+/*
+RemoveScheduledChangesSubscription remove scheduled changes subscription API
+*/
+func (a *Client) RemoveScheduledChangesSubscription(params *RemoveScheduledChangesSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*RemoveScheduledChangesSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRemoveScheduledChangesSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "removeScheduledChangesSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}/remove_scheduled_changes",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RemoveScheduledChangesSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RemoveScheduledChangesSubscriptionOK), nil
+
+}
+
+/*
+RenewalEstimateEstimate renewal estimate estimate API
+*/
+func (a *Client) RenewalEstimateEstimate(params *RenewalEstimateEstimateParams, authInfo runtime.ClientAuthInfoWriter) (*RenewalEstimateEstimateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRenewalEstimateEstimateParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "renewalEstimateEstimate",
+		Method:             "GET",
+		PathPattern:        "/subscriptions/{id}/renewal_estimate",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RenewalEstimateEstimateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RenewalEstimateEstimateOK), nil
+
+}
+
+/*
+RetrieveAddon retrieve addon API
+*/
+func (a *Client) RetrieveAddon(params *RetrieveAddonParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveAddonOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveAddonParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveAddon",
+		Method:             "GET",
+		PathPattern:        "/addons/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveAddonReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveAddonOK), nil
+
+}
+
+/*
+RetrieveAddress retrieve address API
+*/
+func (a *Client) RetrieveAddress(params *RetrieveAddressParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveAddressOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveAddressParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveAddress",
+		Method:             "GET",
+		PathPattern:        "/addresses",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveAddressReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveAddressOK), nil
+
+}
+
+/*
+RetrieveCard retrieve card API
+*/
+func (a *Client) RetrieveCard(params *RetrieveCardParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveCardOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveCardParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveCard",
+		Method:             "GET",
+		PathPattern:        "/cards/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveCardReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveCardOK), nil
+
+}
+
+/*
+RetrieveComment retrieve comment API
+*/
+func (a *Client) RetrieveComment(params *RetrieveCommentParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveCommentOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveCommentParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveComment",
+		Method:             "GET",
+		PathPattern:        "/comments/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveCommentReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveCommentOK), nil
+
+}
+
+/*
+RetrieveCoupon retrieve coupon API
+*/
+func (a *Client) RetrieveCoupon(params *RetrieveCouponParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveCouponOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveCouponParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveCoupon",
+		Method:             "GET",
+		PathPattern:        "/coupons/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveCouponReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveCouponOK), nil
+
+}
+
+/*
+RetrieveCouponCode retrieve coupon code API
+*/
+func (a *Client) RetrieveCouponCode(params *RetrieveCouponCodeParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveCouponCodeOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveCouponCodeParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveCouponCode",
+		Method:             "GET",
+		PathPattern:        "/coupon_codes/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveCouponCodeReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveCouponCodeOK), nil
+
+}
+
+/*
+RetrieveCouponSet retrieve coupon set API
+*/
+func (a *Client) RetrieveCouponSet(params *RetrieveCouponSetParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveCouponSetOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveCouponSetParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveCouponSet",
+		Method:             "GET",
+		PathPattern:        "/coupon_sets/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveCouponSetReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveCouponSetOK), nil
+
+}
+
+/*
+RetrieveCreditNote retrieve credit note API
+*/
+func (a *Client) RetrieveCreditNote(params *RetrieveCreditNoteParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveCreditNoteOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveCreditNoteParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveCreditNote",
+		Method:             "GET",
+		PathPattern:        "/credit_notes/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveCreditNoteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveCreditNoteOK), nil
+
+}
+
+/*
+RetrieveCustomer retrieve customer API
+*/
+func (a *Client) RetrieveCustomer(params *RetrieveCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveCustomer",
+		Method:             "GET",
+		PathPattern:        "/customers/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveCustomerOK), nil
+
+}
+
+/*
+RetrieveEvent retrieve event API
+*/
+func (a *Client) RetrieveEvent(params *RetrieveEventParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveEventOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveEventParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveEvent",
+		Method:             "GET",
+		PathPattern:        "/events/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveEventReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveEventOK), nil
+
+}
+
+/*
+RetrieveHostedPage retrieve hosted page API
+*/
+func (a *Client) RetrieveHostedPage(params *RetrieveHostedPageParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveHostedPageOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveHostedPageParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveHostedPage",
+		Method:             "GET",
+		PathPattern:        "/hosted_pages/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveHostedPageReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveHostedPageOK), nil
+
+}
+
+/*
+RetrieveInvoice retrieve invoice API
+*/
+func (a *Client) RetrieveInvoice(params *RetrieveInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveInvoice",
+		Method:             "GET",
+		PathPattern:        "/invoices/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveInvoiceOK), nil
+
+}
+
+/*
+RetrieveLatestResourceMigration retrieve latest resource migration API
+*/
+func (a *Client) RetrieveLatestResourceMigration(params *RetrieveLatestResourceMigrationParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveLatestResourceMigrationOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveLatestResourceMigrationParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveLatestResourceMigration",
+		Method:             "GET",
+		PathPattern:        "/resource_migrations/retrieve_latest",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveLatestResourceMigrationReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveLatestResourceMigrationOK), nil
 
 }
 
@@ -141,6 +3708,934 @@ func (a *Client) RetrieveOrder(params *RetrieveOrderParams, authInfo runtime.Cli
 }
 
 /*
+RetrievePaymentSource retrieve payment source API
+*/
+func (a *Client) RetrievePaymentSource(params *RetrievePaymentSourceParams, authInfo runtime.ClientAuthInfoWriter) (*RetrievePaymentSourceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrievePaymentSourceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrievePaymentSource",
+		Method:             "GET",
+		PathPattern:        "/payment_sources/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrievePaymentSourceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrievePaymentSourceOK), nil
+
+}
+
+/*
+RetrievePlan retrieve plan API
+*/
+func (a *Client) RetrievePlan(params *RetrievePlanParams, authInfo runtime.ClientAuthInfoWriter) (*RetrievePlanOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrievePlanParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrievePlan",
+		Method:             "GET",
+		PathPattern:        "/plans/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrievePlanReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrievePlanOK), nil
+
+}
+
+/*
+RetrievePortalSession retrieve portal session API
+*/
+func (a *Client) RetrievePortalSession(params *RetrievePortalSessionParams, authInfo runtime.ClientAuthInfoWriter) (*RetrievePortalSessionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrievePortalSessionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrievePortalSession",
+		Method:             "GET",
+		PathPattern:        "/portal_sessions/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrievePortalSessionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrievePortalSessionOK), nil
+
+}
+
+/*
+RetrievePromotionalCredit retrieve promotional credit API
+*/
+func (a *Client) RetrievePromotionalCredit(params *RetrievePromotionalCreditParams, authInfo runtime.ClientAuthInfoWriter) (*RetrievePromotionalCreditOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrievePromotionalCreditParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrievePromotionalCredit",
+		Method:             "GET",
+		PathPattern:        "/promotional_credits/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrievePromotionalCreditReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrievePromotionalCreditOK), nil
+
+}
+
+/*
+RetrieveSubscription retrieve subscription API
+*/
+func (a *Client) RetrieveSubscription(params *RetrieveSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveSubscription",
+		Method:             "GET",
+		PathPattern:        "/subscriptions/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveSubscriptionOK), nil
+
+}
+
+/*
+RetrieveTimeMachine retrieve time machine API
+*/
+func (a *Client) RetrieveTimeMachine(params *RetrieveTimeMachineParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveTimeMachineOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveTimeMachineParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveTimeMachine",
+		Method:             "GET",
+		PathPattern:        "/time_machines/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveTimeMachineReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveTimeMachineOK), nil
+
+}
+
+/*
+RetrieveTransaction retrieve transaction API
+*/
+func (a *Client) RetrieveTransaction(params *RetrieveTransactionParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveTransactionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveTransactionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveTransaction",
+		Method:             "GET",
+		PathPattern:        "/transactions/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveTransactionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveTransactionOK), nil
+
+}
+
+/*
+RetrieveWithScheduledChangesSubscription retrieve with scheduled changes subscription API
+*/
+func (a *Client) RetrieveWithScheduledChangesSubscription(params *RetrieveWithScheduledChangesSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*RetrieveWithScheduledChangesSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRetrieveWithScheduledChangesSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "retrieveWithScheduledChangesSubscription",
+		Method:             "GET",
+		PathPattern:        "/subscriptions/{id}/retrieve_with_scheduled_changes",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &RetrieveWithScheduledChangesSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*RetrieveWithScheduledChangesSubscriptionOK), nil
+
+}
+
+/*
+SetPromotionalCredit set promotional credit API
+*/
+func (a *Client) SetPromotionalCredit(params *SetPromotionalCreditParams, authInfo runtime.ClientAuthInfoWriter) (*SetPromotionalCreditOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewSetPromotionalCreditParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "setPromotionalCredit",
+		Method:             "POST",
+		PathPattern:        "/promotional_credits/set",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &SetPromotionalCreditReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*SetPromotionalCreditOK), nil
+
+}
+
+/*
+SetPromotionalCreditsCustomer set promotional credits customer API
+*/
+func (a *Client) SetPromotionalCreditsCustomer(params *SetPromotionalCreditsCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*SetPromotionalCreditsCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewSetPromotionalCreditsCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "setPromotionalCreditsCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/set_promotional_credits",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &SetPromotionalCreditsCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*SetPromotionalCreditsCustomerOK), nil
+
+}
+
+/*
+StartAfreshTimeMachine start afresh time machine API
+*/
+func (a *Client) StartAfreshTimeMachine(params *StartAfreshTimeMachineParams, authInfo runtime.ClientAuthInfoWriter) (*StartAfreshTimeMachineOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewStartAfreshTimeMachineParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "startAfreshTimeMachine",
+		Method:             "POST",
+		PathPattern:        "/time_machines/{id}/start_afresh",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &StartAfreshTimeMachineReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*StartAfreshTimeMachineOK), nil
+
+}
+
+/*
+StopDunningInvoice stop dunning invoice API
+*/
+func (a *Client) StopDunningInvoice(params *StopDunningInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*StopDunningInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewStopDunningInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "stopDunningInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/stop_dunning",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &StopDunningInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*StopDunningInvoiceOK), nil
+
+}
+
+/*
+SubscriptionsForCustomerSubscription subscriptions for customer subscription API
+*/
+func (a *Client) SubscriptionsForCustomerSubscription(params *SubscriptionsForCustomerSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*SubscriptionsForCustomerSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewSubscriptionsForCustomerSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "subscriptionsForCustomerSubscription",
+		Method:             "GET",
+		PathPattern:        "/customers/{id}/subscriptions",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &SubscriptionsForCustomerSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*SubscriptionsForCustomerSubscriptionOK), nil
+
+}
+
+/*
+SwitchGatewayAccountPaymentSource switch gateway account payment source API
+*/
+func (a *Client) SwitchGatewayAccountPaymentSource(params *SwitchGatewayAccountPaymentSourceParams, authInfo runtime.ClientAuthInfoWriter) (*SwitchGatewayAccountPaymentSourceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewSwitchGatewayAccountPaymentSourceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "switchGatewayAccountPaymentSource",
+		Method:             "POST",
+		PathPattern:        "/payment_sources/{id}/switch_gateway_account",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &SwitchGatewayAccountPaymentSourceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*SwitchGatewayAccountPaymentSourceOK), nil
+
+}
+
+/*
+SwitchGatewayForCustomerCard switch gateway for customer card API
+*/
+func (a *Client) SwitchGatewayForCustomerCard(params *SwitchGatewayForCustomerCardParams, authInfo runtime.ClientAuthInfoWriter) (*SwitchGatewayForCustomerCardOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewSwitchGatewayForCustomerCardParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "switchGatewayForCustomerCard",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/switch_gateway",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &SwitchGatewayForCustomerCardReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*SwitchGatewayForCustomerCardOK), nil
+
+}
+
+/*
+TransactionsForCustomerTransaction transactions for customer transaction API
+*/
+func (a *Client) TransactionsForCustomerTransaction(params *TransactionsForCustomerTransactionParams, authInfo runtime.ClientAuthInfoWriter) (*TransactionsForCustomerTransactionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewTransactionsForCustomerTransactionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "transactionsForCustomerTransaction",
+		Method:             "GET",
+		PathPattern:        "/customers/{id}/transactions",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &TransactionsForCustomerTransactionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*TransactionsForCustomerTransactionOK), nil
+
+}
+
+/*
+TransactionsForSubscriptionTransaction transactions for subscription transaction API
+*/
+func (a *Client) TransactionsForSubscriptionTransaction(params *TransactionsForSubscriptionTransactionParams, authInfo runtime.ClientAuthInfoWriter) (*TransactionsForSubscriptionTransactionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewTransactionsForSubscriptionTransactionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "transactionsForSubscriptionTransaction",
+		Method:             "GET",
+		PathPattern:        "/subscriptions/{id}/transactions",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &TransactionsForSubscriptionTransactionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*TransactionsForSubscriptionTransactionOK), nil
+
+}
+
+/*
+TravelForwardTimeMachine travel forward time machine API
+*/
+func (a *Client) TravelForwardTimeMachine(params *TravelForwardTimeMachineParams, authInfo runtime.ClientAuthInfoWriter) (*TravelForwardTimeMachineOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewTravelForwardTimeMachineParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "travelForwardTimeMachine",
+		Method:             "POST",
+		PathPattern:        "/time_machines/{id}/travel_forward",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &TravelForwardTimeMachineReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*TravelForwardTimeMachineOK), nil
+
+}
+
+/*
+UnarchiveAddon unarchive addon API
+*/
+func (a *Client) UnarchiveAddon(params *UnarchiveAddonParams, authInfo runtime.ClientAuthInfoWriter) (*UnarchiveAddonOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUnarchiveAddonParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "unarchiveAddon",
+		Method:             "POST",
+		PathPattern:        "/addons/{id}/unarchive",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UnarchiveAddonReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UnarchiveAddonOK), nil
+
+}
+
+/*
+UnarchiveCoupon unarchive coupon API
+*/
+func (a *Client) UnarchiveCoupon(params *UnarchiveCouponParams, authInfo runtime.ClientAuthInfoWriter) (*UnarchiveCouponOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUnarchiveCouponParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "unarchiveCoupon",
+		Method:             "POST",
+		PathPattern:        "/coupons/{id}/unarchive",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UnarchiveCouponReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UnarchiveCouponOK), nil
+
+}
+
+/*
+UnarchivePlan unarchive plan API
+*/
+func (a *Client) UnarchivePlan(params *UnarchivePlanParams, authInfo runtime.ClientAuthInfoWriter) (*UnarchivePlanOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUnarchivePlanParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "unarchivePlan",
+		Method:             "POST",
+		PathPattern:        "/plans/{id}/unarchive",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UnarchivePlanReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UnarchivePlanOK), nil
+
+}
+
+/*
+UpcomingInvoicesEstimateEstimate upcoming invoices estimate estimate API
+*/
+func (a *Client) UpcomingInvoicesEstimateEstimate(params *UpcomingInvoicesEstimateEstimateParams, authInfo runtime.ClientAuthInfoWriter) (*UpcomingInvoicesEstimateEstimateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpcomingInvoicesEstimateEstimateParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "upcomingInvoicesEstimateEstimate",
+		Method:             "GET",
+		PathPattern:        "/customers/{id}/upcoming_invoices_estimate",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpcomingInvoicesEstimateEstimateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpcomingInvoicesEstimateEstimateOK), nil
+
+}
+
+/*
+UpdateAddon update addon API
+*/
+func (a *Client) UpdateAddon(params *UpdateAddonParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateAddonOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateAddonParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateAddon",
+		Method:             "POST",
+		PathPattern:        "/addons/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateAddonReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateAddonOK), nil
+
+}
+
+/*
+UpdateAddress update address API
+*/
+func (a *Client) UpdateAddress(params *UpdateAddressParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateAddressOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateAddressParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateAddress",
+		Method:             "POST",
+		PathPattern:        "/addresses",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateAddressReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateAddressOK), nil
+
+}
+
+/*
+UpdateBillingInfoCustomer update billing info customer API
+*/
+func (a *Client) UpdateBillingInfoCustomer(params *UpdateBillingInfoCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateBillingInfoCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateBillingInfoCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateBillingInfoCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/update_billing_info",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateBillingInfoCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateBillingInfoCustomerOK), nil
+
+}
+
+/*
+UpdateCardForCustomerCard update card for customer card API
+*/
+func (a *Client) UpdateCardForCustomerCard(params *UpdateCardForCustomerCardParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateCardForCustomerCardOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateCardForCustomerCardParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateCardForCustomerCard",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/credit_card",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateCardForCustomerCardReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateCardForCustomerCardOK), nil
+
+}
+
+/*
+UpdateCardHostedPage update card hosted page API
+*/
+func (a *Client) UpdateCardHostedPage(params *UpdateCardHostedPageParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateCardHostedPageOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateCardHostedPageParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateCardHostedPage",
+		Method:             "POST",
+		PathPattern:        "/hosted_pages/update_card",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateCardHostedPageReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateCardHostedPageOK), nil
+
+}
+
+/*
+UpdateCardPaymentSource update card payment source API
+*/
+func (a *Client) UpdateCardPaymentSource(params *UpdateCardPaymentSourceParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateCardPaymentSourceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateCardPaymentSourceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateCardPaymentSource",
+		Method:             "POST",
+		PathPattern:        "/payment_sources/{id}/update_card",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateCardPaymentSourceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateCardPaymentSourceOK), nil
+
+}
+
+/*
+UpdateContactCustomer update contact customer API
+*/
+func (a *Client) UpdateContactCustomer(params *UpdateContactCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateContactCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateContactCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateContactCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/update_contact",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateContactCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateContactCustomerOK), nil
+
+}
+
+/*
+UpdateCouponSet update coupon set API
+*/
+func (a *Client) UpdateCouponSet(params *UpdateCouponSetParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateCouponSetOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateCouponSetParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateCouponSet",
+		Method:             "POST",
+		PathPattern:        "/coupon_sets/{id}/update",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateCouponSetReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateCouponSetOK), nil
+
+}
+
+/*
+UpdateCustomer update customer API
+*/
+func (a *Client) UpdateCustomer(params *UpdateCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateCustomerOK), nil
+
+}
+
+/*
+UpdateDetailsInvoice update details invoice API
+*/
+func (a *Client) UpdateDetailsInvoice(params *UpdateDetailsInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateDetailsInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateDetailsInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateDetailsInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/update_details",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateDetailsInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateDetailsInvoiceOK), nil
+
+}
+
+/*
 UpdateOrder update order API
 */
 func (a *Client) UpdateOrder(params *UpdateOrderParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateOrderOK, error) {
@@ -166,6 +4661,238 @@ func (a *Client) UpdateOrder(params *UpdateOrderParams, authInfo runtime.ClientA
 		return nil, err
 	}
 	return result.(*UpdateOrderOK), nil
+
+}
+
+/*
+UpdatePaymentMethodCustomer update payment method customer API
+*/
+func (a *Client) UpdatePaymentMethodCustomer(params *UpdatePaymentMethodCustomerParams, authInfo runtime.ClientAuthInfoWriter) (*UpdatePaymentMethodCustomerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdatePaymentMethodCustomerParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updatePaymentMethodCustomer",
+		Method:             "POST",
+		PathPattern:        "/customers/{id}/update_payment_method",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdatePaymentMethodCustomerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdatePaymentMethodCustomerOK), nil
+
+}
+
+/*
+UpdatePaymentMethodHostedPage update payment method hosted page API
+*/
+func (a *Client) UpdatePaymentMethodHostedPage(params *UpdatePaymentMethodHostedPageParams, authInfo runtime.ClientAuthInfoWriter) (*UpdatePaymentMethodHostedPageOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdatePaymentMethodHostedPageParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updatePaymentMethodHostedPage",
+		Method:             "POST",
+		PathPattern:        "/hosted_pages/update_payment_method",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdatePaymentMethodHostedPageReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdatePaymentMethodHostedPageOK), nil
+
+}
+
+/*
+UpdatePlan update plan API
+*/
+func (a *Client) UpdatePlan(params *UpdatePlanParams, authInfo runtime.ClientAuthInfoWriter) (*UpdatePlanOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdatePlanParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updatePlan",
+		Method:             "POST",
+		PathPattern:        "/plans/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdatePlanReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdatePlanOK), nil
+
+}
+
+/*
+UpdateSubscription update subscription API
+*/
+func (a *Client) UpdateSubscription(params *UpdateSubscriptionParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateSubscriptionOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateSubscriptionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateSubscription",
+		Method:             "POST",
+		PathPattern:        "/subscriptions/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateSubscriptionReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateSubscriptionOK), nil
+
+}
+
+/*
+UpdateSubscriptionEstimate update subscription estimate API
+*/
+func (a *Client) UpdateSubscriptionEstimate(params *UpdateSubscriptionEstimateParams, authInfo runtime.ClientAuthInfoWriter) (*UpdateSubscriptionEstimateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateSubscriptionEstimateParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateSubscriptionEstimate",
+		Method:             "POST",
+		PathPattern:        "/estimates/update_subscription",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateSubscriptionEstimateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UpdateSubscriptionEstimateOK), nil
+
+}
+
+/*
+VoidCreditNoteCreditNote void credit note credit note API
+*/
+func (a *Client) VoidCreditNoteCreditNote(params *VoidCreditNoteCreditNoteParams, authInfo runtime.ClientAuthInfoWriter) (*VoidCreditNoteCreditNoteOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewVoidCreditNoteCreditNoteParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "voidCreditNoteCreditNote",
+		Method:             "POST",
+		PathPattern:        "/credit_notes/{id}/void",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &VoidCreditNoteCreditNoteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*VoidCreditNoteCreditNoteOK), nil
+
+}
+
+/*
+VoidInvoiceInvoice void invoice invoice API
+*/
+func (a *Client) VoidInvoiceInvoice(params *VoidInvoiceInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*VoidInvoiceInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewVoidInvoiceInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "voidInvoiceInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/void",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &VoidInvoiceInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*VoidInvoiceInvoiceOK), nil
+
+}
+
+/*
+WriteOffInvoice write off invoice API
+*/
+func (a *Client) WriteOffInvoice(params *WriteOffInvoiceParams, authInfo runtime.ClientAuthInfoWriter) (*WriteOffInvoiceOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewWriteOffInvoiceParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "writeOffInvoice",
+		Method:             "POST",
+		PathPattern:        "/invoices/{id}/write_off",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &WriteOffInvoiceReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*WriteOffInvoiceOK), nil
 
 }
 

@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"bitbucket.org/gridarrow/chargebee-api/models"
+	"github.com/markns/chargebee-golang/models"
 )
 
 // NewUpdateOrderParams creates a new UpdateOrderParams object
