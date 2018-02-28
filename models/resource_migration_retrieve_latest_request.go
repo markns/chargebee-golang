@@ -17,7 +17,6 @@ import (
 
 // ResourceMigrationRetrieveLatestRequest resource migration retrieve latest request
 // swagger:model ResourceMigrationRetrieveLatestRequest
-
 type ResourceMigrationRetrieveLatestRequest struct {
 
 	// entity id
@@ -29,12 +28,6 @@ type ResourceMigrationRetrieveLatestRequest struct {
 	// from site
 	FromSite string `json:"from_site,omitempty"`
 }
-
-/* polymorph ResourceMigrationRetrieveLatestRequest entity_id false */
-
-/* polymorph ResourceMigrationRetrieveLatestRequest entity_type false */
-
-/* polymorph ResourceMigrationRetrieveLatestRequest from_site false */
 
 // Validate validates this resource migration retrieve latest request
 func (m *ResourceMigrationRetrieveLatestRequest) Validate(formats strfmt.Registry) error {
@@ -64,20 +57,28 @@ func init() {
 }
 
 const (
+
 	// ResourceMigrationRetrieveLatestRequestEntityTypeCustomer captures enum value "customer"
 	ResourceMigrationRetrieveLatestRequestEntityTypeCustomer string = "customer"
+
 	// ResourceMigrationRetrieveLatestRequestEntityTypeSubscription captures enum value "subscription"
 	ResourceMigrationRetrieveLatestRequestEntityTypeSubscription string = "subscription"
+
 	// ResourceMigrationRetrieveLatestRequestEntityTypeInvoice captures enum value "invoice"
 	ResourceMigrationRetrieveLatestRequestEntityTypeInvoice string = "invoice"
+
 	// ResourceMigrationRetrieveLatestRequestEntityTypeCreditNote captures enum value "credit_note"
 	ResourceMigrationRetrieveLatestRequestEntityTypeCreditNote string = "credit_note"
+
 	// ResourceMigrationRetrieveLatestRequestEntityTypeTransaction captures enum value "transaction"
 	ResourceMigrationRetrieveLatestRequestEntityTypeTransaction string = "transaction"
+
 	// ResourceMigrationRetrieveLatestRequestEntityTypePlan captures enum value "plan"
 	ResourceMigrationRetrieveLatestRequestEntityTypePlan string = "plan"
+
 	// ResourceMigrationRetrieveLatestRequestEntityTypeAddon captures enum value "addon"
 	ResourceMigrationRetrieveLatestRequestEntityTypeAddon string = "addon"
+
 	// ResourceMigrationRetrieveLatestRequestEntityTypeCoupon captures enum value "coupon"
 	ResourceMigrationRetrieveLatestRequestEntityTypeCoupon string = "coupon"
 )

@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewChargeAddonInvoiceParams creates a new ChargeAddonInvoiceParams object
@@ -124,12 +124,10 @@ func (o *ChargeAddonInvoiceParams) WriteToRequest(r runtime.ClientRequest, reg s
 	}
 	var res []error
 
-	if o.InvoiceChargeAddonRequest == nil {
-		o.InvoiceChargeAddonRequest = new(models.InvoiceChargeAddonRequest)
-	}
-
-	if err := r.SetBodyParam(o.InvoiceChargeAddonRequest); err != nil {
-		return err
+	if o.InvoiceChargeAddonRequest != nil {
+		if err := r.SetBodyParam(o.InvoiceChargeAddonRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

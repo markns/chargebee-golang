@@ -14,7 +14,6 @@ import (
 
 // LinkedCustomer linked customer
 // swagger:model LinkedCustomer
-
 type LinkedCustomer struct {
 
 	// customer id
@@ -32,16 +31,6 @@ type LinkedCustomer struct {
 	// has payment method
 	HasPaymentMethod bool `json:"has_payment_method,omitempty"`
 }
-
-/* polymorph LinkedCustomer customer_id false */
-
-/* polymorph LinkedCustomer email false */
-
-/* polymorph LinkedCustomer has_active_subscription false */
-
-/* polymorph LinkedCustomer has_billing_address false */
-
-/* polymorph LinkedCustomer has_payment_method false */
 
 // Validate validates this linked customer
 func (m *LinkedCustomer) Validate(formats strfmt.Registry) error {

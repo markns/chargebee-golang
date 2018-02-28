@@ -14,14 +14,11 @@ import (
 
 // SiteMigrationDetailResponse site migration detail response
 // swagger:model SiteMigrationDetailResponse
-
 type SiteMigrationDetailResponse struct {
 
 	// sitemigrationdetail
 	Sitemigrationdetail *SiteMigrationDetail `json:"sitemigrationdetail,omitempty"`
 }
-
-/* polymorph SiteMigrationDetailResponse sitemigrationdetail false */
 
 // Validate validates this site migration detail response
 func (m *SiteMigrationDetailResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *SiteMigrationDetailResponse) validateSitemigrationdetail(formats strfmt
 			}
 			return err
 		}
+
 	}
 
 	return nil

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // StartAfreshTimeMachineReader is a Reader for the StartAfreshTimeMachine structure.

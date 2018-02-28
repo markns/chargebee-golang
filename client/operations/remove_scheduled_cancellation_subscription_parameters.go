@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewRemoveScheduledCancellationSubscriptionParams creates a new RemoveScheduledCancellationSubscriptionParams object
@@ -137,12 +137,10 @@ func (o *RemoveScheduledCancellationSubscriptionParams) WriteToRequest(r runtime
 	}
 	var res []error
 
-	if o.SubscriptionRemoveScheduledCancellationRequest == nil {
-		o.SubscriptionRemoveScheduledCancellationRequest = new(models.SubscriptionRemoveScheduledCancellationRequest)
-	}
-
-	if err := r.SetBodyParam(o.SubscriptionRemoveScheduledCancellationRequest); err != nil {
-		return err
+	if o.SubscriptionRemoveScheduledCancellationRequest != nil {
+		if err := r.SetBodyParam(o.SubscriptionRemoveScheduledCancellationRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

@@ -17,7 +17,6 @@ import (
 
 // AddressUpdateRequest address update request
 // swagger:model AddressUpdateRequest
-
 type AddressUpdateRequest struct {
 
 	// addr
@@ -69,38 +68,6 @@ type AddressUpdateRequest struct {
 	Zip string `json:"zip,omitempty"`
 }
 
-/* polymorph AddressUpdateRequest addr false */
-
-/* polymorph AddressUpdateRequest city false */
-
-/* polymorph AddressUpdateRequest company false */
-
-/* polymorph AddressUpdateRequest country false */
-
-/* polymorph AddressUpdateRequest email false */
-
-/* polymorph AddressUpdateRequest extended_addr false */
-
-/* polymorph AddressUpdateRequest extended_addr2 false */
-
-/* polymorph AddressUpdateRequest first_name false */
-
-/* polymorph AddressUpdateRequest label false */
-
-/* polymorph AddressUpdateRequest last_name false */
-
-/* polymorph AddressUpdateRequest phone false */
-
-/* polymorph AddressUpdateRequest state false */
-
-/* polymorph AddressUpdateRequest state_code false */
-
-/* polymorph AddressUpdateRequest subscription_id false */
-
-/* polymorph AddressUpdateRequest validation_status false */
-
-/* polymorph AddressUpdateRequest zip false */
-
 // Validate validates this address update request
 func (m *AddressUpdateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -129,12 +96,16 @@ func init() {
 }
 
 const (
+
 	// AddressUpdateRequestValidationStatusNotValidated captures enum value "not_validated"
 	AddressUpdateRequestValidationStatusNotValidated string = "not_validated"
+
 	// AddressUpdateRequestValidationStatusValid captures enum value "valid"
 	AddressUpdateRequestValidationStatusValid string = "valid"
+
 	// AddressUpdateRequestValidationStatusPartiallyValid captures enum value "partially_valid"
 	AddressUpdateRequestValidationStatusPartiallyValid string = "partially_valid"
+
 	// AddressUpdateRequestValidationStatusInvalid captures enum value "invalid"
 	AddressUpdateRequestValidationStatusInvalid string = "invalid"
 )

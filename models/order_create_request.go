@@ -17,7 +17,6 @@ import (
 
 // OrderCreateRequest order create request
 // swagger:model OrderCreateRequest
-
 type OrderCreateRequest struct {
 
 	// batch id
@@ -44,22 +43,6 @@ type OrderCreateRequest struct {
 	// tracking id
 	TrackingID string `json:"tracking_id,omitempty"`
 }
-
-/* polymorph OrderCreateRequest batch_id false */
-
-/* polymorph OrderCreateRequest fulfillment_status false */
-
-/* polymorph OrderCreateRequest id false */
-
-/* polymorph OrderCreateRequest invoice_id false */
-
-/* polymorph OrderCreateRequest note false */
-
-/* polymorph OrderCreateRequest reference_id false */
-
-/* polymorph OrderCreateRequest status false */
-
-/* polymorph OrderCreateRequest tracking_id false */
 
 // Validate validates this order create request
 func (m *OrderCreateRequest) Validate(formats strfmt.Registry) error {
@@ -89,14 +72,19 @@ func init() {
 }
 
 const (
+
 	// OrderCreateRequestStatusFuture captures enum value "future"
 	OrderCreateRequestStatusFuture string = "future"
+
 	// OrderCreateRequestStatusInTrial captures enum value "in_trial"
 	OrderCreateRequestStatusInTrial string = "in_trial"
+
 	// OrderCreateRequestStatusActive captures enum value "active"
 	OrderCreateRequestStatusActive string = "active"
+
 	// OrderCreateRequestStatusNonRenewing captures enum value "non_renewing"
 	OrderCreateRequestStatusNonRenewing string = "non_renewing"
+
 	// OrderCreateRequestStatusCancelled captures enum value "cancelled"
 	OrderCreateRequestStatusCancelled string = "cancelled"
 )

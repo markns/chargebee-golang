@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCopyCouponParams creates a new CopyCouponParams object
@@ -124,12 +124,10 @@ func (o *CopyCouponParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Re
 	}
 	var res []error
 
-	if o.CouponCopyRequest == nil {
-		o.CouponCopyRequest = new(models.CouponCopyRequest)
-	}
-
-	if err := r.SetBodyParam(o.CouponCopyRequest); err != nil {
-		return err
+	if o.CouponCopyRequest != nil {
+		if err := r.SetBodyParam(o.CouponCopyRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

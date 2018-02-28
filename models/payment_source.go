@@ -17,7 +17,6 @@ import (
 
 // PaymentSource payment source
 // swagger:model PaymentSource
-
 type PaymentSource struct {
 
 	// amazon payment
@@ -59,32 +58,6 @@ type PaymentSource struct {
 	// type
 	Type string `json:"type,omitempty"`
 }
-
-/* polymorph PaymentSource amazon_payment false */
-
-/* polymorph PaymentSource bank_account false */
-
-/* polymorph PaymentSource card false */
-
-/* polymorph PaymentSource customer_id false */
-
-/* polymorph PaymentSource gateway false */
-
-/* polymorph PaymentSource gateway_account_id false */
-
-/* polymorph PaymentSource id false */
-
-/* polymorph PaymentSource ip_address false */
-
-/* polymorph PaymentSource issuing_country false */
-
-/* polymorph PaymentSource paypal false */
-
-/* polymorph PaymentSource reference_id false */
-
-/* polymorph PaymentSource status false */
-
-/* polymorph PaymentSource type false */
 
 // Validate validates this payment source
 func (m *PaymentSource) Validate(formats strfmt.Registry) error {
@@ -145,6 +118,7 @@ func (m *PaymentSource) validateAmazonPayment(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -164,6 +138,7 @@ func (m *PaymentSource) validateBankAccount(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -183,6 +158,7 @@ func (m *PaymentSource) validateCard(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -201,68 +177,100 @@ func init() {
 }
 
 const (
+
 	// PaymentSourceGatewayChargebee captures enum value "chargebee"
 	PaymentSourceGatewayChargebee string = "chargebee"
+
 	// PaymentSourceGatewayStripe captures enum value "stripe"
 	PaymentSourceGatewayStripe string = "stripe"
+
 	// PaymentSourceGatewayWepay captures enum value "wepay"
 	PaymentSourceGatewayWepay string = "wepay"
+
 	// PaymentSourceGatewayBraintree captures enum value "braintree"
 	PaymentSourceGatewayBraintree string = "braintree"
+
 	// PaymentSourceGatewayAuthorizeNet captures enum value "authorize_net"
 	PaymentSourceGatewayAuthorizeNet string = "authorize_net"
+
 	// PaymentSourceGatewayPaypalPro captures enum value "paypal_pro"
 	PaymentSourceGatewayPaypalPro string = "paypal_pro"
+
 	// PaymentSourceGatewayPin captures enum value "pin"
 	PaymentSourceGatewayPin string = "pin"
+
 	// PaymentSourceGatewayEway captures enum value "eway"
 	PaymentSourceGatewayEway string = "eway"
+
 	// PaymentSourceGatewayEwayRapid captures enum value "eway_rapid"
 	PaymentSourceGatewayEwayRapid string = "eway_rapid"
+
 	// PaymentSourceGatewayWorldpay captures enum value "worldpay"
 	PaymentSourceGatewayWorldpay string = "worldpay"
+
 	// PaymentSourceGatewayBalancedPayments captures enum value "balanced_payments"
 	PaymentSourceGatewayBalancedPayments string = "balanced_payments"
+
 	// PaymentSourceGatewayBeanstream captures enum value "beanstream"
 	PaymentSourceGatewayBeanstream string = "beanstream"
+
 	// PaymentSourceGatewayBluepay captures enum value "bluepay"
 	PaymentSourceGatewayBluepay string = "bluepay"
+
 	// PaymentSourceGatewayElavon captures enum value "elavon"
 	PaymentSourceGatewayElavon string = "elavon"
+
 	// PaymentSourceGatewayFirstDataGlobal captures enum value "first_data_global"
 	PaymentSourceGatewayFirstDataGlobal string = "first_data_global"
+
 	// PaymentSourceGatewayHdfc captures enum value "hdfc"
 	PaymentSourceGatewayHdfc string = "hdfc"
+
 	// PaymentSourceGatewayMigs captures enum value "migs"
 	PaymentSourceGatewayMigs string = "migs"
+
 	// PaymentSourceGatewayNmi captures enum value "nmi"
 	PaymentSourceGatewayNmi string = "nmi"
+
 	// PaymentSourceGatewayOgone captures enum value "ogone"
 	PaymentSourceGatewayOgone string = "ogone"
+
 	// PaymentSourceGatewayPaymill captures enum value "paymill"
 	PaymentSourceGatewayPaymill string = "paymill"
+
 	// PaymentSourceGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	PaymentSourceGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// PaymentSourceGatewaySagePay captures enum value "sage_pay"
 	PaymentSourceGatewaySagePay string = "sage_pay"
+
 	// PaymentSourceGatewayTco captures enum value "tco"
 	PaymentSourceGatewayTco string = "tco"
+
 	// PaymentSourceGatewayWirecard captures enum value "wirecard"
 	PaymentSourceGatewayWirecard string = "wirecard"
+
 	// PaymentSourceGatewayAmazonPayments captures enum value "amazon_payments"
 	PaymentSourceGatewayAmazonPayments string = "amazon_payments"
+
 	// PaymentSourceGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	PaymentSourceGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// PaymentSourceGatewayGocardless captures enum value "gocardless"
 	PaymentSourceGatewayGocardless string = "gocardless"
+
 	// PaymentSourceGatewayAdyen captures enum value "adyen"
 	PaymentSourceGatewayAdyen string = "adyen"
+
 	// PaymentSourceGatewayOrbital captures enum value "orbital"
 	PaymentSourceGatewayOrbital string = "orbital"
+
 	// PaymentSourceGatewayMonerisUs captures enum value "moneris_us"
 	PaymentSourceGatewayMonerisUs string = "moneris_us"
+
 	// PaymentSourceGatewayMoneris captures enum value "moneris"
 	PaymentSourceGatewayMoneris string = "moneris"
+
 	// PaymentSourceGatewayNotApplicable captures enum value "not_applicable"
 	PaymentSourceGatewayNotApplicable string = "not_applicable"
 )
@@ -303,6 +311,7 @@ func (m *PaymentSource) validatePaypal(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -321,14 +330,19 @@ func init() {
 }
 
 const (
+
 	// PaymentSourceStatusFuture captures enum value "future"
 	PaymentSourceStatusFuture string = "future"
+
 	// PaymentSourceStatusInTrial captures enum value "in_trial"
 	PaymentSourceStatusInTrial string = "in_trial"
+
 	// PaymentSourceStatusActive captures enum value "active"
 	PaymentSourceStatusActive string = "active"
+
 	// PaymentSourceStatusNonRenewing captures enum value "non_renewing"
 	PaymentSourceStatusNonRenewing string = "non_renewing"
+
 	// PaymentSourceStatusCancelled captures enum value "cancelled"
 	PaymentSourceStatusCancelled string = "cancelled"
 )
@@ -368,20 +382,28 @@ func init() {
 }
 
 const (
+
 	// PaymentSourceTypeCard captures enum value "card"
 	PaymentSourceTypeCard string = "card"
+
 	// PaymentSourceTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	PaymentSourceTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// PaymentSourceTypeAmazonPayments captures enum value "amazon_payments"
 	PaymentSourceTypeAmazonPayments string = "amazon_payments"
+
 	// PaymentSourceTypeDirectDebit captures enum value "direct_debit"
 	PaymentSourceTypeDirectDebit string = "direct_debit"
+
 	// PaymentSourceTypeGeneric captures enum value "generic"
 	PaymentSourceTypeGeneric string = "generic"
+
 	// PaymentSourceTypeAlipay captures enum value "alipay"
 	PaymentSourceTypeAlipay string = "alipay"
+
 	// PaymentSourceTypeUnionpay captures enum value "unionpay"
 	PaymentSourceTypeUnionpay string = "unionpay"
+
 	// PaymentSourceTypeApplePay captures enum value "apple_pay"
 	PaymentSourceTypeApplePay string = "apple_pay"
 )

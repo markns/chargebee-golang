@@ -17,7 +17,6 @@ import (
 
 // InvoiceCreateRequest invoice create request
 // swagger:model InvoiceCreateRequest
-
 type InvoiceCreateRequest struct {
 
 	// coupon
@@ -78,44 +77,6 @@ type InvoiceCreateRequest struct {
 	ShippingAddressZip string `json:"shipping_address[zip],omitempty"`
 }
 
-/* polymorph InvoiceCreateRequest coupon false */
-
-/* polymorph InvoiceCreateRequest currency_code false */
-
-/* polymorph InvoiceCreateRequest customer_id false */
-
-/* polymorph InvoiceCreateRequest payment_source_id false */
-
-/* polymorph InvoiceCreateRequest po_number false */
-
-/* polymorph InvoiceCreateRequest shipping_address[city] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[company] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[country] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[email] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[first_name] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[last_name] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[line1] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[line2] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[line3] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[phone] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[state] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[state_code] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[validation_status] false */
-
-/* polymorph InvoiceCreateRequest shipping_address[zip] false */
-
 // Validate validates this invoice create request
 func (m *InvoiceCreateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -144,12 +105,16 @@ func init() {
 }
 
 const (
+
 	// InvoiceCreateRequestShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	InvoiceCreateRequestShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// InvoiceCreateRequestShippingAddressValidationStatusValid captures enum value "valid"
 	InvoiceCreateRequestShippingAddressValidationStatusValid string = "valid"
+
 	// InvoiceCreateRequestShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	InvoiceCreateRequestShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// InvoiceCreateRequestShippingAddressValidationStatusInvalid captures enum value "invalid"
 	InvoiceCreateRequestShippingAddressValidationStatusInvalid string = "invalid"
 )

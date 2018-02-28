@@ -14,7 +14,6 @@ import (
 
 // InvoiceAddAddonChargeRequest invoice add addon charge request
 // swagger:model InvoiceAddAddonChargeRequest
-
 type InvoiceAddAddonChargeRequest struct {
 
 	// addon id
@@ -32,16 +31,6 @@ type InvoiceAddAddonChargeRequest struct {
 	// line item date to
 	LineItemDateTo int64 `json:"line_item[date_to],omitempty"`
 }
-
-/* polymorph InvoiceAddAddonChargeRequest addon_id false */
-
-/* polymorph InvoiceAddAddonChargeRequest addon_quantity false */
-
-/* polymorph InvoiceAddAddonChargeRequest addon_unit_price false */
-
-/* polymorph InvoiceAddAddonChargeRequest line_item[date_from] false */
-
-/* polymorph InvoiceAddAddonChargeRequest line_item[date_to] false */
 
 // Validate validates this invoice add addon charge request
 func (m *InvoiceAddAddonChargeRequest) Validate(formats strfmt.Registry) error {

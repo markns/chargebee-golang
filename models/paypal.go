@@ -14,7 +14,6 @@ import (
 
 // Paypal paypal
 // swagger:model Paypal
-
 type Paypal struct {
 
 	// agreement id
@@ -23,10 +22,6 @@ type Paypal struct {
 	// email
 	Email string `json:"email,omitempty"`
 }
-
-/* polymorph Paypal agreement_id false */
-
-/* polymorph Paypal email false */
 
 // Validate validates this paypal
 func (m *Paypal) Validate(formats strfmt.Registry) error {

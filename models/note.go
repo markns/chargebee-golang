@@ -17,7 +17,6 @@ import (
 
 // Note note
 // swagger:model Note
-
 type Note struct {
 
 	// entity id
@@ -29,12 +28,6 @@ type Note struct {
 	// note
 	Note string `json:"note,omitempty"`
 }
-
-/* polymorph Note entity_id false */
-
-/* polymorph Note entity_type false */
-
-/* polymorph Note note false */
 
 // Validate validates this note
 func (m *Note) Validate(formats strfmt.Registry) error {
@@ -64,20 +57,28 @@ func init() {
 }
 
 const (
+
 	// NoteEntityTypeCustomer captures enum value "customer"
 	NoteEntityTypeCustomer string = "customer"
+
 	// NoteEntityTypeSubscription captures enum value "subscription"
 	NoteEntityTypeSubscription string = "subscription"
+
 	// NoteEntityTypeInvoice captures enum value "invoice"
 	NoteEntityTypeInvoice string = "invoice"
+
 	// NoteEntityTypeCreditNote captures enum value "credit_note"
 	NoteEntityTypeCreditNote string = "credit_note"
+
 	// NoteEntityTypeTransaction captures enum value "transaction"
 	NoteEntityTypeTransaction string = "transaction"
+
 	// NoteEntityTypePlan captures enum value "plan"
 	NoteEntityTypePlan string = "plan"
+
 	// NoteEntityTypeAddon captures enum value "addon"
 	NoteEntityTypeAddon string = "addon"
+
 	// NoteEntityTypeCoupon captures enum value "coupon"
 	NoteEntityTypeCoupon string = "coupon"
 )

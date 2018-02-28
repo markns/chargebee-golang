@@ -17,7 +17,6 @@ import (
 
 // SubscriptionImportSubscriptionRequest subscription import subscription request
 // swagger:model SubscriptionImportSubscriptionRequest
-
 type SubscriptionImportSubscriptionRequest struct {
 
 	// affiliate token
@@ -270,172 +269,6 @@ type SubscriptionImportSubscriptionRequest struct {
 	TrialStart int64 `json:"trial_start,omitempty"`
 }
 
-/* polymorph SubscriptionImportSubscriptionRequest affiliate_token false */
-
-/* polymorph SubscriptionImportSubscriptionRequest auto_collection false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[city] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[company] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[country] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[email] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[first_name] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[last_name] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[line1] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[line2] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[line3] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[phone] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[state] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[state_code] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[validation_status] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_address[zip] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest billing_cycles false */
-
-/* polymorph SubscriptionImportSubscriptionRequest cancelled_at false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[billing_addr1] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[billing_addr2] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[billing_city] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[billing_country] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[billing_state] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[billing_state_code] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[billing_zip] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[cvv] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[expiry_month] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[expiry_year] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[first_name] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[gateway] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[gateway_account_id] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[last_name] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[number] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest card[tmp_token] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest coupon_ids false */
-
-/* polymorph SubscriptionImportSubscriptionRequest current_term_end false */
-
-/* polymorph SubscriptionImportSubscriptionRequest current_term_start false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[allow_direct_debit] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[auto_collection] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[company] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[email] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[entity_code] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[exempt_number] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[first_name] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[id] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[last_name] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[locale] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[net_term_days] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[phone] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[taxability] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest customer[vat_number] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest id false */
-
-/* polymorph SubscriptionImportSubscriptionRequest invoice_notes false */
-
-/* polymorph SubscriptionImportSubscriptionRequest meta_data false */
-
-/* polymorph SubscriptionImportSubscriptionRequest payment_method[gateway] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest payment_method[gateway_account_id] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest payment_method[issuing_country] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest payment_method[reference_id] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest payment_method[type] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest plan_id false */
-
-/* polymorph SubscriptionImportSubscriptionRequest plan_quantity false */
-
-/* polymorph SubscriptionImportSubscriptionRequest plan_unit_price false */
-
-/* polymorph SubscriptionImportSubscriptionRequest po_number false */
-
-/* polymorph SubscriptionImportSubscriptionRequest setup_fee false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[city] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[company] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[country] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[email] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[first_name] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[last_name] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[line1] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[line2] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[line3] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[phone] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[state] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[state_code] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[validation_status] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest shipping_address[zip] false */
-
-/* polymorph SubscriptionImportSubscriptionRequest start_date false */
-
-/* polymorph SubscriptionImportSubscriptionRequest started_at false */
-
-/* polymorph SubscriptionImportSubscriptionRequest status false */
-
-/* polymorph SubscriptionImportSubscriptionRequest trial_end false */
-
-/* polymorph SubscriptionImportSubscriptionRequest trial_start false */
-
 // Validate validates this subscription import subscription request
 func (m *SubscriptionImportSubscriptionRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -509,8 +342,10 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportSubscriptionRequestAutoCollectionOn captures enum value "on"
 	SubscriptionImportSubscriptionRequestAutoCollectionOn string = "on"
+
 	// SubscriptionImportSubscriptionRequestAutoCollectionOff captures enum value "off"
 	SubscriptionImportSubscriptionRequestAutoCollectionOff string = "off"
 )
@@ -550,12 +385,16 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportSubscriptionRequestBillingAddressValidationStatusNotValidated captures enum value "not_validated"
 	SubscriptionImportSubscriptionRequestBillingAddressValidationStatusNotValidated string = "not_validated"
+
 	// SubscriptionImportSubscriptionRequestBillingAddressValidationStatusValid captures enum value "valid"
 	SubscriptionImportSubscriptionRequestBillingAddressValidationStatusValid string = "valid"
+
 	// SubscriptionImportSubscriptionRequestBillingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	SubscriptionImportSubscriptionRequestBillingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// SubscriptionImportSubscriptionRequestBillingAddressValidationStatusInvalid captures enum value "invalid"
 	SubscriptionImportSubscriptionRequestBillingAddressValidationStatusInvalid string = "invalid"
 )
@@ -595,68 +434,100 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportSubscriptionRequestCardGatewayChargebee captures enum value "chargebee"
 	SubscriptionImportSubscriptionRequestCardGatewayChargebee string = "chargebee"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayStripe captures enum value "stripe"
 	SubscriptionImportSubscriptionRequestCardGatewayStripe string = "stripe"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayWepay captures enum value "wepay"
 	SubscriptionImportSubscriptionRequestCardGatewayWepay string = "wepay"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayBraintree captures enum value "braintree"
 	SubscriptionImportSubscriptionRequestCardGatewayBraintree string = "braintree"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayAuthorizeNet captures enum value "authorize_net"
 	SubscriptionImportSubscriptionRequestCardGatewayAuthorizeNet string = "authorize_net"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayPaypalPro captures enum value "paypal_pro"
 	SubscriptionImportSubscriptionRequestCardGatewayPaypalPro string = "paypal_pro"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayPin captures enum value "pin"
 	SubscriptionImportSubscriptionRequestCardGatewayPin string = "pin"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayEway captures enum value "eway"
 	SubscriptionImportSubscriptionRequestCardGatewayEway string = "eway"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayEwayRapid captures enum value "eway_rapid"
 	SubscriptionImportSubscriptionRequestCardGatewayEwayRapid string = "eway_rapid"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayWorldpay captures enum value "worldpay"
 	SubscriptionImportSubscriptionRequestCardGatewayWorldpay string = "worldpay"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayBalancedPayments captures enum value "balanced_payments"
 	SubscriptionImportSubscriptionRequestCardGatewayBalancedPayments string = "balanced_payments"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayBeanstream captures enum value "beanstream"
 	SubscriptionImportSubscriptionRequestCardGatewayBeanstream string = "beanstream"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayBluepay captures enum value "bluepay"
 	SubscriptionImportSubscriptionRequestCardGatewayBluepay string = "bluepay"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayElavon captures enum value "elavon"
 	SubscriptionImportSubscriptionRequestCardGatewayElavon string = "elavon"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayFirstDataGlobal captures enum value "first_data_global"
 	SubscriptionImportSubscriptionRequestCardGatewayFirstDataGlobal string = "first_data_global"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayHdfc captures enum value "hdfc"
 	SubscriptionImportSubscriptionRequestCardGatewayHdfc string = "hdfc"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayMigs captures enum value "migs"
 	SubscriptionImportSubscriptionRequestCardGatewayMigs string = "migs"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayNmi captures enum value "nmi"
 	SubscriptionImportSubscriptionRequestCardGatewayNmi string = "nmi"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayOgone captures enum value "ogone"
 	SubscriptionImportSubscriptionRequestCardGatewayOgone string = "ogone"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayPaymill captures enum value "paymill"
 	SubscriptionImportSubscriptionRequestCardGatewayPaymill string = "paymill"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	SubscriptionImportSubscriptionRequestCardGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// SubscriptionImportSubscriptionRequestCardGatewaySagePay captures enum value "sage_pay"
 	SubscriptionImportSubscriptionRequestCardGatewaySagePay string = "sage_pay"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayTco captures enum value "tco"
 	SubscriptionImportSubscriptionRequestCardGatewayTco string = "tco"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayWirecard captures enum value "wirecard"
 	SubscriptionImportSubscriptionRequestCardGatewayWirecard string = "wirecard"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayAmazonPayments captures enum value "amazon_payments"
 	SubscriptionImportSubscriptionRequestCardGatewayAmazonPayments string = "amazon_payments"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	SubscriptionImportSubscriptionRequestCardGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayGocardless captures enum value "gocardless"
 	SubscriptionImportSubscriptionRequestCardGatewayGocardless string = "gocardless"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayAdyen captures enum value "adyen"
 	SubscriptionImportSubscriptionRequestCardGatewayAdyen string = "adyen"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayOrbital captures enum value "orbital"
 	SubscriptionImportSubscriptionRequestCardGatewayOrbital string = "orbital"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayMonerisUs captures enum value "moneris_us"
 	SubscriptionImportSubscriptionRequestCardGatewayMonerisUs string = "moneris_us"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayMoneris captures enum value "moneris"
 	SubscriptionImportSubscriptionRequestCardGatewayMoneris string = "moneris"
+
 	// SubscriptionImportSubscriptionRequestCardGatewayNotApplicable captures enum value "not_applicable"
 	SubscriptionImportSubscriptionRequestCardGatewayNotApplicable string = "not_applicable"
 )
@@ -696,8 +567,10 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportSubscriptionRequestCustomerAutoCollectionOn captures enum value "on"
 	SubscriptionImportSubscriptionRequestCustomerAutoCollectionOn string = "on"
+
 	// SubscriptionImportSubscriptionRequestCustomerAutoCollectionOff captures enum value "off"
 	SubscriptionImportSubscriptionRequestCustomerAutoCollectionOff string = "off"
 )
@@ -737,40 +610,58 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeA captures enum value "a"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeA string = "a"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeB captures enum value "b"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeB string = "b"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeC captures enum value "c"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeC string = "c"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeD captures enum value "d"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeD string = "d"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeE captures enum value "e"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeE string = "e"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeF captures enum value "f"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeF string = "f"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeG captures enum value "g"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeG string = "g"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeH captures enum value "h"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeH string = "h"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeI captures enum value "i"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeI string = "i"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeJ captures enum value "j"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeJ string = "j"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeK captures enum value "k"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeK string = "k"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeL captures enum value "l"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeL string = "l"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeN captures enum value "n"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeN string = "n"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeP captures enum value "p"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeP string = "p"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeQ captures enum value "q"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeQ string = "q"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeR captures enum value "r"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeR string = "r"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeMed1 captures enum value "med1"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeMed1 string = "med1"
+
 	// SubscriptionImportSubscriptionRequestCustomerEntityCodeMed2 captures enum value "med2"
 	SubscriptionImportSubscriptionRequestCustomerEntityCodeMed2 string = "med2"
 )
@@ -810,8 +701,10 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportSubscriptionRequestCustomerTaxabilityTaxable captures enum value "taxable"
 	SubscriptionImportSubscriptionRequestCustomerTaxabilityTaxable string = "taxable"
+
 	// SubscriptionImportSubscriptionRequestCustomerTaxabilityExempt captures enum value "exempt"
 	SubscriptionImportSubscriptionRequestCustomerTaxabilityExempt string = "exempt"
 )
@@ -851,68 +744,100 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayChargebee captures enum value "chargebee"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayChargebee string = "chargebee"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayStripe captures enum value "stripe"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayStripe string = "stripe"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayWepay captures enum value "wepay"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayWepay string = "wepay"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayBraintree captures enum value "braintree"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayBraintree string = "braintree"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayAuthorizeNet captures enum value "authorize_net"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayAuthorizeNet string = "authorize_net"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayPaypalPro captures enum value "paypal_pro"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayPaypalPro string = "paypal_pro"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayPin captures enum value "pin"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayPin string = "pin"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayEway captures enum value "eway"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayEway string = "eway"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayEwayRapid captures enum value "eway_rapid"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayEwayRapid string = "eway_rapid"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayWorldpay captures enum value "worldpay"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayWorldpay string = "worldpay"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayBalancedPayments captures enum value "balanced_payments"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayBalancedPayments string = "balanced_payments"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayBeanstream captures enum value "beanstream"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayBeanstream string = "beanstream"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayBluepay captures enum value "bluepay"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayBluepay string = "bluepay"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayElavon captures enum value "elavon"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayElavon string = "elavon"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayFirstDataGlobal captures enum value "first_data_global"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayFirstDataGlobal string = "first_data_global"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayHdfc captures enum value "hdfc"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayHdfc string = "hdfc"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayMigs captures enum value "migs"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayMigs string = "migs"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayNmi captures enum value "nmi"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayNmi string = "nmi"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayOgone captures enum value "ogone"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayOgone string = "ogone"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayPaymill captures enum value "paymill"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayPaymill string = "paymill"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewaySagePay captures enum value "sage_pay"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewaySagePay string = "sage_pay"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayTco captures enum value "tco"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayTco string = "tco"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayWirecard captures enum value "wirecard"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayWirecard string = "wirecard"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayAmazonPayments captures enum value "amazon_payments"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayAmazonPayments string = "amazon_payments"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayGocardless captures enum value "gocardless"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayGocardless string = "gocardless"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayAdyen captures enum value "adyen"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayAdyen string = "adyen"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayOrbital captures enum value "orbital"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayOrbital string = "orbital"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayMonerisUs captures enum value "moneris_us"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayMonerisUs string = "moneris_us"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayMoneris captures enum value "moneris"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayMoneris string = "moneris"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodGatewayNotApplicable captures enum value "not_applicable"
 	SubscriptionImportSubscriptionRequestPaymentMethodGatewayNotApplicable string = "not_applicable"
 )
@@ -952,20 +877,28 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodTypeCard captures enum value "card"
 	SubscriptionImportSubscriptionRequestPaymentMethodTypeCard string = "card"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	SubscriptionImportSubscriptionRequestPaymentMethodTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodTypeAmazonPayments captures enum value "amazon_payments"
 	SubscriptionImportSubscriptionRequestPaymentMethodTypeAmazonPayments string = "amazon_payments"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodTypeDirectDebit captures enum value "direct_debit"
 	SubscriptionImportSubscriptionRequestPaymentMethodTypeDirectDebit string = "direct_debit"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodTypeGeneric captures enum value "generic"
 	SubscriptionImportSubscriptionRequestPaymentMethodTypeGeneric string = "generic"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodTypeAlipay captures enum value "alipay"
 	SubscriptionImportSubscriptionRequestPaymentMethodTypeAlipay string = "alipay"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodTypeUnionpay captures enum value "unionpay"
 	SubscriptionImportSubscriptionRequestPaymentMethodTypeUnionpay string = "unionpay"
+
 	// SubscriptionImportSubscriptionRequestPaymentMethodTypeApplePay captures enum value "apple_pay"
 	SubscriptionImportSubscriptionRequestPaymentMethodTypeApplePay string = "apple_pay"
 )
@@ -1005,12 +938,16 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportSubscriptionRequestShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	SubscriptionImportSubscriptionRequestShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// SubscriptionImportSubscriptionRequestShippingAddressValidationStatusValid captures enum value "valid"
 	SubscriptionImportSubscriptionRequestShippingAddressValidationStatusValid string = "valid"
+
 	// SubscriptionImportSubscriptionRequestShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	SubscriptionImportSubscriptionRequestShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// SubscriptionImportSubscriptionRequestShippingAddressValidationStatusInvalid captures enum value "invalid"
 	SubscriptionImportSubscriptionRequestShippingAddressValidationStatusInvalid string = "invalid"
 )
@@ -1050,14 +987,19 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportSubscriptionRequestStatusFuture captures enum value "future"
 	SubscriptionImportSubscriptionRequestStatusFuture string = "future"
+
 	// SubscriptionImportSubscriptionRequestStatusInTrial captures enum value "in_trial"
 	SubscriptionImportSubscriptionRequestStatusInTrial string = "in_trial"
+
 	// SubscriptionImportSubscriptionRequestStatusActive captures enum value "active"
 	SubscriptionImportSubscriptionRequestStatusActive string = "active"
+
 	// SubscriptionImportSubscriptionRequestStatusNonRenewing captures enum value "non_renewing"
 	SubscriptionImportSubscriptionRequestStatusNonRenewing string = "non_renewing"
+
 	// SubscriptionImportSubscriptionRequestStatusCancelled captures enum value "cancelled"
 	SubscriptionImportSubscriptionRequestStatusCancelled string = "cancelled"
 )

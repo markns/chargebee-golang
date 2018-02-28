@@ -14,7 +14,6 @@ import (
 
 // CouponSetCreateRequest coupon set create request
 // swagger:model CouponSetCreateRequest
-
 type CouponSetCreateRequest struct {
 
 	// coupon id
@@ -29,14 +28,6 @@ type CouponSetCreateRequest struct {
 	// name
 	Name string `json:"name,omitempty"`
 }
-
-/* polymorph CouponSetCreateRequest coupon_id false */
-
-/* polymorph CouponSetCreateRequest id false */
-
-/* polymorph CouponSetCreateRequest meta_data false */
-
-/* polymorph CouponSetCreateRequest name false */
 
 // Validate validates this coupon set create request
 func (m *CouponSetCreateRequest) Validate(formats strfmt.Registry) error {

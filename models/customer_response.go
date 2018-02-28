@@ -14,14 +14,11 @@ import (
 
 // CustomerResponse customer response
 // swagger:model CustomerResponse
-
 type CustomerResponse struct {
 
 	// customer
 	Customer *Customer `json:"customer,omitempty"`
 }
-
-/* polymorph CustomerResponse customer false */
 
 // Validate validates this customer response
 func (m *CustomerResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *CustomerResponse) validateCustomer(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

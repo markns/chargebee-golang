@@ -14,14 +14,11 @@ import (
 
 // CommentResponse comment response
 // swagger:model CommentResponse
-
 type CommentResponse struct {
 
 	// comment
 	Comment *Comment `json:"comment,omitempty"`
 }
-
-/* polymorph CommentResponse comment false */
 
 // Validate validates this comment response
 func (m *CommentResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *CommentResponse) validateComment(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

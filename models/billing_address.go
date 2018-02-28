@@ -17,7 +17,6 @@ import (
 
 // BillingAddress billing address
 // swagger:model BillingAddress
-
 type BillingAddress struct {
 
 	// city
@@ -63,34 +62,6 @@ type BillingAddress struct {
 	Zip string `json:"zip,omitempty"`
 }
 
-/* polymorph BillingAddress city false */
-
-/* polymorph BillingAddress company false */
-
-/* polymorph BillingAddress country false */
-
-/* polymorph BillingAddress email false */
-
-/* polymorph BillingAddress first_name false */
-
-/* polymorph BillingAddress last_name false */
-
-/* polymorph BillingAddress line1 false */
-
-/* polymorph BillingAddress line2 false */
-
-/* polymorph BillingAddress line3 false */
-
-/* polymorph BillingAddress phone false */
-
-/* polymorph BillingAddress state false */
-
-/* polymorph BillingAddress state_code false */
-
-/* polymorph BillingAddress validation_status false */
-
-/* polymorph BillingAddress zip false */
-
 // Validate validates this billing address
 func (m *BillingAddress) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -119,12 +90,16 @@ func init() {
 }
 
 const (
+
 	// BillingAddressValidationStatusNotValidated captures enum value "not_validated"
 	BillingAddressValidationStatusNotValidated string = "not_validated"
+
 	// BillingAddressValidationStatusValid captures enum value "valid"
 	BillingAddressValidationStatusValid string = "valid"
+
 	// BillingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	BillingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// BillingAddressValidationStatusInvalid captures enum value "invalid"
 	BillingAddressValidationStatusInvalid string = "invalid"
 )

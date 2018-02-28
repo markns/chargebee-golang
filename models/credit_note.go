@@ -18,7 +18,6 @@ import (
 
 // CreditNote credit note
 // swagger:model CreditNote
-
 type CreditNote struct {
 
 	// allocations
@@ -109,64 +108,6 @@ type CreditNote struct {
 	VoidedAt int64 `json:"voided_at,omitempty"`
 }
 
-/* polymorph CreditNote allocations false */
-
-/* polymorph CreditNote amount_allocated false */
-
-/* polymorph CreditNote amount_available false */
-
-/* polymorph CreditNote amount_refunded false */
-
-/* polymorph CreditNote currency_code false */
-
-/* polymorph CreditNote customer_id false */
-
-/* polymorph CreditNote date false */
-
-/* polymorph CreditNote deleted false */
-
-/* polymorph CreditNote discounts false */
-
-/* polymorph CreditNote id false */
-
-/* polymorph CreditNote line_item_discounts false */
-
-/* polymorph CreditNote line_item_taxes false */
-
-/* polymorph CreditNote line_items false */
-
-/* polymorph CreditNote linked_refunds false */
-
-/* polymorph CreditNote price_type false */
-
-/* polymorph CreditNote reason_code false */
-
-/* polymorph CreditNote reference_invoice_id false */
-
-/* polymorph CreditNote refunded_at false */
-
-/* polymorph CreditNote resource_version false */
-
-/* polymorph CreditNote round_off_amount false */
-
-/* polymorph CreditNote status false */
-
-/* polymorph CreditNote sub_total false */
-
-/* polymorph CreditNote subscription_id false */
-
-/* polymorph CreditNote taxes false */
-
-/* polymorph CreditNote total false */
-
-/* polymorph CreditNote type false */
-
-/* polymorph CreditNote updated_at false */
-
-/* polymorph CreditNote vat_number false */
-
-/* polymorph CreditNote voided_at false */
-
 // Validate validates this credit note
 func (m *CreditNote) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -252,6 +193,7 @@ func (m *CreditNote) validateAllocations(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -279,6 +221,7 @@ func (m *CreditNote) validateDiscounts(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -306,6 +249,7 @@ func (m *CreditNote) validateLineItemDiscounts(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -333,6 +277,7 @@ func (m *CreditNote) validateLineItemTaxes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -360,6 +305,7 @@ func (m *CreditNote) validateLineItems(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -387,6 +333,7 @@ func (m *CreditNote) validateLinkedRefunds(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -407,8 +354,10 @@ func init() {
 }
 
 const (
+
 	// CreditNotePriceTypeTaxExclusive captures enum value "tax_exclusive"
 	CreditNotePriceTypeTaxExclusive string = "tax_exclusive"
+
 	// CreditNotePriceTypeTaxInclusive captures enum value "tax_inclusive"
 	CreditNotePriceTypeTaxInclusive string = "tax_inclusive"
 )
@@ -448,26 +397,37 @@ func init() {
 }
 
 const (
+
 	// CreditNoteReasonCodeWriteOff captures enum value "write_off"
 	CreditNoteReasonCodeWriteOff string = "write_off"
+
 	// CreditNoteReasonCodeSubscriptionChange captures enum value "subscription_change"
 	CreditNoteReasonCodeSubscriptionChange string = "subscription_change"
+
 	// CreditNoteReasonCodeSubscriptionCancellation captures enum value "subscription_cancellation"
 	CreditNoteReasonCodeSubscriptionCancellation string = "subscription_cancellation"
+
 	// CreditNoteReasonCodeChargeback captures enum value "chargeback"
 	CreditNoteReasonCodeChargeback string = "chargeback"
+
 	// CreditNoteReasonCodeProductUnsatisfactory captures enum value "product_unsatisfactory"
 	CreditNoteReasonCodeProductUnsatisfactory string = "product_unsatisfactory"
+
 	// CreditNoteReasonCodeServiceUnsatisfactory captures enum value "service_unsatisfactory"
 	CreditNoteReasonCodeServiceUnsatisfactory string = "service_unsatisfactory"
+
 	// CreditNoteReasonCodeOrderChange captures enum value "order_change"
 	CreditNoteReasonCodeOrderChange string = "order_change"
+
 	// CreditNoteReasonCodeOrderCancellation captures enum value "order_cancellation"
 	CreditNoteReasonCodeOrderCancellation string = "order_cancellation"
+
 	// CreditNoteReasonCodeWaiver captures enum value "waiver"
 	CreditNoteReasonCodeWaiver string = "waiver"
+
 	// CreditNoteReasonCodeOther captures enum value "other"
 	CreditNoteReasonCodeOther string = "other"
+
 	// CreditNoteReasonCodeFraudulent captures enum value "fraudulent"
 	CreditNoteReasonCodeFraudulent string = "fraudulent"
 )
@@ -507,14 +467,19 @@ func init() {
 }
 
 const (
+
 	// CreditNoteStatusFuture captures enum value "future"
 	CreditNoteStatusFuture string = "future"
+
 	// CreditNoteStatusInTrial captures enum value "in_trial"
 	CreditNoteStatusInTrial string = "in_trial"
+
 	// CreditNoteStatusActive captures enum value "active"
 	CreditNoteStatusActive string = "active"
+
 	// CreditNoteStatusNonRenewing captures enum value "non_renewing"
 	CreditNoteStatusNonRenewing string = "non_renewing"
+
 	// CreditNoteStatusCancelled captures enum value "cancelled"
 	CreditNoteStatusCancelled string = "cancelled"
 )
@@ -561,6 +526,7 @@ func (m *CreditNote) validateTaxes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -581,20 +547,28 @@ func init() {
 }
 
 const (
+
 	// CreditNoteTypeCard captures enum value "card"
 	CreditNoteTypeCard string = "card"
+
 	// CreditNoteTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CreditNoteTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CreditNoteTypeAmazonPayments captures enum value "amazon_payments"
 	CreditNoteTypeAmazonPayments string = "amazon_payments"
+
 	// CreditNoteTypeDirectDebit captures enum value "direct_debit"
 	CreditNoteTypeDirectDebit string = "direct_debit"
+
 	// CreditNoteTypeGeneric captures enum value "generic"
 	CreditNoteTypeGeneric string = "generic"
+
 	// CreditNoteTypeAlipay captures enum value "alipay"
 	CreditNoteTypeAlipay string = "alipay"
+
 	// CreditNoteTypeUnionpay captures enum value "unionpay"
 	CreditNoteTypeUnionpay string = "unionpay"
+
 	// CreditNoteTypeApplePay captures enum value "apple_pay"
 	CreditNoteTypeApplePay string = "apple_pay"
 )

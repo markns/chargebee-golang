@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewRemoveCouponsSubscriptionParams creates a new RemoveCouponsSubscriptionParams object
@@ -137,12 +137,10 @@ func (o *RemoveCouponsSubscriptionParams) WriteToRequest(r runtime.ClientRequest
 	}
 	var res []error
 
-	if o.SubscriptionRemoveCouponsRequest == nil {
-		o.SubscriptionRemoveCouponsRequest = new(models.SubscriptionRemoveCouponsRequest)
-	}
-
-	if err := r.SetBodyParam(o.SubscriptionRemoveCouponsRequest); err != nil {
-		return err
+	if o.SubscriptionRemoveCouponsRequest != nil {
+		if err := r.SetBodyParam(o.SubscriptionRemoveCouponsRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

@@ -14,14 +14,11 @@ import (
 
 // PortalSessionActivateRequest portal session activate request
 // swagger:model PortalSessionActivateRequest
-
 type PortalSessionActivateRequest struct {
 
 	// token
 	Token string `json:"token,omitempty"`
 }
-
-/* polymorph PortalSessionActivateRequest token false */
 
 // Validate validates this portal session activate request
 func (m *PortalSessionActivateRequest) Validate(formats strfmt.Registry) error {

@@ -14,7 +14,6 @@ import (
 
 // CouponSetUpdateRequest coupon set update request
 // swagger:model CouponSetUpdateRequest
-
 type CouponSetUpdateRequest struct {
 
 	// meta data
@@ -23,10 +22,6 @@ type CouponSetUpdateRequest struct {
 	// name
 	Name string `json:"name,omitempty"`
 }
-
-/* polymorph CouponSetUpdateRequest meta_data false */
-
-/* polymorph CouponSetUpdateRequest name false */
 
 // Validate validates this coupon set update request
 func (m *CouponSetUpdateRequest) Validate(formats strfmt.Registry) error {

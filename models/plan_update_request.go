@@ -17,7 +17,6 @@ import (
 
 // PlanUpdateRequest plan update request
 // swagger:model PlanUpdateRequest
-
 type PlanUpdateRequest struct {
 
 	// accounting category1
@@ -99,58 +98,6 @@ type PlanUpdateRequest struct {
 	TrialPeriodUnit string `json:"trial_period_unit,omitempty"`
 }
 
-/* polymorph PlanUpdateRequest accounting_category1 false */
-
-/* polymorph PlanUpdateRequest accounting_category2 false */
-
-/* polymorph PlanUpdateRequest accounting_code false */
-
-/* polymorph PlanUpdateRequest billing_cycles false */
-
-/* polymorph PlanUpdateRequest charge_model false */
-
-/* polymorph PlanUpdateRequest currency_code false */
-
-/* polymorph PlanUpdateRequest description false */
-
-/* polymorph PlanUpdateRequest downgrade_penalty false */
-
-/* polymorph PlanUpdateRequest enabled_in_hosted_pages false */
-
-/* polymorph PlanUpdateRequest enabled_in_portal false */
-
-/* polymorph PlanUpdateRequest free_quantity false */
-
-/* polymorph PlanUpdateRequest invoice_name false */
-
-/* polymorph PlanUpdateRequest invoice_notes false */
-
-/* polymorph PlanUpdateRequest meta_data false */
-
-/* polymorph PlanUpdateRequest name false */
-
-/* polymorph PlanUpdateRequest period false */
-
-/* polymorph PlanUpdateRequest period_unit false */
-
-/* polymorph PlanUpdateRequest price false */
-
-/* polymorph PlanUpdateRequest redirect_url false */
-
-/* polymorph PlanUpdateRequest setup_cost false */
-
-/* polymorph PlanUpdateRequest sku false */
-
-/* polymorph PlanUpdateRequest tax_code false */
-
-/* polymorph PlanUpdateRequest tax_profile_id false */
-
-/* polymorph PlanUpdateRequest taxable false */
-
-/* polymorph PlanUpdateRequest trial_period false */
-
-/* polymorph PlanUpdateRequest trial_period_unit false */
-
 // Validate validates this plan update request
 func (m *PlanUpdateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -189,8 +136,10 @@ func init() {
 }
 
 const (
+
 	// PlanUpdateRequestChargeModelFullCharge captures enum value "full_charge"
 	PlanUpdateRequestChargeModelFullCharge string = "full_charge"
+
 	// PlanUpdateRequestChargeModelProrate captures enum value "prorate"
 	PlanUpdateRequestChargeModelProrate string = "prorate"
 )
@@ -230,10 +179,13 @@ func init() {
 }
 
 const (
+
 	// PlanUpdateRequestPeriodUnitWeek captures enum value "week"
 	PlanUpdateRequestPeriodUnitWeek string = "week"
+
 	// PlanUpdateRequestPeriodUnitMonth captures enum value "month"
 	PlanUpdateRequestPeriodUnitMonth string = "month"
+
 	// PlanUpdateRequestPeriodUnitYear captures enum value "year"
 	PlanUpdateRequestPeriodUnitYear string = "year"
 )
@@ -273,8 +225,10 @@ func init() {
 }
 
 const (
+
 	// PlanUpdateRequestTrialPeriodUnitDay captures enum value "day"
 	PlanUpdateRequestTrialPeriodUnitDay string = "day"
+
 	// PlanUpdateRequestTrialPeriodUnitMonth captures enum value "month"
 	PlanUpdateRequestTrialPeriodUnitMonth string = "month"
 )

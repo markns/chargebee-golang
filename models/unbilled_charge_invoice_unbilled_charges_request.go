@@ -14,7 +14,6 @@ import (
 
 // UnbilledChargeInvoiceUnbilledChargesRequest unbilled charge invoice unbilled charges request
 // swagger:model UnbilledChargeInvoiceUnbilledChargesRequest
-
 type UnbilledChargeInvoiceUnbilledChargesRequest struct {
 
 	// customer id
@@ -23,10 +22,6 @@ type UnbilledChargeInvoiceUnbilledChargesRequest struct {
 	// subscription id
 	SubscriptionID string `json:"subscription_id,omitempty"`
 }
-
-/* polymorph UnbilledChargeInvoiceUnbilledChargesRequest customer_id false */
-
-/* polymorph UnbilledChargeInvoiceUnbilledChargesRequest subscription_id false */
 
 // Validate validates this unbilled charge invoice unbilled charges request
 func (m *UnbilledChargeInvoiceUnbilledChargesRequest) Validate(formats strfmt.Registry) error {

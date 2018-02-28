@@ -17,7 +17,6 @@ import (
 
 // CardSwitchGatewayForCustomerRequest card switch gateway for customer request
 // swagger:model CardSwitchGatewayForCustomerRequest
-
 type CardSwitchGatewayForCustomerRequest struct {
 
 	// gateway
@@ -26,10 +25,6 @@ type CardSwitchGatewayForCustomerRequest struct {
 	// gateway account id
 	GatewayAccountID string `json:"gateway_account_id,omitempty"`
 }
-
-/* polymorph CardSwitchGatewayForCustomerRequest gateway false */
-
-/* polymorph CardSwitchGatewayForCustomerRequest gateway_account_id false */
 
 // Validate validates this card switch gateway for customer request
 func (m *CardSwitchGatewayForCustomerRequest) Validate(formats strfmt.Registry) error {
@@ -59,68 +54,100 @@ func init() {
 }
 
 const (
+
 	// CardSwitchGatewayForCustomerRequestGatewayChargebee captures enum value "chargebee"
 	CardSwitchGatewayForCustomerRequestGatewayChargebee string = "chargebee"
+
 	// CardSwitchGatewayForCustomerRequestGatewayStripe captures enum value "stripe"
 	CardSwitchGatewayForCustomerRequestGatewayStripe string = "stripe"
+
 	// CardSwitchGatewayForCustomerRequestGatewayWepay captures enum value "wepay"
 	CardSwitchGatewayForCustomerRequestGatewayWepay string = "wepay"
+
 	// CardSwitchGatewayForCustomerRequestGatewayBraintree captures enum value "braintree"
 	CardSwitchGatewayForCustomerRequestGatewayBraintree string = "braintree"
+
 	// CardSwitchGatewayForCustomerRequestGatewayAuthorizeNet captures enum value "authorize_net"
 	CardSwitchGatewayForCustomerRequestGatewayAuthorizeNet string = "authorize_net"
+
 	// CardSwitchGatewayForCustomerRequestGatewayPaypalPro captures enum value "paypal_pro"
 	CardSwitchGatewayForCustomerRequestGatewayPaypalPro string = "paypal_pro"
+
 	// CardSwitchGatewayForCustomerRequestGatewayPin captures enum value "pin"
 	CardSwitchGatewayForCustomerRequestGatewayPin string = "pin"
+
 	// CardSwitchGatewayForCustomerRequestGatewayEway captures enum value "eway"
 	CardSwitchGatewayForCustomerRequestGatewayEway string = "eway"
+
 	// CardSwitchGatewayForCustomerRequestGatewayEwayRapid captures enum value "eway_rapid"
 	CardSwitchGatewayForCustomerRequestGatewayEwayRapid string = "eway_rapid"
+
 	// CardSwitchGatewayForCustomerRequestGatewayWorldpay captures enum value "worldpay"
 	CardSwitchGatewayForCustomerRequestGatewayWorldpay string = "worldpay"
+
 	// CardSwitchGatewayForCustomerRequestGatewayBalancedPayments captures enum value "balanced_payments"
 	CardSwitchGatewayForCustomerRequestGatewayBalancedPayments string = "balanced_payments"
+
 	// CardSwitchGatewayForCustomerRequestGatewayBeanstream captures enum value "beanstream"
 	CardSwitchGatewayForCustomerRequestGatewayBeanstream string = "beanstream"
+
 	// CardSwitchGatewayForCustomerRequestGatewayBluepay captures enum value "bluepay"
 	CardSwitchGatewayForCustomerRequestGatewayBluepay string = "bluepay"
+
 	// CardSwitchGatewayForCustomerRequestGatewayElavon captures enum value "elavon"
 	CardSwitchGatewayForCustomerRequestGatewayElavon string = "elavon"
+
 	// CardSwitchGatewayForCustomerRequestGatewayFirstDataGlobal captures enum value "first_data_global"
 	CardSwitchGatewayForCustomerRequestGatewayFirstDataGlobal string = "first_data_global"
+
 	// CardSwitchGatewayForCustomerRequestGatewayHdfc captures enum value "hdfc"
 	CardSwitchGatewayForCustomerRequestGatewayHdfc string = "hdfc"
+
 	// CardSwitchGatewayForCustomerRequestGatewayMigs captures enum value "migs"
 	CardSwitchGatewayForCustomerRequestGatewayMigs string = "migs"
+
 	// CardSwitchGatewayForCustomerRequestGatewayNmi captures enum value "nmi"
 	CardSwitchGatewayForCustomerRequestGatewayNmi string = "nmi"
+
 	// CardSwitchGatewayForCustomerRequestGatewayOgone captures enum value "ogone"
 	CardSwitchGatewayForCustomerRequestGatewayOgone string = "ogone"
+
 	// CardSwitchGatewayForCustomerRequestGatewayPaymill captures enum value "paymill"
 	CardSwitchGatewayForCustomerRequestGatewayPaymill string = "paymill"
+
 	// CardSwitchGatewayForCustomerRequestGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	CardSwitchGatewayForCustomerRequestGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// CardSwitchGatewayForCustomerRequestGatewaySagePay captures enum value "sage_pay"
 	CardSwitchGatewayForCustomerRequestGatewaySagePay string = "sage_pay"
+
 	// CardSwitchGatewayForCustomerRequestGatewayTco captures enum value "tco"
 	CardSwitchGatewayForCustomerRequestGatewayTco string = "tco"
+
 	// CardSwitchGatewayForCustomerRequestGatewayWirecard captures enum value "wirecard"
 	CardSwitchGatewayForCustomerRequestGatewayWirecard string = "wirecard"
+
 	// CardSwitchGatewayForCustomerRequestGatewayAmazonPayments captures enum value "amazon_payments"
 	CardSwitchGatewayForCustomerRequestGatewayAmazonPayments string = "amazon_payments"
+
 	// CardSwitchGatewayForCustomerRequestGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CardSwitchGatewayForCustomerRequestGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CardSwitchGatewayForCustomerRequestGatewayGocardless captures enum value "gocardless"
 	CardSwitchGatewayForCustomerRequestGatewayGocardless string = "gocardless"
+
 	// CardSwitchGatewayForCustomerRequestGatewayAdyen captures enum value "adyen"
 	CardSwitchGatewayForCustomerRequestGatewayAdyen string = "adyen"
+
 	// CardSwitchGatewayForCustomerRequestGatewayOrbital captures enum value "orbital"
 	CardSwitchGatewayForCustomerRequestGatewayOrbital string = "orbital"
+
 	// CardSwitchGatewayForCustomerRequestGatewayMonerisUs captures enum value "moneris_us"
 	CardSwitchGatewayForCustomerRequestGatewayMonerisUs string = "moneris_us"
+
 	// CardSwitchGatewayForCustomerRequestGatewayMoneris captures enum value "moneris"
 	CardSwitchGatewayForCustomerRequestGatewayMoneris string = "moneris"
+
 	// CardSwitchGatewayForCustomerRequestGatewayNotApplicable captures enum value "not_applicable"
 	CardSwitchGatewayForCustomerRequestGatewayNotApplicable string = "not_applicable"
 )

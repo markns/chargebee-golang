@@ -14,7 +14,6 @@ import (
 
 // PlanCopyRequest plan copy request
 // swagger:model PlanCopyRequest
-
 type PlanCopyRequest struct {
 
 	// for site merging
@@ -29,14 +28,6 @@ type PlanCopyRequest struct {
 	// id at from site
 	IDAtFromSite string `json:"id_at_from_site,omitempty"`
 }
-
-/* polymorph PlanCopyRequest for_site_merging false */
-
-/* polymorph PlanCopyRequest from_site false */
-
-/* polymorph PlanCopyRequest id false */
-
-/* polymorph PlanCopyRequest id_at_from_site false */
 
 // Validate validates this plan copy request
 func (m *PlanCopyRequest) Validate(formats strfmt.Registry) error {

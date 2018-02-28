@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCopyAddonParams creates a new CopyAddonParams object
@@ -124,12 +124,10 @@ func (o *CopyAddonParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Reg
 	}
 	var res []error
 
-	if o.AddonCopyRequest == nil {
-		o.AddonCopyRequest = new(models.AddonCopyRequest)
-	}
-
-	if err := r.SetBodyParam(o.AddonCopyRequest); err != nil {
-		return err
+	if o.AddonCopyRequest != nil {
+		if err := r.SetBodyParam(o.AddonCopyRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

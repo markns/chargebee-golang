@@ -17,7 +17,6 @@ import (
 
 // PaymentSourceCreateUsingTempTokenRequest payment source create using temp token request
 // swagger:model PaymentSourceCreateUsingTempTokenRequest
-
 type PaymentSourceCreateUsingTempTokenRequest struct {
 
 	// customer id
@@ -38,18 +37,6 @@ type PaymentSourceCreateUsingTempTokenRequest struct {
 	// type
 	Type string `json:"type,omitempty"`
 }
-
-/* polymorph PaymentSourceCreateUsingTempTokenRequest customer_id false */
-
-/* polymorph PaymentSourceCreateUsingTempTokenRequest gateway_account_id false */
-
-/* polymorph PaymentSourceCreateUsingTempTokenRequest issuing_country false */
-
-/* polymorph PaymentSourceCreateUsingTempTokenRequest replace_primary_payment_source false */
-
-/* polymorph PaymentSourceCreateUsingTempTokenRequest tmp_token false */
-
-/* polymorph PaymentSourceCreateUsingTempTokenRequest type false */
 
 // Validate validates this payment source create using temp token request
 func (m *PaymentSourceCreateUsingTempTokenRequest) Validate(formats strfmt.Registry) error {
@@ -79,20 +66,28 @@ func init() {
 }
 
 const (
+
 	// PaymentSourceCreateUsingTempTokenRequestTypeCard captures enum value "card"
 	PaymentSourceCreateUsingTempTokenRequestTypeCard string = "card"
+
 	// PaymentSourceCreateUsingTempTokenRequestTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	PaymentSourceCreateUsingTempTokenRequestTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// PaymentSourceCreateUsingTempTokenRequestTypeAmazonPayments captures enum value "amazon_payments"
 	PaymentSourceCreateUsingTempTokenRequestTypeAmazonPayments string = "amazon_payments"
+
 	// PaymentSourceCreateUsingTempTokenRequestTypeDirectDebit captures enum value "direct_debit"
 	PaymentSourceCreateUsingTempTokenRequestTypeDirectDebit string = "direct_debit"
+
 	// PaymentSourceCreateUsingTempTokenRequestTypeGeneric captures enum value "generic"
 	PaymentSourceCreateUsingTempTokenRequestTypeGeneric string = "generic"
+
 	// PaymentSourceCreateUsingTempTokenRequestTypeAlipay captures enum value "alipay"
 	PaymentSourceCreateUsingTempTokenRequestTypeAlipay string = "alipay"
+
 	// PaymentSourceCreateUsingTempTokenRequestTypeUnionpay captures enum value "unionpay"
 	PaymentSourceCreateUsingTempTokenRequestTypeUnionpay string = "unionpay"
+
 	// PaymentSourceCreateUsingTempTokenRequestTypeApplePay captures enum value "apple_pay"
 	PaymentSourceCreateUsingTempTokenRequestTypeApplePay string = "apple_pay"
 )

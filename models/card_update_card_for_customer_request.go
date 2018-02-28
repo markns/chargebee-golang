@@ -17,7 +17,6 @@ import (
 
 // CardUpdateCardForCustomerRequest card update card for customer request
 // swagger:model CardUpdateCardForCustomerRequest
-
 type CardUpdateCardForCustomerRequest struct {
 
 	// billing addr1
@@ -75,42 +74,6 @@ type CardUpdateCardForCustomerRequest struct {
 	TmpToken string `json:"tmp_token,omitempty"`
 }
 
-/* polymorph CardUpdateCardForCustomerRequest billing_addr1 false */
-
-/* polymorph CardUpdateCardForCustomerRequest billing_addr2 false */
-
-/* polymorph CardUpdateCardForCustomerRequest billing_city false */
-
-/* polymorph CardUpdateCardForCustomerRequest billing_country false */
-
-/* polymorph CardUpdateCardForCustomerRequest billing_state false */
-
-/* polymorph CardUpdateCardForCustomerRequest billing_state_code false */
-
-/* polymorph CardUpdateCardForCustomerRequest billing_zip false */
-
-/* polymorph CardUpdateCardForCustomerRequest customer[vat_number] false */
-
-/* polymorph CardUpdateCardForCustomerRequest cvv false */
-
-/* polymorph CardUpdateCardForCustomerRequest expiry_month false */
-
-/* polymorph CardUpdateCardForCustomerRequest expiry_year false */
-
-/* polymorph CardUpdateCardForCustomerRequest first_name false */
-
-/* polymorph CardUpdateCardForCustomerRequest gateway false */
-
-/* polymorph CardUpdateCardForCustomerRequest gateway_account_id false */
-
-/* polymorph CardUpdateCardForCustomerRequest ip_address false */
-
-/* polymorph CardUpdateCardForCustomerRequest last_name false */
-
-/* polymorph CardUpdateCardForCustomerRequest number false */
-
-/* polymorph CardUpdateCardForCustomerRequest tmp_token false */
-
 // Validate validates this card update card for customer request
 func (m *CardUpdateCardForCustomerRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -139,68 +102,100 @@ func init() {
 }
 
 const (
+
 	// CardUpdateCardForCustomerRequestGatewayChargebee captures enum value "chargebee"
 	CardUpdateCardForCustomerRequestGatewayChargebee string = "chargebee"
+
 	// CardUpdateCardForCustomerRequestGatewayStripe captures enum value "stripe"
 	CardUpdateCardForCustomerRequestGatewayStripe string = "stripe"
+
 	// CardUpdateCardForCustomerRequestGatewayWepay captures enum value "wepay"
 	CardUpdateCardForCustomerRequestGatewayWepay string = "wepay"
+
 	// CardUpdateCardForCustomerRequestGatewayBraintree captures enum value "braintree"
 	CardUpdateCardForCustomerRequestGatewayBraintree string = "braintree"
+
 	// CardUpdateCardForCustomerRequestGatewayAuthorizeNet captures enum value "authorize_net"
 	CardUpdateCardForCustomerRequestGatewayAuthorizeNet string = "authorize_net"
+
 	// CardUpdateCardForCustomerRequestGatewayPaypalPro captures enum value "paypal_pro"
 	CardUpdateCardForCustomerRequestGatewayPaypalPro string = "paypal_pro"
+
 	// CardUpdateCardForCustomerRequestGatewayPin captures enum value "pin"
 	CardUpdateCardForCustomerRequestGatewayPin string = "pin"
+
 	// CardUpdateCardForCustomerRequestGatewayEway captures enum value "eway"
 	CardUpdateCardForCustomerRequestGatewayEway string = "eway"
+
 	// CardUpdateCardForCustomerRequestGatewayEwayRapid captures enum value "eway_rapid"
 	CardUpdateCardForCustomerRequestGatewayEwayRapid string = "eway_rapid"
+
 	// CardUpdateCardForCustomerRequestGatewayWorldpay captures enum value "worldpay"
 	CardUpdateCardForCustomerRequestGatewayWorldpay string = "worldpay"
+
 	// CardUpdateCardForCustomerRequestGatewayBalancedPayments captures enum value "balanced_payments"
 	CardUpdateCardForCustomerRequestGatewayBalancedPayments string = "balanced_payments"
+
 	// CardUpdateCardForCustomerRequestGatewayBeanstream captures enum value "beanstream"
 	CardUpdateCardForCustomerRequestGatewayBeanstream string = "beanstream"
+
 	// CardUpdateCardForCustomerRequestGatewayBluepay captures enum value "bluepay"
 	CardUpdateCardForCustomerRequestGatewayBluepay string = "bluepay"
+
 	// CardUpdateCardForCustomerRequestGatewayElavon captures enum value "elavon"
 	CardUpdateCardForCustomerRequestGatewayElavon string = "elavon"
+
 	// CardUpdateCardForCustomerRequestGatewayFirstDataGlobal captures enum value "first_data_global"
 	CardUpdateCardForCustomerRequestGatewayFirstDataGlobal string = "first_data_global"
+
 	// CardUpdateCardForCustomerRequestGatewayHdfc captures enum value "hdfc"
 	CardUpdateCardForCustomerRequestGatewayHdfc string = "hdfc"
+
 	// CardUpdateCardForCustomerRequestGatewayMigs captures enum value "migs"
 	CardUpdateCardForCustomerRequestGatewayMigs string = "migs"
+
 	// CardUpdateCardForCustomerRequestGatewayNmi captures enum value "nmi"
 	CardUpdateCardForCustomerRequestGatewayNmi string = "nmi"
+
 	// CardUpdateCardForCustomerRequestGatewayOgone captures enum value "ogone"
 	CardUpdateCardForCustomerRequestGatewayOgone string = "ogone"
+
 	// CardUpdateCardForCustomerRequestGatewayPaymill captures enum value "paymill"
 	CardUpdateCardForCustomerRequestGatewayPaymill string = "paymill"
+
 	// CardUpdateCardForCustomerRequestGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	CardUpdateCardForCustomerRequestGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// CardUpdateCardForCustomerRequestGatewaySagePay captures enum value "sage_pay"
 	CardUpdateCardForCustomerRequestGatewaySagePay string = "sage_pay"
+
 	// CardUpdateCardForCustomerRequestGatewayTco captures enum value "tco"
 	CardUpdateCardForCustomerRequestGatewayTco string = "tco"
+
 	// CardUpdateCardForCustomerRequestGatewayWirecard captures enum value "wirecard"
 	CardUpdateCardForCustomerRequestGatewayWirecard string = "wirecard"
+
 	// CardUpdateCardForCustomerRequestGatewayAmazonPayments captures enum value "amazon_payments"
 	CardUpdateCardForCustomerRequestGatewayAmazonPayments string = "amazon_payments"
+
 	// CardUpdateCardForCustomerRequestGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CardUpdateCardForCustomerRequestGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CardUpdateCardForCustomerRequestGatewayGocardless captures enum value "gocardless"
 	CardUpdateCardForCustomerRequestGatewayGocardless string = "gocardless"
+
 	// CardUpdateCardForCustomerRequestGatewayAdyen captures enum value "adyen"
 	CardUpdateCardForCustomerRequestGatewayAdyen string = "adyen"
+
 	// CardUpdateCardForCustomerRequestGatewayOrbital captures enum value "orbital"
 	CardUpdateCardForCustomerRequestGatewayOrbital string = "orbital"
+
 	// CardUpdateCardForCustomerRequestGatewayMonerisUs captures enum value "moneris_us"
 	CardUpdateCardForCustomerRequestGatewayMonerisUs string = "moneris_us"
+
 	// CardUpdateCardForCustomerRequestGatewayMoneris captures enum value "moneris"
 	CardUpdateCardForCustomerRequestGatewayMoneris string = "moneris"
+
 	// CardUpdateCardForCustomerRequestGatewayNotApplicable captures enum value "not_applicable"
 	CardUpdateCardForCustomerRequestGatewayNotApplicable string = "not_applicable"
 )

@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCreateCommentParams creates a new CreateCommentParams object
@@ -124,12 +124,10 @@ func (o *CreateCommentParams) WriteToRequest(r runtime.ClientRequest, reg strfmt
 	}
 	var res []error
 
-	if o.CommentCreateRequest == nil {
-		o.CommentCreateRequest = new(models.CommentCreateRequest)
-	}
-
-	if err := r.SetBodyParam(o.CommentCreateRequest); err != nil {
-		return err
+	if o.CommentCreateRequest != nil {
+		if err := r.SetBodyParam(o.CommentCreateRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

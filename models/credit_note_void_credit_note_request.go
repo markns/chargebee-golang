@@ -14,14 +14,11 @@ import (
 
 // CreditNoteVoidCreditNoteRequest credit note void credit note request
 // swagger:model CreditNoteVoidCreditNoteRequest
-
 type CreditNoteVoidCreditNoteRequest struct {
 
 	// comment
 	Comment string `json:"comment,omitempty"`
 }
-
-/* polymorph CreditNoteVoidCreditNoteRequest comment false */
 
 // Validate validates this credit note void credit note request
 func (m *CreditNoteVoidCreditNoteRequest) Validate(formats strfmt.Registry) error {

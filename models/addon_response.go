@@ -14,14 +14,11 @@ import (
 
 // AddonResponse addon response
 // swagger:model AddonResponse
-
 type AddonResponse struct {
 
 	// addon
 	Addon *Addon `json:"addon,omitempty"`
 }
-
-/* polymorph AddonResponse addon false */
 
 // Validate validates this addon response
 func (m *AddonResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *AddonResponse) validateAddon(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

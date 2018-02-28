@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCreateCardPaymentSourceParams creates a new CreateCardPaymentSourceParams object
@@ -124,12 +124,10 @@ func (o *CreateCardPaymentSourceParams) WriteToRequest(r runtime.ClientRequest, 
 	}
 	var res []error
 
-	if o.PaymentSourceCreateCardRequest == nil {
-		o.PaymentSourceCreateCardRequest = new(models.PaymentSourceCreateCardRequest)
-	}
-
-	if err := r.SetBodyParam(o.PaymentSourceCreateCardRequest); err != nil {
-		return err
+	if o.PaymentSourceCreateCardRequest != nil {
+		if err := r.SetBodyParam(o.PaymentSourceCreateCardRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

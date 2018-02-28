@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewRecordRefundCreditNoteParams creates a new RecordRefundCreditNoteParams object
@@ -137,12 +137,10 @@ func (o *RecordRefundCreditNoteParams) WriteToRequest(r runtime.ClientRequest, r
 	}
 	var res []error
 
-	if o.CreditNoteRecordRefundRequest == nil {
-		o.CreditNoteRecordRefundRequest = new(models.CreditNoteRecordRefundRequest)
-	}
-
-	if err := r.SetBodyParam(o.CreditNoteRecordRefundRequest); err != nil {
-		return err
+	if o.CreditNoteRecordRefundRequest != nil {
+		if err := r.SetBodyParam(o.CreditNoteRecordRefundRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

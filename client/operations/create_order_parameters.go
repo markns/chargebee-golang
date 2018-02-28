@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCreateOrderParams creates a new CreateOrderParams object
@@ -124,12 +124,10 @@ func (o *CreateOrderParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.R
 	}
 	var res []error
 
-	if o.OrderCreateRequest == nil {
-		o.OrderCreateRequest = new(models.OrderCreateRequest)
-	}
-
-	if err := r.SetBodyParam(o.OrderCreateRequest); err != nil {
-		return err
+	if o.OrderCreateRequest != nil {
+		if err := r.SetBodyParam(o.OrderCreateRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

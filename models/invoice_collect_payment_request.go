@@ -14,7 +14,6 @@ import (
 
 // InvoiceCollectPaymentRequest invoice collect payment request
 // swagger:model InvoiceCollectPaymentRequest
-
 type InvoiceCollectPaymentRequest struct {
 
 	// amount
@@ -23,10 +22,6 @@ type InvoiceCollectPaymentRequest struct {
 	// payment source id
 	PaymentSourceID string `json:"payment_source_id,omitempty"`
 }
-
-/* polymorph InvoiceCollectPaymentRequest amount false */
-
-/* polymorph InvoiceCollectPaymentRequest payment_source_id false */
 
 // Validate validates this invoice collect payment request
 func (m *InvoiceCollectPaymentRequest) Validate(formats strfmt.Registry) error {

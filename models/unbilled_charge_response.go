@@ -14,14 +14,11 @@ import (
 
 // UnbilledChargeResponse unbilled charge response
 // swagger:model UnbilledChargeResponse
-
 type UnbilledChargeResponse struct {
 
 	// unbilledcharge
 	Unbilledcharge *UnbilledCharge `json:"unbilledcharge,omitempty"`
 }
-
-/* polymorph UnbilledChargeResponse unbilledcharge false */
 
 // Validate validates this unbilled charge response
 func (m *UnbilledChargeResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *UnbilledChargeResponse) validateUnbilledcharge(formats strfmt.Registry)
 			}
 			return err
 		}
+
 	}
 
 	return nil

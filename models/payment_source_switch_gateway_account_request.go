@@ -14,14 +14,11 @@ import (
 
 // PaymentSourceSwitchGatewayAccountRequest payment source switch gateway account request
 // swagger:model PaymentSourceSwitchGatewayAccountRequest
-
 type PaymentSourceSwitchGatewayAccountRequest struct {
 
 	// gateway account id
 	GatewayAccountID string `json:"gateway_account_id,omitempty"`
 }
-
-/* polymorph PaymentSourceSwitchGatewayAccountRequest gateway_account_id false */
 
 // Validate validates this payment source switch gateway account request
 func (m *PaymentSourceSwitchGatewayAccountRequest) Validate(formats strfmt.Registry) error {

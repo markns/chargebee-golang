@@ -17,7 +17,6 @@ import (
 
 // CustomerUpdateRequest customer update request
 // swagger:model CustomerUpdateRequest
-
 type CustomerUpdateRequest struct {
 
 	// allow direct debit
@@ -72,40 +71,6 @@ type CustomerUpdateRequest struct {
 	Taxability string `json:"taxability,omitempty"`
 }
 
-/* polymorph CustomerUpdateRequest allow_direct_debit false */
-
-/* polymorph CustomerUpdateRequest auto_collection false */
-
-/* polymorph CustomerUpdateRequest company false */
-
-/* polymorph CustomerUpdateRequest consolidated_invoicing false */
-
-/* polymorph CustomerUpdateRequest email false */
-
-/* polymorph CustomerUpdateRequest entity_code false */
-
-/* polymorph CustomerUpdateRequest exempt_number false */
-
-/* polymorph CustomerUpdateRequest first_name false */
-
-/* polymorph CustomerUpdateRequest fraud_flag false */
-
-/* polymorph CustomerUpdateRequest invoice_notes false */
-
-/* polymorph CustomerUpdateRequest last_name false */
-
-/* polymorph CustomerUpdateRequest locale false */
-
-/* polymorph CustomerUpdateRequest meta_data false */
-
-/* polymorph CustomerUpdateRequest net_term_days false */
-
-/* polymorph CustomerUpdateRequest phone false */
-
-/* polymorph CustomerUpdateRequest preferred_currency_code false */
-
-/* polymorph CustomerUpdateRequest taxability false */
-
 // Validate validates this customer update request
 func (m *CustomerUpdateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -149,8 +114,10 @@ func init() {
 }
 
 const (
+
 	// CustomerUpdateRequestAutoCollectionOn captures enum value "on"
 	CustomerUpdateRequestAutoCollectionOn string = "on"
+
 	// CustomerUpdateRequestAutoCollectionOff captures enum value "off"
 	CustomerUpdateRequestAutoCollectionOff string = "off"
 )
@@ -190,40 +157,58 @@ func init() {
 }
 
 const (
+
 	// CustomerUpdateRequestEntityCodeA captures enum value "a"
 	CustomerUpdateRequestEntityCodeA string = "a"
+
 	// CustomerUpdateRequestEntityCodeB captures enum value "b"
 	CustomerUpdateRequestEntityCodeB string = "b"
+
 	// CustomerUpdateRequestEntityCodeC captures enum value "c"
 	CustomerUpdateRequestEntityCodeC string = "c"
+
 	// CustomerUpdateRequestEntityCodeD captures enum value "d"
 	CustomerUpdateRequestEntityCodeD string = "d"
+
 	// CustomerUpdateRequestEntityCodeE captures enum value "e"
 	CustomerUpdateRequestEntityCodeE string = "e"
+
 	// CustomerUpdateRequestEntityCodeF captures enum value "f"
 	CustomerUpdateRequestEntityCodeF string = "f"
+
 	// CustomerUpdateRequestEntityCodeG captures enum value "g"
 	CustomerUpdateRequestEntityCodeG string = "g"
+
 	// CustomerUpdateRequestEntityCodeH captures enum value "h"
 	CustomerUpdateRequestEntityCodeH string = "h"
+
 	// CustomerUpdateRequestEntityCodeI captures enum value "i"
 	CustomerUpdateRequestEntityCodeI string = "i"
+
 	// CustomerUpdateRequestEntityCodeJ captures enum value "j"
 	CustomerUpdateRequestEntityCodeJ string = "j"
+
 	// CustomerUpdateRequestEntityCodeK captures enum value "k"
 	CustomerUpdateRequestEntityCodeK string = "k"
+
 	// CustomerUpdateRequestEntityCodeL captures enum value "l"
 	CustomerUpdateRequestEntityCodeL string = "l"
+
 	// CustomerUpdateRequestEntityCodeN captures enum value "n"
 	CustomerUpdateRequestEntityCodeN string = "n"
+
 	// CustomerUpdateRequestEntityCodeP captures enum value "p"
 	CustomerUpdateRequestEntityCodeP string = "p"
+
 	// CustomerUpdateRequestEntityCodeQ captures enum value "q"
 	CustomerUpdateRequestEntityCodeQ string = "q"
+
 	// CustomerUpdateRequestEntityCodeR captures enum value "r"
 	CustomerUpdateRequestEntityCodeR string = "r"
+
 	// CustomerUpdateRequestEntityCodeMed1 captures enum value "med1"
 	CustomerUpdateRequestEntityCodeMed1 string = "med1"
+
 	// CustomerUpdateRequestEntityCodeMed2 captures enum value "med2"
 	CustomerUpdateRequestEntityCodeMed2 string = "med2"
 )
@@ -263,10 +248,13 @@ func init() {
 }
 
 const (
+
 	// CustomerUpdateRequestFraudFlagSafe captures enum value "safe"
 	CustomerUpdateRequestFraudFlagSafe string = "safe"
+
 	// CustomerUpdateRequestFraudFlagSuspicious captures enum value "suspicious"
 	CustomerUpdateRequestFraudFlagSuspicious string = "suspicious"
+
 	// CustomerUpdateRequestFraudFlagFraudulent captures enum value "fraudulent"
 	CustomerUpdateRequestFraudFlagFraudulent string = "fraudulent"
 )
@@ -306,8 +294,10 @@ func init() {
 }
 
 const (
+
 	// CustomerUpdateRequestTaxabilityTaxable captures enum value "taxable"
 	CustomerUpdateRequestTaxabilityTaxable string = "taxable"
+
 	// CustomerUpdateRequestTaxabilityExempt captures enum value "exempt"
 	CustomerUpdateRequestTaxabilityExempt string = "exempt"
 )

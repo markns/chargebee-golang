@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCreatePlanParams creates a new CreatePlanParams object
@@ -124,12 +124,10 @@ func (o *CreatePlanParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Re
 	}
 	var res []error
 
-	if o.PlanCreateRequest == nil {
-		o.PlanCreateRequest = new(models.PlanCreateRequest)
-	}
-
-	if err := r.SetBodyParam(o.PlanCreateRequest); err != nil {
-		return err
+	if o.PlanCreateRequest != nil {
+		if err := r.SetBodyParam(o.PlanCreateRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

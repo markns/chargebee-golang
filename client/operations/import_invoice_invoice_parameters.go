@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewImportInvoiceInvoiceParams creates a new ImportInvoiceInvoiceParams object
@@ -124,12 +124,10 @@ func (o *ImportInvoiceInvoiceParams) WriteToRequest(r runtime.ClientRequest, reg
 	}
 	var res []error
 
-	if o.InvoiceImportInvoiceRequest == nil {
-		o.InvoiceImportInvoiceRequest = new(models.InvoiceImportInvoiceRequest)
-	}
-
-	if err := r.SetBodyParam(o.InvoiceImportInvoiceRequest); err != nil {
-		return err
+	if o.InvoiceImportInvoiceRequest != nil {
+		if err := r.SetBodyParam(o.InvoiceImportInvoiceRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

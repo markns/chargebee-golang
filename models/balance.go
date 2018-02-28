@@ -14,7 +14,6 @@ import (
 
 // Balance balance
 // swagger:model Balance
-
 type Balance struct {
 
 	// balance currency code
@@ -32,16 +31,6 @@ type Balance struct {
 	// unbilled charges
 	UnbilledCharges int32 `json:"unbilled_charges,omitempty"`
 }
-
-/* polymorph Balance balance_currency_code false */
-
-/* polymorph Balance excess_payments false */
-
-/* polymorph Balance promotional_credits false */
-
-/* polymorph Balance refundable_credits false */
-
-/* polymorph Balance unbilled_charges false */
 
 // Validate validates this balance
 func (m *Balance) Validate(formats strfmt.Registry) error {

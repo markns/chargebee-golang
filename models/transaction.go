@@ -18,7 +18,6 @@ import (
 
 // Transaction transaction
 // swagger:model Transaction
-
 type Transaction struct {
 
 	// amount
@@ -115,68 +114,6 @@ type Transaction struct {
 	VoidedAt int64 `json:"voided_at,omitempty"`
 }
 
-/* polymorph Transaction amount false */
-
-/* polymorph Transaction amount_unused false */
-
-/* polymorph Transaction currency_code false */
-
-/* polymorph Transaction customer_id false */
-
-/* polymorph Transaction date false */
-
-/* polymorph Transaction deleted false */
-
-/* polymorph Transaction error_code false */
-
-/* polymorph Transaction error_text false */
-
-/* polymorph Transaction fraud_flag false */
-
-/* polymorph Transaction fraud_reason false */
-
-/* polymorph Transaction gateway false */
-
-/* polymorph Transaction gateway_account_id false */
-
-/* polymorph Transaction id false */
-
-/* polymorph Transaction id_at_gateway false */
-
-/* polymorph Transaction linked_credit_notes false */
-
-/* polymorph Transaction linked_invoices false */
-
-/* polymorph Transaction linked_refunds false */
-
-/* polymorph Transaction masked_card_number false */
-
-/* polymorph Transaction payment_method false */
-
-/* polymorph Transaction payment_source_id false */
-
-/* polymorph Transaction reference_number false */
-
-/* polymorph Transaction reference_transaction_id false */
-
-/* polymorph Transaction refunded_txn_id false */
-
-/* polymorph Transaction resource_version false */
-
-/* polymorph Transaction reversal_transaction_id false */
-
-/* polymorph Transaction settled_at false */
-
-/* polymorph Transaction status false */
-
-/* polymorph Transaction subscription_id false */
-
-/* polymorph Transaction type false */
-
-/* polymorph Transaction updated_at false */
-
-/* polymorph Transaction voided_at false */
-
 // Validate validates this transaction
 func (m *Transaction) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -240,10 +177,13 @@ func init() {
 }
 
 const (
+
 	// TransactionFraudFlagSafe captures enum value "safe"
 	TransactionFraudFlagSafe string = "safe"
+
 	// TransactionFraudFlagSuspicious captures enum value "suspicious"
 	TransactionFraudFlagSuspicious string = "suspicious"
+
 	// TransactionFraudFlagFraudulent captures enum value "fraudulent"
 	TransactionFraudFlagFraudulent string = "fraudulent"
 )
@@ -283,68 +223,100 @@ func init() {
 }
 
 const (
+
 	// TransactionGatewayChargebee captures enum value "chargebee"
 	TransactionGatewayChargebee string = "chargebee"
+
 	// TransactionGatewayStripe captures enum value "stripe"
 	TransactionGatewayStripe string = "stripe"
+
 	// TransactionGatewayWepay captures enum value "wepay"
 	TransactionGatewayWepay string = "wepay"
+
 	// TransactionGatewayBraintree captures enum value "braintree"
 	TransactionGatewayBraintree string = "braintree"
+
 	// TransactionGatewayAuthorizeNet captures enum value "authorize_net"
 	TransactionGatewayAuthorizeNet string = "authorize_net"
+
 	// TransactionGatewayPaypalPro captures enum value "paypal_pro"
 	TransactionGatewayPaypalPro string = "paypal_pro"
+
 	// TransactionGatewayPin captures enum value "pin"
 	TransactionGatewayPin string = "pin"
+
 	// TransactionGatewayEway captures enum value "eway"
 	TransactionGatewayEway string = "eway"
+
 	// TransactionGatewayEwayRapid captures enum value "eway_rapid"
 	TransactionGatewayEwayRapid string = "eway_rapid"
+
 	// TransactionGatewayWorldpay captures enum value "worldpay"
 	TransactionGatewayWorldpay string = "worldpay"
+
 	// TransactionGatewayBalancedPayments captures enum value "balanced_payments"
 	TransactionGatewayBalancedPayments string = "balanced_payments"
+
 	// TransactionGatewayBeanstream captures enum value "beanstream"
 	TransactionGatewayBeanstream string = "beanstream"
+
 	// TransactionGatewayBluepay captures enum value "bluepay"
 	TransactionGatewayBluepay string = "bluepay"
+
 	// TransactionGatewayElavon captures enum value "elavon"
 	TransactionGatewayElavon string = "elavon"
+
 	// TransactionGatewayFirstDataGlobal captures enum value "first_data_global"
 	TransactionGatewayFirstDataGlobal string = "first_data_global"
+
 	// TransactionGatewayHdfc captures enum value "hdfc"
 	TransactionGatewayHdfc string = "hdfc"
+
 	// TransactionGatewayMigs captures enum value "migs"
 	TransactionGatewayMigs string = "migs"
+
 	// TransactionGatewayNmi captures enum value "nmi"
 	TransactionGatewayNmi string = "nmi"
+
 	// TransactionGatewayOgone captures enum value "ogone"
 	TransactionGatewayOgone string = "ogone"
+
 	// TransactionGatewayPaymill captures enum value "paymill"
 	TransactionGatewayPaymill string = "paymill"
+
 	// TransactionGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	TransactionGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// TransactionGatewaySagePay captures enum value "sage_pay"
 	TransactionGatewaySagePay string = "sage_pay"
+
 	// TransactionGatewayTco captures enum value "tco"
 	TransactionGatewayTco string = "tco"
+
 	// TransactionGatewayWirecard captures enum value "wirecard"
 	TransactionGatewayWirecard string = "wirecard"
+
 	// TransactionGatewayAmazonPayments captures enum value "amazon_payments"
 	TransactionGatewayAmazonPayments string = "amazon_payments"
+
 	// TransactionGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	TransactionGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// TransactionGatewayGocardless captures enum value "gocardless"
 	TransactionGatewayGocardless string = "gocardless"
+
 	// TransactionGatewayAdyen captures enum value "adyen"
 	TransactionGatewayAdyen string = "adyen"
+
 	// TransactionGatewayOrbital captures enum value "orbital"
 	TransactionGatewayOrbital string = "orbital"
+
 	// TransactionGatewayMonerisUs captures enum value "moneris_us"
 	TransactionGatewayMonerisUs string = "moneris_us"
+
 	// TransactionGatewayMoneris captures enum value "moneris"
 	TransactionGatewayMoneris string = "moneris"
+
 	// TransactionGatewayNotApplicable captures enum value "not_applicable"
 	TransactionGatewayNotApplicable string = "not_applicable"
 )
@@ -391,6 +363,7 @@ func (m *Transaction) validateLinkedCreditNotes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -418,6 +391,7 @@ func (m *Transaction) validateLinkedInvoices(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -445,6 +419,7 @@ func (m *Transaction) validateLinkedRefunds(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -466,6 +441,7 @@ func (m *Transaction) validatePaymentMethod(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -484,14 +460,19 @@ func init() {
 }
 
 const (
+
 	// TransactionStatusFuture captures enum value "future"
 	TransactionStatusFuture string = "future"
+
 	// TransactionStatusInTrial captures enum value "in_trial"
 	TransactionStatusInTrial string = "in_trial"
+
 	// TransactionStatusActive captures enum value "active"
 	TransactionStatusActive string = "active"
+
 	// TransactionStatusNonRenewing captures enum value "non_renewing"
 	TransactionStatusNonRenewing string = "non_renewing"
+
 	// TransactionStatusCancelled captures enum value "cancelled"
 	TransactionStatusCancelled string = "cancelled"
 )
@@ -531,20 +512,28 @@ func init() {
 }
 
 const (
+
 	// TransactionTypeCard captures enum value "card"
 	TransactionTypeCard string = "card"
+
 	// TransactionTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	TransactionTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// TransactionTypeAmazonPayments captures enum value "amazon_payments"
 	TransactionTypeAmazonPayments string = "amazon_payments"
+
 	// TransactionTypeDirectDebit captures enum value "direct_debit"
 	TransactionTypeDirectDebit string = "direct_debit"
+
 	// TransactionTypeGeneric captures enum value "generic"
 	TransactionTypeGeneric string = "generic"
+
 	// TransactionTypeAlipay captures enum value "alipay"
 	TransactionTypeAlipay string = "alipay"
+
 	// TransactionTypeUnionpay captures enum value "unionpay"
 	TransactionTypeUnionpay string = "unionpay"
+
 	// TransactionTypeApplePay captures enum value "apple_pay"
 	TransactionTypeApplePay string = "apple_pay"
 )

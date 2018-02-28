@@ -14,7 +14,6 @@ import (
 
 // PortalSessionCreateRequest portal session create request
 // swagger:model PortalSessionCreateRequest
-
 type PortalSessionCreateRequest struct {
 
 	// customer id
@@ -26,12 +25,6 @@ type PortalSessionCreateRequest struct {
 	// redirect url
 	RedirectURL string `json:"redirect_url,omitempty"`
 }
-
-/* polymorph PortalSessionCreateRequest customer[id] false */
-
-/* polymorph PortalSessionCreateRequest forward_url false */
-
-/* polymorph PortalSessionCreateRequest redirect_url false */
 
 // Validate validates this portal session create request
 func (m *PortalSessionCreateRequest) Validate(formats strfmt.Registry) error {

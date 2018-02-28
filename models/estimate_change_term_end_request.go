@@ -14,7 +14,6 @@ import (
 
 // EstimateChangeTermEndRequest estimate change term end request
 // swagger:model EstimateChangeTermEndRequest
-
 type EstimateChangeTermEndRequest struct {
 
 	// invoice immediately
@@ -26,12 +25,6 @@ type EstimateChangeTermEndRequest struct {
 	// term ends at
 	TermEndsAt int64 `json:"term_ends_at,omitempty"`
 }
-
-/* polymorph EstimateChangeTermEndRequest invoice_immediately false */
-
-/* polymorph EstimateChangeTermEndRequest prorate false */
-
-/* polymorph EstimateChangeTermEndRequest term_ends_at false */
 
 // Validate validates this estimate change term end request
 func (m *EstimateChangeTermEndRequest) Validate(formats strfmt.Registry) error {

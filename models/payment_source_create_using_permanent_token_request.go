@@ -17,7 +17,6 @@ import (
 
 // PaymentSourceCreateUsingPermanentTokenRequest payment source create using permanent token request
 // swagger:model PaymentSourceCreateUsingPermanentTokenRequest
-
 type PaymentSourceCreateUsingPermanentTokenRequest struct {
 
 	// customer id
@@ -38,18 +37,6 @@ type PaymentSourceCreateUsingPermanentTokenRequest struct {
 	// type
 	Type string `json:"type,omitempty"`
 }
-
-/* polymorph PaymentSourceCreateUsingPermanentTokenRequest customer_id false */
-
-/* polymorph PaymentSourceCreateUsingPermanentTokenRequest gateway_account_id false */
-
-/* polymorph PaymentSourceCreateUsingPermanentTokenRequest issuing_country false */
-
-/* polymorph PaymentSourceCreateUsingPermanentTokenRequest reference_id false */
-
-/* polymorph PaymentSourceCreateUsingPermanentTokenRequest replace_primary_payment_source false */
-
-/* polymorph PaymentSourceCreateUsingPermanentTokenRequest type false */
 
 // Validate validates this payment source create using permanent token request
 func (m *PaymentSourceCreateUsingPermanentTokenRequest) Validate(formats strfmt.Registry) error {
@@ -79,20 +66,28 @@ func init() {
 }
 
 const (
+
 	// PaymentSourceCreateUsingPermanentTokenRequestTypeCard captures enum value "card"
 	PaymentSourceCreateUsingPermanentTokenRequestTypeCard string = "card"
+
 	// PaymentSourceCreateUsingPermanentTokenRequestTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	PaymentSourceCreateUsingPermanentTokenRequestTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// PaymentSourceCreateUsingPermanentTokenRequestTypeAmazonPayments captures enum value "amazon_payments"
 	PaymentSourceCreateUsingPermanentTokenRequestTypeAmazonPayments string = "amazon_payments"
+
 	// PaymentSourceCreateUsingPermanentTokenRequestTypeDirectDebit captures enum value "direct_debit"
 	PaymentSourceCreateUsingPermanentTokenRequestTypeDirectDebit string = "direct_debit"
+
 	// PaymentSourceCreateUsingPermanentTokenRequestTypeGeneric captures enum value "generic"
 	PaymentSourceCreateUsingPermanentTokenRequestTypeGeneric string = "generic"
+
 	// PaymentSourceCreateUsingPermanentTokenRequestTypeAlipay captures enum value "alipay"
 	PaymentSourceCreateUsingPermanentTokenRequestTypeAlipay string = "alipay"
+
 	// PaymentSourceCreateUsingPermanentTokenRequestTypeUnionpay captures enum value "unionpay"
 	PaymentSourceCreateUsingPermanentTokenRequestTypeUnionpay string = "unionpay"
+
 	// PaymentSourceCreateUsingPermanentTokenRequestTypeApplePay captures enum value "apple_pay"
 	PaymentSourceCreateUsingPermanentTokenRequestTypeApplePay string = "apple_pay"
 )

@@ -17,7 +17,6 @@ import (
 
 // CustomerChangeBillingDateRequest customer change billing date request
 // swagger:model CustomerChangeBillingDateRequest
-
 type CustomerChangeBillingDateRequest struct {
 
 	// billing date
@@ -32,14 +31,6 @@ type CustomerChangeBillingDateRequest struct {
 	// billing day of week mode
 	BillingDayOfWeekMode string `json:"billing_day_of_week_mode,omitempty"`
 }
-
-/* polymorph CustomerChangeBillingDateRequest billing_date false */
-
-/* polymorph CustomerChangeBillingDateRequest billing_date_mode false */
-
-/* polymorph CustomerChangeBillingDateRequest billing_day_of_week false */
-
-/* polymorph CustomerChangeBillingDateRequest billing_day_of_week_mode false */
 
 // Validate validates this customer change billing date request
 func (m *CustomerChangeBillingDateRequest) Validate(formats strfmt.Registry) error {
@@ -79,8 +70,10 @@ func init() {
 }
 
 const (
+
 	// CustomerChangeBillingDateRequestBillingDateModeUsingDefaults captures enum value "using_defaults"
 	CustomerChangeBillingDateRequestBillingDateModeUsingDefaults string = "using_defaults"
+
 	// CustomerChangeBillingDateRequestBillingDateModeManuallySet captures enum value "manually_set"
 	CustomerChangeBillingDateRequestBillingDateModeManuallySet string = "manually_set"
 )
@@ -120,18 +113,25 @@ func init() {
 }
 
 const (
+
 	// CustomerChangeBillingDateRequestBillingDayOfWeekSunday captures enum value "sunday"
 	CustomerChangeBillingDateRequestBillingDayOfWeekSunday string = "sunday"
+
 	// CustomerChangeBillingDateRequestBillingDayOfWeekMonday captures enum value "monday"
 	CustomerChangeBillingDateRequestBillingDayOfWeekMonday string = "monday"
+
 	// CustomerChangeBillingDateRequestBillingDayOfWeekTuesday captures enum value "tuesday"
 	CustomerChangeBillingDateRequestBillingDayOfWeekTuesday string = "tuesday"
+
 	// CustomerChangeBillingDateRequestBillingDayOfWeekWednesday captures enum value "wednesday"
 	CustomerChangeBillingDateRequestBillingDayOfWeekWednesday string = "wednesday"
+
 	// CustomerChangeBillingDateRequestBillingDayOfWeekThursday captures enum value "thursday"
 	CustomerChangeBillingDateRequestBillingDayOfWeekThursday string = "thursday"
+
 	// CustomerChangeBillingDateRequestBillingDayOfWeekFriday captures enum value "friday"
 	CustomerChangeBillingDateRequestBillingDayOfWeekFriday string = "friday"
+
 	// CustomerChangeBillingDateRequestBillingDayOfWeekSaturday captures enum value "saturday"
 	CustomerChangeBillingDateRequestBillingDayOfWeekSaturday string = "saturday"
 )
@@ -171,8 +171,10 @@ func init() {
 }
 
 const (
+
 	// CustomerChangeBillingDateRequestBillingDayOfWeekModeUsingDefaults captures enum value "using_defaults"
 	CustomerChangeBillingDateRequestBillingDayOfWeekModeUsingDefaults string = "using_defaults"
+
 	// CustomerChangeBillingDateRequestBillingDayOfWeekModeManuallySet captures enum value "manually_set"
 	CustomerChangeBillingDateRequestBillingDayOfWeekModeManuallySet string = "manually_set"
 )

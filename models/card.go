@@ -17,7 +17,6 @@ import (
 
 // Card card
 // swagger:model Card
-
 type Card struct {
 
 	// billing addr1
@@ -69,38 +68,6 @@ type Card struct {
 	MaskedNumber string `json:"masked_number,omitempty"`
 }
 
-/* polymorph Card billing_addr1 false */
-
-/* polymorph Card billing_addr2 false */
-
-/* polymorph Card billing_city false */
-
-/* polymorph Card billing_country false */
-
-/* polymorph Card billing_state false */
-
-/* polymorph Card billing_state_code false */
-
-/* polymorph Card billing_zip false */
-
-/* polymorph Card brand false */
-
-/* polymorph Card expiry_month false */
-
-/* polymorph Card expiry_year false */
-
-/* polymorph Card first_name false */
-
-/* polymorph Card funding_type false */
-
-/* polymorph Card iin false */
-
-/* polymorph Card last4 false */
-
-/* polymorph Card last_name false */
-
-/* polymorph Card masked_number false */
-
 // Validate validates this card
 func (m *Card) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -134,18 +101,25 @@ func init() {
 }
 
 const (
+
 	// CardBrandVisa captures enum value "visa"
 	CardBrandVisa string = "visa"
+
 	// CardBrandMastercard captures enum value "mastercard"
 	CardBrandMastercard string = "mastercard"
+
 	// CardBrandAmericanExpress captures enum value "american_express"
 	CardBrandAmericanExpress string = "american_express"
+
 	// CardBrandDiscover captures enum value "discover"
 	CardBrandDiscover string = "discover"
+
 	// CardBrandJcb captures enum value "jcb"
 	CardBrandJcb string = "jcb"
+
 	// CardBrandDinersClub captures enum value "diners_club"
 	CardBrandDinersClub string = "diners_club"
+
 	// CardBrandOther captures enum value "other"
 	CardBrandOther string = "other"
 )
@@ -185,14 +159,19 @@ func init() {
 }
 
 const (
+
 	// CardFundingTypeCredit captures enum value "credit"
 	CardFundingTypeCredit string = "credit"
+
 	// CardFundingTypeDebit captures enum value "debit"
 	CardFundingTypeDebit string = "debit"
+
 	// CardFundingTypePrepaid captures enum value "prepaid"
 	CardFundingTypePrepaid string = "prepaid"
+
 	// CardFundingTypeNotKnown captures enum value "not_known"
 	CardFundingTypeNotKnown string = "not_known"
+
 	// CardFundingTypeNotApplicable captures enum value "not_applicable"
 	CardFundingTypeNotApplicable string = "not_applicable"
 )

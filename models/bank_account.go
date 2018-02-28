@@ -17,7 +17,6 @@ import (
 
 // BankAccount bank account
 // swagger:model BankAccount
-
 type BankAccount struct {
 
 	// account type
@@ -32,14 +31,6 @@ type BankAccount struct {
 	// name on account
 	NameOnAccount string `json:"name_on_account,omitempty"`
 }
-
-/* polymorph BankAccount account_type false */
-
-/* polymorph BankAccount bank_name false */
-
-/* polymorph BankAccount mandate_id false */
-
-/* polymorph BankAccount name_on_account false */
 
 // Validate validates this bank account
 func (m *BankAccount) Validate(formats strfmt.Registry) error {
@@ -69,8 +60,10 @@ func init() {
 }
 
 const (
+
 	// BankAccountAccountTypeChecking captures enum value "checking"
 	BankAccountAccountTypeChecking string = "checking"
+
 	// BankAccountAccountTypeSavings captures enum value "savings"
 	BankAccountAccountTypeSavings string = "savings"
 )

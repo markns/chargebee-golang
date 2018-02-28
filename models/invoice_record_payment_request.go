@@ -17,7 +17,6 @@ import (
 
 // InvoiceRecordPaymentRequest invoice record payment request
 // swagger:model InvoiceRecordPaymentRequest
-
 type InvoiceRecordPaymentRequest struct {
 
 	// comment
@@ -47,24 +46,6 @@ type InvoiceRecordPaymentRequest struct {
 	// transaction status
 	TransactionStatus string `json:"transaction[status],omitempty"`
 }
-
-/* polymorph InvoiceRecordPaymentRequest comment false */
-
-/* polymorph InvoiceRecordPaymentRequest transaction[amount] false */
-
-/* polymorph InvoiceRecordPaymentRequest transaction[date] false */
-
-/* polymorph InvoiceRecordPaymentRequest transaction[error_code] false */
-
-/* polymorph InvoiceRecordPaymentRequest transaction[error_text] false */
-
-/* polymorph InvoiceRecordPaymentRequest transaction[id_at_gateway] false */
-
-/* polymorph InvoiceRecordPaymentRequest transaction[payment_method] false */
-
-/* polymorph InvoiceRecordPaymentRequest transaction[reference_number] false */
-
-/* polymorph InvoiceRecordPaymentRequest transaction[status] false */
 
 // Validate validates this invoice record payment request
 func (m *InvoiceRecordPaymentRequest) Validate(formats strfmt.Registry) error {
@@ -100,6 +81,7 @@ func (m *InvoiceRecordPaymentRequest) validateTransactionPaymentMethod(formats s
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -118,14 +100,19 @@ func init() {
 }
 
 const (
+
 	// InvoiceRecordPaymentRequestTransactionStatusFuture captures enum value "future"
 	InvoiceRecordPaymentRequestTransactionStatusFuture string = "future"
+
 	// InvoiceRecordPaymentRequestTransactionStatusInTrial captures enum value "in_trial"
 	InvoiceRecordPaymentRequestTransactionStatusInTrial string = "in_trial"
+
 	// InvoiceRecordPaymentRequestTransactionStatusActive captures enum value "active"
 	InvoiceRecordPaymentRequestTransactionStatusActive string = "active"
+
 	// InvoiceRecordPaymentRequestTransactionStatusNonRenewing captures enum value "non_renewing"
 	InvoiceRecordPaymentRequestTransactionStatusNonRenewing string = "non_renewing"
+
 	// InvoiceRecordPaymentRequestTransactionStatusCancelled captures enum value "cancelled"
 	InvoiceRecordPaymentRequestTransactionStatusCancelled string = "cancelled"
 )

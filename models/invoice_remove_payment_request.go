@@ -14,14 +14,11 @@ import (
 
 // InvoiceRemovePaymentRequest invoice remove payment request
 // swagger:model InvoiceRemovePaymentRequest
-
 type InvoiceRemovePaymentRequest struct {
 
 	// transaction id
 	TransactionID string `json:"transaction[id],omitempty"`
 }
-
-/* polymorph InvoiceRemovePaymentRequest transaction[id] false */
 
 // Validate validates this invoice remove payment request
 func (m *InvoiceRemovePaymentRequest) Validate(formats strfmt.Registry) error {

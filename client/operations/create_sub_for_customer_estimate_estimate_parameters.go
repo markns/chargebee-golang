@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCreateSubForCustomerEstimateEstimateParams creates a new CreateSubForCustomerEstimateEstimateParams object
@@ -137,12 +137,10 @@ func (o *CreateSubForCustomerEstimateEstimateParams) WriteToRequest(r runtime.Cl
 	}
 	var res []error
 
-	if o.EstimateCreateSubForCustomerEstimateRequest == nil {
-		o.EstimateCreateSubForCustomerEstimateRequest = new(models.EstimateCreateSubForCustomerEstimateRequest)
-	}
-
-	if err := r.SetBodyParam(o.EstimateCreateSubForCustomerEstimateRequest); err != nil {
-		return err
+	if o.EstimateCreateSubForCustomerEstimateRequest != nil {
+		if err := r.SetBodyParam(o.EstimateCreateSubForCustomerEstimateRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

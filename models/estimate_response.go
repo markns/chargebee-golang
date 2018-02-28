@@ -14,14 +14,11 @@ import (
 
 // EstimateResponse estimate response
 // swagger:model EstimateResponse
-
 type EstimateResponse struct {
 
 	// estimate
 	Estimate *Estimate `json:"estimate,omitempty"`
 }
-
-/* polymorph EstimateResponse estimate false */
 
 // Validate validates this estimate response
 func (m *EstimateResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *EstimateResponse) validateEstimate(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

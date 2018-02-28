@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewSetPromotionalCreditsCustomerParams creates a new SetPromotionalCreditsCustomerParams object
@@ -137,12 +137,10 @@ func (o *SetPromotionalCreditsCustomerParams) WriteToRequest(r runtime.ClientReq
 	}
 	var res []error
 
-	if o.CustomerSetPromotionalCreditsRequest == nil {
-		o.CustomerSetPromotionalCreditsRequest = new(models.CustomerSetPromotionalCreditsRequest)
-	}
-
-	if err := r.SetBodyParam(o.CustomerSetPromotionalCreditsRequest); err != nil {
-		return err
+	if o.CustomerSetPromotionalCreditsRequest != nil {
+		if err := r.SetBodyParam(o.CustomerSetPromotionalCreditsRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

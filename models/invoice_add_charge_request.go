@@ -14,7 +14,6 @@ import (
 
 // InvoiceAddChargeRequest invoice add charge request
 // swagger:model InvoiceAddChargeRequest
-
 type InvoiceAddChargeRequest struct {
 
 	// amount
@@ -29,14 +28,6 @@ type InvoiceAddChargeRequest struct {
 	// line item date to
 	LineItemDateTo int64 `json:"line_item[date_to],omitempty"`
 }
-
-/* polymorph InvoiceAddChargeRequest amount false */
-
-/* polymorph InvoiceAddChargeRequest description false */
-
-/* polymorph InvoiceAddChargeRequest line_item[date_from] false */
-
-/* polymorph InvoiceAddChargeRequest line_item[date_to] false */
 
 // Validate validates this invoice add charge request
 func (m *InvoiceAddChargeRequest) Validate(formats strfmt.Registry) error {

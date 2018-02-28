@@ -14,14 +14,11 @@ import (
 
 // TransactionResponse transaction response
 // swagger:model TransactionResponse
-
 type TransactionResponse struct {
 
 	// transaction
 	Transaction *Transaction `json:"transaction,omitempty"`
 }
-
-/* polymorph TransactionResponse transaction false */
 
 // Validate validates this transaction response
 func (m *TransactionResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *TransactionResponse) validateTransaction(formats strfmt.Registry) error
 			}
 			return err
 		}
+
 	}
 
 	return nil

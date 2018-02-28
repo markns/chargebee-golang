@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewRetrieveLatestResourceMigrationParams creates a new RetrieveLatestResourceMigrationParams object
@@ -124,12 +124,10 @@ func (o *RetrieveLatestResourceMigrationParams) WriteToRequest(r runtime.ClientR
 	}
 	var res []error
 
-	if o.ResourceMigrationRetrieveLatestRequest == nil {
-		o.ResourceMigrationRetrieveLatestRequest = new(models.ResourceMigrationRetrieveLatestRequest)
-	}
-
-	if err := r.SetBodyParam(o.ResourceMigrationRetrieveLatestRequest); err != nil {
-		return err
+	if o.ResourceMigrationRetrieveLatestRequest != nil {
+		if err := r.SetBodyParam(o.ResourceMigrationRetrieveLatestRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

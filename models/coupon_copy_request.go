@@ -14,7 +14,6 @@ import (
 
 // CouponCopyRequest coupon copy request
 // swagger:model CouponCopyRequest
-
 type CouponCopyRequest struct {
 
 	// for site merging
@@ -29,14 +28,6 @@ type CouponCopyRequest struct {
 	// id at from site
 	IDAtFromSite string `json:"id_at_from_site,omitempty"`
 }
-
-/* polymorph CouponCopyRequest for_site_merging false */
-
-/* polymorph CouponCopyRequest from_site false */
-
-/* polymorph CouponCopyRequest id false */
-
-/* polymorph CouponCopyRequest id_at_from_site false */
 
 // Validate validates this coupon copy request
 func (m *CouponCopyRequest) Validate(formats strfmt.Registry) error {

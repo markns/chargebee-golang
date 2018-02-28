@@ -14,7 +14,6 @@ import (
 
 // Contact contact
 // swagger:model Contact
-
 type Contact struct {
 
 	// email
@@ -44,24 +43,6 @@ type Contact struct {
 	// send billing email
 	SendBillingEmail bool `json:"send_billing_email,omitempty"`
 }
-
-/* polymorph Contact email false */
-
-/* polymorph Contact enabled false */
-
-/* polymorph Contact first_name false */
-
-/* polymorph Contact id false */
-
-/* polymorph Contact label false */
-
-/* polymorph Contact last_name false */
-
-/* polymorph Contact phone false */
-
-/* polymorph Contact send_account_email false */
-
-/* polymorph Contact send_billing_email false */
 
 // Validate validates this contact
 func (m *Contact) Validate(formats strfmt.Registry) error {

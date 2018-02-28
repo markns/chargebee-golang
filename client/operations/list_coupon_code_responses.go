@@ -8,16 +8,12 @@ package operations
 import (
 	"fmt"
 	"io"
-	"strconv"
 
-	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
-	"github.com/go-openapi/swag"
-	"github.com/go-openapi/validate"
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // ListCouponCodeReader is a Reader for the ListCouponCode structure.
@@ -51,7 +47,7 @@ func NewListCouponCodeOK() *ListCouponCodeOK {
 listCouponCode response
 */
 type ListCouponCodeOK struct {
-	Payload ListCouponCodeOKBody
+	Payload *models.ListCouponCodeOKBody
 }
 
 func (o *ListCouponCodeOK) Error() string {
@@ -60,103 +56,12 @@ func (o *ListCouponCodeOK) Error() string {
 
 func (o *ListCouponCodeOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
+	o.Payload = new(models.ListCouponCodeOKBody)
+
 	// response payload
-	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
-	return nil
-}
-
-/*ListCouponCodeOKBody list coupon code o k body
-swagger:model ListCouponCodeOKBody
-*/
-
-type ListCouponCodeOKBody struct {
-
-	// list
-	// Required: true
-	List []*models.CouponCodeResponse `json:"list"`
-
-	// next offset
-	// Required: true
-	NextOffset *string `json:"next_offset"`
-}
-
-/* polymorph ListCouponCodeOKBody list false */
-
-/* polymorph ListCouponCodeOKBody next_offset false */
-
-// Validate validates this list coupon code o k body
-func (o *ListCouponCodeOKBody) Validate(formats strfmt.Registry) error {
-	var res []error
-
-	if err := o.validateList(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
-	if err := o.validateNextOffset(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
-	if len(res) > 0 {
-		return errors.CompositeValidationError(res...)
-	}
-	return nil
-}
-
-func (o *ListCouponCodeOKBody) validateList(formats strfmt.Registry) error {
-
-	if err := validate.Required("listCouponCodeOK"+"."+"list", "body", o.List); err != nil {
-		return err
-	}
-
-	for i := 0; i < len(o.List); i++ {
-
-		if swag.IsZero(o.List[i]) { // not required
-			continue
-		}
-
-		if o.List[i] != nil {
-
-			if err := o.List[i].Validate(formats); err != nil {
-				if ve, ok := err.(*errors.Validation); ok {
-					return ve.ValidateName("listCouponCodeOK" + "." + "list" + "." + strconv.Itoa(i))
-				}
-				return err
-			}
-		}
-
-	}
-
-	return nil
-}
-
-func (o *ListCouponCodeOKBody) validateNextOffset(formats strfmt.Registry) error {
-
-	if err := validate.Required("listCouponCodeOK"+"."+"next_offset", "body", o.NextOffset); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-// MarshalBinary interface implementation
-func (o *ListCouponCodeOKBody) MarshalBinary() ([]byte, error) {
-	if o == nil {
-		return nil, nil
-	}
-	return swag.WriteJSON(o)
-}
-
-// UnmarshalBinary interface implementation
-func (o *ListCouponCodeOKBody) UnmarshalBinary(b []byte) error {
-	var res ListCouponCodeOKBody
-	if err := swag.ReadJSON(b, &res); err != nil {
-		return err
-	}
-	*o = res
 	return nil
 }

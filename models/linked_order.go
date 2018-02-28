@@ -17,7 +17,6 @@ import (
 
 // LinkedOrder linked order
 // swagger:model LinkedOrder
-
 type LinkedOrder struct {
 
 	// batch id
@@ -38,18 +37,6 @@ type LinkedOrder struct {
 	// status
 	Status string `json:"status,omitempty"`
 }
-
-/* polymorph LinkedOrder batch_id false */
-
-/* polymorph LinkedOrder created_at false */
-
-/* polymorph LinkedOrder fulfillment_status false */
-
-/* polymorph LinkedOrder id false */
-
-/* polymorph LinkedOrder reference_id false */
-
-/* polymorph LinkedOrder status false */
 
 // Validate validates this linked order
 func (m *LinkedOrder) Validate(formats strfmt.Registry) error {
@@ -79,14 +66,19 @@ func init() {
 }
 
 const (
+
 	// LinkedOrderStatusFuture captures enum value "future"
 	LinkedOrderStatusFuture string = "future"
+
 	// LinkedOrderStatusInTrial captures enum value "in_trial"
 	LinkedOrderStatusInTrial string = "in_trial"
+
 	// LinkedOrderStatusActive captures enum value "active"
 	LinkedOrderStatusActive string = "active"
+
 	// LinkedOrderStatusNonRenewing captures enum value "non_renewing"
 	LinkedOrderStatusNonRenewing string = "non_renewing"
+
 	// LinkedOrderStatusCancelled captures enum value "cancelled"
 	LinkedOrderStatusCancelled string = "cancelled"
 )

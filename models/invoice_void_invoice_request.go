@@ -14,14 +14,11 @@ import (
 
 // InvoiceVoidInvoiceRequest invoice void invoice request
 // swagger:model InvoiceVoidInvoiceRequest
-
 type InvoiceVoidInvoiceRequest struct {
 
 	// comment
 	Comment string `json:"comment,omitempty"`
 }
-
-/* polymorph InvoiceVoidInvoiceRequest comment false */
 
 // Validate validates this invoice void invoice request
 func (m *InvoiceVoidInvoiceRequest) Validate(formats strfmt.Registry) error {

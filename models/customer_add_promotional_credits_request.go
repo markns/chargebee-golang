@@ -17,7 +17,6 @@ import (
 
 // CustomerAddPromotionalCreditsRequest customer add promotional credits request
 // swagger:model CustomerAddPromotionalCreditsRequest
-
 type CustomerAddPromotionalCreditsRequest struct {
 
 	// amount
@@ -35,16 +34,6 @@ type CustomerAddPromotionalCreditsRequest struct {
 	// reference
 	Reference string `json:"reference,omitempty"`
 }
-
-/* polymorph CustomerAddPromotionalCreditsRequest amount false */
-
-/* polymorph CustomerAddPromotionalCreditsRequest credit_type false */
-
-/* polymorph CustomerAddPromotionalCreditsRequest currency_code false */
-
-/* polymorph CustomerAddPromotionalCreditsRequest description false */
-
-/* polymorph CustomerAddPromotionalCreditsRequest reference false */
 
 // Validate validates this customer add promotional credits request
 func (m *CustomerAddPromotionalCreditsRequest) Validate(formats strfmt.Registry) error {
@@ -74,10 +63,13 @@ func init() {
 }
 
 const (
+
 	// CustomerAddPromotionalCreditsRequestCreditTypeLoyaltyCredits captures enum value "loyalty_credits"
 	CustomerAddPromotionalCreditsRequestCreditTypeLoyaltyCredits string = "loyalty_credits"
+
 	// CustomerAddPromotionalCreditsRequestCreditTypeReferralRewards captures enum value "referral_rewards"
 	CustomerAddPromotionalCreditsRequestCreditTypeReferralRewards string = "referral_rewards"
+
 	// CustomerAddPromotionalCreditsRequestCreditTypeGeneral captures enum value "general"
 	CustomerAddPromotionalCreditsRequestCreditTypeGeneral string = "general"
 )

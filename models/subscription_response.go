@@ -14,14 +14,11 @@ import (
 
 // SubscriptionResponse subscription response
 // swagger:model SubscriptionResponse
-
 type SubscriptionResponse struct {
 
 	// subscription
 	Subscription *Subscription `json:"subscription,omitempty"`
 }
-
-/* polymorph SubscriptionResponse subscription false */
 
 // Validate validates this subscription response
 func (m *SubscriptionResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *SubscriptionResponse) validateSubscription(formats strfmt.Registry) err
 			}
 			return err
 		}
+
 	}
 
 	return nil

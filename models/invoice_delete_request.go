@@ -14,14 +14,11 @@ import (
 
 // InvoiceDeleteRequest invoice delete request
 // swagger:model InvoiceDeleteRequest
-
 type InvoiceDeleteRequest struct {
 
 	// comment
 	Comment string `json:"comment,omitempty"`
 }
-
-/* polymorph InvoiceDeleteRequest comment false */
 
 // Validate validates this invoice delete request
 func (m *InvoiceDeleteRequest) Validate(formats strfmt.Registry) error {

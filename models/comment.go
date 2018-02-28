@@ -17,7 +17,6 @@ import (
 
 // Comment comment
 // swagger:model Comment
-
 type Comment struct {
 
 	// added by
@@ -41,20 +40,6 @@ type Comment struct {
 	// type
 	Type string `json:"type,omitempty"`
 }
-
-/* polymorph Comment added_by false */
-
-/* polymorph Comment created_at false */
-
-/* polymorph Comment entity_id false */
-
-/* polymorph Comment entity_type false */
-
-/* polymorph Comment id false */
-
-/* polymorph Comment notes false */
-
-/* polymorph Comment type false */
 
 // Validate validates this comment
 func (m *Comment) Validate(formats strfmt.Registry) error {
@@ -89,20 +74,28 @@ func init() {
 }
 
 const (
+
 	// CommentEntityTypeCustomer captures enum value "customer"
 	CommentEntityTypeCustomer string = "customer"
+
 	// CommentEntityTypeSubscription captures enum value "subscription"
 	CommentEntityTypeSubscription string = "subscription"
+
 	// CommentEntityTypeInvoice captures enum value "invoice"
 	CommentEntityTypeInvoice string = "invoice"
+
 	// CommentEntityTypeCreditNote captures enum value "credit_note"
 	CommentEntityTypeCreditNote string = "credit_note"
+
 	// CommentEntityTypeTransaction captures enum value "transaction"
 	CommentEntityTypeTransaction string = "transaction"
+
 	// CommentEntityTypePlan captures enum value "plan"
 	CommentEntityTypePlan string = "plan"
+
 	// CommentEntityTypeAddon captures enum value "addon"
 	CommentEntityTypeAddon string = "addon"
+
 	// CommentEntityTypeCoupon captures enum value "coupon"
 	CommentEntityTypeCoupon string = "coupon"
 )
@@ -142,20 +135,28 @@ func init() {
 }
 
 const (
+
 	// CommentTypeCard captures enum value "card"
 	CommentTypeCard string = "card"
+
 	// CommentTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CommentTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CommentTypeAmazonPayments captures enum value "amazon_payments"
 	CommentTypeAmazonPayments string = "amazon_payments"
+
 	// CommentTypeDirectDebit captures enum value "direct_debit"
 	CommentTypeDirectDebit string = "direct_debit"
+
 	// CommentTypeGeneric captures enum value "generic"
 	CommentTypeGeneric string = "generic"
+
 	// CommentTypeAlipay captures enum value "alipay"
 	CommentTypeAlipay string = "alipay"
+
 	// CommentTypeUnionpay captures enum value "unionpay"
 	CommentTypeUnionpay string = "unionpay"
+
 	// CommentTypeApplePay captures enum value "apple_pay"
 	CommentTypeApplePay string = "apple_pay"
 )

@@ -14,14 +14,11 @@ import (
 
 // InvoiceResponse invoice response
 // swagger:model InvoiceResponse
-
 type InvoiceResponse struct {
 
 	// invoice
 	Invoice *Invoice `json:"invoice,omitempty"`
 }
-
-/* polymorph InvoiceResponse invoice false */
 
 // Validate validates this invoice response
 func (m *InvoiceResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *InvoiceResponse) validateInvoice(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

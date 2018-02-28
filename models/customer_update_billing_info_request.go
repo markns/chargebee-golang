@@ -17,7 +17,6 @@ import (
 
 // CustomerUpdateBillingInfoRequest customer update billing info request
 // swagger:model CustomerUpdateBillingInfoRequest
-
 type CustomerUpdateBillingInfoRequest struct {
 
 	// billing address city
@@ -69,38 +68,6 @@ type CustomerUpdateBillingInfoRequest struct {
 	VatNumber string `json:"vat_number,omitempty"`
 }
 
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[city] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[company] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[country] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[email] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[first_name] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[last_name] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[line1] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[line2] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[line3] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[phone] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[state] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[state_code] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[validation_status] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest billing_address[zip] false */
-
-/* polymorph CustomerUpdateBillingInfoRequest registered_for_gst false */
-
-/* polymorph CustomerUpdateBillingInfoRequest vat_number false */
-
 // Validate validates this customer update billing info request
 func (m *CustomerUpdateBillingInfoRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -129,12 +96,16 @@ func init() {
 }
 
 const (
+
 	// CustomerUpdateBillingInfoRequestBillingAddressValidationStatusNotValidated captures enum value "not_validated"
 	CustomerUpdateBillingInfoRequestBillingAddressValidationStatusNotValidated string = "not_validated"
+
 	// CustomerUpdateBillingInfoRequestBillingAddressValidationStatusValid captures enum value "valid"
 	CustomerUpdateBillingInfoRequestBillingAddressValidationStatusValid string = "valid"
+
 	// CustomerUpdateBillingInfoRequestBillingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	CustomerUpdateBillingInfoRequestBillingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// CustomerUpdateBillingInfoRequestBillingAddressValidationStatusInvalid captures enum value "invalid"
 	CustomerUpdateBillingInfoRequestBillingAddressValidationStatusInvalid string = "invalid"
 )

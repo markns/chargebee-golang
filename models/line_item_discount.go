@@ -17,7 +17,6 @@ import (
 
 // LineItemDiscount line item discount
 // swagger:model LineItemDiscount
-
 type LineItemDiscount struct {
 
 	// coupon id
@@ -32,14 +31,6 @@ type LineItemDiscount struct {
 	// line item id
 	LineItemID string `json:"line_item_id,omitempty"`
 }
-
-/* polymorph LineItemDiscount coupon_id false */
-
-/* polymorph LineItemDiscount discount_amount false */
-
-/* polymorph LineItemDiscount discount_type false */
-
-/* polymorph LineItemDiscount line_item_id false */
 
 // Validate validates this line item discount
 func (m *LineItemDiscount) Validate(formats strfmt.Registry) error {
@@ -69,12 +60,16 @@ func init() {
 }
 
 const (
+
 	// LineItemDiscountDiscountTypeItemLevelCoupon captures enum value "item_level_coupon"
 	LineItemDiscountDiscountTypeItemLevelCoupon string = "item_level_coupon"
+
 	// LineItemDiscountDiscountTypeDocumentLevelCoupon captures enum value "document_level_coupon"
 	LineItemDiscountDiscountTypeDocumentLevelCoupon string = "document_level_coupon"
+
 	// LineItemDiscountDiscountTypePromotionalCredits captures enum value "promotional_credits"
 	LineItemDiscountDiscountTypePromotionalCredits string = "promotional_credits"
+
 	// LineItemDiscountDiscountTypeProratedCredits captures enum value "prorated_credits"
 	LineItemDiscountDiscountTypeProratedCredits string = "prorated_credits"
 )

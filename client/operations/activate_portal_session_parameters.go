@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewActivatePortalSessionParams creates a new ActivatePortalSessionParams object
@@ -137,12 +137,10 @@ func (o *ActivatePortalSessionParams) WriteToRequest(r runtime.ClientRequest, re
 	}
 	var res []error
 
-	if o.PortalSessionActivateRequest == nil {
-		o.PortalSessionActivateRequest = new(models.PortalSessionActivateRequest)
-	}
-
-	if err := r.SetBodyParam(o.PortalSessionActivateRequest); err != nil {
-		return err
+	if o.PortalSessionActivateRequest != nil {
+		if err := r.SetBodyParam(o.PortalSessionActivateRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

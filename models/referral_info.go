@@ -17,7 +17,6 @@ import (
 
 // ReferralInfo referral info
 // swagger:model ReferralInfo
-
 type ReferralInfo struct {
 
 	// account id
@@ -62,34 +61,6 @@ type ReferralInfo struct {
 	// reward status
 	RewardStatus string `json:"reward_status,omitempty"`
 }
-
-/* polymorph ReferralInfo account_id false */
-
-/* polymorph ReferralInfo campaign_id false */
-
-/* polymorph ReferralInfo coupon_code false */
-
-/* polymorph ReferralInfo destination_url false */
-
-/* polymorph ReferralInfo external_campaign_id false */
-
-/* polymorph ReferralInfo external_reference_id false */
-
-/* polymorph ReferralInfo friend_offer_type false */
-
-/* polymorph ReferralInfo notify_referral_system false */
-
-/* polymorph ReferralInfo post_purchase_widget_enabled false */
-
-/* polymorph ReferralInfo referral_code false */
-
-/* polymorph ReferralInfo referral_system false */
-
-/* polymorph ReferralInfo referrer_id false */
-
-/* polymorph ReferralInfo referrer_reward_type false */
-
-/* polymorph ReferralInfo reward_status false */
 
 // Validate validates this referral info
 func (m *ReferralInfo) Validate(formats strfmt.Registry) error {
@@ -139,10 +110,13 @@ func init() {
 }
 
 const (
+
 	// ReferralInfoFriendOfferTypeNone captures enum value "none"
 	ReferralInfoFriendOfferTypeNone string = "none"
+
 	// ReferralInfoFriendOfferTypeCoupon captures enum value "coupon"
 	ReferralInfoFriendOfferTypeCoupon string = "coupon"
+
 	// ReferralInfoFriendOfferTypeCouponCode captures enum value "coupon_code"
 	ReferralInfoFriendOfferTypeCouponCode string = "coupon_code"
 )
@@ -182,10 +156,13 @@ func init() {
 }
 
 const (
+
 	// ReferralInfoNotifyReferralSystemNone captures enum value "none"
 	ReferralInfoNotifyReferralSystemNone string = "none"
+
 	// ReferralInfoNotifyReferralSystemFirstPaidConversion captures enum value "first_paid_conversion"
 	ReferralInfoNotifyReferralSystemFirstPaidConversion string = "first_paid_conversion"
+
 	// ReferralInfoNotifyReferralSystemAllInvoices captures enum value "all_invoices"
 	ReferralInfoNotifyReferralSystemAllInvoices string = "all_invoices"
 )
@@ -225,10 +202,13 @@ func init() {
 }
 
 const (
+
 	// ReferralInfoReferralSystemReferralCandy captures enum value "referral_candy"
 	ReferralInfoReferralSystemReferralCandy string = "referral_candy"
+
 	// ReferralInfoReferralSystemReferralSaasquatch captures enum value "referral_saasquatch"
 	ReferralInfoReferralSystemReferralSaasquatch string = "referral_saasquatch"
+
 	// ReferralInfoReferralSystemFriendbuy captures enum value "friendbuy"
 	ReferralInfoReferralSystemFriendbuy string = "friendbuy"
 )
@@ -268,12 +248,16 @@ func init() {
 }
 
 const (
+
 	// ReferralInfoReferrerRewardTypeNone captures enum value "none"
 	ReferralInfoReferrerRewardTypeNone string = "none"
+
 	// ReferralInfoReferrerRewardTypeReferralDirectReward captures enum value "referral_direct_reward"
 	ReferralInfoReferrerRewardTypeReferralDirectReward string = "referral_direct_reward"
+
 	// ReferralInfoReferrerRewardTypeCustomPromotionalCredit captures enum value "custom_promotional_credit"
 	ReferralInfoReferrerRewardTypeCustomPromotionalCredit string = "custom_promotional_credit"
+
 	// ReferralInfoReferrerRewardTypeCustomRevenuePercentBased captures enum value "custom_revenue_percent_based"
 	ReferralInfoReferrerRewardTypeCustomRevenuePercentBased string = "custom_revenue_percent_based"
 )
@@ -313,10 +297,13 @@ func init() {
 }
 
 const (
+
 	// ReferralInfoRewardStatusPending captures enum value "pending"
 	ReferralInfoRewardStatusPending string = "pending"
+
 	// ReferralInfoRewardStatusPaid captures enum value "paid"
 	ReferralInfoRewardStatusPaid string = "paid"
+
 	// ReferralInfoRewardStatusInvalid captures enum value "invalid"
 	ReferralInfoRewardStatusInvalid string = "invalid"
 )

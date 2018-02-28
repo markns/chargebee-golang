@@ -17,7 +17,6 @@ import (
 
 // HostedPageManagePaymentSourcesRequest hosted page manage payment sources request
 // swagger:model HostedPageManagePaymentSourcesRequest
-
 type HostedPageManagePaymentSourcesRequest struct {
 
 	// card gateway
@@ -29,12 +28,6 @@ type HostedPageManagePaymentSourcesRequest struct {
 	// customer id
 	CustomerID string `json:"customer[id],omitempty"`
 }
-
-/* polymorph HostedPageManagePaymentSourcesRequest card[gateway] false */
-
-/* polymorph HostedPageManagePaymentSourcesRequest card[gateway_account_id] false */
-
-/* polymorph HostedPageManagePaymentSourcesRequest customer[id] false */
 
 // Validate validates this hosted page manage payment sources request
 func (m *HostedPageManagePaymentSourcesRequest) Validate(formats strfmt.Registry) error {
@@ -64,68 +57,100 @@ func init() {
 }
 
 const (
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayChargebee captures enum value "chargebee"
 	HostedPageManagePaymentSourcesRequestCardGatewayChargebee string = "chargebee"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayStripe captures enum value "stripe"
 	HostedPageManagePaymentSourcesRequestCardGatewayStripe string = "stripe"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayWepay captures enum value "wepay"
 	HostedPageManagePaymentSourcesRequestCardGatewayWepay string = "wepay"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayBraintree captures enum value "braintree"
 	HostedPageManagePaymentSourcesRequestCardGatewayBraintree string = "braintree"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayAuthorizeNet captures enum value "authorize_net"
 	HostedPageManagePaymentSourcesRequestCardGatewayAuthorizeNet string = "authorize_net"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayPaypalPro captures enum value "paypal_pro"
 	HostedPageManagePaymentSourcesRequestCardGatewayPaypalPro string = "paypal_pro"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayPin captures enum value "pin"
 	HostedPageManagePaymentSourcesRequestCardGatewayPin string = "pin"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayEway captures enum value "eway"
 	HostedPageManagePaymentSourcesRequestCardGatewayEway string = "eway"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayEwayRapid captures enum value "eway_rapid"
 	HostedPageManagePaymentSourcesRequestCardGatewayEwayRapid string = "eway_rapid"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayWorldpay captures enum value "worldpay"
 	HostedPageManagePaymentSourcesRequestCardGatewayWorldpay string = "worldpay"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayBalancedPayments captures enum value "balanced_payments"
 	HostedPageManagePaymentSourcesRequestCardGatewayBalancedPayments string = "balanced_payments"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayBeanstream captures enum value "beanstream"
 	HostedPageManagePaymentSourcesRequestCardGatewayBeanstream string = "beanstream"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayBluepay captures enum value "bluepay"
 	HostedPageManagePaymentSourcesRequestCardGatewayBluepay string = "bluepay"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayElavon captures enum value "elavon"
 	HostedPageManagePaymentSourcesRequestCardGatewayElavon string = "elavon"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayFirstDataGlobal captures enum value "first_data_global"
 	HostedPageManagePaymentSourcesRequestCardGatewayFirstDataGlobal string = "first_data_global"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayHdfc captures enum value "hdfc"
 	HostedPageManagePaymentSourcesRequestCardGatewayHdfc string = "hdfc"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayMigs captures enum value "migs"
 	HostedPageManagePaymentSourcesRequestCardGatewayMigs string = "migs"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayNmi captures enum value "nmi"
 	HostedPageManagePaymentSourcesRequestCardGatewayNmi string = "nmi"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayOgone captures enum value "ogone"
 	HostedPageManagePaymentSourcesRequestCardGatewayOgone string = "ogone"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayPaymill captures enum value "paymill"
 	HostedPageManagePaymentSourcesRequestCardGatewayPaymill string = "paymill"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	HostedPageManagePaymentSourcesRequestCardGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewaySagePay captures enum value "sage_pay"
 	HostedPageManagePaymentSourcesRequestCardGatewaySagePay string = "sage_pay"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayTco captures enum value "tco"
 	HostedPageManagePaymentSourcesRequestCardGatewayTco string = "tco"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayWirecard captures enum value "wirecard"
 	HostedPageManagePaymentSourcesRequestCardGatewayWirecard string = "wirecard"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayAmazonPayments captures enum value "amazon_payments"
 	HostedPageManagePaymentSourcesRequestCardGatewayAmazonPayments string = "amazon_payments"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	HostedPageManagePaymentSourcesRequestCardGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayGocardless captures enum value "gocardless"
 	HostedPageManagePaymentSourcesRequestCardGatewayGocardless string = "gocardless"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayAdyen captures enum value "adyen"
 	HostedPageManagePaymentSourcesRequestCardGatewayAdyen string = "adyen"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayOrbital captures enum value "orbital"
 	HostedPageManagePaymentSourcesRequestCardGatewayOrbital string = "orbital"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayMonerisUs captures enum value "moneris_us"
 	HostedPageManagePaymentSourcesRequestCardGatewayMonerisUs string = "moneris_us"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayMoneris captures enum value "moneris"
 	HostedPageManagePaymentSourcesRequestCardGatewayMoneris string = "moneris"
+
 	// HostedPageManagePaymentSourcesRequestCardGatewayNotApplicable captures enum value "not_applicable"
 	HostedPageManagePaymentSourcesRequestCardGatewayNotApplicable string = "not_applicable"
 )

@@ -14,14 +14,11 @@ import (
 
 // PlanResponse plan response
 // swagger:model PlanResponse
-
 type PlanResponse struct {
 
 	// plan
 	Plan *Plan `json:"plan,omitempty"`
 }
-
-/* polymorph PlanResponse plan false */
 
 // Validate validates this plan response
 func (m *PlanResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *PlanResponse) validatePlan(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

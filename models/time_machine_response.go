@@ -14,14 +14,11 @@ import (
 
 // TimeMachineResponse time machine response
 // swagger:model TimeMachineResponse
-
 type TimeMachineResponse struct {
 
 	// timemachine
 	Timemachine *TimeMachine `json:"timemachine,omitempty"`
 }
-
-/* polymorph TimeMachineResponse timemachine false */
 
 // Validate validates this time machine response
 func (m *TimeMachineResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *TimeMachineResponse) validateTimemachine(formats strfmt.Registry) error
 			}
 			return err
 		}
+
 	}
 
 	return nil

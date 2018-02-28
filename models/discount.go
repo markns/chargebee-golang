@@ -17,7 +17,6 @@ import (
 
 // Discount discount
 // swagger:model Discount
-
 type Discount struct {
 
 	// amount
@@ -32,14 +31,6 @@ type Discount struct {
 	// entity type
 	EntityType string `json:"entity_type,omitempty"`
 }
-
-/* polymorph Discount amount false */
-
-/* polymorph Discount description false */
-
-/* polymorph Discount entity_id false */
-
-/* polymorph Discount entity_type false */
 
 // Validate validates this discount
 func (m *Discount) Validate(formats strfmt.Registry) error {
@@ -69,20 +60,28 @@ func init() {
 }
 
 const (
+
 	// DiscountEntityTypeCustomer captures enum value "customer"
 	DiscountEntityTypeCustomer string = "customer"
+
 	// DiscountEntityTypeSubscription captures enum value "subscription"
 	DiscountEntityTypeSubscription string = "subscription"
+
 	// DiscountEntityTypeInvoice captures enum value "invoice"
 	DiscountEntityTypeInvoice string = "invoice"
+
 	// DiscountEntityTypeCreditNote captures enum value "credit_note"
 	DiscountEntityTypeCreditNote string = "credit_note"
+
 	// DiscountEntityTypeTransaction captures enum value "transaction"
 	DiscountEntityTypeTransaction string = "transaction"
+
 	// DiscountEntityTypePlan captures enum value "plan"
 	DiscountEntityTypePlan string = "plan"
+
 	// DiscountEntityTypeAddon captures enum value "addon"
 	DiscountEntityTypeAddon string = "addon"
+
 	// DiscountEntityTypeCoupon captures enum value "coupon"
 	DiscountEntityTypeCoupon string = "coupon"
 )

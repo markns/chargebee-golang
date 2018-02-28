@@ -17,7 +17,6 @@ import (
 
 // Plan plan
 // swagger:model Plan
-
 type Plan struct {
 
 	// accounting category1
@@ -111,66 +110,6 @@ type Plan struct {
 	UpdatedAt int64 `json:"updated_at,omitempty"`
 }
 
-/* polymorph Plan accounting_category1 false */
-
-/* polymorph Plan accounting_category2 false */
-
-/* polymorph Plan accounting_code false */
-
-/* polymorph Plan archived_at false */
-
-/* polymorph Plan billing_cycles false */
-
-/* polymorph Plan charge_model false */
-
-/* polymorph Plan currency_code false */
-
-/* polymorph Plan description false */
-
-/* polymorph Plan enabled_in_hosted_pages false */
-
-/* polymorph Plan enabled_in_portal false */
-
-/* polymorph Plan free_quantity false */
-
-/* polymorph Plan id false */
-
-/* polymorph Plan invoice_name false */
-
-/* polymorph Plan invoice_notes false */
-
-/* polymorph Plan meta_data false */
-
-/* polymorph Plan name false */
-
-/* polymorph Plan period false */
-
-/* polymorph Plan period_unit false */
-
-/* polymorph Plan price false */
-
-/* polymorph Plan redirect_url false */
-
-/* polymorph Plan resource_version false */
-
-/* polymorph Plan setup_cost false */
-
-/* polymorph Plan sku false */
-
-/* polymorph Plan status false */
-
-/* polymorph Plan tax_code false */
-
-/* polymorph Plan tax_profile_id false */
-
-/* polymorph Plan taxable false */
-
-/* polymorph Plan trial_period false */
-
-/* polymorph Plan trial_period_unit false */
-
-/* polymorph Plan updated_at false */
-
 // Validate validates this plan
 func (m *Plan) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -214,8 +153,10 @@ func init() {
 }
 
 const (
+
 	// PlanChargeModelFullCharge captures enum value "full_charge"
 	PlanChargeModelFullCharge string = "full_charge"
+
 	// PlanChargeModelProrate captures enum value "prorate"
 	PlanChargeModelProrate string = "prorate"
 )
@@ -255,10 +196,13 @@ func init() {
 }
 
 const (
+
 	// PlanPeriodUnitWeek captures enum value "week"
 	PlanPeriodUnitWeek string = "week"
+
 	// PlanPeriodUnitMonth captures enum value "month"
 	PlanPeriodUnitMonth string = "month"
+
 	// PlanPeriodUnitYear captures enum value "year"
 	PlanPeriodUnitYear string = "year"
 )
@@ -298,14 +242,19 @@ func init() {
 }
 
 const (
+
 	// PlanStatusFuture captures enum value "future"
 	PlanStatusFuture string = "future"
+
 	// PlanStatusInTrial captures enum value "in_trial"
 	PlanStatusInTrial string = "in_trial"
+
 	// PlanStatusActive captures enum value "active"
 	PlanStatusActive string = "active"
+
 	// PlanStatusNonRenewing captures enum value "non_renewing"
 	PlanStatusNonRenewing string = "non_renewing"
+
 	// PlanStatusCancelled captures enum value "cancelled"
 	PlanStatusCancelled string = "cancelled"
 )
@@ -345,8 +294,10 @@ func init() {
 }
 
 const (
+
 	// PlanTrialPeriodUnitDay captures enum value "day"
 	PlanTrialPeriodUnitDay string = "day"
+
 	// PlanTrialPeriodUnitMonth captures enum value "month"
 	PlanTrialPeriodUnitMonth string = "month"
 )

@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewManagePaymentSourcesHostedPageParams creates a new ManagePaymentSourcesHostedPageParams object
@@ -124,12 +124,10 @@ func (o *ManagePaymentSourcesHostedPageParams) WriteToRequest(r runtime.ClientRe
 	}
 	var res []error
 
-	if o.HostedPageManagePaymentSourcesRequest == nil {
-		o.HostedPageManagePaymentSourcesRequest = new(models.HostedPageManagePaymentSourcesRequest)
-	}
-
-	if err := r.SetBodyParam(o.HostedPageManagePaymentSourcesRequest); err != nil {
-		return err
+	if o.HostedPageManagePaymentSourcesRequest != nil {
+		if err := r.SetBodyParam(o.HostedPageManagePaymentSourcesRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

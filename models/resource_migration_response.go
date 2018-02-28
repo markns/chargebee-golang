@@ -14,14 +14,11 @@ import (
 
 // ResourceMigrationResponse resource migration response
 // swagger:model ResourceMigrationResponse
-
 type ResourceMigrationResponse struct {
 
 	// resourcemigration
 	Resourcemigration *ResourceMigration `json:"resourcemigration,omitempty"`
 }
-
-/* polymorph ResourceMigrationResponse resourcemigration false */
 
 // Validate validates this resource migration response
 func (m *ResourceMigrationResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *ResourceMigrationResponse) validateResourcemigration(formats strfmt.Reg
 			}
 			return err
 		}
+
 	}
 
 	return nil

@@ -8,16 +8,12 @@ package operations
 import (
 	"fmt"
 	"io"
-	"strconv"
 
-	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
-	"github.com/go-openapi/swag"
-	"github.com/go-openapi/validate"
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // ListCommentReader is a Reader for the ListComment structure.
@@ -51,7 +47,7 @@ func NewListCommentOK() *ListCommentOK {
 listComment response
 */
 type ListCommentOK struct {
-	Payload ListCommentOKBody
+	Payload *models.ListCommentOKBody
 }
 
 func (o *ListCommentOK) Error() string {
@@ -60,103 +56,12 @@ func (o *ListCommentOK) Error() string {
 
 func (o *ListCommentOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
+	o.Payload = new(models.ListCommentOKBody)
+
 	// response payload
-	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
-	return nil
-}
-
-/*ListCommentOKBody list comment o k body
-swagger:model ListCommentOKBody
-*/
-
-type ListCommentOKBody struct {
-
-	// list
-	// Required: true
-	List []*models.CommentResponse `json:"list"`
-
-	// next offset
-	// Required: true
-	NextOffset *string `json:"next_offset"`
-}
-
-/* polymorph ListCommentOKBody list false */
-
-/* polymorph ListCommentOKBody next_offset false */
-
-// Validate validates this list comment o k body
-func (o *ListCommentOKBody) Validate(formats strfmt.Registry) error {
-	var res []error
-
-	if err := o.validateList(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
-	if err := o.validateNextOffset(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
-	if len(res) > 0 {
-		return errors.CompositeValidationError(res...)
-	}
-	return nil
-}
-
-func (o *ListCommentOKBody) validateList(formats strfmt.Registry) error {
-
-	if err := validate.Required("listCommentOK"+"."+"list", "body", o.List); err != nil {
-		return err
-	}
-
-	for i := 0; i < len(o.List); i++ {
-
-		if swag.IsZero(o.List[i]) { // not required
-			continue
-		}
-
-		if o.List[i] != nil {
-
-			if err := o.List[i].Validate(formats); err != nil {
-				if ve, ok := err.(*errors.Validation); ok {
-					return ve.ValidateName("listCommentOK" + "." + "list" + "." + strconv.Itoa(i))
-				}
-				return err
-			}
-		}
-
-	}
-
-	return nil
-}
-
-func (o *ListCommentOKBody) validateNextOffset(formats strfmt.Registry) error {
-
-	if err := validate.Required("listCommentOK"+"."+"next_offset", "body", o.NextOffset); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-// MarshalBinary interface implementation
-func (o *ListCommentOKBody) MarshalBinary() ([]byte, error) {
-	if o == nil {
-		return nil, nil
-	}
-	return swag.WriteJSON(o)
-}
-
-// UnmarshalBinary interface implementation
-func (o *ListCommentOKBody) UnmarshalBinary(b []byte) error {
-	var res ListCommentOKBody
-	if err := swag.ReadJSON(b, &res); err != nil {
-		return err
-	}
-	*o = res
 	return nil
 }

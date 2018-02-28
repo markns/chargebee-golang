@@ -18,7 +18,6 @@ import (
 
 // PortalSession portal session
 // swagger:model PortalSession
-
 type PortalSession struct {
 
 	// access url
@@ -61,32 +60,6 @@ type PortalSession struct {
 	Token string `json:"token,omitempty"`
 }
 
-/* polymorph PortalSession access_url false */
-
-/* polymorph PortalSession created_at false */
-
-/* polymorph PortalSession customer_id false */
-
-/* polymorph PortalSession expires_at false */
-
-/* polymorph PortalSession id false */
-
-/* polymorph PortalSession linked_customers false */
-
-/* polymorph PortalSession login_at false */
-
-/* polymorph PortalSession login_ipaddress false */
-
-/* polymorph PortalSession logout_at false */
-
-/* polymorph PortalSession logout_ipaddress false */
-
-/* polymorph PortalSession redirect_url false */
-
-/* polymorph PortalSession status false */
-
-/* polymorph PortalSession token false */
-
 // Validate validates this portal session
 func (m *PortalSession) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -127,6 +100,7 @@ func (m *PortalSession) validateLinkedCustomers(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -147,14 +121,19 @@ func init() {
 }
 
 const (
+
 	// PortalSessionStatusFuture captures enum value "future"
 	PortalSessionStatusFuture string = "future"
+
 	// PortalSessionStatusInTrial captures enum value "in_trial"
 	PortalSessionStatusInTrial string = "in_trial"
+
 	// PortalSessionStatusActive captures enum value "active"
 	PortalSessionStatusActive string = "active"
+
 	// PortalSessionStatusNonRenewing captures enum value "non_renewing"
 	PortalSessionStatusNonRenewing string = "non_renewing"
+
 	// PortalSessionStatusCancelled captures enum value "cancelled"
 	PortalSessionStatusCancelled string = "cancelled"
 )

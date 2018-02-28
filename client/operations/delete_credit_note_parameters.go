@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewDeleteCreditNoteParams creates a new DeleteCreditNoteParams object
@@ -137,12 +137,10 @@ func (o *DeleteCreditNoteParams) WriteToRequest(r runtime.ClientRequest, reg str
 	}
 	var res []error
 
-	if o.CreditNoteDeleteRequest == nil {
-		o.CreditNoteDeleteRequest = new(models.CreditNoteDeleteRequest)
-	}
-
-	if err := r.SetBodyParam(o.CreditNoteDeleteRequest); err != nil {
-		return err
+	if o.CreditNoteDeleteRequest != nil {
+		if err := r.SetBodyParam(o.CreditNoteDeleteRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

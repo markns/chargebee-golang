@@ -17,7 +17,6 @@ import (
 
 // LinkedCreditNote linked credit note
 // swagger:model LinkedCreditNote
-
 type LinkedCreditNote struct {
 
 	// applied amount
@@ -44,22 +43,6 @@ type LinkedCreditNote struct {
 	// cn total
 	CnTotal int32 `json:"cn_total,omitempty"`
 }
-
-/* polymorph LinkedCreditNote applied_amount false */
-
-/* polymorph LinkedCreditNote applied_at false */
-
-/* polymorph LinkedCreditNote cn_date false */
-
-/* polymorph LinkedCreditNote cn_id false */
-
-/* polymorph LinkedCreditNote cn_reason_code false */
-
-/* polymorph LinkedCreditNote cn_reference_invoice_id false */
-
-/* polymorph LinkedCreditNote cn_status false */
-
-/* polymorph LinkedCreditNote cn_total false */
 
 // Validate validates this linked credit note
 func (m *LinkedCreditNote) Validate(formats strfmt.Registry) error {
@@ -94,26 +77,37 @@ func init() {
 }
 
 const (
+
 	// LinkedCreditNoteCnReasonCodeWriteOff captures enum value "write_off"
 	LinkedCreditNoteCnReasonCodeWriteOff string = "write_off"
+
 	// LinkedCreditNoteCnReasonCodeSubscriptionChange captures enum value "subscription_change"
 	LinkedCreditNoteCnReasonCodeSubscriptionChange string = "subscription_change"
+
 	// LinkedCreditNoteCnReasonCodeSubscriptionCancellation captures enum value "subscription_cancellation"
 	LinkedCreditNoteCnReasonCodeSubscriptionCancellation string = "subscription_cancellation"
+
 	// LinkedCreditNoteCnReasonCodeChargeback captures enum value "chargeback"
 	LinkedCreditNoteCnReasonCodeChargeback string = "chargeback"
+
 	// LinkedCreditNoteCnReasonCodeProductUnsatisfactory captures enum value "product_unsatisfactory"
 	LinkedCreditNoteCnReasonCodeProductUnsatisfactory string = "product_unsatisfactory"
+
 	// LinkedCreditNoteCnReasonCodeServiceUnsatisfactory captures enum value "service_unsatisfactory"
 	LinkedCreditNoteCnReasonCodeServiceUnsatisfactory string = "service_unsatisfactory"
+
 	// LinkedCreditNoteCnReasonCodeOrderChange captures enum value "order_change"
 	LinkedCreditNoteCnReasonCodeOrderChange string = "order_change"
+
 	// LinkedCreditNoteCnReasonCodeOrderCancellation captures enum value "order_cancellation"
 	LinkedCreditNoteCnReasonCodeOrderCancellation string = "order_cancellation"
+
 	// LinkedCreditNoteCnReasonCodeWaiver captures enum value "waiver"
 	LinkedCreditNoteCnReasonCodeWaiver string = "waiver"
+
 	// LinkedCreditNoteCnReasonCodeOther captures enum value "other"
 	LinkedCreditNoteCnReasonCodeOther string = "other"
+
 	// LinkedCreditNoteCnReasonCodeFraudulent captures enum value "fraudulent"
 	LinkedCreditNoteCnReasonCodeFraudulent string = "fraudulent"
 )
@@ -153,14 +147,19 @@ func init() {
 }
 
 const (
+
 	// LinkedCreditNoteCnStatusFuture captures enum value "future"
 	LinkedCreditNoteCnStatusFuture string = "future"
+
 	// LinkedCreditNoteCnStatusInTrial captures enum value "in_trial"
 	LinkedCreditNoteCnStatusInTrial string = "in_trial"
+
 	// LinkedCreditNoteCnStatusActive captures enum value "active"
 	LinkedCreditNoteCnStatusActive string = "active"
+
 	// LinkedCreditNoteCnStatusNonRenewing captures enum value "non_renewing"
 	LinkedCreditNoteCnStatusNonRenewing string = "non_renewing"
+
 	// LinkedCreditNoteCnStatusCancelled captures enum value "cancelled"
 	LinkedCreditNoteCnStatusCancelled string = "cancelled"
 )

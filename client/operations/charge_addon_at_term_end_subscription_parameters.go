@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewChargeAddonAtTermEndSubscriptionParams creates a new ChargeAddonAtTermEndSubscriptionParams object
@@ -137,12 +137,10 @@ func (o *ChargeAddonAtTermEndSubscriptionParams) WriteToRequest(r runtime.Client
 	}
 	var res []error
 
-	if o.SubscriptionChargeAddonAtTermEndRequest == nil {
-		o.SubscriptionChargeAddonAtTermEndRequest = new(models.SubscriptionChargeAddonAtTermEndRequest)
-	}
-
-	if err := r.SetBodyParam(o.SubscriptionChargeAddonAtTermEndRequest); err != nil {
-		return err
+	if o.SubscriptionChargeAddonAtTermEndRequest != nil {
+		if err := r.SetBodyParam(o.SubscriptionChargeAddonAtTermEndRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

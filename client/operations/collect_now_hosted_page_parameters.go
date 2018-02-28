@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCollectNowHostedPageParams creates a new CollectNowHostedPageParams object
@@ -124,12 +124,10 @@ func (o *CollectNowHostedPageParams) WriteToRequest(r runtime.ClientRequest, reg
 	}
 	var res []error
 
-	if o.HostedPageCollectNowRequest == nil {
-		o.HostedPageCollectNowRequest = new(models.HostedPageCollectNowRequest)
-	}
-
-	if err := r.SetBodyParam(o.HostedPageCollectNowRequest); err != nil {
-		return err
+	if o.HostedPageCollectNowRequest != nil {
+		if err := r.SetBodyParam(o.HostedPageCollectNowRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

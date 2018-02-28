@@ -8,16 +8,12 @@ package operations
 import (
 	"fmt"
 	"io"
-	"strconv"
 
-	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
-	"github.com/go-openapi/swag"
-	"github.com/go-openapi/validate"
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // ListPaymentSourceReader is a Reader for the ListPaymentSource structure.
@@ -51,7 +47,7 @@ func NewListPaymentSourceOK() *ListPaymentSourceOK {
 listPaymentSource response
 */
 type ListPaymentSourceOK struct {
-	Payload ListPaymentSourceOKBody
+	Payload *models.ListPaymentSourceOKBody
 }
 
 func (o *ListPaymentSourceOK) Error() string {
@@ -60,103 +56,12 @@ func (o *ListPaymentSourceOK) Error() string {
 
 func (o *ListPaymentSourceOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
+	o.Payload = new(models.ListPaymentSourceOKBody)
+
 	// response payload
-	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
-	return nil
-}
-
-/*ListPaymentSourceOKBody list payment source o k body
-swagger:model ListPaymentSourceOKBody
-*/
-
-type ListPaymentSourceOKBody struct {
-
-	// list
-	// Required: true
-	List []*models.PaymentSourceResponse `json:"list"`
-
-	// next offset
-	// Required: true
-	NextOffset *string `json:"next_offset"`
-}
-
-/* polymorph ListPaymentSourceOKBody list false */
-
-/* polymorph ListPaymentSourceOKBody next_offset false */
-
-// Validate validates this list payment source o k body
-func (o *ListPaymentSourceOKBody) Validate(formats strfmt.Registry) error {
-	var res []error
-
-	if err := o.validateList(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
-	if err := o.validateNextOffset(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
-	if len(res) > 0 {
-		return errors.CompositeValidationError(res...)
-	}
-	return nil
-}
-
-func (o *ListPaymentSourceOKBody) validateList(formats strfmt.Registry) error {
-
-	if err := validate.Required("listPaymentSourceOK"+"."+"list", "body", o.List); err != nil {
-		return err
-	}
-
-	for i := 0; i < len(o.List); i++ {
-
-		if swag.IsZero(o.List[i]) { // not required
-			continue
-		}
-
-		if o.List[i] != nil {
-
-			if err := o.List[i].Validate(formats); err != nil {
-				if ve, ok := err.(*errors.Validation); ok {
-					return ve.ValidateName("listPaymentSourceOK" + "." + "list" + "." + strconv.Itoa(i))
-				}
-				return err
-			}
-		}
-
-	}
-
-	return nil
-}
-
-func (o *ListPaymentSourceOKBody) validateNextOffset(formats strfmt.Registry) error {
-
-	if err := validate.Required("listPaymentSourceOK"+"."+"next_offset", "body", o.NextOffset); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-// MarshalBinary interface implementation
-func (o *ListPaymentSourceOKBody) MarshalBinary() ([]byte, error) {
-	if o == nil {
-		return nil, nil
-	}
-	return swag.WriteJSON(o)
-}
-
-// UnmarshalBinary interface implementation
-func (o *ListPaymentSourceOKBody) UnmarshalBinary(b []byte) error {
-	var res ListPaymentSourceOKBody
-	if err := swag.ReadJSON(b, &res); err != nil {
-		return err
-	}
-	*o = res
 	return nil
 }

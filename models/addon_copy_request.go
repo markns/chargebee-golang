@@ -14,7 +14,6 @@ import (
 
 // AddonCopyRequest addon copy request
 // swagger:model AddonCopyRequest
-
 type AddonCopyRequest struct {
 
 	// for site merging
@@ -29,14 +28,6 @@ type AddonCopyRequest struct {
 	// id at from site
 	IDAtFromSite string `json:"id_at_from_site,omitempty"`
 }
-
-/* polymorph AddonCopyRequest for_site_merging false */
-
-/* polymorph AddonCopyRequest from_site false */
-
-/* polymorph AddonCopyRequest id false */
-
-/* polymorph AddonCopyRequest id_at_from_site false */
 
 // Validate validates this addon copy request
 func (m *AddonCopyRequest) Validate(formats strfmt.Registry) error {

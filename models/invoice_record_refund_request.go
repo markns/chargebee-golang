@@ -17,7 +17,6 @@ import (
 
 // InvoiceRecordRefundRequest invoice record refund request
 // swagger:model InvoiceRecordRefundRequest
-
 type InvoiceRecordRefundRequest struct {
 
 	// comment
@@ -41,20 +40,6 @@ type InvoiceRecordRefundRequest struct {
 	// transaction reference number
 	TransactionReferenceNumber string `json:"transaction[reference_number],omitempty"`
 }
-
-/* polymorph InvoiceRecordRefundRequest comment false */
-
-/* polymorph InvoiceRecordRefundRequest credit_note[reason_code] false */
-
-/* polymorph InvoiceRecordRefundRequest customer_notes false */
-
-/* polymorph InvoiceRecordRefundRequest transaction[amount] false */
-
-/* polymorph InvoiceRecordRefundRequest transaction[date] false */
-
-/* polymorph InvoiceRecordRefundRequest transaction[payment_method] false */
-
-/* polymorph InvoiceRecordRefundRequest transaction[reference_number] false */
 
 // Validate validates this invoice record refund request
 func (m *InvoiceRecordRefundRequest) Validate(formats strfmt.Registry) error {
@@ -89,26 +74,37 @@ func init() {
 }
 
 const (
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeWriteOff captures enum value "write_off"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeWriteOff string = "write_off"
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeSubscriptionChange captures enum value "subscription_change"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeSubscriptionChange string = "subscription_change"
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeSubscriptionCancellation captures enum value "subscription_cancellation"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeSubscriptionCancellation string = "subscription_cancellation"
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeChargeback captures enum value "chargeback"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeChargeback string = "chargeback"
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeProductUnsatisfactory captures enum value "product_unsatisfactory"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeProductUnsatisfactory string = "product_unsatisfactory"
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeServiceUnsatisfactory captures enum value "service_unsatisfactory"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeServiceUnsatisfactory string = "service_unsatisfactory"
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeOrderChange captures enum value "order_change"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeOrderChange string = "order_change"
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeOrderCancellation captures enum value "order_cancellation"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeOrderCancellation string = "order_cancellation"
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeWaiver captures enum value "waiver"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeWaiver string = "waiver"
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeOther captures enum value "other"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeOther string = "other"
+
 	// InvoiceRecordRefundRequestCreditNoteReasonCodeFraudulent captures enum value "fraudulent"
 	InvoiceRecordRefundRequestCreditNoteReasonCodeFraudulent string = "fraudulent"
 )
@@ -149,6 +145,7 @@ func (m *InvoiceRecordRefundRequest) validateTransactionPaymentMethod(formats st
 			}
 			return err
 		}
+
 	}
 
 	return nil

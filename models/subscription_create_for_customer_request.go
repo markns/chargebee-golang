@@ -17,7 +17,6 @@ import (
 
 // SubscriptionCreateForCustomerRequest subscription create for customer request
 // swagger:model SubscriptionCreateForCustomerRequest
-
 type SubscriptionCreateForCustomerRequest struct {
 
 	// auto collection
@@ -117,70 +116,6 @@ type SubscriptionCreateForCustomerRequest struct {
 	TrialEnd int64 `json:"trial_end,omitempty"`
 }
 
-/* polymorph SubscriptionCreateForCustomerRequest auto_collection false */
-
-/* polymorph SubscriptionCreateForCustomerRequest billing_alignment_mode false */
-
-/* polymorph SubscriptionCreateForCustomerRequest billing_cycles false */
-
-/* polymorph SubscriptionCreateForCustomerRequest coupon false */
-
-/* polymorph SubscriptionCreateForCustomerRequest coupon_ids false */
-
-/* polymorph SubscriptionCreateForCustomerRequest id false */
-
-/* polymorph SubscriptionCreateForCustomerRequest invoice_immediately false */
-
-/* polymorph SubscriptionCreateForCustomerRequest invoice_notes false */
-
-/* polymorph SubscriptionCreateForCustomerRequest meta_data false */
-
-/* polymorph SubscriptionCreateForCustomerRequest payment_source_id false */
-
-/* polymorph SubscriptionCreateForCustomerRequest plan_id false */
-
-/* polymorph SubscriptionCreateForCustomerRequest plan_quantity false */
-
-/* polymorph SubscriptionCreateForCustomerRequest plan_unit_price false */
-
-/* polymorph SubscriptionCreateForCustomerRequest po_number false */
-
-/* polymorph SubscriptionCreateForCustomerRequest setup_fee false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[city] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[company] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[country] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[email] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[first_name] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[last_name] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[line1] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[line2] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[line3] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[phone] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[state] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[state_code] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[validation_status] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest shipping_address[zip] false */
-
-/* polymorph SubscriptionCreateForCustomerRequest start_date false */
-
-/* polymorph SubscriptionCreateForCustomerRequest terms_to_charge false */
-
-/* polymorph SubscriptionCreateForCustomerRequest trial_end false */
-
 // Validate validates this subscription create for customer request
 func (m *SubscriptionCreateForCustomerRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -219,8 +154,10 @@ func init() {
 }
 
 const (
+
 	// SubscriptionCreateForCustomerRequestAutoCollectionOn captures enum value "on"
 	SubscriptionCreateForCustomerRequestAutoCollectionOn string = "on"
+
 	// SubscriptionCreateForCustomerRequestAutoCollectionOff captures enum value "off"
 	SubscriptionCreateForCustomerRequestAutoCollectionOff string = "off"
 )
@@ -260,8 +197,10 @@ func init() {
 }
 
 const (
+
 	// SubscriptionCreateForCustomerRequestBillingAlignmentModeImmediate captures enum value "immediate"
 	SubscriptionCreateForCustomerRequestBillingAlignmentModeImmediate string = "immediate"
+
 	// SubscriptionCreateForCustomerRequestBillingAlignmentModeDelayed captures enum value "delayed"
 	SubscriptionCreateForCustomerRequestBillingAlignmentModeDelayed string = "delayed"
 )
@@ -301,12 +240,16 @@ func init() {
 }
 
 const (
+
 	// SubscriptionCreateForCustomerRequestShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	SubscriptionCreateForCustomerRequestShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// SubscriptionCreateForCustomerRequestShippingAddressValidationStatusValid captures enum value "valid"
 	SubscriptionCreateForCustomerRequestShippingAddressValidationStatusValid string = "valid"
+
 	// SubscriptionCreateForCustomerRequestShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	SubscriptionCreateForCustomerRequestShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// SubscriptionCreateForCustomerRequestShippingAddressValidationStatusInvalid captures enum value "invalid"
 	SubscriptionCreateForCustomerRequestShippingAddressValidationStatusInvalid string = "invalid"
 )

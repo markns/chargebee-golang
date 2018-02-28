@@ -38,9 +38,6 @@ func NewHTTPClient(formats strfmt.Registry) *Chargebee {
 // using a customizable transport config.
 func NewHTTPClientWithConfig(formats strfmt.Registry, cfg *TransportConfig) *Chargebee {
 	// ensure nullable parameters have default
-	if formats == nil {
-		formats = strfmt.Default
-	}
 	if cfg == nil {
 		cfg = DefaultTransportConfig()
 	}
@@ -52,6 +49,11 @@ func NewHTTPClientWithConfig(formats strfmt.Registry, cfg *TransportConfig) *Cha
 
 // New creates a new chargebee client
 func New(transport runtime.ClientTransport, formats strfmt.Registry) *Chargebee {
+	// ensure nullable parameters have default
+	if formats == nil {
+		formats = strfmt.Default
+	}
+
 	cli := new(Chargebee)
 	cli.Transport = transport
 

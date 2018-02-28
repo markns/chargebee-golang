@@ -17,7 +17,6 @@ import (
 
 // CreditNoteCreateRequest credit note create request
 // swagger:model CreditNoteCreateRequest
-
 type CreditNoteCreateRequest struct {
 
 	// customer notes
@@ -38,18 +37,6 @@ type CreditNoteCreateRequest struct {
 	// type
 	Type string `json:"type,omitempty"`
 }
-
-/* polymorph CreditNoteCreateRequest customer_notes false */
-
-/* polymorph CreditNoteCreateRequest date false */
-
-/* polymorph CreditNoteCreateRequest reason_code false */
-
-/* polymorph CreditNoteCreateRequest reference_invoice_id false */
-
-/* polymorph CreditNoteCreateRequest total false */
-
-/* polymorph CreditNoteCreateRequest type false */
 
 // Validate validates this credit note create request
 func (m *CreditNoteCreateRequest) Validate(formats strfmt.Registry) error {
@@ -84,26 +71,37 @@ func init() {
 }
 
 const (
+
 	// CreditNoteCreateRequestReasonCodeWriteOff captures enum value "write_off"
 	CreditNoteCreateRequestReasonCodeWriteOff string = "write_off"
+
 	// CreditNoteCreateRequestReasonCodeSubscriptionChange captures enum value "subscription_change"
 	CreditNoteCreateRequestReasonCodeSubscriptionChange string = "subscription_change"
+
 	// CreditNoteCreateRequestReasonCodeSubscriptionCancellation captures enum value "subscription_cancellation"
 	CreditNoteCreateRequestReasonCodeSubscriptionCancellation string = "subscription_cancellation"
+
 	// CreditNoteCreateRequestReasonCodeChargeback captures enum value "chargeback"
 	CreditNoteCreateRequestReasonCodeChargeback string = "chargeback"
+
 	// CreditNoteCreateRequestReasonCodeProductUnsatisfactory captures enum value "product_unsatisfactory"
 	CreditNoteCreateRequestReasonCodeProductUnsatisfactory string = "product_unsatisfactory"
+
 	// CreditNoteCreateRequestReasonCodeServiceUnsatisfactory captures enum value "service_unsatisfactory"
 	CreditNoteCreateRequestReasonCodeServiceUnsatisfactory string = "service_unsatisfactory"
+
 	// CreditNoteCreateRequestReasonCodeOrderChange captures enum value "order_change"
 	CreditNoteCreateRequestReasonCodeOrderChange string = "order_change"
+
 	// CreditNoteCreateRequestReasonCodeOrderCancellation captures enum value "order_cancellation"
 	CreditNoteCreateRequestReasonCodeOrderCancellation string = "order_cancellation"
+
 	// CreditNoteCreateRequestReasonCodeWaiver captures enum value "waiver"
 	CreditNoteCreateRequestReasonCodeWaiver string = "waiver"
+
 	// CreditNoteCreateRequestReasonCodeOther captures enum value "other"
 	CreditNoteCreateRequestReasonCodeOther string = "other"
+
 	// CreditNoteCreateRequestReasonCodeFraudulent captures enum value "fraudulent"
 	CreditNoteCreateRequestReasonCodeFraudulent string = "fraudulent"
 )
@@ -143,20 +141,28 @@ func init() {
 }
 
 const (
+
 	// CreditNoteCreateRequestTypeCard captures enum value "card"
 	CreditNoteCreateRequestTypeCard string = "card"
+
 	// CreditNoteCreateRequestTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CreditNoteCreateRequestTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CreditNoteCreateRequestTypeAmazonPayments captures enum value "amazon_payments"
 	CreditNoteCreateRequestTypeAmazonPayments string = "amazon_payments"
+
 	// CreditNoteCreateRequestTypeDirectDebit captures enum value "direct_debit"
 	CreditNoteCreateRequestTypeDirectDebit string = "direct_debit"
+
 	// CreditNoteCreateRequestTypeGeneric captures enum value "generic"
 	CreditNoteCreateRequestTypeGeneric string = "generic"
+
 	// CreditNoteCreateRequestTypeAlipay captures enum value "alipay"
 	CreditNoteCreateRequestTypeAlipay string = "alipay"
+
 	// CreditNoteCreateRequestTypeUnionpay captures enum value "unionpay"
 	CreditNoteCreateRequestTypeUnionpay string = "unionpay"
+
 	// CreditNoteCreateRequestTypeApplePay captures enum value "apple_pay"
 	CreditNoteCreateRequestTypeApplePay string = "apple_pay"
 )

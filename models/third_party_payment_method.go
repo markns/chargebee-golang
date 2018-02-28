@@ -17,7 +17,6 @@ import (
 
 // ThirdPartyPaymentMethod third party payment method
 // swagger:model ThirdPartyPaymentMethod
-
 type ThirdPartyPaymentMethod struct {
 
 	// gateway
@@ -32,14 +31,6 @@ type ThirdPartyPaymentMethod struct {
 	// type
 	Type string `json:"type,omitempty"`
 }
-
-/* polymorph ThirdPartyPaymentMethod gateway false */
-
-/* polymorph ThirdPartyPaymentMethod gateway_account_id false */
-
-/* polymorph ThirdPartyPaymentMethod reference_id false */
-
-/* polymorph ThirdPartyPaymentMethod type false */
 
 // Validate validates this third party payment method
 func (m *ThirdPartyPaymentMethod) Validate(formats strfmt.Registry) error {
@@ -74,68 +65,100 @@ func init() {
 }
 
 const (
+
 	// ThirdPartyPaymentMethodGatewayChargebee captures enum value "chargebee"
 	ThirdPartyPaymentMethodGatewayChargebee string = "chargebee"
+
 	// ThirdPartyPaymentMethodGatewayStripe captures enum value "stripe"
 	ThirdPartyPaymentMethodGatewayStripe string = "stripe"
+
 	// ThirdPartyPaymentMethodGatewayWepay captures enum value "wepay"
 	ThirdPartyPaymentMethodGatewayWepay string = "wepay"
+
 	// ThirdPartyPaymentMethodGatewayBraintree captures enum value "braintree"
 	ThirdPartyPaymentMethodGatewayBraintree string = "braintree"
+
 	// ThirdPartyPaymentMethodGatewayAuthorizeNet captures enum value "authorize_net"
 	ThirdPartyPaymentMethodGatewayAuthorizeNet string = "authorize_net"
+
 	// ThirdPartyPaymentMethodGatewayPaypalPro captures enum value "paypal_pro"
 	ThirdPartyPaymentMethodGatewayPaypalPro string = "paypal_pro"
+
 	// ThirdPartyPaymentMethodGatewayPin captures enum value "pin"
 	ThirdPartyPaymentMethodGatewayPin string = "pin"
+
 	// ThirdPartyPaymentMethodGatewayEway captures enum value "eway"
 	ThirdPartyPaymentMethodGatewayEway string = "eway"
+
 	// ThirdPartyPaymentMethodGatewayEwayRapid captures enum value "eway_rapid"
 	ThirdPartyPaymentMethodGatewayEwayRapid string = "eway_rapid"
+
 	// ThirdPartyPaymentMethodGatewayWorldpay captures enum value "worldpay"
 	ThirdPartyPaymentMethodGatewayWorldpay string = "worldpay"
+
 	// ThirdPartyPaymentMethodGatewayBalancedPayments captures enum value "balanced_payments"
 	ThirdPartyPaymentMethodGatewayBalancedPayments string = "balanced_payments"
+
 	// ThirdPartyPaymentMethodGatewayBeanstream captures enum value "beanstream"
 	ThirdPartyPaymentMethodGatewayBeanstream string = "beanstream"
+
 	// ThirdPartyPaymentMethodGatewayBluepay captures enum value "bluepay"
 	ThirdPartyPaymentMethodGatewayBluepay string = "bluepay"
+
 	// ThirdPartyPaymentMethodGatewayElavon captures enum value "elavon"
 	ThirdPartyPaymentMethodGatewayElavon string = "elavon"
+
 	// ThirdPartyPaymentMethodGatewayFirstDataGlobal captures enum value "first_data_global"
 	ThirdPartyPaymentMethodGatewayFirstDataGlobal string = "first_data_global"
+
 	// ThirdPartyPaymentMethodGatewayHdfc captures enum value "hdfc"
 	ThirdPartyPaymentMethodGatewayHdfc string = "hdfc"
+
 	// ThirdPartyPaymentMethodGatewayMigs captures enum value "migs"
 	ThirdPartyPaymentMethodGatewayMigs string = "migs"
+
 	// ThirdPartyPaymentMethodGatewayNmi captures enum value "nmi"
 	ThirdPartyPaymentMethodGatewayNmi string = "nmi"
+
 	// ThirdPartyPaymentMethodGatewayOgone captures enum value "ogone"
 	ThirdPartyPaymentMethodGatewayOgone string = "ogone"
+
 	// ThirdPartyPaymentMethodGatewayPaymill captures enum value "paymill"
 	ThirdPartyPaymentMethodGatewayPaymill string = "paymill"
+
 	// ThirdPartyPaymentMethodGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	ThirdPartyPaymentMethodGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// ThirdPartyPaymentMethodGatewaySagePay captures enum value "sage_pay"
 	ThirdPartyPaymentMethodGatewaySagePay string = "sage_pay"
+
 	// ThirdPartyPaymentMethodGatewayTco captures enum value "tco"
 	ThirdPartyPaymentMethodGatewayTco string = "tco"
+
 	// ThirdPartyPaymentMethodGatewayWirecard captures enum value "wirecard"
 	ThirdPartyPaymentMethodGatewayWirecard string = "wirecard"
+
 	// ThirdPartyPaymentMethodGatewayAmazonPayments captures enum value "amazon_payments"
 	ThirdPartyPaymentMethodGatewayAmazonPayments string = "amazon_payments"
+
 	// ThirdPartyPaymentMethodGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	ThirdPartyPaymentMethodGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// ThirdPartyPaymentMethodGatewayGocardless captures enum value "gocardless"
 	ThirdPartyPaymentMethodGatewayGocardless string = "gocardless"
+
 	// ThirdPartyPaymentMethodGatewayAdyen captures enum value "adyen"
 	ThirdPartyPaymentMethodGatewayAdyen string = "adyen"
+
 	// ThirdPartyPaymentMethodGatewayOrbital captures enum value "orbital"
 	ThirdPartyPaymentMethodGatewayOrbital string = "orbital"
+
 	// ThirdPartyPaymentMethodGatewayMonerisUs captures enum value "moneris_us"
 	ThirdPartyPaymentMethodGatewayMonerisUs string = "moneris_us"
+
 	// ThirdPartyPaymentMethodGatewayMoneris captures enum value "moneris"
 	ThirdPartyPaymentMethodGatewayMoneris string = "moneris"
+
 	// ThirdPartyPaymentMethodGatewayNotApplicable captures enum value "not_applicable"
 	ThirdPartyPaymentMethodGatewayNotApplicable string = "not_applicable"
 )
@@ -175,20 +198,28 @@ func init() {
 }
 
 const (
+
 	// ThirdPartyPaymentMethodTypeCard captures enum value "card"
 	ThirdPartyPaymentMethodTypeCard string = "card"
+
 	// ThirdPartyPaymentMethodTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	ThirdPartyPaymentMethodTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// ThirdPartyPaymentMethodTypeAmazonPayments captures enum value "amazon_payments"
 	ThirdPartyPaymentMethodTypeAmazonPayments string = "amazon_payments"
+
 	// ThirdPartyPaymentMethodTypeDirectDebit captures enum value "direct_debit"
 	ThirdPartyPaymentMethodTypeDirectDebit string = "direct_debit"
+
 	// ThirdPartyPaymentMethodTypeGeneric captures enum value "generic"
 	ThirdPartyPaymentMethodTypeGeneric string = "generic"
+
 	// ThirdPartyPaymentMethodTypeAlipay captures enum value "alipay"
 	ThirdPartyPaymentMethodTypeAlipay string = "alipay"
+
 	// ThirdPartyPaymentMethodTypeUnionpay captures enum value "unionpay"
 	ThirdPartyPaymentMethodTypeUnionpay string = "unionpay"
+
 	// ThirdPartyPaymentMethodTypeApplePay captures enum value "apple_pay"
 	ThirdPartyPaymentMethodTypeApplePay string = "apple_pay"
 )

@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewApplyPaymentsInvoiceParams creates a new ApplyPaymentsInvoiceParams object
@@ -137,8 +137,10 @@ func (o *ApplyPaymentsInvoiceParams) WriteToRequest(r runtime.ClientRequest, reg
 	}
 	var res []error
 
-	if err := r.SetBodyParam(o.InvoiceApplyPaymentsRequest); err != nil {
-		return err
+	if o.InvoiceApplyPaymentsRequest != nil {
+		if err := r.SetBodyParam(o.InvoiceApplyPaymentsRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

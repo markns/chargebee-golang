@@ -17,7 +17,6 @@ import (
 
 // CouponCreateRequest coupon create request
 // swagger:model CouponCreateRequest
-
 type CouponCreateRequest struct {
 
 	// addon constraint
@@ -81,46 +80,6 @@ type CouponCreateRequest struct {
 	ValidTill int64 `json:"valid_till,omitempty"`
 }
 
-/* polymorph CouponCreateRequest addon_constraint false */
-
-/* polymorph CouponCreateRequest addon_ids false */
-
-/* polymorph CouponCreateRequest apply_on false */
-
-/* polymorph CouponCreateRequest currency_code false */
-
-/* polymorph CouponCreateRequest discount_amount false */
-
-/* polymorph CouponCreateRequest discount_percentage false */
-
-/* polymorph CouponCreateRequest discount_quantity false */
-
-/* polymorph CouponCreateRequest discount_type false */
-
-/* polymorph CouponCreateRequest duration_month false */
-
-/* polymorph CouponCreateRequest duration_type false */
-
-/* polymorph CouponCreateRequest id false */
-
-/* polymorph CouponCreateRequest invoice_name false */
-
-/* polymorph CouponCreateRequest invoice_notes false */
-
-/* polymorph CouponCreateRequest max_redemptions false */
-
-/* polymorph CouponCreateRequest meta_data false */
-
-/* polymorph CouponCreateRequest name false */
-
-/* polymorph CouponCreateRequest plan_constraint false */
-
-/* polymorph CouponCreateRequest plan_ids false */
-
-/* polymorph CouponCreateRequest status false */
-
-/* polymorph CouponCreateRequest valid_till false */
-
 // Validate validates this coupon create request
 func (m *CouponCreateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -174,12 +133,16 @@ func init() {
 }
 
 const (
+
 	// CouponCreateRequestAddonConstraintNone captures enum value "none"
 	CouponCreateRequestAddonConstraintNone string = "none"
+
 	// CouponCreateRequestAddonConstraintAll captures enum value "all"
 	CouponCreateRequestAddonConstraintAll string = "all"
+
 	// CouponCreateRequestAddonConstraintSpecific captures enum value "specific"
 	CouponCreateRequestAddonConstraintSpecific string = "specific"
+
 	// CouponCreateRequestAddonConstraintNotApplicable captures enum value "not_applicable"
 	CouponCreateRequestAddonConstraintNotApplicable string = "not_applicable"
 )
@@ -219,12 +182,16 @@ func init() {
 }
 
 const (
+
 	// CouponCreateRequestApplyOnInvoiceAmount captures enum value "invoice_amount"
 	CouponCreateRequestApplyOnInvoiceAmount string = "invoice_amount"
+
 	// CouponCreateRequestApplyOnSpecifiedItemsTotal captures enum value "specified_items_total"
 	CouponCreateRequestApplyOnSpecifiedItemsTotal string = "specified_items_total"
+
 	// CouponCreateRequestApplyOnEachSpecifiedItem captures enum value "each_specified_item"
 	CouponCreateRequestApplyOnEachSpecifiedItem string = "each_specified_item"
+
 	// CouponCreateRequestApplyOnEachUnitOfSpecifiedItems captures enum value "each_unit_of_specified_items"
 	CouponCreateRequestApplyOnEachUnitOfSpecifiedItems string = "each_unit_of_specified_items"
 )
@@ -264,12 +231,16 @@ func init() {
 }
 
 const (
+
 	// CouponCreateRequestDiscountTypeItemLevelCoupon captures enum value "item_level_coupon"
 	CouponCreateRequestDiscountTypeItemLevelCoupon string = "item_level_coupon"
+
 	// CouponCreateRequestDiscountTypeDocumentLevelCoupon captures enum value "document_level_coupon"
 	CouponCreateRequestDiscountTypeDocumentLevelCoupon string = "document_level_coupon"
+
 	// CouponCreateRequestDiscountTypePromotionalCredits captures enum value "promotional_credits"
 	CouponCreateRequestDiscountTypePromotionalCredits string = "promotional_credits"
+
 	// CouponCreateRequestDiscountTypeProratedCredits captures enum value "prorated_credits"
 	CouponCreateRequestDiscountTypeProratedCredits string = "prorated_credits"
 )
@@ -309,10 +280,13 @@ func init() {
 }
 
 const (
+
 	// CouponCreateRequestDurationTypeOneTime captures enum value "one_time"
 	CouponCreateRequestDurationTypeOneTime string = "one_time"
+
 	// CouponCreateRequestDurationTypeForever captures enum value "forever"
 	CouponCreateRequestDurationTypeForever string = "forever"
+
 	// CouponCreateRequestDurationTypeLimitedPeriod captures enum value "limited_period"
 	CouponCreateRequestDurationTypeLimitedPeriod string = "limited_period"
 )
@@ -352,12 +326,16 @@ func init() {
 }
 
 const (
+
 	// CouponCreateRequestPlanConstraintNone captures enum value "none"
 	CouponCreateRequestPlanConstraintNone string = "none"
+
 	// CouponCreateRequestPlanConstraintAll captures enum value "all"
 	CouponCreateRequestPlanConstraintAll string = "all"
+
 	// CouponCreateRequestPlanConstraintSpecific captures enum value "specific"
 	CouponCreateRequestPlanConstraintSpecific string = "specific"
+
 	// CouponCreateRequestPlanConstraintNotApplicable captures enum value "not_applicable"
 	CouponCreateRequestPlanConstraintNotApplicable string = "not_applicable"
 )
@@ -397,14 +375,19 @@ func init() {
 }
 
 const (
+
 	// CouponCreateRequestStatusFuture captures enum value "future"
 	CouponCreateRequestStatusFuture string = "future"
+
 	// CouponCreateRequestStatusInTrial captures enum value "in_trial"
 	CouponCreateRequestStatusInTrial string = "in_trial"
+
 	// CouponCreateRequestStatusActive captures enum value "active"
 	CouponCreateRequestStatusActive string = "active"
+
 	// CouponCreateRequestStatusNonRenewing captures enum value "non_renewing"
 	CouponCreateRequestStatusNonRenewing string = "non_renewing"
+
 	// CouponCreateRequestStatusCancelled captures enum value "cancelled"
 	CouponCreateRequestStatusCancelled string = "cancelled"
 )

@@ -14,7 +14,6 @@ import (
 
 // CustomerMoveRequest customer move request
 // swagger:model CustomerMoveRequest
-
 type CustomerMoveRequest struct {
 
 	// from site
@@ -23,10 +22,6 @@ type CustomerMoveRequest struct {
 	// id at from site
 	IDAtFromSite string `json:"id_at_from_site,omitempty"`
 }
-
-/* polymorph CustomerMoveRequest from_site false */
-
-/* polymorph CustomerMoveRequest id_at_from_site false */
 
 // Validate validates this customer move request
 func (m *CustomerMoveRequest) Validate(formats strfmt.Registry) error {

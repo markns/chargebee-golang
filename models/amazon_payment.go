@@ -14,7 +14,6 @@ import (
 
 // AmazonPayment amazon payment
 // swagger:model AmazonPayment
-
 type AmazonPayment struct {
 
 	// agreement id
@@ -23,10 +22,6 @@ type AmazonPayment struct {
 	// email
 	Email string `json:"email,omitempty"`
 }
-
-/* polymorph AmazonPayment agreement_id false */
-
-/* polymorph AmazonPayment email false */
 
 // Validate validates this amazon payment
 func (m *AmazonPayment) Validate(formats strfmt.Registry) error {

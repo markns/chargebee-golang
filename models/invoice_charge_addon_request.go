@@ -14,7 +14,6 @@ import (
 
 // InvoiceChargeAddonRequest invoice charge addon request
 // swagger:model InvoiceChargeAddonRequest
-
 type InvoiceChargeAddonRequest struct {
 
 	// addon id
@@ -41,22 +40,6 @@ type InvoiceChargeAddonRequest struct {
 	// subscription id
 	SubscriptionID string `json:"subscription_id,omitempty"`
 }
-
-/* polymorph InvoiceChargeAddonRequest addon_id false */
-
-/* polymorph InvoiceChargeAddonRequest addon_quantity false */
-
-/* polymorph InvoiceChargeAddonRequest addon_unit_price false */
-
-/* polymorph InvoiceChargeAddonRequest coupon false */
-
-/* polymorph InvoiceChargeAddonRequest customer_id false */
-
-/* polymorph InvoiceChargeAddonRequest payment_source_id false */
-
-/* polymorph InvoiceChargeAddonRequest po_number false */
-
-/* polymorph InvoiceChargeAddonRequest subscription_id false */
 
 // Validate validates this invoice charge addon request
 func (m *InvoiceChargeAddonRequest) Validate(formats strfmt.Registry) error {

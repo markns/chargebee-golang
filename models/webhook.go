@@ -17,7 +17,6 @@ import (
 
 // Webhook webhook
 // swagger:model Webhook
-
 type Webhook struct {
 
 	// id
@@ -26,10 +25,6 @@ type Webhook struct {
 	// webhook status
 	WebhookStatus string `json:"webhook_status,omitempty"`
 }
-
-/* polymorph Webhook id false */
-
-/* polymorph Webhook webhook_status false */
 
 // Validate validates this webhook
 func (m *Webhook) Validate(formats strfmt.Registry) error {
@@ -59,18 +54,25 @@ func init() {
 }
 
 const (
+
 	// WebhookWebhookStatusNotConfigured captures enum value "not_configured"
 	WebhookWebhookStatusNotConfigured string = "not_configured"
+
 	// WebhookWebhookStatusScheduled captures enum value "scheduled"
 	WebhookWebhookStatusScheduled string = "scheduled"
+
 	// WebhookWebhookStatusSucceeded captures enum value "succeeded"
 	WebhookWebhookStatusSucceeded string = "succeeded"
+
 	// WebhookWebhookStatusReScheduled captures enum value "re_scheduled"
 	WebhookWebhookStatusReScheduled string = "re_scheduled"
+
 	// WebhookWebhookStatusFailed captures enum value "failed"
 	WebhookWebhookStatusFailed string = "failed"
+
 	// WebhookWebhookStatusSkipped captures enum value "skipped"
 	WebhookWebhookStatusSkipped string = "skipped"
+
 	// WebhookWebhookStatusNotApplicable captures enum value "not_applicable"
 	WebhookWebhookStatusNotApplicable string = "not_applicable"
 )

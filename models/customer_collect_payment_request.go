@@ -17,7 +17,6 @@ import (
 
 // CustomerCollectPaymentRequest customer collect payment request
 // swagger:model CustomerCollectPaymentRequest
-
 type CustomerCollectPaymentRequest struct {
 
 	// amount
@@ -87,50 +86,6 @@ type CustomerCollectPaymentRequest struct {
 	RetainPaymentSource bool `json:"retain_payment_source,omitempty"`
 }
 
-/* polymorph CustomerCollectPaymentRequest amount false */
-
-/* polymorph CustomerCollectPaymentRequest card[billing_addr1] false */
-
-/* polymorph CustomerCollectPaymentRequest card[billing_addr2] false */
-
-/* polymorph CustomerCollectPaymentRequest card[billing_city] false */
-
-/* polymorph CustomerCollectPaymentRequest card[billing_country] false */
-
-/* polymorph CustomerCollectPaymentRequest card[billing_state] false */
-
-/* polymorph CustomerCollectPaymentRequest card[billing_state_code] false */
-
-/* polymorph CustomerCollectPaymentRequest card[billing_zip] false */
-
-/* polymorph CustomerCollectPaymentRequest card[cvv] false */
-
-/* polymorph CustomerCollectPaymentRequest card[expiry_month] false */
-
-/* polymorph CustomerCollectPaymentRequest card[expiry_year] false */
-
-/* polymorph CustomerCollectPaymentRequest card[first_name] false */
-
-/* polymorph CustomerCollectPaymentRequest card[gateway_account_id] false */
-
-/* polymorph CustomerCollectPaymentRequest card[last_name] false */
-
-/* polymorph CustomerCollectPaymentRequest card[number] false */
-
-/* polymorph CustomerCollectPaymentRequest payment_method[gateway_account_id] false */
-
-/* polymorph CustomerCollectPaymentRequest payment_method[reference_id] false */
-
-/* polymorph CustomerCollectPaymentRequest payment_method[tmp_token] false */
-
-/* polymorph CustomerCollectPaymentRequest payment_method[type] false */
-
-/* polymorph CustomerCollectPaymentRequest payment_source_id false */
-
-/* polymorph CustomerCollectPaymentRequest replace_primary_payment_source false */
-
-/* polymorph CustomerCollectPaymentRequest retain_payment_source false */
-
 // Validate validates this customer collect payment request
 func (m *CustomerCollectPaymentRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -159,20 +114,28 @@ func init() {
 }
 
 const (
+
 	// CustomerCollectPaymentRequestPaymentMethodTypeCard captures enum value "card"
 	CustomerCollectPaymentRequestPaymentMethodTypeCard string = "card"
+
 	// CustomerCollectPaymentRequestPaymentMethodTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CustomerCollectPaymentRequestPaymentMethodTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CustomerCollectPaymentRequestPaymentMethodTypeAmazonPayments captures enum value "amazon_payments"
 	CustomerCollectPaymentRequestPaymentMethodTypeAmazonPayments string = "amazon_payments"
+
 	// CustomerCollectPaymentRequestPaymentMethodTypeDirectDebit captures enum value "direct_debit"
 	CustomerCollectPaymentRequestPaymentMethodTypeDirectDebit string = "direct_debit"
+
 	// CustomerCollectPaymentRequestPaymentMethodTypeGeneric captures enum value "generic"
 	CustomerCollectPaymentRequestPaymentMethodTypeGeneric string = "generic"
+
 	// CustomerCollectPaymentRequestPaymentMethodTypeAlipay captures enum value "alipay"
 	CustomerCollectPaymentRequestPaymentMethodTypeAlipay string = "alipay"
+
 	// CustomerCollectPaymentRequestPaymentMethodTypeUnionpay captures enum value "unionpay"
 	CustomerCollectPaymentRequestPaymentMethodTypeUnionpay string = "unionpay"
+
 	// CustomerCollectPaymentRequestPaymentMethodTypeApplePay captures enum value "apple_pay"
 	CustomerCollectPaymentRequestPaymentMethodTypeApplePay string = "apple_pay"
 )

@@ -14,14 +14,11 @@ import (
 
 // CouponResponse coupon response
 // swagger:model CouponResponse
-
 type CouponResponse struct {
 
 	// coupon
 	Coupon *Coupon `json:"coupon,omitempty"`
 }
-
-/* polymorph CouponResponse coupon false */
 
 // Validate validates this coupon response
 func (m *CouponResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *CouponResponse) validateCoupon(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

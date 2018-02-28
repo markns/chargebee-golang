@@ -14,7 +14,6 @@ import (
 
 // CustomerAddContactRequest customer add contact request
 // swagger:model CustomerAddContactRequest
-
 type CustomerAddContactRequest struct {
 
 	// contact email
@@ -44,24 +43,6 @@ type CustomerAddContactRequest struct {
 	// contact send billing email
 	ContactSendBillingEmail bool `json:"contact[send_billing_email],omitempty"`
 }
-
-/* polymorph CustomerAddContactRequest contact[email] false */
-
-/* polymorph CustomerAddContactRequest contact[enabled] false */
-
-/* polymorph CustomerAddContactRequest contact[first_name] false */
-
-/* polymorph CustomerAddContactRequest contact[id] false */
-
-/* polymorph CustomerAddContactRequest contact[label] false */
-
-/* polymorph CustomerAddContactRequest contact[last_name] false */
-
-/* polymorph CustomerAddContactRequest contact[phone] false */
-
-/* polymorph CustomerAddContactRequest contact[send_account_email] false */
-
-/* polymorph CustomerAddContactRequest contact[send_billing_email] false */
 
 // Validate validates this customer add contact request
 func (m *CustomerAddContactRequest) Validate(formats strfmt.Registry) error {

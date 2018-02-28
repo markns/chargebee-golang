@@ -17,7 +17,6 @@ import (
 
 // LineItem line item
 // swagger:model LineItem
-
 type LineItem struct {
 
 	// amount
@@ -69,38 +68,6 @@ type LineItem struct {
 	UnitAmount int32 `json:"unit_amount,omitempty"`
 }
 
-/* polymorph LineItem amount false */
-
-/* polymorph LineItem date_from false */
-
-/* polymorph LineItem date_to false */
-
-/* polymorph LineItem description false */
-
-/* polymorph LineItem discount_amount false */
-
-/* polymorph LineItem entity_id false */
-
-/* polymorph LineItem entity_type false */
-
-/* polymorph LineItem id false */
-
-/* polymorph LineItem is_taxed false */
-
-/* polymorph LineItem item_level_discount_amount false */
-
-/* polymorph LineItem quantity false */
-
-/* polymorph LineItem subscription_id false */
-
-/* polymorph LineItem tax_amount false */
-
-/* polymorph LineItem tax_exempt_reason false */
-
-/* polymorph LineItem tax_rate false */
-
-/* polymorph LineItem unit_amount false */
-
 // Validate validates this line item
 func (m *LineItem) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -134,20 +101,28 @@ func init() {
 }
 
 const (
+
 	// LineItemEntityTypeCustomer captures enum value "customer"
 	LineItemEntityTypeCustomer string = "customer"
+
 	// LineItemEntityTypeSubscription captures enum value "subscription"
 	LineItemEntityTypeSubscription string = "subscription"
+
 	// LineItemEntityTypeInvoice captures enum value "invoice"
 	LineItemEntityTypeInvoice string = "invoice"
+
 	// LineItemEntityTypeCreditNote captures enum value "credit_note"
 	LineItemEntityTypeCreditNote string = "credit_note"
+
 	// LineItemEntityTypeTransaction captures enum value "transaction"
 	LineItemEntityTypeTransaction string = "transaction"
+
 	// LineItemEntityTypePlan captures enum value "plan"
 	LineItemEntityTypePlan string = "plan"
+
 	// LineItemEntityTypeAddon captures enum value "addon"
 	LineItemEntityTypeAddon string = "addon"
+
 	// LineItemEntityTypeCoupon captures enum value "coupon"
 	LineItemEntityTypeCoupon string = "coupon"
 )
@@ -187,18 +162,25 @@ func init() {
 }
 
 const (
+
 	// LineItemTaxExemptReasonTaxNotConfigured captures enum value "tax_not_configured"
 	LineItemTaxExemptReasonTaxNotConfigured string = "tax_not_configured"
+
 	// LineItemTaxExemptReasonRegionNonTaxable captures enum value "region_non_taxable"
 	LineItemTaxExemptReasonRegionNonTaxable string = "region_non_taxable"
+
 	// LineItemTaxExemptReasonExport captures enum value "export"
 	LineItemTaxExemptReasonExport string = "export"
+
 	// LineItemTaxExemptReasonCustomerExempt captures enum value "customer_exempt"
 	LineItemTaxExemptReasonCustomerExempt string = "customer_exempt"
+
 	// LineItemTaxExemptReasonProductExempt captures enum value "product_exempt"
 	LineItemTaxExemptReasonProductExempt string = "product_exempt"
+
 	// LineItemTaxExemptReasonZeroRated captures enum value "zero_rated"
 	LineItemTaxExemptReasonZeroRated string = "zero_rated"
+
 	// LineItemTaxExemptReasonReverseCharge captures enum value "reverse_charge"
 	LineItemTaxExemptReasonReverseCharge string = "reverse_charge"
 )

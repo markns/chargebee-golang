@@ -14,14 +14,11 @@ import (
 
 // CardResponse card response
 // swagger:model CardResponse
-
 type CardResponse struct {
 
 	// card
 	Card *Card `json:"card,omitempty"`
 }
-
-/* polymorph CardResponse card false */
 
 // Validate validates this card response
 func (m *CardResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *CardResponse) validateCard(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

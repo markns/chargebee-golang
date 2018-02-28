@@ -14,7 +14,6 @@ import (
 
 // SubscriptionAddChargeAtTermEndRequest subscription add charge at term end request
 // swagger:model SubscriptionAddChargeAtTermEndRequest
-
 type SubscriptionAddChargeAtTermEndRequest struct {
 
 	// amount
@@ -23,10 +22,6 @@ type SubscriptionAddChargeAtTermEndRequest struct {
 	// description
 	Description string `json:"description,omitempty"`
 }
-
-/* polymorph SubscriptionAddChargeAtTermEndRequest amount false */
-
-/* polymorph SubscriptionAddChargeAtTermEndRequest description false */
 
 // Validate validates this subscription add charge at term end request
 func (m *SubscriptionAddChargeAtTermEndRequest) Validate(formats strfmt.Registry) error {

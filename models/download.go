@@ -14,7 +14,6 @@ import (
 
 // Download download
 // swagger:model Download
-
 type Download struct {
 
 	// download url
@@ -23,10 +22,6 @@ type Download struct {
 	// valid till
 	ValidTill int64 `json:"valid_till,omitempty"`
 }
-
-/* polymorph Download download_url false */
-
-/* polymorph Download valid_till false */
 
 // Validate validates this download
 func (m *Download) Validate(formats strfmt.Registry) error {

@@ -7,5 +7,4 @@ package models
 
 // InvoiceApplyCreditsRequest invoice apply credits request
 // swagger:model InvoiceApplyCreditsRequest
-
 type InvoiceApplyCreditsRequest interface{}

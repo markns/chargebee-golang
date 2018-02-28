@@ -14,14 +14,11 @@ import (
 
 // PaymentSourceExportPaymentSourceRequest payment source export payment source request
 // swagger:model PaymentSourceExportPaymentSourceRequest
-
 type PaymentSourceExportPaymentSourceRequest struct {
 
 	// gateway account id
 	GatewayAccountID string `json:"gateway_account_id,omitempty"`
 }
-
-/* polymorph PaymentSourceExportPaymentSourceRequest gateway_account_id false */
 
 // Validate validates this payment source export payment source request
 func (m *PaymentSourceExportPaymentSourceRequest) Validate(formats strfmt.Registry) error {

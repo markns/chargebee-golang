@@ -17,7 +17,6 @@ import (
 
 // AppliedCredit applied credit
 // swagger:model AppliedCredit
-
 type AppliedCredit struct {
 
 	// applied amount
@@ -38,18 +37,6 @@ type AppliedCredit struct {
 	// cn status
 	CnStatus string `json:"cn_status,omitempty"`
 }
-
-/* polymorph AppliedCredit applied_amount false */
-
-/* polymorph AppliedCredit applied_at false */
-
-/* polymorph AppliedCredit cn_date false */
-
-/* polymorph AppliedCredit cn_id false */
-
-/* polymorph AppliedCredit cn_reason_code false */
-
-/* polymorph AppliedCredit cn_status false */
 
 // Validate validates this applied credit
 func (m *AppliedCredit) Validate(formats strfmt.Registry) error {
@@ -84,26 +71,37 @@ func init() {
 }
 
 const (
+
 	// AppliedCreditCnReasonCodeWriteOff captures enum value "write_off"
 	AppliedCreditCnReasonCodeWriteOff string = "write_off"
+
 	// AppliedCreditCnReasonCodeSubscriptionChange captures enum value "subscription_change"
 	AppliedCreditCnReasonCodeSubscriptionChange string = "subscription_change"
+
 	// AppliedCreditCnReasonCodeSubscriptionCancellation captures enum value "subscription_cancellation"
 	AppliedCreditCnReasonCodeSubscriptionCancellation string = "subscription_cancellation"
+
 	// AppliedCreditCnReasonCodeChargeback captures enum value "chargeback"
 	AppliedCreditCnReasonCodeChargeback string = "chargeback"
+
 	// AppliedCreditCnReasonCodeProductUnsatisfactory captures enum value "product_unsatisfactory"
 	AppliedCreditCnReasonCodeProductUnsatisfactory string = "product_unsatisfactory"
+
 	// AppliedCreditCnReasonCodeServiceUnsatisfactory captures enum value "service_unsatisfactory"
 	AppliedCreditCnReasonCodeServiceUnsatisfactory string = "service_unsatisfactory"
+
 	// AppliedCreditCnReasonCodeOrderChange captures enum value "order_change"
 	AppliedCreditCnReasonCodeOrderChange string = "order_change"
+
 	// AppliedCreditCnReasonCodeOrderCancellation captures enum value "order_cancellation"
 	AppliedCreditCnReasonCodeOrderCancellation string = "order_cancellation"
+
 	// AppliedCreditCnReasonCodeWaiver captures enum value "waiver"
 	AppliedCreditCnReasonCodeWaiver string = "waiver"
+
 	// AppliedCreditCnReasonCodeOther captures enum value "other"
 	AppliedCreditCnReasonCodeOther string = "other"
+
 	// AppliedCreditCnReasonCodeFraudulent captures enum value "fraudulent"
 	AppliedCreditCnReasonCodeFraudulent string = "fraudulent"
 )
@@ -143,14 +141,19 @@ func init() {
 }
 
 const (
+
 	// AppliedCreditCnStatusFuture captures enum value "future"
 	AppliedCreditCnStatusFuture string = "future"
+
 	// AppliedCreditCnStatusInTrial captures enum value "in_trial"
 	AppliedCreditCnStatusInTrial string = "in_trial"
+
 	// AppliedCreditCnStatusActive captures enum value "active"
 	AppliedCreditCnStatusActive string = "active"
+
 	// AppliedCreditCnStatusNonRenewing captures enum value "non_renewing"
 	AppliedCreditCnStatusNonRenewing string = "non_renewing"
+
 	// AppliedCreditCnStatusCancelled captures enum value "cancelled"
 	AppliedCreditCnStatusCancelled string = "cancelled"
 )

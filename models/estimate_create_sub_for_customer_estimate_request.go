@@ -17,7 +17,6 @@ import (
 
 // EstimateCreateSubForCustomerEstimateRequest estimate create sub for customer estimate request
 // swagger:model EstimateCreateSubForCustomerEstimateRequest
-
 type EstimateCreateSubForCustomerEstimateRequest struct {
 
 	// billing alignment mode
@@ -84,48 +83,6 @@ type EstimateCreateSubForCustomerEstimateRequest struct {
 	UseExistingBalances bool `json:"use_existing_balances,omitempty"`
 }
 
-/* polymorph EstimateCreateSubForCustomerEstimateRequest billing_alignment_mode false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest billing_cycles false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest coupon_ids false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest invoice_immediately false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest shipping_address[city] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest shipping_address[country] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest shipping_address[line1] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest shipping_address[line2] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest shipping_address[line3] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest shipping_address[state_code] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest shipping_address[validation_status] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest shipping_address[zip] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest subscription[id] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest subscription[plan_id] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest subscription[plan_quantity] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest subscription[plan_unit_price] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest subscription[setup_fee] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest subscription[start_date] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest subscription[trial_end] false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest terms_to_charge false */
-
-/* polymorph EstimateCreateSubForCustomerEstimateRequest use_existing_balances false */
-
 // Validate validates this estimate create sub for customer estimate request
 func (m *EstimateCreateSubForCustomerEstimateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -159,8 +116,10 @@ func init() {
 }
 
 const (
+
 	// EstimateCreateSubForCustomerEstimateRequestBillingAlignmentModeImmediate captures enum value "immediate"
 	EstimateCreateSubForCustomerEstimateRequestBillingAlignmentModeImmediate string = "immediate"
+
 	// EstimateCreateSubForCustomerEstimateRequestBillingAlignmentModeDelayed captures enum value "delayed"
 	EstimateCreateSubForCustomerEstimateRequestBillingAlignmentModeDelayed string = "delayed"
 )
@@ -200,12 +159,16 @@ func init() {
 }
 
 const (
+
 	// EstimateCreateSubForCustomerEstimateRequestShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	EstimateCreateSubForCustomerEstimateRequestShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// EstimateCreateSubForCustomerEstimateRequestShippingAddressValidationStatusValid captures enum value "valid"
 	EstimateCreateSubForCustomerEstimateRequestShippingAddressValidationStatusValid string = "valid"
+
 	// EstimateCreateSubForCustomerEstimateRequestShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	EstimateCreateSubForCustomerEstimateRequestShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// EstimateCreateSubForCustomerEstimateRequestShippingAddressValidationStatusInvalid captures enum value "invalid"
 	EstimateCreateSubForCustomerEstimateRequestShippingAddressValidationStatusInvalid string = "invalid"
 )

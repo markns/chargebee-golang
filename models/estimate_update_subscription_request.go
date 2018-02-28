@@ -17,7 +17,6 @@ import (
 
 // EstimateUpdateSubscriptionRequest estimate update subscription request
 // swagger:model EstimateUpdateSubscriptionRequest
-
 type EstimateUpdateSubscriptionRequest struct {
 
 	// billing address city
@@ -144,88 +143,6 @@ type EstimateUpdateSubscriptionRequest struct {
 	UseExistingBalances bool `json:"use_existing_balances,omitempty"`
 }
 
-/* polymorph EstimateUpdateSubscriptionRequest billing_address[city] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest billing_address[country] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest billing_address[line1] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest billing_address[line2] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest billing_address[line3] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest billing_address[state_code] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest billing_address[validation_status] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest billing_address[zip] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest billing_alignment_mode false */
-
-/* polymorph EstimateUpdateSubscriptionRequest billing_cycles false */
-
-/* polymorph EstimateUpdateSubscriptionRequest coupon_ids false */
-
-/* polymorph EstimateUpdateSubscriptionRequest customer[registered_for_gst] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest customer[taxability] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest customer[vat_number] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest end_of_term false */
-
-/* polymorph EstimateUpdateSubscriptionRequest force_term_reset false */
-
-/* polymorph EstimateUpdateSubscriptionRequest include_delayed_charges false */
-
-/* polymorph EstimateUpdateSubscriptionRequest invoice_immediately false */
-
-/* polymorph EstimateUpdateSubscriptionRequest prorate false */
-
-/* polymorph EstimateUpdateSubscriptionRequest reactivate false */
-
-/* polymorph EstimateUpdateSubscriptionRequest reactivate_from false */
-
-/* polymorph EstimateUpdateSubscriptionRequest replace_addon_list false */
-
-/* polymorph EstimateUpdateSubscriptionRequest replace_coupon_list false */
-
-/* polymorph EstimateUpdateSubscriptionRequest shipping_address[city] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest shipping_address[country] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest shipping_address[line1] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest shipping_address[line2] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest shipping_address[line3] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest shipping_address[state_code] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest shipping_address[validation_status] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest shipping_address[zip] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest subscription[coupon] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest subscription[id] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest subscription[plan_id] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest subscription[plan_quantity] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest subscription[plan_unit_price] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest subscription[setup_fee] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest subscription[start_date] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest subscription[trial_end] false */
-
-/* polymorph EstimateUpdateSubscriptionRequest terms_to_charge false */
-
-/* polymorph EstimateUpdateSubscriptionRequest use_existing_balances false */
-
 // Validate validates this estimate update subscription request
 func (m *EstimateUpdateSubscriptionRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -269,12 +186,16 @@ func init() {
 }
 
 const (
+
 	// EstimateUpdateSubscriptionRequestBillingAddressValidationStatusNotValidated captures enum value "not_validated"
 	EstimateUpdateSubscriptionRequestBillingAddressValidationStatusNotValidated string = "not_validated"
+
 	// EstimateUpdateSubscriptionRequestBillingAddressValidationStatusValid captures enum value "valid"
 	EstimateUpdateSubscriptionRequestBillingAddressValidationStatusValid string = "valid"
+
 	// EstimateUpdateSubscriptionRequestBillingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	EstimateUpdateSubscriptionRequestBillingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// EstimateUpdateSubscriptionRequestBillingAddressValidationStatusInvalid captures enum value "invalid"
 	EstimateUpdateSubscriptionRequestBillingAddressValidationStatusInvalid string = "invalid"
 )
@@ -314,8 +235,10 @@ func init() {
 }
 
 const (
+
 	// EstimateUpdateSubscriptionRequestBillingAlignmentModeImmediate captures enum value "immediate"
 	EstimateUpdateSubscriptionRequestBillingAlignmentModeImmediate string = "immediate"
+
 	// EstimateUpdateSubscriptionRequestBillingAlignmentModeDelayed captures enum value "delayed"
 	EstimateUpdateSubscriptionRequestBillingAlignmentModeDelayed string = "delayed"
 )
@@ -355,8 +278,10 @@ func init() {
 }
 
 const (
+
 	// EstimateUpdateSubscriptionRequestCustomerTaxabilityTaxable captures enum value "taxable"
 	EstimateUpdateSubscriptionRequestCustomerTaxabilityTaxable string = "taxable"
+
 	// EstimateUpdateSubscriptionRequestCustomerTaxabilityExempt captures enum value "exempt"
 	EstimateUpdateSubscriptionRequestCustomerTaxabilityExempt string = "exempt"
 )
@@ -396,12 +321,16 @@ func init() {
 }
 
 const (
+
 	// EstimateUpdateSubscriptionRequestShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	EstimateUpdateSubscriptionRequestShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// EstimateUpdateSubscriptionRequestShippingAddressValidationStatusValid captures enum value "valid"
 	EstimateUpdateSubscriptionRequestShippingAddressValidationStatusValid string = "valid"
+
 	// EstimateUpdateSubscriptionRequestShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	EstimateUpdateSubscriptionRequestShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// EstimateUpdateSubscriptionRequestShippingAddressValidationStatusInvalid captures enum value "invalid"
 	EstimateUpdateSubscriptionRequestShippingAddressValidationStatusInvalid string = "invalid"
 )

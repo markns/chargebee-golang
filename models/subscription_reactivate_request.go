@@ -17,7 +17,6 @@ import (
 
 // SubscriptionReactivateRequest subscription reactivate request
 // swagger:model SubscriptionReactivateRequest
-
 type SubscriptionReactivateRequest struct {
 
 	// billing alignment mode
@@ -41,20 +40,6 @@ type SubscriptionReactivateRequest struct {
 	// trial period days
 	TrialPeriodDays int32 `json:"trial_period_days,omitempty"`
 }
-
-/* polymorph SubscriptionReactivateRequest billing_alignment_mode false */
-
-/* polymorph SubscriptionReactivateRequest billing_cycles false */
-
-/* polymorph SubscriptionReactivateRequest invoice_immediately false */
-
-/* polymorph SubscriptionReactivateRequest reactivate_from false */
-
-/* polymorph SubscriptionReactivateRequest terms_to_charge false */
-
-/* polymorph SubscriptionReactivateRequest trial_end false */
-
-/* polymorph SubscriptionReactivateRequest trial_period_days false */
 
 // Validate validates this subscription reactivate request
 func (m *SubscriptionReactivateRequest) Validate(formats strfmt.Registry) error {
@@ -84,8 +69,10 @@ func init() {
 }
 
 const (
+
 	// SubscriptionReactivateRequestBillingAlignmentModeImmediate captures enum value "immediate"
 	SubscriptionReactivateRequestBillingAlignmentModeImmediate string = "immediate"
+
 	// SubscriptionReactivateRequestBillingAlignmentModeDelayed captures enum value "delayed"
 	SubscriptionReactivateRequestBillingAlignmentModeDelayed string = "delayed"
 )

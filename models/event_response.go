@@ -14,14 +14,11 @@ import (
 
 // EventResponse event response
 // swagger:model EventResponse
-
 type EventResponse struct {
 
 	// event
 	Event *Event `json:"event,omitempty"`
 }
-
-/* polymorph EventResponse event false */
 
 // Validate validates this event response
 func (m *EventResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *EventResponse) validateEvent(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

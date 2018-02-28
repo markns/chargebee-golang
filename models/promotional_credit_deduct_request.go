@@ -17,7 +17,6 @@ import (
 
 // PromotionalCreditDeductRequest promotional credit deduct request
 // swagger:model PromotionalCreditDeductRequest
-
 type PromotionalCreditDeductRequest struct {
 
 	// amount
@@ -38,18 +37,6 @@ type PromotionalCreditDeductRequest struct {
 	// reference
 	Reference string `json:"reference,omitempty"`
 }
-
-/* polymorph PromotionalCreditDeductRequest amount false */
-
-/* polymorph PromotionalCreditDeductRequest credit_type false */
-
-/* polymorph PromotionalCreditDeductRequest currency_code false */
-
-/* polymorph PromotionalCreditDeductRequest customer_id false */
-
-/* polymorph PromotionalCreditDeductRequest description false */
-
-/* polymorph PromotionalCreditDeductRequest reference false */
 
 // Validate validates this promotional credit deduct request
 func (m *PromotionalCreditDeductRequest) Validate(formats strfmt.Registry) error {
@@ -79,10 +66,13 @@ func init() {
 }
 
 const (
+
 	// PromotionalCreditDeductRequestCreditTypeLoyaltyCredits captures enum value "loyalty_credits"
 	PromotionalCreditDeductRequestCreditTypeLoyaltyCredits string = "loyalty_credits"
+
 	// PromotionalCreditDeductRequestCreditTypeReferralRewards captures enum value "referral_rewards"
 	PromotionalCreditDeductRequestCreditTypeReferralRewards string = "referral_rewards"
+
 	// PromotionalCreditDeductRequestCreditTypeGeneral captures enum value "general"
 	PromotionalCreditDeductRequestCreditTypeGeneral string = "general"
 )

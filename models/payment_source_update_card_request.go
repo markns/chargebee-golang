@@ -14,7 +14,6 @@ import (
 
 // PaymentSourceUpdateCardRequest payment source update card request
 // swagger:model PaymentSourceUpdateCardRequest
-
 type PaymentSourceUpdateCardRequest struct {
 
 	// card billing addr1
@@ -53,30 +52,6 @@ type PaymentSourceUpdateCardRequest struct {
 	// gateway meta data
 	GatewayMetaData string `json:"gateway_meta_data,omitempty"`
 }
-
-/* polymorph PaymentSourceUpdateCardRequest card[billing_addr1] false */
-
-/* polymorph PaymentSourceUpdateCardRequest card[billing_addr2] false */
-
-/* polymorph PaymentSourceUpdateCardRequest card[billing_city] false */
-
-/* polymorph PaymentSourceUpdateCardRequest card[billing_country] false */
-
-/* polymorph PaymentSourceUpdateCardRequest card[billing_state] false */
-
-/* polymorph PaymentSourceUpdateCardRequest card[billing_state_code] false */
-
-/* polymorph PaymentSourceUpdateCardRequest card[billing_zip] false */
-
-/* polymorph PaymentSourceUpdateCardRequest card[expiry_month] false */
-
-/* polymorph PaymentSourceUpdateCardRequest card[expiry_year] false */
-
-/* polymorph PaymentSourceUpdateCardRequest card[first_name] false */
-
-/* polymorph PaymentSourceUpdateCardRequest card[last_name] false */
-
-/* polymorph PaymentSourceUpdateCardRequest gateway_meta_data false */
 
 // Validate validates this payment source update card request
 func (m *PaymentSourceUpdateCardRequest) Validate(formats strfmt.Registry) error {

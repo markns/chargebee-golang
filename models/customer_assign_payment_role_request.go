@@ -17,7 +17,6 @@ import (
 
 // CustomerAssignPaymentRoleRequest customer assign payment role request
 // swagger:model CustomerAssignPaymentRoleRequest
-
 type CustomerAssignPaymentRoleRequest struct {
 
 	// payment source id
@@ -26,10 +25,6 @@ type CustomerAssignPaymentRoleRequest struct {
 	// role
 	Role string `json:"role,omitempty"`
 }
-
-/* polymorph CustomerAssignPaymentRoleRequest payment_source_id false */
-
-/* polymorph CustomerAssignPaymentRoleRequest role false */
 
 // Validate validates this customer assign payment role request
 func (m *CustomerAssignPaymentRoleRequest) Validate(formats strfmt.Registry) error {
@@ -59,10 +54,13 @@ func init() {
 }
 
 const (
+
 	// CustomerAssignPaymentRoleRequestRolePrimary captures enum value "primary"
 	CustomerAssignPaymentRoleRequestRolePrimary string = "primary"
+
 	// CustomerAssignPaymentRoleRequestRoleBackup captures enum value "backup"
 	CustomerAssignPaymentRoleRequestRoleBackup string = "backup"
+
 	// CustomerAssignPaymentRoleRequestRoleNone captures enum value "none"
 	CustomerAssignPaymentRoleRequestRoleNone string = "none"
 )

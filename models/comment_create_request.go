@@ -17,7 +17,6 @@ import (
 
 // CommentCreateRequest comment create request
 // swagger:model CommentCreateRequest
-
 type CommentCreateRequest struct {
 
 	// added by
@@ -32,14 +31,6 @@ type CommentCreateRequest struct {
 	// notes
 	Notes string `json:"notes,omitempty"`
 }
-
-/* polymorph CommentCreateRequest added_by false */
-
-/* polymorph CommentCreateRequest entity_id false */
-
-/* polymorph CommentCreateRequest entity_type false */
-
-/* polymorph CommentCreateRequest notes false */
 
 // Validate validates this comment create request
 func (m *CommentCreateRequest) Validate(formats strfmt.Registry) error {
@@ -69,20 +60,28 @@ func init() {
 }
 
 const (
+
 	// CommentCreateRequestEntityTypeCustomer captures enum value "customer"
 	CommentCreateRequestEntityTypeCustomer string = "customer"
+
 	// CommentCreateRequestEntityTypeSubscription captures enum value "subscription"
 	CommentCreateRequestEntityTypeSubscription string = "subscription"
+
 	// CommentCreateRequestEntityTypeInvoice captures enum value "invoice"
 	CommentCreateRequestEntityTypeInvoice string = "invoice"
+
 	// CommentCreateRequestEntityTypeCreditNote captures enum value "credit_note"
 	CommentCreateRequestEntityTypeCreditNote string = "credit_note"
+
 	// CommentCreateRequestEntityTypeTransaction captures enum value "transaction"
 	CommentCreateRequestEntityTypeTransaction string = "transaction"
+
 	// CommentCreateRequestEntityTypePlan captures enum value "plan"
 	CommentCreateRequestEntityTypePlan string = "plan"
+
 	// CommentCreateRequestEntityTypeAddon captures enum value "addon"
 	CommentCreateRequestEntityTypeAddon string = "addon"
+
 	// CommentCreateRequestEntityTypeCoupon captures enum value "coupon"
 	CommentCreateRequestEntityTypeCoupon string = "coupon"
 )

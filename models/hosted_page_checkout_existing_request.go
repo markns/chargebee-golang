@@ -17,7 +17,6 @@ import (
 
 // HostedPageCheckoutExistingRequest hosted page checkout existing request
 // swagger:model HostedPageCheckoutExistingRequest
-
 type HostedPageCheckoutExistingRequest struct {
 
 	// billing alignment mode
@@ -93,54 +92,6 @@ type HostedPageCheckoutExistingRequest struct {
 	TermsToCharge int32 `json:"terms_to_charge,omitempty"`
 }
 
-/* polymorph HostedPageCheckoutExistingRequest billing_alignment_mode false */
-
-/* polymorph HostedPageCheckoutExistingRequest billing_cycles false */
-
-/* polymorph HostedPageCheckoutExistingRequest cancel_url false */
-
-/* polymorph HostedPageCheckoutExistingRequest card[gateway] false */
-
-/* polymorph HostedPageCheckoutExistingRequest card[gateway_account_id] false */
-
-/* polymorph HostedPageCheckoutExistingRequest customer[vat_number] false */
-
-/* polymorph HostedPageCheckoutExistingRequest embed false */
-
-/* polymorph HostedPageCheckoutExistingRequest force_term_reset false */
-
-/* polymorph HostedPageCheckoutExistingRequest iframe_messaging false */
-
-/* polymorph HostedPageCheckoutExistingRequest pass_thru_content false */
-
-/* polymorph HostedPageCheckoutExistingRequest reactivate false */
-
-/* polymorph HostedPageCheckoutExistingRequest reactivate_from false */
-
-/* polymorph HostedPageCheckoutExistingRequest redirect_url false */
-
-/* polymorph HostedPageCheckoutExistingRequest replace_addon_list false */
-
-/* polymorph HostedPageCheckoutExistingRequest subscription[coupon] false */
-
-/* polymorph HostedPageCheckoutExistingRequest subscription[id] false */
-
-/* polymorph HostedPageCheckoutExistingRequest subscription[invoice_notes] false */
-
-/* polymorph HostedPageCheckoutExistingRequest subscription[plan_id] false */
-
-/* polymorph HostedPageCheckoutExistingRequest subscription[plan_quantity] false */
-
-/* polymorph HostedPageCheckoutExistingRequest subscription[plan_unit_price] false */
-
-/* polymorph HostedPageCheckoutExistingRequest subscription[setup_fee] false */
-
-/* polymorph HostedPageCheckoutExistingRequest subscription[start_date] false */
-
-/* polymorph HostedPageCheckoutExistingRequest subscription[trial_end] false */
-
-/* polymorph HostedPageCheckoutExistingRequest terms_to_charge false */
-
 // Validate validates this hosted page checkout existing request
 func (m *HostedPageCheckoutExistingRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -174,8 +125,10 @@ func init() {
 }
 
 const (
+
 	// HostedPageCheckoutExistingRequestBillingAlignmentModeImmediate captures enum value "immediate"
 	HostedPageCheckoutExistingRequestBillingAlignmentModeImmediate string = "immediate"
+
 	// HostedPageCheckoutExistingRequestBillingAlignmentModeDelayed captures enum value "delayed"
 	HostedPageCheckoutExistingRequestBillingAlignmentModeDelayed string = "delayed"
 )
@@ -215,68 +168,100 @@ func init() {
 }
 
 const (
+
 	// HostedPageCheckoutExistingRequestCardGatewayChargebee captures enum value "chargebee"
 	HostedPageCheckoutExistingRequestCardGatewayChargebee string = "chargebee"
+
 	// HostedPageCheckoutExistingRequestCardGatewayStripe captures enum value "stripe"
 	HostedPageCheckoutExistingRequestCardGatewayStripe string = "stripe"
+
 	// HostedPageCheckoutExistingRequestCardGatewayWepay captures enum value "wepay"
 	HostedPageCheckoutExistingRequestCardGatewayWepay string = "wepay"
+
 	// HostedPageCheckoutExistingRequestCardGatewayBraintree captures enum value "braintree"
 	HostedPageCheckoutExistingRequestCardGatewayBraintree string = "braintree"
+
 	// HostedPageCheckoutExistingRequestCardGatewayAuthorizeNet captures enum value "authorize_net"
 	HostedPageCheckoutExistingRequestCardGatewayAuthorizeNet string = "authorize_net"
+
 	// HostedPageCheckoutExistingRequestCardGatewayPaypalPro captures enum value "paypal_pro"
 	HostedPageCheckoutExistingRequestCardGatewayPaypalPro string = "paypal_pro"
+
 	// HostedPageCheckoutExistingRequestCardGatewayPin captures enum value "pin"
 	HostedPageCheckoutExistingRequestCardGatewayPin string = "pin"
+
 	// HostedPageCheckoutExistingRequestCardGatewayEway captures enum value "eway"
 	HostedPageCheckoutExistingRequestCardGatewayEway string = "eway"
+
 	// HostedPageCheckoutExistingRequestCardGatewayEwayRapid captures enum value "eway_rapid"
 	HostedPageCheckoutExistingRequestCardGatewayEwayRapid string = "eway_rapid"
+
 	// HostedPageCheckoutExistingRequestCardGatewayWorldpay captures enum value "worldpay"
 	HostedPageCheckoutExistingRequestCardGatewayWorldpay string = "worldpay"
+
 	// HostedPageCheckoutExistingRequestCardGatewayBalancedPayments captures enum value "balanced_payments"
 	HostedPageCheckoutExistingRequestCardGatewayBalancedPayments string = "balanced_payments"
+
 	// HostedPageCheckoutExistingRequestCardGatewayBeanstream captures enum value "beanstream"
 	HostedPageCheckoutExistingRequestCardGatewayBeanstream string = "beanstream"
+
 	// HostedPageCheckoutExistingRequestCardGatewayBluepay captures enum value "bluepay"
 	HostedPageCheckoutExistingRequestCardGatewayBluepay string = "bluepay"
+
 	// HostedPageCheckoutExistingRequestCardGatewayElavon captures enum value "elavon"
 	HostedPageCheckoutExistingRequestCardGatewayElavon string = "elavon"
+
 	// HostedPageCheckoutExistingRequestCardGatewayFirstDataGlobal captures enum value "first_data_global"
 	HostedPageCheckoutExistingRequestCardGatewayFirstDataGlobal string = "first_data_global"
+
 	// HostedPageCheckoutExistingRequestCardGatewayHdfc captures enum value "hdfc"
 	HostedPageCheckoutExistingRequestCardGatewayHdfc string = "hdfc"
+
 	// HostedPageCheckoutExistingRequestCardGatewayMigs captures enum value "migs"
 	HostedPageCheckoutExistingRequestCardGatewayMigs string = "migs"
+
 	// HostedPageCheckoutExistingRequestCardGatewayNmi captures enum value "nmi"
 	HostedPageCheckoutExistingRequestCardGatewayNmi string = "nmi"
+
 	// HostedPageCheckoutExistingRequestCardGatewayOgone captures enum value "ogone"
 	HostedPageCheckoutExistingRequestCardGatewayOgone string = "ogone"
+
 	// HostedPageCheckoutExistingRequestCardGatewayPaymill captures enum value "paymill"
 	HostedPageCheckoutExistingRequestCardGatewayPaymill string = "paymill"
+
 	// HostedPageCheckoutExistingRequestCardGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	HostedPageCheckoutExistingRequestCardGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// HostedPageCheckoutExistingRequestCardGatewaySagePay captures enum value "sage_pay"
 	HostedPageCheckoutExistingRequestCardGatewaySagePay string = "sage_pay"
+
 	// HostedPageCheckoutExistingRequestCardGatewayTco captures enum value "tco"
 	HostedPageCheckoutExistingRequestCardGatewayTco string = "tco"
+
 	// HostedPageCheckoutExistingRequestCardGatewayWirecard captures enum value "wirecard"
 	HostedPageCheckoutExistingRequestCardGatewayWirecard string = "wirecard"
+
 	// HostedPageCheckoutExistingRequestCardGatewayAmazonPayments captures enum value "amazon_payments"
 	HostedPageCheckoutExistingRequestCardGatewayAmazonPayments string = "amazon_payments"
+
 	// HostedPageCheckoutExistingRequestCardGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	HostedPageCheckoutExistingRequestCardGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// HostedPageCheckoutExistingRequestCardGatewayGocardless captures enum value "gocardless"
 	HostedPageCheckoutExistingRequestCardGatewayGocardless string = "gocardless"
+
 	// HostedPageCheckoutExistingRequestCardGatewayAdyen captures enum value "adyen"
 	HostedPageCheckoutExistingRequestCardGatewayAdyen string = "adyen"
+
 	// HostedPageCheckoutExistingRequestCardGatewayOrbital captures enum value "orbital"
 	HostedPageCheckoutExistingRequestCardGatewayOrbital string = "orbital"
+
 	// HostedPageCheckoutExistingRequestCardGatewayMonerisUs captures enum value "moneris_us"
 	HostedPageCheckoutExistingRequestCardGatewayMonerisUs string = "moneris_us"
+
 	// HostedPageCheckoutExistingRequestCardGatewayMoneris captures enum value "moneris"
 	HostedPageCheckoutExistingRequestCardGatewayMoneris string = "moneris"
+
 	// HostedPageCheckoutExistingRequestCardGatewayNotApplicable captures enum value "not_applicable"
 	HostedPageCheckoutExistingRequestCardGatewayNotApplicable string = "not_applicable"
 )

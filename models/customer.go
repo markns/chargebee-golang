@@ -18,7 +18,6 @@ import (
 
 // Customer customer
 // swagger:model Customer
-
 type Customer struct {
 
 	// allow direct debit
@@ -142,86 +141,6 @@ type Customer struct {
 	VatNumber string `json:"vat_number,omitempty"`
 }
 
-/* polymorph Customer allow_direct_debit false */
-
-/* polymorph Customer auto_collection false */
-
-/* polymorph Customer backup_payment_source_id false */
-
-/* polymorph Customer balances false */
-
-/* polymorph Customer billing_address false */
-
-/* polymorph Customer billing_date false */
-
-/* polymorph Customer billing_date_mode false */
-
-/* polymorph Customer billing_day_of_week false */
-
-/* polymorph Customer billing_day_of_week_mode false */
-
-/* polymorph Customer company false */
-
-/* polymorph Customer consolidated_invoicing false */
-
-/* polymorph Customer contacts false */
-
-/* polymorph Customer created_at false */
-
-/* polymorph Customer created_from_ip false */
-
-/* polymorph Customer deleted false */
-
-/* polymorph Customer email false */
-
-/* polymorph Customer entity_code false */
-
-/* polymorph Customer excess_payments false */
-
-/* polymorph Customer exempt_number false */
-
-/* polymorph Customer first_name false */
-
-/* polymorph Customer fraud_flag false */
-
-/* polymorph Customer id false */
-
-/* polymorph Customer invoice_notes false */
-
-/* polymorph Customer last_name false */
-
-/* polymorph Customer locale false */
-
-/* polymorph Customer meta_data false */
-
-/* polymorph Customer net_term_days false */
-
-/* polymorph Customer payment_method false */
-
-/* polymorph Customer phone false */
-
-/* polymorph Customer preferred_currency_code false */
-
-/* polymorph Customer primary_payment_source_id false */
-
-/* polymorph Customer promotional_credits false */
-
-/* polymorph Customer referral_urls false */
-
-/* polymorph Customer refundable_credits false */
-
-/* polymorph Customer registered_for_gst false */
-
-/* polymorph Customer resource_version false */
-
-/* polymorph Customer taxability false */
-
-/* polymorph Customer unbilled_charges false */
-
-/* polymorph Customer updated_at false */
-
-/* polymorph Customer vat_number false */
-
 // Validate validates this customer
 func (m *Customer) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -305,8 +224,10 @@ func init() {
 }
 
 const (
+
 	// CustomerAutoCollectionOn captures enum value "on"
 	CustomerAutoCollectionOn string = "on"
+
 	// CustomerAutoCollectionOff captures enum value "off"
 	CustomerAutoCollectionOff string = "off"
 )
@@ -353,6 +274,7 @@ func (m *Customer) validateBalances(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -374,6 +296,7 @@ func (m *Customer) validateBillingAddress(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -392,8 +315,10 @@ func init() {
 }
 
 const (
+
 	// CustomerBillingDateModeUsingDefaults captures enum value "using_defaults"
 	CustomerBillingDateModeUsingDefaults string = "using_defaults"
+
 	// CustomerBillingDateModeManuallySet captures enum value "manually_set"
 	CustomerBillingDateModeManuallySet string = "manually_set"
 )
@@ -433,18 +358,25 @@ func init() {
 }
 
 const (
+
 	// CustomerBillingDayOfWeekSunday captures enum value "sunday"
 	CustomerBillingDayOfWeekSunday string = "sunday"
+
 	// CustomerBillingDayOfWeekMonday captures enum value "monday"
 	CustomerBillingDayOfWeekMonday string = "monday"
+
 	// CustomerBillingDayOfWeekTuesday captures enum value "tuesday"
 	CustomerBillingDayOfWeekTuesday string = "tuesday"
+
 	// CustomerBillingDayOfWeekWednesday captures enum value "wednesday"
 	CustomerBillingDayOfWeekWednesday string = "wednesday"
+
 	// CustomerBillingDayOfWeekThursday captures enum value "thursday"
 	CustomerBillingDayOfWeekThursday string = "thursday"
+
 	// CustomerBillingDayOfWeekFriday captures enum value "friday"
 	CustomerBillingDayOfWeekFriday string = "friday"
+
 	// CustomerBillingDayOfWeekSaturday captures enum value "saturday"
 	CustomerBillingDayOfWeekSaturday string = "saturday"
 )
@@ -484,8 +416,10 @@ func init() {
 }
 
 const (
+
 	// CustomerBillingDayOfWeekModeUsingDefaults captures enum value "using_defaults"
 	CustomerBillingDayOfWeekModeUsingDefaults string = "using_defaults"
+
 	// CustomerBillingDayOfWeekModeManuallySet captures enum value "manually_set"
 	CustomerBillingDayOfWeekModeManuallySet string = "manually_set"
 )
@@ -532,6 +466,7 @@ func (m *Customer) validateContacts(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -552,40 +487,58 @@ func init() {
 }
 
 const (
+
 	// CustomerEntityCodeA captures enum value "a"
 	CustomerEntityCodeA string = "a"
+
 	// CustomerEntityCodeB captures enum value "b"
 	CustomerEntityCodeB string = "b"
+
 	// CustomerEntityCodeC captures enum value "c"
 	CustomerEntityCodeC string = "c"
+
 	// CustomerEntityCodeD captures enum value "d"
 	CustomerEntityCodeD string = "d"
+
 	// CustomerEntityCodeE captures enum value "e"
 	CustomerEntityCodeE string = "e"
+
 	// CustomerEntityCodeF captures enum value "f"
 	CustomerEntityCodeF string = "f"
+
 	// CustomerEntityCodeG captures enum value "g"
 	CustomerEntityCodeG string = "g"
+
 	// CustomerEntityCodeH captures enum value "h"
 	CustomerEntityCodeH string = "h"
+
 	// CustomerEntityCodeI captures enum value "i"
 	CustomerEntityCodeI string = "i"
+
 	// CustomerEntityCodeJ captures enum value "j"
 	CustomerEntityCodeJ string = "j"
+
 	// CustomerEntityCodeK captures enum value "k"
 	CustomerEntityCodeK string = "k"
+
 	// CustomerEntityCodeL captures enum value "l"
 	CustomerEntityCodeL string = "l"
+
 	// CustomerEntityCodeN captures enum value "n"
 	CustomerEntityCodeN string = "n"
+
 	// CustomerEntityCodeP captures enum value "p"
 	CustomerEntityCodeP string = "p"
+
 	// CustomerEntityCodeQ captures enum value "q"
 	CustomerEntityCodeQ string = "q"
+
 	// CustomerEntityCodeR captures enum value "r"
 	CustomerEntityCodeR string = "r"
+
 	// CustomerEntityCodeMed1 captures enum value "med1"
 	CustomerEntityCodeMed1 string = "med1"
+
 	// CustomerEntityCodeMed2 captures enum value "med2"
 	CustomerEntityCodeMed2 string = "med2"
 )
@@ -625,10 +578,13 @@ func init() {
 }
 
 const (
+
 	// CustomerFraudFlagSafe captures enum value "safe"
 	CustomerFraudFlagSafe string = "safe"
+
 	// CustomerFraudFlagSuspicious captures enum value "suspicious"
 	CustomerFraudFlagSuspicious string = "suspicious"
+
 	// CustomerFraudFlagFraudulent captures enum value "fraudulent"
 	CustomerFraudFlagFraudulent string = "fraudulent"
 )
@@ -669,6 +625,7 @@ func (m *Customer) validatePaymentMethod(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -694,6 +651,7 @@ func (m *Customer) validateReferralUrls(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -714,8 +672,10 @@ func init() {
 }
 
 const (
+
 	// CustomerTaxabilityTaxable captures enum value "taxable"
 	CustomerTaxabilityTaxable string = "taxable"
+
 	// CustomerTaxabilityExempt captures enum value "exempt"
 	CustomerTaxabilityExempt string = "exempt"
 )

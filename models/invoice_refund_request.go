@@ -17,7 +17,6 @@ import (
 
 // InvoiceRefundRequest invoice refund request
 // swagger:model InvoiceRefundRequest
-
 type InvoiceRefundRequest struct {
 
 	// comment
@@ -32,14 +31,6 @@ type InvoiceRefundRequest struct {
 	// refund amount
 	RefundAmount int32 `json:"refund_amount,omitempty"`
 }
-
-/* polymorph InvoiceRefundRequest comment false */
-
-/* polymorph InvoiceRefundRequest credit_note[reason_code] false */
-
-/* polymorph InvoiceRefundRequest customer_notes false */
-
-/* polymorph InvoiceRefundRequest refund_amount false */
 
 // Validate validates this invoice refund request
 func (m *InvoiceRefundRequest) Validate(formats strfmt.Registry) error {
@@ -69,26 +60,37 @@ func init() {
 }
 
 const (
+
 	// InvoiceRefundRequestCreditNoteReasonCodeWriteOff captures enum value "write_off"
 	InvoiceRefundRequestCreditNoteReasonCodeWriteOff string = "write_off"
+
 	// InvoiceRefundRequestCreditNoteReasonCodeSubscriptionChange captures enum value "subscription_change"
 	InvoiceRefundRequestCreditNoteReasonCodeSubscriptionChange string = "subscription_change"
+
 	// InvoiceRefundRequestCreditNoteReasonCodeSubscriptionCancellation captures enum value "subscription_cancellation"
 	InvoiceRefundRequestCreditNoteReasonCodeSubscriptionCancellation string = "subscription_cancellation"
+
 	// InvoiceRefundRequestCreditNoteReasonCodeChargeback captures enum value "chargeback"
 	InvoiceRefundRequestCreditNoteReasonCodeChargeback string = "chargeback"
+
 	// InvoiceRefundRequestCreditNoteReasonCodeProductUnsatisfactory captures enum value "product_unsatisfactory"
 	InvoiceRefundRequestCreditNoteReasonCodeProductUnsatisfactory string = "product_unsatisfactory"
+
 	// InvoiceRefundRequestCreditNoteReasonCodeServiceUnsatisfactory captures enum value "service_unsatisfactory"
 	InvoiceRefundRequestCreditNoteReasonCodeServiceUnsatisfactory string = "service_unsatisfactory"
+
 	// InvoiceRefundRequestCreditNoteReasonCodeOrderChange captures enum value "order_change"
 	InvoiceRefundRequestCreditNoteReasonCodeOrderChange string = "order_change"
+
 	// InvoiceRefundRequestCreditNoteReasonCodeOrderCancellation captures enum value "order_cancellation"
 	InvoiceRefundRequestCreditNoteReasonCodeOrderCancellation string = "order_cancellation"
+
 	// InvoiceRefundRequestCreditNoteReasonCodeWaiver captures enum value "waiver"
 	InvoiceRefundRequestCreditNoteReasonCodeWaiver string = "waiver"
+
 	// InvoiceRefundRequestCreditNoteReasonCodeOther captures enum value "other"
 	InvoiceRefundRequestCreditNoteReasonCodeOther string = "other"
+
 	// InvoiceRefundRequestCreditNoteReasonCodeFraudulent captures enum value "fraudulent"
 	InvoiceRefundRequestCreditNoteReasonCodeFraudulent string = "fraudulent"
 )

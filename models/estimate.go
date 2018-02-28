@@ -16,7 +16,6 @@ import (
 
 // Estimate estimate
 // swagger:model Estimate
-
 type Estimate struct {
 
 	// created at
@@ -40,20 +39,6 @@ type Estimate struct {
 	// unbilled charge estimates
 	UnbilledChargeEstimates []*UnbilledCharge `json:"unbilled_charge_estimates"`
 }
-
-/* polymorph Estimate created_at false */
-
-/* polymorph Estimate credit_note_estimates false */
-
-/* polymorph Estimate invoice_estimate false */
-
-/* polymorph Estimate invoice_estimates false */
-
-/* polymorph Estimate next_invoice_estimate false */
-
-/* polymorph Estimate subscription_estimate false */
-
-/* polymorph Estimate unbilled_charge_estimates false */
 
 // Validate validates this estimate
 func (m *Estimate) Validate(formats strfmt.Registry) error {
@@ -115,6 +100,7 @@ func (m *Estimate) validateCreditNoteEstimates(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -136,6 +122,7 @@ func (m *Estimate) validateInvoiceEstimate(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -161,6 +148,7 @@ func (m *Estimate) validateInvoiceEstimates(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -182,6 +170,7 @@ func (m *Estimate) validateNextInvoiceEstimate(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -201,6 +190,7 @@ func (m *Estimate) validateSubscriptionEstimate(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -226,6 +216,7 @@ func (m *Estimate) validateUnbilledChargeEstimates(formats strfmt.Registry) erro
 				}
 				return err
 			}
+
 		}
 
 	}

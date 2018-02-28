@@ -17,7 +17,6 @@ import (
 
 // LinkedPayment linked payment
 // swagger:model LinkedPayment
-
 type LinkedPayment struct {
 
 	// applied amount
@@ -38,18 +37,6 @@ type LinkedPayment struct {
 	// txn status
 	TxnStatus string `json:"txn_status,omitempty"`
 }
-
-/* polymorph LinkedPayment applied_amount false */
-
-/* polymorph LinkedPayment applied_at false */
-
-/* polymorph LinkedPayment txn_amount false */
-
-/* polymorph LinkedPayment txn_date false */
-
-/* polymorph LinkedPayment txn_id false */
-
-/* polymorph LinkedPayment txn_status false */
 
 // Validate validates this linked payment
 func (m *LinkedPayment) Validate(formats strfmt.Registry) error {
@@ -79,14 +66,19 @@ func init() {
 }
 
 const (
+
 	// LinkedPaymentTxnStatusFuture captures enum value "future"
 	LinkedPaymentTxnStatusFuture string = "future"
+
 	// LinkedPaymentTxnStatusInTrial captures enum value "in_trial"
 	LinkedPaymentTxnStatusInTrial string = "in_trial"
+
 	// LinkedPaymentTxnStatusActive captures enum value "active"
 	LinkedPaymentTxnStatusActive string = "active"
+
 	// LinkedPaymentTxnStatusNonRenewing captures enum value "non_renewing"
 	LinkedPaymentTxnStatusNonRenewing string = "non_renewing"
+
 	// LinkedPaymentTxnStatusCancelled captures enum value "cancelled"
 	LinkedPaymentTxnStatusCancelled string = "cancelled"
 )

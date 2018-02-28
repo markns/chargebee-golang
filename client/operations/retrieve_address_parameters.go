@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewRetrieveAddressParams creates a new RetrieveAddressParams object
@@ -124,12 +124,10 @@ func (o *RetrieveAddressParams) WriteToRequest(r runtime.ClientRequest, reg strf
 	}
 	var res []error
 
-	if o.AddressRetrieveRequest == nil {
-		o.AddressRetrieveRequest = new(models.AddressRetrieveRequest)
-	}
-
-	if err := r.SetBodyParam(o.AddressRetrieveRequest); err != nil {
-		return err
+	if o.AddressRetrieveRequest != nil {
+		if err := r.SetBodyParam(o.AddressRetrieveRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

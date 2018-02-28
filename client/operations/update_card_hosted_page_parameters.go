@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewUpdateCardHostedPageParams creates a new UpdateCardHostedPageParams object
@@ -124,12 +124,10 @@ func (o *UpdateCardHostedPageParams) WriteToRequest(r runtime.ClientRequest, reg
 	}
 	var res []error
 
-	if o.HostedPageUpdateCardRequest == nil {
-		o.HostedPageUpdateCardRequest = new(models.HostedPageUpdateCardRequest)
-	}
-
-	if err := r.SetBodyParam(o.HostedPageUpdateCardRequest); err != nil {
-		return err
+	if o.HostedPageUpdateCardRequest != nil {
+		if err := r.SetBodyParam(o.HostedPageUpdateCardRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

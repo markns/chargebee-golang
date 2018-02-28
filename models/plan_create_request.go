@@ -17,7 +17,6 @@ import (
 
 // PlanCreateRequest plan create request
 // swagger:model PlanCreateRequest
-
 type PlanCreateRequest struct {
 
 	// accounting category1
@@ -105,62 +104,6 @@ type PlanCreateRequest struct {
 	TrialPeriodUnit string `json:"trial_period_unit,omitempty"`
 }
 
-/* polymorph PlanCreateRequest accounting_category1 false */
-
-/* polymorph PlanCreateRequest accounting_category2 false */
-
-/* polymorph PlanCreateRequest accounting_code false */
-
-/* polymorph PlanCreateRequest billing_cycles false */
-
-/* polymorph PlanCreateRequest charge_model false */
-
-/* polymorph PlanCreateRequest currency_code false */
-
-/* polymorph PlanCreateRequest description false */
-
-/* polymorph PlanCreateRequest downgrade_penalty false */
-
-/* polymorph PlanCreateRequest enabled_in_hosted_pages false */
-
-/* polymorph PlanCreateRequest enabled_in_portal false */
-
-/* polymorph PlanCreateRequest free_quantity false */
-
-/* polymorph PlanCreateRequest id false */
-
-/* polymorph PlanCreateRequest invoice_name false */
-
-/* polymorph PlanCreateRequest invoice_notes false */
-
-/* polymorph PlanCreateRequest meta_data false */
-
-/* polymorph PlanCreateRequest name false */
-
-/* polymorph PlanCreateRequest period false */
-
-/* polymorph PlanCreateRequest period_unit false */
-
-/* polymorph PlanCreateRequest price false */
-
-/* polymorph PlanCreateRequest redirect_url false */
-
-/* polymorph PlanCreateRequest setup_cost false */
-
-/* polymorph PlanCreateRequest sku false */
-
-/* polymorph PlanCreateRequest status false */
-
-/* polymorph PlanCreateRequest tax_code false */
-
-/* polymorph PlanCreateRequest tax_profile_id false */
-
-/* polymorph PlanCreateRequest taxable false */
-
-/* polymorph PlanCreateRequest trial_period false */
-
-/* polymorph PlanCreateRequest trial_period_unit false */
-
 // Validate validates this plan create request
 func (m *PlanCreateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -204,8 +147,10 @@ func init() {
 }
 
 const (
+
 	// PlanCreateRequestChargeModelFullCharge captures enum value "full_charge"
 	PlanCreateRequestChargeModelFullCharge string = "full_charge"
+
 	// PlanCreateRequestChargeModelProrate captures enum value "prorate"
 	PlanCreateRequestChargeModelProrate string = "prorate"
 )
@@ -245,10 +190,13 @@ func init() {
 }
 
 const (
+
 	// PlanCreateRequestPeriodUnitWeek captures enum value "week"
 	PlanCreateRequestPeriodUnitWeek string = "week"
+
 	// PlanCreateRequestPeriodUnitMonth captures enum value "month"
 	PlanCreateRequestPeriodUnitMonth string = "month"
+
 	// PlanCreateRequestPeriodUnitYear captures enum value "year"
 	PlanCreateRequestPeriodUnitYear string = "year"
 )
@@ -288,14 +236,19 @@ func init() {
 }
 
 const (
+
 	// PlanCreateRequestStatusFuture captures enum value "future"
 	PlanCreateRequestStatusFuture string = "future"
+
 	// PlanCreateRequestStatusInTrial captures enum value "in_trial"
 	PlanCreateRequestStatusInTrial string = "in_trial"
+
 	// PlanCreateRequestStatusActive captures enum value "active"
 	PlanCreateRequestStatusActive string = "active"
+
 	// PlanCreateRequestStatusNonRenewing captures enum value "non_renewing"
 	PlanCreateRequestStatusNonRenewing string = "non_renewing"
+
 	// PlanCreateRequestStatusCancelled captures enum value "cancelled"
 	PlanCreateRequestStatusCancelled string = "cancelled"
 )
@@ -335,8 +288,10 @@ func init() {
 }
 
 const (
+
 	// PlanCreateRequestTrialPeriodUnitDay captures enum value "day"
 	PlanCreateRequestTrialPeriodUnitDay string = "day"
+
 	// PlanCreateRequestTrialPeriodUnitMonth captures enum value "month"
 	PlanCreateRequestTrialPeriodUnitMonth string = "month"
 )

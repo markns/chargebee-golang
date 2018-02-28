@@ -14,7 +14,6 @@ import (
 
 // SubscriptionChangeTermEndRequest subscription change term end request
 // swagger:model SubscriptionChangeTermEndRequest
-
 type SubscriptionChangeTermEndRequest struct {
 
 	// invoice immediately
@@ -26,12 +25,6 @@ type SubscriptionChangeTermEndRequest struct {
 	// term ends at
 	TermEndsAt int64 `json:"term_ends_at,omitempty"`
 }
-
-/* polymorph SubscriptionChangeTermEndRequest invoice_immediately false */
-
-/* polymorph SubscriptionChangeTermEndRequest prorate false */
-
-/* polymorph SubscriptionChangeTermEndRequest term_ends_at false */
 
 // Validate validates this subscription change term end request
 func (m *SubscriptionChangeTermEndRequest) Validate(formats strfmt.Registry) error {

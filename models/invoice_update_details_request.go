@@ -17,7 +17,6 @@ import (
 
 // InvoiceUpdateDetailsRequest invoice update details request
 // swagger:model InvoiceUpdateDetailsRequest
-
 type InvoiceUpdateDetailsRequest struct {
 
 	// billing address city
@@ -111,66 +110,6 @@ type InvoiceUpdateDetailsRequest struct {
 	VatNumber string `json:"vat_number,omitempty"`
 }
 
-/* polymorph InvoiceUpdateDetailsRequest billing_address[city] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[company] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[country] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[email] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[first_name] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[last_name] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[line1] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[line2] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[line3] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[phone] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[state] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[state_code] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[validation_status] false */
-
-/* polymorph InvoiceUpdateDetailsRequest billing_address[zip] false */
-
-/* polymorph InvoiceUpdateDetailsRequest po_number false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[city] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[company] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[country] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[email] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[first_name] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[last_name] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[line1] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[line2] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[line3] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[phone] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[state] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[state_code] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[validation_status] false */
-
-/* polymorph InvoiceUpdateDetailsRequest shipping_address[zip] false */
-
-/* polymorph InvoiceUpdateDetailsRequest vat_number false */
-
 // Validate validates this invoice update details request
 func (m *InvoiceUpdateDetailsRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -204,12 +143,16 @@ func init() {
 }
 
 const (
+
 	// InvoiceUpdateDetailsRequestBillingAddressValidationStatusNotValidated captures enum value "not_validated"
 	InvoiceUpdateDetailsRequestBillingAddressValidationStatusNotValidated string = "not_validated"
+
 	// InvoiceUpdateDetailsRequestBillingAddressValidationStatusValid captures enum value "valid"
 	InvoiceUpdateDetailsRequestBillingAddressValidationStatusValid string = "valid"
+
 	// InvoiceUpdateDetailsRequestBillingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	InvoiceUpdateDetailsRequestBillingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// InvoiceUpdateDetailsRequestBillingAddressValidationStatusInvalid captures enum value "invalid"
 	InvoiceUpdateDetailsRequestBillingAddressValidationStatusInvalid string = "invalid"
 )
@@ -249,12 +192,16 @@ func init() {
 }
 
 const (
+
 	// InvoiceUpdateDetailsRequestShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	InvoiceUpdateDetailsRequestShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// InvoiceUpdateDetailsRequestShippingAddressValidationStatusValid captures enum value "valid"
 	InvoiceUpdateDetailsRequestShippingAddressValidationStatusValid string = "valid"
+
 	// InvoiceUpdateDetailsRequestShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	InvoiceUpdateDetailsRequestShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// InvoiceUpdateDetailsRequestShippingAddressValidationStatusInvalid captures enum value "invalid"
 	InvoiceUpdateDetailsRequestShippingAddressValidationStatusInvalid string = "invalid"
 )

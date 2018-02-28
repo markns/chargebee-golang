@@ -17,7 +17,6 @@ import (
 
 // LinkedInvoice linked invoice
 // swagger:model LinkedInvoice
-
 type LinkedInvoice struct {
 
 	// applied amount
@@ -38,18 +37,6 @@ type LinkedInvoice struct {
 	// invoice total
 	InvoiceTotal int32 `json:"invoice_total,omitempty"`
 }
-
-/* polymorph LinkedInvoice applied_amount false */
-
-/* polymorph LinkedInvoice applied_at false */
-
-/* polymorph LinkedInvoice invoice_date false */
-
-/* polymorph LinkedInvoice invoice_id false */
-
-/* polymorph LinkedInvoice invoice_status false */
-
-/* polymorph LinkedInvoice invoice_total false */
 
 // Validate validates this linked invoice
 func (m *LinkedInvoice) Validate(formats strfmt.Registry) error {
@@ -79,14 +66,19 @@ func init() {
 }
 
 const (
+
 	// LinkedInvoiceInvoiceStatusFuture captures enum value "future"
 	LinkedInvoiceInvoiceStatusFuture string = "future"
+
 	// LinkedInvoiceInvoiceStatusInTrial captures enum value "in_trial"
 	LinkedInvoiceInvoiceStatusInTrial string = "in_trial"
+
 	// LinkedInvoiceInvoiceStatusActive captures enum value "active"
 	LinkedInvoiceInvoiceStatusActive string = "active"
+
 	// LinkedInvoiceInvoiceStatusNonRenewing captures enum value "non_renewing"
 	LinkedInvoiceInvoiceStatusNonRenewing string = "non_renewing"
+
 	// LinkedInvoiceInvoiceStatusCancelled captures enum value "cancelled"
 	LinkedInvoiceInvoiceStatusCancelled string = "cancelled"
 )

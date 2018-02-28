@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewChangeTermEndEstimateParams creates a new ChangeTermEndEstimateParams object
@@ -137,12 +137,10 @@ func (o *ChangeTermEndEstimateParams) WriteToRequest(r runtime.ClientRequest, re
 	}
 	var res []error
 
-	if o.EstimateChangeTermEndRequest == nil {
-		o.EstimateChangeTermEndRequest = new(models.EstimateChangeTermEndRequest)
-	}
-
-	if err := r.SetBodyParam(o.EstimateChangeTermEndRequest); err != nil {
-		return err
+	if o.EstimateChangeTermEndRequest != nil {
+		if err := r.SetBodyParam(o.EstimateChangeTermEndRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

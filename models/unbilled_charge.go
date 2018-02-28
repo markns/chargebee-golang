@@ -17,7 +17,6 @@ import (
 
 // UnbilledCharge unbilled charge
 // swagger:model UnbilledCharge
-
 type UnbilledCharge struct {
 
 	// amount
@@ -69,38 +68,6 @@ type UnbilledCharge struct {
 	VoidedAt int64 `json:"voided_at,omitempty"`
 }
 
-/* polymorph UnbilledCharge amount false */
-
-/* polymorph UnbilledCharge currency_code false */
-
-/* polymorph UnbilledCharge customer_id false */
-
-/* polymorph UnbilledCharge date_from false */
-
-/* polymorph UnbilledCharge date_to false */
-
-/* polymorph UnbilledCharge deleted false */
-
-/* polymorph UnbilledCharge description false */
-
-/* polymorph UnbilledCharge discount_amount false */
-
-/* polymorph UnbilledCharge entity_id false */
-
-/* polymorph UnbilledCharge entity_type false */
-
-/* polymorph UnbilledCharge id false */
-
-/* polymorph UnbilledCharge is_voided false */
-
-/* polymorph UnbilledCharge quantity false */
-
-/* polymorph UnbilledCharge subscription_id false */
-
-/* polymorph UnbilledCharge unit_amount false */
-
-/* polymorph UnbilledCharge voided_at false */
-
 // Validate validates this unbilled charge
 func (m *UnbilledCharge) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -129,20 +96,28 @@ func init() {
 }
 
 const (
+
 	// UnbilledChargeEntityTypeCustomer captures enum value "customer"
 	UnbilledChargeEntityTypeCustomer string = "customer"
+
 	// UnbilledChargeEntityTypeSubscription captures enum value "subscription"
 	UnbilledChargeEntityTypeSubscription string = "subscription"
+
 	// UnbilledChargeEntityTypeInvoice captures enum value "invoice"
 	UnbilledChargeEntityTypeInvoice string = "invoice"
+
 	// UnbilledChargeEntityTypeCreditNote captures enum value "credit_note"
 	UnbilledChargeEntityTypeCreditNote string = "credit_note"
+
 	// UnbilledChargeEntityTypeTransaction captures enum value "transaction"
 	UnbilledChargeEntityTypeTransaction string = "transaction"
+
 	// UnbilledChargeEntityTypePlan captures enum value "plan"
 	UnbilledChargeEntityTypePlan string = "plan"
+
 	// UnbilledChargeEntityTypeAddon captures enum value "addon"
 	UnbilledChargeEntityTypeAddon string = "addon"
+
 	// UnbilledChargeEntityTypeCoupon captures enum value "coupon"
 	UnbilledChargeEntityTypeCoupon string = "coupon"
 )

@@ -18,7 +18,6 @@ import (
 
 // Subscription subscription
 // swagger:model Subscription
-
 type Subscription struct {
 
 	// activated at
@@ -154,94 +153,6 @@ type Subscription struct {
 	UpdatedAt int64 `json:"updated_at,omitempty"`
 }
 
-/* polymorph Subscription activated_at false */
-
-/* polymorph Subscription addons false */
-
-/* polymorph Subscription affiliate_token false */
-
-/* polymorph Subscription auto_collection false */
-
-/* polymorph Subscription base_currency_code false */
-
-/* polymorph Subscription billing_period false */
-
-/* polymorph Subscription billing_period_unit false */
-
-/* polymorph Subscription cancel_reason false */
-
-/* polymorph Subscription cancelled_at false */
-
-/* polymorph Subscription coupons false */
-
-/* polymorph Subscription created_at false */
-
-/* polymorph Subscription created_from_ip false */
-
-/* polymorph Subscription currency_code false */
-
-/* polymorph Subscription current_term_end false */
-
-/* polymorph Subscription current_term_start false */
-
-/* polymorph Subscription customer_id false */
-
-/* polymorph Subscription deleted false */
-
-/* polymorph Subscription due_invoices_count false */
-
-/* polymorph Subscription due_since false */
-
-/* polymorph Subscription exchange_rate false */
-
-/* polymorph Subscription has_scheduled_changes false */
-
-/* polymorph Subscription id false */
-
-/* polymorph Subscription invoice_notes false */
-
-/* polymorph Subscription meta_data false */
-
-/* polymorph Subscription mrr false */
-
-/* polymorph Subscription next_billing_at false */
-
-/* polymorph Subscription payment_source_id false */
-
-/* polymorph Subscription plan_free_quantity false */
-
-/* polymorph Subscription plan_id false */
-
-/* polymorph Subscription plan_quantity false */
-
-/* polymorph Subscription plan_unit_price false */
-
-/* polymorph Subscription po_number false */
-
-/* polymorph Subscription referral_info false */
-
-/* polymorph Subscription remaining_billing_cycles false */
-
-/* polymorph Subscription resource_version false */
-
-/* polymorph Subscription setup_fee false */
-
-/* polymorph Subscription shipping_address false */
-
-/* polymorph Subscription start_date false */
-
-/* polymorph Subscription started_at false */
-
-/* polymorph Subscription status false */
-
-/* polymorph Subscription total_dues false */
-
-/* polymorph Subscription trial_end false */
-
-/* polymorph Subscription trial_start false */
-
-/* polymorph Subscription updated_at false */
-
 // Validate validates this subscription
 func (m *Subscription) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -312,6 +223,7 @@ func (m *Subscription) validateAddons(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -332,8 +244,10 @@ func init() {
 }
 
 const (
+
 	// SubscriptionAutoCollectionOn captures enum value "on"
 	SubscriptionAutoCollectionOn string = "on"
+
 	// SubscriptionAutoCollectionOff captures enum value "off"
 	SubscriptionAutoCollectionOff string = "off"
 )
@@ -373,10 +287,13 @@ func init() {
 }
 
 const (
+
 	// SubscriptionBillingPeriodUnitWeek captures enum value "week"
 	SubscriptionBillingPeriodUnitWeek string = "week"
+
 	// SubscriptionBillingPeriodUnitMonth captures enum value "month"
 	SubscriptionBillingPeriodUnitMonth string = "month"
+
 	// SubscriptionBillingPeriodUnitYear captures enum value "year"
 	SubscriptionBillingPeriodUnitYear string = "year"
 )
@@ -416,18 +333,25 @@ func init() {
 }
 
 const (
+
 	// SubscriptionCancelReasonNotPaid captures enum value "not_paid"
 	SubscriptionCancelReasonNotPaid string = "not_paid"
+
 	// SubscriptionCancelReasonNoCard captures enum value "no_card"
 	SubscriptionCancelReasonNoCard string = "no_card"
+
 	// SubscriptionCancelReasonFraudReviewFailed captures enum value "fraud_review_failed"
 	SubscriptionCancelReasonFraudReviewFailed string = "fraud_review_failed"
+
 	// SubscriptionCancelReasonNonCompliantEuCustomer captures enum value "non_compliant_eu_customer"
 	SubscriptionCancelReasonNonCompliantEuCustomer string = "non_compliant_eu_customer"
+
 	// SubscriptionCancelReasonTaxCalculationFailed captures enum value "tax_calculation_failed"
 	SubscriptionCancelReasonTaxCalculationFailed string = "tax_calculation_failed"
+
 	// SubscriptionCancelReasonCurrencyIncompatibleWithGateway captures enum value "currency_incompatible_with_gateway"
 	SubscriptionCancelReasonCurrencyIncompatibleWithGateway string = "currency_incompatible_with_gateway"
+
 	// SubscriptionCancelReasonNonCompliantCustomer captures enum value "non_compliant_customer"
 	SubscriptionCancelReasonNonCompliantCustomer string = "non_compliant_customer"
 )
@@ -474,6 +398,7 @@ func (m *Subscription) validateCoupons(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -495,6 +420,7 @@ func (m *Subscription) validateReferralInfo(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -514,6 +440,7 @@ func (m *Subscription) validateShippingAddress(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -532,14 +459,19 @@ func init() {
 }
 
 const (
+
 	// SubscriptionStatusFuture captures enum value "future"
 	SubscriptionStatusFuture string = "future"
+
 	// SubscriptionStatusInTrial captures enum value "in_trial"
 	SubscriptionStatusInTrial string = "in_trial"
+
 	// SubscriptionStatusActive captures enum value "active"
 	SubscriptionStatusActive string = "active"
+
 	// SubscriptionStatusNonRenewing captures enum value "non_renewing"
 	SubscriptionStatusNonRenewing string = "non_renewing"
+
 	// SubscriptionStatusCancelled captures enum value "cancelled"
 	SubscriptionStatusCancelled string = "cancelled"
 )

@@ -8,16 +8,12 @@ package operations
 import (
 	"fmt"
 	"io"
-	"strconv"
 
-	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
-	"github.com/go-openapi/swag"
-	"github.com/go-openapi/validate"
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // InvoicesForCustomerInvoiceReader is a Reader for the InvoicesForCustomerInvoice structure.
@@ -51,7 +47,7 @@ func NewInvoicesForCustomerInvoiceOK() *InvoicesForCustomerInvoiceOK {
 invoicesForCustomerInvoice response
 */
 type InvoicesForCustomerInvoiceOK struct {
-	Payload InvoicesForCustomerInvoiceOKBody
+	Payload *models.InvoicesForCustomerInvoiceOKBody
 }
 
 func (o *InvoicesForCustomerInvoiceOK) Error() string {
@@ -60,103 +56,12 @@ func (o *InvoicesForCustomerInvoiceOK) Error() string {
 
 func (o *InvoicesForCustomerInvoiceOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
+	o.Payload = new(models.InvoicesForCustomerInvoiceOKBody)
+
 	// response payload
-	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
-	return nil
-}
-
-/*InvoicesForCustomerInvoiceOKBody invoices for customer invoice o k body
-swagger:model InvoicesForCustomerInvoiceOKBody
-*/
-
-type InvoicesForCustomerInvoiceOKBody struct {
-
-	// list
-	// Required: true
-	List []*models.InvoiceResponse `json:"list"`
-
-	// next offset
-	// Required: true
-	NextOffset *string `json:"next_offset"`
-}
-
-/* polymorph InvoicesForCustomerInvoiceOKBody list false */
-
-/* polymorph InvoicesForCustomerInvoiceOKBody next_offset false */
-
-// Validate validates this invoices for customer invoice o k body
-func (o *InvoicesForCustomerInvoiceOKBody) Validate(formats strfmt.Registry) error {
-	var res []error
-
-	if err := o.validateList(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
-	if err := o.validateNextOffset(formats); err != nil {
-		// prop
-		res = append(res, err)
-	}
-
-	if len(res) > 0 {
-		return errors.CompositeValidationError(res...)
-	}
-	return nil
-}
-
-func (o *InvoicesForCustomerInvoiceOKBody) validateList(formats strfmt.Registry) error {
-
-	if err := validate.Required("invoicesForCustomerInvoiceOK"+"."+"list", "body", o.List); err != nil {
-		return err
-	}
-
-	for i := 0; i < len(o.List); i++ {
-
-		if swag.IsZero(o.List[i]) { // not required
-			continue
-		}
-
-		if o.List[i] != nil {
-
-			if err := o.List[i].Validate(formats); err != nil {
-				if ve, ok := err.(*errors.Validation); ok {
-					return ve.ValidateName("invoicesForCustomerInvoiceOK" + "." + "list" + "." + strconv.Itoa(i))
-				}
-				return err
-			}
-		}
-
-	}
-
-	return nil
-}
-
-func (o *InvoicesForCustomerInvoiceOKBody) validateNextOffset(formats strfmt.Registry) error {
-
-	if err := validate.Required("invoicesForCustomerInvoiceOK"+"."+"next_offset", "body", o.NextOffset); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-// MarshalBinary interface implementation
-func (o *InvoicesForCustomerInvoiceOKBody) MarshalBinary() ([]byte, error) {
-	if o == nil {
-		return nil, nil
-	}
-	return swag.WriteJSON(o)
-}
-
-// UnmarshalBinary interface implementation
-func (o *InvoicesForCustomerInvoiceOKBody) UnmarshalBinary(b []byte) error {
-	var res InvoicesForCustomerInvoiceOKBody
-	if err := swag.ReadJSON(b, &res); err != nil {
-		return err
-	}
-	*o = res
 	return nil
 }

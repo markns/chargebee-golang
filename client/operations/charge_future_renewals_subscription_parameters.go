@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewChargeFutureRenewalsSubscriptionParams creates a new ChargeFutureRenewalsSubscriptionParams object
@@ -137,12 +137,10 @@ func (o *ChargeFutureRenewalsSubscriptionParams) WriteToRequest(r runtime.Client
 	}
 	var res []error
 
-	if o.SubscriptionChargeFutureRenewalsRequest == nil {
-		o.SubscriptionChargeFutureRenewalsRequest = new(models.SubscriptionChargeFutureRenewalsRequest)
-	}
-
-	if err := r.SetBodyParam(o.SubscriptionChargeFutureRenewalsRequest); err != nil {
-		return err
+	if o.SubscriptionChargeFutureRenewalsRequest != nil {
+		if err := r.SetBodyParam(o.SubscriptionChargeFutureRenewalsRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

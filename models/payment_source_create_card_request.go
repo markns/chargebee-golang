@@ -14,7 +14,6 @@ import (
 
 // PaymentSourceCreateCardRequest payment source create card request
 // swagger:model PaymentSourceCreateCardRequest
-
 type PaymentSourceCreateCardRequest struct {
 
 	// card billing addr1
@@ -65,38 +64,6 @@ type PaymentSourceCreateCardRequest struct {
 	// replace primary payment source
 	ReplacePrimaryPaymentSource bool `json:"replace_primary_payment_source,omitempty"`
 }
-
-/* polymorph PaymentSourceCreateCardRequest card[billing_addr1] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[billing_addr2] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[billing_city] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[billing_country] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[billing_state] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[billing_state_code] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[billing_zip] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[cvv] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[expiry_month] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[expiry_year] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[first_name] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[gateway_account_id] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[last_name] false */
-
-/* polymorph PaymentSourceCreateCardRequest card[number] false */
-
-/* polymorph PaymentSourceCreateCardRequest customer_id false */
-
-/* polymorph PaymentSourceCreateCardRequest replace_primary_payment_source false */
 
 // Validate validates this payment source create card request
 func (m *PaymentSourceCreateCardRequest) Validate(formats strfmt.Registry) error {

@@ -17,7 +17,6 @@ import (
 
 // CustomerCreateRequest customer create request
 // swagger:model CustomerCreateRequest
-
 type CustomerCreateRequest struct {
 
 	// allow direct debit
@@ -192,120 +191,6 @@ type CustomerCreateRequest struct {
 	VatNumber string `json:"vat_number,omitempty"`
 }
 
-/* polymorph CustomerCreateRequest allow_direct_debit false */
-
-/* polymorph CustomerCreateRequest auto_collection false */
-
-/* polymorph CustomerCreateRequest billing_address[city] false */
-
-/* polymorph CustomerCreateRequest billing_address[company] false */
-
-/* polymorph CustomerCreateRequest billing_address[country] false */
-
-/* polymorph CustomerCreateRequest billing_address[email] false */
-
-/* polymorph CustomerCreateRequest billing_address[first_name] false */
-
-/* polymorph CustomerCreateRequest billing_address[last_name] false */
-
-/* polymorph CustomerCreateRequest billing_address[line1] false */
-
-/* polymorph CustomerCreateRequest billing_address[line2] false */
-
-/* polymorph CustomerCreateRequest billing_address[line3] false */
-
-/* polymorph CustomerCreateRequest billing_address[phone] false */
-
-/* polymorph CustomerCreateRequest billing_address[state] false */
-
-/* polymorph CustomerCreateRequest billing_address[state_code] false */
-
-/* polymorph CustomerCreateRequest billing_address[validation_status] false */
-
-/* polymorph CustomerCreateRequest billing_address[zip] false */
-
-/* polymorph CustomerCreateRequest card[billing_addr1] false */
-
-/* polymorph CustomerCreateRequest card[billing_addr2] false */
-
-/* polymorph CustomerCreateRequest card[billing_city] false */
-
-/* polymorph CustomerCreateRequest card[billing_country] false */
-
-/* polymorph CustomerCreateRequest card[billing_state] false */
-
-/* polymorph CustomerCreateRequest card[billing_state_code] false */
-
-/* polymorph CustomerCreateRequest card[billing_zip] false */
-
-/* polymorph CustomerCreateRequest card[cvv] false */
-
-/* polymorph CustomerCreateRequest card[expiry_month] false */
-
-/* polymorph CustomerCreateRequest card[expiry_year] false */
-
-/* polymorph CustomerCreateRequest card[first_name] false */
-
-/* polymorph CustomerCreateRequest card[gateway] false */
-
-/* polymorph CustomerCreateRequest card[gateway_account_id] false */
-
-/* polymorph CustomerCreateRequest card[ip_address] false */
-
-/* polymorph CustomerCreateRequest card[last_name] false */
-
-/* polymorph CustomerCreateRequest card[number] false */
-
-/* polymorph CustomerCreateRequest card[tmp_token] false */
-
-/* polymorph CustomerCreateRequest company false */
-
-/* polymorph CustomerCreateRequest consolidated_invoicing false */
-
-/* polymorph CustomerCreateRequest created_from_ip false */
-
-/* polymorph CustomerCreateRequest email false */
-
-/* polymorph CustomerCreateRequest entity_code false */
-
-/* polymorph CustomerCreateRequest exempt_number false */
-
-/* polymorph CustomerCreateRequest first_name false */
-
-/* polymorph CustomerCreateRequest id false */
-
-/* polymorph CustomerCreateRequest invoice_notes false */
-
-/* polymorph CustomerCreateRequest last_name false */
-
-/* polymorph CustomerCreateRequest locale false */
-
-/* polymorph CustomerCreateRequest meta_data false */
-
-/* polymorph CustomerCreateRequest net_term_days false */
-
-/* polymorph CustomerCreateRequest payment_method[gateway] false */
-
-/* polymorph CustomerCreateRequest payment_method[gateway_account_id] false */
-
-/* polymorph CustomerCreateRequest payment_method[issuing_country] false */
-
-/* polymorph CustomerCreateRequest payment_method[reference_id] false */
-
-/* polymorph CustomerCreateRequest payment_method[tmp_token] false */
-
-/* polymorph CustomerCreateRequest payment_method[type] false */
-
-/* polymorph CustomerCreateRequest phone false */
-
-/* polymorph CustomerCreateRequest preferred_currency_code false */
-
-/* polymorph CustomerCreateRequest registered_for_gst false */
-
-/* polymorph CustomerCreateRequest taxability false */
-
-/* polymorph CustomerCreateRequest vat_number false */
-
 // Validate validates this customer create request
 func (m *CustomerCreateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -364,8 +249,10 @@ func init() {
 }
 
 const (
+
 	// CustomerCreateRequestAutoCollectionOn captures enum value "on"
 	CustomerCreateRequestAutoCollectionOn string = "on"
+
 	// CustomerCreateRequestAutoCollectionOff captures enum value "off"
 	CustomerCreateRequestAutoCollectionOff string = "off"
 )
@@ -405,12 +292,16 @@ func init() {
 }
 
 const (
+
 	// CustomerCreateRequestBillingAddressValidationStatusNotValidated captures enum value "not_validated"
 	CustomerCreateRequestBillingAddressValidationStatusNotValidated string = "not_validated"
+
 	// CustomerCreateRequestBillingAddressValidationStatusValid captures enum value "valid"
 	CustomerCreateRequestBillingAddressValidationStatusValid string = "valid"
+
 	// CustomerCreateRequestBillingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	CustomerCreateRequestBillingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// CustomerCreateRequestBillingAddressValidationStatusInvalid captures enum value "invalid"
 	CustomerCreateRequestBillingAddressValidationStatusInvalid string = "invalid"
 )
@@ -450,68 +341,100 @@ func init() {
 }
 
 const (
+
 	// CustomerCreateRequestCardGatewayChargebee captures enum value "chargebee"
 	CustomerCreateRequestCardGatewayChargebee string = "chargebee"
+
 	// CustomerCreateRequestCardGatewayStripe captures enum value "stripe"
 	CustomerCreateRequestCardGatewayStripe string = "stripe"
+
 	// CustomerCreateRequestCardGatewayWepay captures enum value "wepay"
 	CustomerCreateRequestCardGatewayWepay string = "wepay"
+
 	// CustomerCreateRequestCardGatewayBraintree captures enum value "braintree"
 	CustomerCreateRequestCardGatewayBraintree string = "braintree"
+
 	// CustomerCreateRequestCardGatewayAuthorizeNet captures enum value "authorize_net"
 	CustomerCreateRequestCardGatewayAuthorizeNet string = "authorize_net"
+
 	// CustomerCreateRequestCardGatewayPaypalPro captures enum value "paypal_pro"
 	CustomerCreateRequestCardGatewayPaypalPro string = "paypal_pro"
+
 	// CustomerCreateRequestCardGatewayPin captures enum value "pin"
 	CustomerCreateRequestCardGatewayPin string = "pin"
+
 	// CustomerCreateRequestCardGatewayEway captures enum value "eway"
 	CustomerCreateRequestCardGatewayEway string = "eway"
+
 	// CustomerCreateRequestCardGatewayEwayRapid captures enum value "eway_rapid"
 	CustomerCreateRequestCardGatewayEwayRapid string = "eway_rapid"
+
 	// CustomerCreateRequestCardGatewayWorldpay captures enum value "worldpay"
 	CustomerCreateRequestCardGatewayWorldpay string = "worldpay"
+
 	// CustomerCreateRequestCardGatewayBalancedPayments captures enum value "balanced_payments"
 	CustomerCreateRequestCardGatewayBalancedPayments string = "balanced_payments"
+
 	// CustomerCreateRequestCardGatewayBeanstream captures enum value "beanstream"
 	CustomerCreateRequestCardGatewayBeanstream string = "beanstream"
+
 	// CustomerCreateRequestCardGatewayBluepay captures enum value "bluepay"
 	CustomerCreateRequestCardGatewayBluepay string = "bluepay"
+
 	// CustomerCreateRequestCardGatewayElavon captures enum value "elavon"
 	CustomerCreateRequestCardGatewayElavon string = "elavon"
+
 	// CustomerCreateRequestCardGatewayFirstDataGlobal captures enum value "first_data_global"
 	CustomerCreateRequestCardGatewayFirstDataGlobal string = "first_data_global"
+
 	// CustomerCreateRequestCardGatewayHdfc captures enum value "hdfc"
 	CustomerCreateRequestCardGatewayHdfc string = "hdfc"
+
 	// CustomerCreateRequestCardGatewayMigs captures enum value "migs"
 	CustomerCreateRequestCardGatewayMigs string = "migs"
+
 	// CustomerCreateRequestCardGatewayNmi captures enum value "nmi"
 	CustomerCreateRequestCardGatewayNmi string = "nmi"
+
 	// CustomerCreateRequestCardGatewayOgone captures enum value "ogone"
 	CustomerCreateRequestCardGatewayOgone string = "ogone"
+
 	// CustomerCreateRequestCardGatewayPaymill captures enum value "paymill"
 	CustomerCreateRequestCardGatewayPaymill string = "paymill"
+
 	// CustomerCreateRequestCardGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	CustomerCreateRequestCardGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// CustomerCreateRequestCardGatewaySagePay captures enum value "sage_pay"
 	CustomerCreateRequestCardGatewaySagePay string = "sage_pay"
+
 	// CustomerCreateRequestCardGatewayTco captures enum value "tco"
 	CustomerCreateRequestCardGatewayTco string = "tco"
+
 	// CustomerCreateRequestCardGatewayWirecard captures enum value "wirecard"
 	CustomerCreateRequestCardGatewayWirecard string = "wirecard"
+
 	// CustomerCreateRequestCardGatewayAmazonPayments captures enum value "amazon_payments"
 	CustomerCreateRequestCardGatewayAmazonPayments string = "amazon_payments"
+
 	// CustomerCreateRequestCardGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CustomerCreateRequestCardGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CustomerCreateRequestCardGatewayGocardless captures enum value "gocardless"
 	CustomerCreateRequestCardGatewayGocardless string = "gocardless"
+
 	// CustomerCreateRequestCardGatewayAdyen captures enum value "adyen"
 	CustomerCreateRequestCardGatewayAdyen string = "adyen"
+
 	// CustomerCreateRequestCardGatewayOrbital captures enum value "orbital"
 	CustomerCreateRequestCardGatewayOrbital string = "orbital"
+
 	// CustomerCreateRequestCardGatewayMonerisUs captures enum value "moneris_us"
 	CustomerCreateRequestCardGatewayMonerisUs string = "moneris_us"
+
 	// CustomerCreateRequestCardGatewayMoneris captures enum value "moneris"
 	CustomerCreateRequestCardGatewayMoneris string = "moneris"
+
 	// CustomerCreateRequestCardGatewayNotApplicable captures enum value "not_applicable"
 	CustomerCreateRequestCardGatewayNotApplicable string = "not_applicable"
 )
@@ -551,40 +474,58 @@ func init() {
 }
 
 const (
+
 	// CustomerCreateRequestEntityCodeA captures enum value "a"
 	CustomerCreateRequestEntityCodeA string = "a"
+
 	// CustomerCreateRequestEntityCodeB captures enum value "b"
 	CustomerCreateRequestEntityCodeB string = "b"
+
 	// CustomerCreateRequestEntityCodeC captures enum value "c"
 	CustomerCreateRequestEntityCodeC string = "c"
+
 	// CustomerCreateRequestEntityCodeD captures enum value "d"
 	CustomerCreateRequestEntityCodeD string = "d"
+
 	// CustomerCreateRequestEntityCodeE captures enum value "e"
 	CustomerCreateRequestEntityCodeE string = "e"
+
 	// CustomerCreateRequestEntityCodeF captures enum value "f"
 	CustomerCreateRequestEntityCodeF string = "f"
+
 	// CustomerCreateRequestEntityCodeG captures enum value "g"
 	CustomerCreateRequestEntityCodeG string = "g"
+
 	// CustomerCreateRequestEntityCodeH captures enum value "h"
 	CustomerCreateRequestEntityCodeH string = "h"
+
 	// CustomerCreateRequestEntityCodeI captures enum value "i"
 	CustomerCreateRequestEntityCodeI string = "i"
+
 	// CustomerCreateRequestEntityCodeJ captures enum value "j"
 	CustomerCreateRequestEntityCodeJ string = "j"
+
 	// CustomerCreateRequestEntityCodeK captures enum value "k"
 	CustomerCreateRequestEntityCodeK string = "k"
+
 	// CustomerCreateRequestEntityCodeL captures enum value "l"
 	CustomerCreateRequestEntityCodeL string = "l"
+
 	// CustomerCreateRequestEntityCodeN captures enum value "n"
 	CustomerCreateRequestEntityCodeN string = "n"
+
 	// CustomerCreateRequestEntityCodeP captures enum value "p"
 	CustomerCreateRequestEntityCodeP string = "p"
+
 	// CustomerCreateRequestEntityCodeQ captures enum value "q"
 	CustomerCreateRequestEntityCodeQ string = "q"
+
 	// CustomerCreateRequestEntityCodeR captures enum value "r"
 	CustomerCreateRequestEntityCodeR string = "r"
+
 	// CustomerCreateRequestEntityCodeMed1 captures enum value "med1"
 	CustomerCreateRequestEntityCodeMed1 string = "med1"
+
 	// CustomerCreateRequestEntityCodeMed2 captures enum value "med2"
 	CustomerCreateRequestEntityCodeMed2 string = "med2"
 )
@@ -624,68 +565,100 @@ func init() {
 }
 
 const (
+
 	// CustomerCreateRequestPaymentMethodGatewayChargebee captures enum value "chargebee"
 	CustomerCreateRequestPaymentMethodGatewayChargebee string = "chargebee"
+
 	// CustomerCreateRequestPaymentMethodGatewayStripe captures enum value "stripe"
 	CustomerCreateRequestPaymentMethodGatewayStripe string = "stripe"
+
 	// CustomerCreateRequestPaymentMethodGatewayWepay captures enum value "wepay"
 	CustomerCreateRequestPaymentMethodGatewayWepay string = "wepay"
+
 	// CustomerCreateRequestPaymentMethodGatewayBraintree captures enum value "braintree"
 	CustomerCreateRequestPaymentMethodGatewayBraintree string = "braintree"
+
 	// CustomerCreateRequestPaymentMethodGatewayAuthorizeNet captures enum value "authorize_net"
 	CustomerCreateRequestPaymentMethodGatewayAuthorizeNet string = "authorize_net"
+
 	// CustomerCreateRequestPaymentMethodGatewayPaypalPro captures enum value "paypal_pro"
 	CustomerCreateRequestPaymentMethodGatewayPaypalPro string = "paypal_pro"
+
 	// CustomerCreateRequestPaymentMethodGatewayPin captures enum value "pin"
 	CustomerCreateRequestPaymentMethodGatewayPin string = "pin"
+
 	// CustomerCreateRequestPaymentMethodGatewayEway captures enum value "eway"
 	CustomerCreateRequestPaymentMethodGatewayEway string = "eway"
+
 	// CustomerCreateRequestPaymentMethodGatewayEwayRapid captures enum value "eway_rapid"
 	CustomerCreateRequestPaymentMethodGatewayEwayRapid string = "eway_rapid"
+
 	// CustomerCreateRequestPaymentMethodGatewayWorldpay captures enum value "worldpay"
 	CustomerCreateRequestPaymentMethodGatewayWorldpay string = "worldpay"
+
 	// CustomerCreateRequestPaymentMethodGatewayBalancedPayments captures enum value "balanced_payments"
 	CustomerCreateRequestPaymentMethodGatewayBalancedPayments string = "balanced_payments"
+
 	// CustomerCreateRequestPaymentMethodGatewayBeanstream captures enum value "beanstream"
 	CustomerCreateRequestPaymentMethodGatewayBeanstream string = "beanstream"
+
 	// CustomerCreateRequestPaymentMethodGatewayBluepay captures enum value "bluepay"
 	CustomerCreateRequestPaymentMethodGatewayBluepay string = "bluepay"
+
 	// CustomerCreateRequestPaymentMethodGatewayElavon captures enum value "elavon"
 	CustomerCreateRequestPaymentMethodGatewayElavon string = "elavon"
+
 	// CustomerCreateRequestPaymentMethodGatewayFirstDataGlobal captures enum value "first_data_global"
 	CustomerCreateRequestPaymentMethodGatewayFirstDataGlobal string = "first_data_global"
+
 	// CustomerCreateRequestPaymentMethodGatewayHdfc captures enum value "hdfc"
 	CustomerCreateRequestPaymentMethodGatewayHdfc string = "hdfc"
+
 	// CustomerCreateRequestPaymentMethodGatewayMigs captures enum value "migs"
 	CustomerCreateRequestPaymentMethodGatewayMigs string = "migs"
+
 	// CustomerCreateRequestPaymentMethodGatewayNmi captures enum value "nmi"
 	CustomerCreateRequestPaymentMethodGatewayNmi string = "nmi"
+
 	// CustomerCreateRequestPaymentMethodGatewayOgone captures enum value "ogone"
 	CustomerCreateRequestPaymentMethodGatewayOgone string = "ogone"
+
 	// CustomerCreateRequestPaymentMethodGatewayPaymill captures enum value "paymill"
 	CustomerCreateRequestPaymentMethodGatewayPaymill string = "paymill"
+
 	// CustomerCreateRequestPaymentMethodGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	CustomerCreateRequestPaymentMethodGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// CustomerCreateRequestPaymentMethodGatewaySagePay captures enum value "sage_pay"
 	CustomerCreateRequestPaymentMethodGatewaySagePay string = "sage_pay"
+
 	// CustomerCreateRequestPaymentMethodGatewayTco captures enum value "tco"
 	CustomerCreateRequestPaymentMethodGatewayTco string = "tco"
+
 	// CustomerCreateRequestPaymentMethodGatewayWirecard captures enum value "wirecard"
 	CustomerCreateRequestPaymentMethodGatewayWirecard string = "wirecard"
+
 	// CustomerCreateRequestPaymentMethodGatewayAmazonPayments captures enum value "amazon_payments"
 	CustomerCreateRequestPaymentMethodGatewayAmazonPayments string = "amazon_payments"
+
 	// CustomerCreateRequestPaymentMethodGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CustomerCreateRequestPaymentMethodGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CustomerCreateRequestPaymentMethodGatewayGocardless captures enum value "gocardless"
 	CustomerCreateRequestPaymentMethodGatewayGocardless string = "gocardless"
+
 	// CustomerCreateRequestPaymentMethodGatewayAdyen captures enum value "adyen"
 	CustomerCreateRequestPaymentMethodGatewayAdyen string = "adyen"
+
 	// CustomerCreateRequestPaymentMethodGatewayOrbital captures enum value "orbital"
 	CustomerCreateRequestPaymentMethodGatewayOrbital string = "orbital"
+
 	// CustomerCreateRequestPaymentMethodGatewayMonerisUs captures enum value "moneris_us"
 	CustomerCreateRequestPaymentMethodGatewayMonerisUs string = "moneris_us"
+
 	// CustomerCreateRequestPaymentMethodGatewayMoneris captures enum value "moneris"
 	CustomerCreateRequestPaymentMethodGatewayMoneris string = "moneris"
+
 	// CustomerCreateRequestPaymentMethodGatewayNotApplicable captures enum value "not_applicable"
 	CustomerCreateRequestPaymentMethodGatewayNotApplicable string = "not_applicable"
 )
@@ -725,20 +698,28 @@ func init() {
 }
 
 const (
+
 	// CustomerCreateRequestPaymentMethodTypeCard captures enum value "card"
 	CustomerCreateRequestPaymentMethodTypeCard string = "card"
+
 	// CustomerCreateRequestPaymentMethodTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CustomerCreateRequestPaymentMethodTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CustomerCreateRequestPaymentMethodTypeAmazonPayments captures enum value "amazon_payments"
 	CustomerCreateRequestPaymentMethodTypeAmazonPayments string = "amazon_payments"
+
 	// CustomerCreateRequestPaymentMethodTypeDirectDebit captures enum value "direct_debit"
 	CustomerCreateRequestPaymentMethodTypeDirectDebit string = "direct_debit"
+
 	// CustomerCreateRequestPaymentMethodTypeGeneric captures enum value "generic"
 	CustomerCreateRequestPaymentMethodTypeGeneric string = "generic"
+
 	// CustomerCreateRequestPaymentMethodTypeAlipay captures enum value "alipay"
 	CustomerCreateRequestPaymentMethodTypeAlipay string = "alipay"
+
 	// CustomerCreateRequestPaymentMethodTypeUnionpay captures enum value "unionpay"
 	CustomerCreateRequestPaymentMethodTypeUnionpay string = "unionpay"
+
 	// CustomerCreateRequestPaymentMethodTypeApplePay captures enum value "apple_pay"
 	CustomerCreateRequestPaymentMethodTypeApplePay string = "apple_pay"
 )
@@ -778,8 +759,10 @@ func init() {
 }
 
 const (
+
 	// CustomerCreateRequestTaxabilityTaxable captures enum value "taxable"
 	CustomerCreateRequestTaxabilityTaxable string = "taxable"
+
 	// CustomerCreateRequestTaxabilityExempt captures enum value "exempt"
 	CustomerCreateRequestTaxabilityExempt string = "exempt"
 )

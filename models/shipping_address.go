@@ -17,7 +17,6 @@ import (
 
 // ShippingAddress shipping address
 // swagger:model ShippingAddress
-
 type ShippingAddress struct {
 
 	// city
@@ -63,34 +62,6 @@ type ShippingAddress struct {
 	Zip string `json:"zip,omitempty"`
 }
 
-/* polymorph ShippingAddress city false */
-
-/* polymorph ShippingAddress company false */
-
-/* polymorph ShippingAddress country false */
-
-/* polymorph ShippingAddress email false */
-
-/* polymorph ShippingAddress first_name false */
-
-/* polymorph ShippingAddress last_name false */
-
-/* polymorph ShippingAddress line1 false */
-
-/* polymorph ShippingAddress line2 false */
-
-/* polymorph ShippingAddress line3 false */
-
-/* polymorph ShippingAddress phone false */
-
-/* polymorph ShippingAddress state false */
-
-/* polymorph ShippingAddress state_code false */
-
-/* polymorph ShippingAddress validation_status false */
-
-/* polymorph ShippingAddress zip false */
-
 // Validate validates this shipping address
 func (m *ShippingAddress) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -119,12 +90,16 @@ func init() {
 }
 
 const (
+
 	// ShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	ShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// ShippingAddressValidationStatusValid captures enum value "valid"
 	ShippingAddressValidationStatusValid string = "valid"
+
 	// ShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	ShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// ShippingAddressValidationStatusInvalid captures enum value "invalid"
 	ShippingAddressValidationStatusInvalid string = "invalid"
 )

@@ -17,7 +17,6 @@ import (
 
 // SubscriptionImportForCustomerRequest subscription import for customer request
 // swagger:model SubscriptionImportForCustomerRequest
-
 type SubscriptionImportForCustomerRequest struct {
 
 	// auto collection
@@ -123,74 +122,6 @@ type SubscriptionImportForCustomerRequest struct {
 	TrialStart int64 `json:"trial_start,omitempty"`
 }
 
-/* polymorph SubscriptionImportForCustomerRequest auto_collection false */
-
-/* polymorph SubscriptionImportForCustomerRequest billing_cycles false */
-
-/* polymorph SubscriptionImportForCustomerRequest cancelled_at false */
-
-/* polymorph SubscriptionImportForCustomerRequest coupon_ids false */
-
-/* polymorph SubscriptionImportForCustomerRequest current_term_end false */
-
-/* polymorph SubscriptionImportForCustomerRequest current_term_start false */
-
-/* polymorph SubscriptionImportForCustomerRequest id false */
-
-/* polymorph SubscriptionImportForCustomerRequest invoice_notes false */
-
-/* polymorph SubscriptionImportForCustomerRequest meta_data false */
-
-/* polymorph SubscriptionImportForCustomerRequest payment_source_id false */
-
-/* polymorph SubscriptionImportForCustomerRequest plan_id false */
-
-/* polymorph SubscriptionImportForCustomerRequest plan_quantity false */
-
-/* polymorph SubscriptionImportForCustomerRequest plan_unit_price false */
-
-/* polymorph SubscriptionImportForCustomerRequest po_number false */
-
-/* polymorph SubscriptionImportForCustomerRequest setup_fee false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[city] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[company] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[country] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[email] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[first_name] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[last_name] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[line1] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[line2] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[line3] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[phone] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[state] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[state_code] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[validation_status] false */
-
-/* polymorph SubscriptionImportForCustomerRequest shipping_address[zip] false */
-
-/* polymorph SubscriptionImportForCustomerRequest start_date false */
-
-/* polymorph SubscriptionImportForCustomerRequest started_at false */
-
-/* polymorph SubscriptionImportForCustomerRequest status false */
-
-/* polymorph SubscriptionImportForCustomerRequest trial_end false */
-
-/* polymorph SubscriptionImportForCustomerRequest trial_start false */
-
 // Validate validates this subscription import for customer request
 func (m *SubscriptionImportForCustomerRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -229,8 +160,10 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportForCustomerRequestAutoCollectionOn captures enum value "on"
 	SubscriptionImportForCustomerRequestAutoCollectionOn string = "on"
+
 	// SubscriptionImportForCustomerRequestAutoCollectionOff captures enum value "off"
 	SubscriptionImportForCustomerRequestAutoCollectionOff string = "off"
 )
@@ -270,12 +203,16 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportForCustomerRequestShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	SubscriptionImportForCustomerRequestShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// SubscriptionImportForCustomerRequestShippingAddressValidationStatusValid captures enum value "valid"
 	SubscriptionImportForCustomerRequestShippingAddressValidationStatusValid string = "valid"
+
 	// SubscriptionImportForCustomerRequestShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	SubscriptionImportForCustomerRequestShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// SubscriptionImportForCustomerRequestShippingAddressValidationStatusInvalid captures enum value "invalid"
 	SubscriptionImportForCustomerRequestShippingAddressValidationStatusInvalid string = "invalid"
 )
@@ -315,14 +252,19 @@ func init() {
 }
 
 const (
+
 	// SubscriptionImportForCustomerRequestStatusFuture captures enum value "future"
 	SubscriptionImportForCustomerRequestStatusFuture string = "future"
+
 	// SubscriptionImportForCustomerRequestStatusInTrial captures enum value "in_trial"
 	SubscriptionImportForCustomerRequestStatusInTrial string = "in_trial"
+
 	// SubscriptionImportForCustomerRequestStatusActive captures enum value "active"
 	SubscriptionImportForCustomerRequestStatusActive string = "active"
+
 	// SubscriptionImportForCustomerRequestStatusNonRenewing captures enum value "non_renewing"
 	SubscriptionImportForCustomerRequestStatusNonRenewing string = "non_renewing"
+
 	// SubscriptionImportForCustomerRequestStatusCancelled captures enum value "cancelled"
 	SubscriptionImportForCustomerRequestStatusCancelled string = "cancelled"
 )

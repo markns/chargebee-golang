@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewImportSubscriptionSubscriptionParams creates a new ImportSubscriptionSubscriptionParams object
@@ -124,12 +124,10 @@ func (o *ImportSubscriptionSubscriptionParams) WriteToRequest(r runtime.ClientRe
 	}
 	var res []error
 
-	if o.SubscriptionImportSubscriptionRequest == nil {
-		o.SubscriptionImportSubscriptionRequest = new(models.SubscriptionImportSubscriptionRequest)
-	}
-
-	if err := r.SetBodyParam(o.SubscriptionImportSubscriptionRequest); err != nil {
-		return err
+	if o.SubscriptionImportSubscriptionRequest != nil {
+		if err := r.SetBodyParam(o.SubscriptionImportSubscriptionRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

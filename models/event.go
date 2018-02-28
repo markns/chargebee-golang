@@ -18,7 +18,6 @@ import (
 
 // Event event
 // swagger:model Event
-
 type Event struct {
 
 	// api version
@@ -42,20 +41,6 @@ type Event struct {
 	// webhooks
 	Webhooks []*Webhook `json:"webhooks"`
 }
-
-/* polymorph Event api_version false */
-
-/* polymorph Event event_type false */
-
-/* polymorph Event id false */
-
-/* polymorph Event occurred_at false */
-
-/* polymorph Event source false */
-
-/* polymorph Event user false */
-
-/* polymorph Event webhooks false */
 
 // Validate validates this event
 func (m *Event) Validate(formats strfmt.Registry) error {
@@ -100,8 +85,10 @@ func init() {
 }
 
 const (
+
 	// EventAPIVersionV1 captures enum value "v1"
 	EventAPIVersionV1 string = "v1"
+
 	// EventAPIVersionV2 captures enum value "v2"
 	EventAPIVersionV2 string = "v2"
 )
@@ -141,138 +128,205 @@ func init() {
 }
 
 const (
+
 	// EventEventTypePlanCreated captures enum value "plan_created"
 	EventEventTypePlanCreated string = "plan_created"
+
 	// EventEventTypePlanUpdated captures enum value "plan_updated"
 	EventEventTypePlanUpdated string = "plan_updated"
+
 	// EventEventTypePlanDeleted captures enum value "plan_deleted"
 	EventEventTypePlanDeleted string = "plan_deleted"
+
 	// EventEventTypeAddonCreated captures enum value "addon_created"
 	EventEventTypeAddonCreated string = "addon_created"
+
 	// EventEventTypeAddonUpdated captures enum value "addon_updated"
 	EventEventTypeAddonUpdated string = "addon_updated"
+
 	// EventEventTypeAddonDeleted captures enum value "addon_deleted"
 	EventEventTypeAddonDeleted string = "addon_deleted"
+
 	// EventEventTypeCouponCreated captures enum value "coupon_created"
 	EventEventTypeCouponCreated string = "coupon_created"
+
 	// EventEventTypeCouponUpdated captures enum value "coupon_updated"
 	EventEventTypeCouponUpdated string = "coupon_updated"
+
 	// EventEventTypeCouponDeleted captures enum value "coupon_deleted"
 	EventEventTypeCouponDeleted string = "coupon_deleted"
+
 	// EventEventTypeCouponSetCreated captures enum value "coupon_set_created"
 	EventEventTypeCouponSetCreated string = "coupon_set_created"
+
 	// EventEventTypeCouponSetUpdated captures enum value "coupon_set_updated"
 	EventEventTypeCouponSetUpdated string = "coupon_set_updated"
+
 	// EventEventTypeCouponSetDeleted captures enum value "coupon_set_deleted"
 	EventEventTypeCouponSetDeleted string = "coupon_set_deleted"
+
 	// EventEventTypeCouponCodesAdded captures enum value "coupon_codes_added"
 	EventEventTypeCouponCodesAdded string = "coupon_codes_added"
+
 	// EventEventTypeCouponCodesDeleted captures enum value "coupon_codes_deleted"
 	EventEventTypeCouponCodesDeleted string = "coupon_codes_deleted"
+
 	// EventEventTypeCouponCodesUpdated captures enum value "coupon_codes_updated"
 	EventEventTypeCouponCodesUpdated string = "coupon_codes_updated"
+
 	// EventEventTypeCustomerCreated captures enum value "customer_created"
 	EventEventTypeCustomerCreated string = "customer_created"
+
 	// EventEventTypeCustomerChanged captures enum value "customer_changed"
 	EventEventTypeCustomerChanged string = "customer_changed"
+
 	// EventEventTypeCustomerDeleted captures enum value "customer_deleted"
 	EventEventTypeCustomerDeleted string = "customer_deleted"
+
 	// EventEventTypeCustomerMovedOut captures enum value "customer_moved_out"
 	EventEventTypeCustomerMovedOut string = "customer_moved_out"
+
 	// EventEventTypeCustomerMovedIn captures enum value "customer_moved_in"
 	EventEventTypeCustomerMovedIn string = "customer_moved_in"
+
 	// EventEventTypePromotionalCreditsAdded captures enum value "promotional_credits_added"
 	EventEventTypePromotionalCreditsAdded string = "promotional_credits_added"
+
 	// EventEventTypePromotionalCreditsDeducted captures enum value "promotional_credits_deducted"
 	EventEventTypePromotionalCreditsDeducted string = "promotional_credits_deducted"
+
 	// EventEventTypeSubscriptionCreated captures enum value "subscription_created"
 	EventEventTypeSubscriptionCreated string = "subscription_created"
+
 	// EventEventTypeSubscriptionStarted captures enum value "subscription_started"
 	EventEventTypeSubscriptionStarted string = "subscription_started"
+
 	// EventEventTypeSubscriptionTrialEndReminder captures enum value "subscription_trial_end_reminder"
 	EventEventTypeSubscriptionTrialEndReminder string = "subscription_trial_end_reminder"
+
 	// EventEventTypeSubscriptionActivated captures enum value "subscription_activated"
 	EventEventTypeSubscriptionActivated string = "subscription_activated"
+
 	// EventEventTypeSubscriptionChanged captures enum value "subscription_changed"
 	EventEventTypeSubscriptionChanged string = "subscription_changed"
+
 	// EventEventTypeSubscriptionCancellationScheduled captures enum value "subscription_cancellation_scheduled"
 	EventEventTypeSubscriptionCancellationScheduled string = "subscription_cancellation_scheduled"
+
 	// EventEventTypeSubscriptionCancellationReminder captures enum value "subscription_cancellation_reminder"
 	EventEventTypeSubscriptionCancellationReminder string = "subscription_cancellation_reminder"
+
 	// EventEventTypeSubscriptionCancelled captures enum value "subscription_cancelled"
 	EventEventTypeSubscriptionCancelled string = "subscription_cancelled"
+
 	// EventEventTypeSubscriptionReactivated captures enum value "subscription_reactivated"
 	EventEventTypeSubscriptionReactivated string = "subscription_reactivated"
+
 	// EventEventTypeSubscriptionRenewed captures enum value "subscription_renewed"
 	EventEventTypeSubscriptionRenewed string = "subscription_renewed"
+
 	// EventEventTypeSubscriptionScheduledCancellationRemoved captures enum value "subscription_scheduled_cancellation_removed"
 	EventEventTypeSubscriptionScheduledCancellationRemoved string = "subscription_scheduled_cancellation_removed"
+
 	// EventEventTypeSubscriptionChangesScheduled captures enum value "subscription_changes_scheduled"
 	EventEventTypeSubscriptionChangesScheduled string = "subscription_changes_scheduled"
+
 	// EventEventTypeSubscriptionScheduledChangesRemoved captures enum value "subscription_scheduled_changes_removed"
 	EventEventTypeSubscriptionScheduledChangesRemoved string = "subscription_scheduled_changes_removed"
+
 	// EventEventTypeSubscriptionShippingAddressUpdated captures enum value "subscription_shipping_address_updated"
 	EventEventTypeSubscriptionShippingAddressUpdated string = "subscription_shipping_address_updated"
+
 	// EventEventTypeSubscriptionDeleted captures enum value "subscription_deleted"
 	EventEventTypeSubscriptionDeleted string = "subscription_deleted"
+
 	// EventEventTypePendingInvoiceCreated captures enum value "pending_invoice_created"
 	EventEventTypePendingInvoiceCreated string = "pending_invoice_created"
+
 	// EventEventTypePendingInvoiceUpdated captures enum value "pending_invoice_updated"
 	EventEventTypePendingInvoiceUpdated string = "pending_invoice_updated"
+
 	// EventEventTypeInvoiceGenerated captures enum value "invoice_generated"
 	EventEventTypeInvoiceGenerated string = "invoice_generated"
+
 	// EventEventTypeInvoiceUpdated captures enum value "invoice_updated"
 	EventEventTypeInvoiceUpdated string = "invoice_updated"
+
 	// EventEventTypeInvoiceDeleted captures enum value "invoice_deleted"
 	EventEventTypeInvoiceDeleted string = "invoice_deleted"
+
 	// EventEventTypeCreditNoteCreated captures enum value "credit_note_created"
 	EventEventTypeCreditNoteCreated string = "credit_note_created"
+
 	// EventEventTypeCreditNoteUpdated captures enum value "credit_note_updated"
 	EventEventTypeCreditNoteUpdated string = "credit_note_updated"
+
 	// EventEventTypeCreditNoteDeleted captures enum value "credit_note_deleted"
 	EventEventTypeCreditNoteDeleted string = "credit_note_deleted"
+
 	// EventEventTypeSubscriptionRenewalReminder captures enum value "subscription_renewal_reminder"
 	EventEventTypeSubscriptionRenewalReminder string = "subscription_renewal_reminder"
+
 	// EventEventTypeTransactionCreated captures enum value "transaction_created"
 	EventEventTypeTransactionCreated string = "transaction_created"
+
 	// EventEventTypeTransactionUpdated captures enum value "transaction_updated"
 	EventEventTypeTransactionUpdated string = "transaction_updated"
+
 	// EventEventTypeTransactionDeleted captures enum value "transaction_deleted"
 	EventEventTypeTransactionDeleted string = "transaction_deleted"
+
 	// EventEventTypePaymentSucceeded captures enum value "payment_succeeded"
 	EventEventTypePaymentSucceeded string = "payment_succeeded"
+
 	// EventEventTypePaymentFailed captures enum value "payment_failed"
 	EventEventTypePaymentFailed string = "payment_failed"
+
 	// EventEventTypePaymentRefunded captures enum value "payment_refunded"
 	EventEventTypePaymentRefunded string = "payment_refunded"
+
 	// EventEventTypePaymentInitiated captures enum value "payment_initiated"
 	EventEventTypePaymentInitiated string = "payment_initiated"
+
 	// EventEventTypeRefundInitiated captures enum value "refund_initiated"
 	EventEventTypeRefundInitiated string = "refund_initiated"
+
 	// EventEventTypeNetdPaymentDueReminder captures enum value "netd_payment_due_reminder"
 	EventEventTypeNetdPaymentDueReminder string = "netd_payment_due_reminder"
+
 	// EventEventTypeCardAdded captures enum value "card_added"
 	EventEventTypeCardAdded string = "card_added"
+
 	// EventEventTypeCardUpdated captures enum value "card_updated"
 	EventEventTypeCardUpdated string = "card_updated"
+
 	// EventEventTypeCardExpiryReminder captures enum value "card_expiry_reminder"
 	EventEventTypeCardExpiryReminder string = "card_expiry_reminder"
+
 	// EventEventTypeCardExpired captures enum value "card_expired"
 	EventEventTypeCardExpired string = "card_expired"
+
 	// EventEventTypeCardDeleted captures enum value "card_deleted"
 	EventEventTypeCardDeleted string = "card_deleted"
+
 	// EventEventTypePaymentSourceAdded captures enum value "payment_source_added"
 	EventEventTypePaymentSourceAdded string = "payment_source_added"
+
 	// EventEventTypePaymentSourceUpdated captures enum value "payment_source_updated"
 	EventEventTypePaymentSourceUpdated string = "payment_source_updated"
+
 	// EventEventTypePaymentSourceDeleted captures enum value "payment_source_deleted"
 	EventEventTypePaymentSourceDeleted string = "payment_source_deleted"
+
 	// EventEventTypeUnbilledChargesCreated captures enum value "unbilled_charges_created"
 	EventEventTypeUnbilledChargesCreated string = "unbilled_charges_created"
+
 	// EventEventTypeUnbilledChargesVoided captures enum value "unbilled_charges_voided"
 	EventEventTypeUnbilledChargesVoided string = "unbilled_charges_voided"
+
 	// EventEventTypeUnbilledChargesDeleted captures enum value "unbilled_charges_deleted"
 	EventEventTypeUnbilledChargesDeleted string = "unbilled_charges_deleted"
+
 	// EventEventTypeUnbilledChargesInvoiced captures enum value "unbilled_charges_invoiced"
 	EventEventTypeUnbilledChargesInvoiced string = "unbilled_charges_invoiced"
 )
@@ -312,26 +366,37 @@ func init() {
 }
 
 const (
+
 	// EventSourceAdminConsole captures enum value "admin_console"
 	EventSourceAdminConsole string = "admin_console"
+
 	// EventSourceAPI captures enum value "api"
 	EventSourceAPI string = "api"
+
 	// EventSourceScheduledJob captures enum value "scheduled_job"
 	EventSourceScheduledJob string = "scheduled_job"
+
 	// EventSourceHostedPage captures enum value "hosted_page"
 	EventSourceHostedPage string = "hosted_page"
+
 	// EventSourcePortal captures enum value "portal"
 	EventSourcePortal string = "portal"
+
 	// EventSourceSystem captures enum value "system"
 	EventSourceSystem string = "system"
+
 	// EventSourceNone captures enum value "none"
 	EventSourceNone string = "none"
+
 	// EventSourceJsAPI captures enum value "js_api"
 	EventSourceJsAPI string = "js_api"
+
 	// EventSourceMigration captures enum value "migration"
 	EventSourceMigration string = "migration"
+
 	// EventSourceBulkOperation captures enum value "bulk_operation"
 	EventSourceBulkOperation string = "bulk_operation"
+
 	// EventSourceExternalService captures enum value "external_service"
 	EventSourceExternalService string = "external_service"
 )
@@ -378,6 +443,7 @@ func (m *Event) validateWebhooks(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}

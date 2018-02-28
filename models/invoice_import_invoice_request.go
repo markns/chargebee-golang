@@ -17,7 +17,6 @@ import (
 
 // InvoiceImportInvoiceRequest invoice import invoice request
 // swagger:model InvoiceImportInvoiceRequest
-
 type InvoiceImportInvoiceRequest struct {
 
 	// billing address city
@@ -150,92 +149,6 @@ type InvoiceImportInvoiceRequest struct {
 	VatNumber string `json:"vat_number,omitempty"`
 }
 
-/* polymorph InvoiceImportInvoiceRequest billing_address[city] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[company] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[country] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[email] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[first_name] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[last_name] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[line1] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[line2] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[line3] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[phone] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[state] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[state_code] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[validation_status] false */
-
-/* polymorph InvoiceImportInvoiceRequest billing_address[zip] false */
-
-/* polymorph InvoiceImportInvoiceRequest currency_code false */
-
-/* polymorph InvoiceImportInvoiceRequest customer_id false */
-
-/* polymorph InvoiceImportInvoiceRequest date false */
-
-/* polymorph InvoiceImportInvoiceRequest due_date false */
-
-/* polymorph InvoiceImportInvoiceRequest id false */
-
-/* polymorph InvoiceImportInvoiceRequest net_term_days false */
-
-/* polymorph InvoiceImportInvoiceRequest po_number false */
-
-/* polymorph InvoiceImportInvoiceRequest price_type false */
-
-/* polymorph InvoiceImportInvoiceRequest round_off false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[city] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[company] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[country] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[email] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[first_name] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[last_name] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[line1] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[line2] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[line3] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[phone] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[state] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[state_code] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[validation_status] false */
-
-/* polymorph InvoiceImportInvoiceRequest shipping_address[zip] false */
-
-/* polymorph InvoiceImportInvoiceRequest status false */
-
-/* polymorph InvoiceImportInvoiceRequest subscription_id false */
-
-/* polymorph InvoiceImportInvoiceRequest tax_override_reason false */
-
-/* polymorph InvoiceImportInvoiceRequest total false */
-
-/* polymorph InvoiceImportInvoiceRequest use_for_proration false */
-
-/* polymorph InvoiceImportInvoiceRequest vat_number false */
-
 // Validate validates this invoice import invoice request
 func (m *InvoiceImportInvoiceRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -284,12 +197,16 @@ func init() {
 }
 
 const (
+
 	// InvoiceImportInvoiceRequestBillingAddressValidationStatusNotValidated captures enum value "not_validated"
 	InvoiceImportInvoiceRequestBillingAddressValidationStatusNotValidated string = "not_validated"
+
 	// InvoiceImportInvoiceRequestBillingAddressValidationStatusValid captures enum value "valid"
 	InvoiceImportInvoiceRequestBillingAddressValidationStatusValid string = "valid"
+
 	// InvoiceImportInvoiceRequestBillingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	InvoiceImportInvoiceRequestBillingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// InvoiceImportInvoiceRequestBillingAddressValidationStatusInvalid captures enum value "invalid"
 	InvoiceImportInvoiceRequestBillingAddressValidationStatusInvalid string = "invalid"
 )
@@ -329,8 +246,10 @@ func init() {
 }
 
 const (
+
 	// InvoiceImportInvoiceRequestPriceTypeTaxExclusive captures enum value "tax_exclusive"
 	InvoiceImportInvoiceRequestPriceTypeTaxExclusive string = "tax_exclusive"
+
 	// InvoiceImportInvoiceRequestPriceTypeTaxInclusive captures enum value "tax_inclusive"
 	InvoiceImportInvoiceRequestPriceTypeTaxInclusive string = "tax_inclusive"
 )
@@ -370,12 +289,16 @@ func init() {
 }
 
 const (
+
 	// InvoiceImportInvoiceRequestShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	InvoiceImportInvoiceRequestShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// InvoiceImportInvoiceRequestShippingAddressValidationStatusValid captures enum value "valid"
 	InvoiceImportInvoiceRequestShippingAddressValidationStatusValid string = "valid"
+
 	// InvoiceImportInvoiceRequestShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	InvoiceImportInvoiceRequestShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// InvoiceImportInvoiceRequestShippingAddressValidationStatusInvalid captures enum value "invalid"
 	InvoiceImportInvoiceRequestShippingAddressValidationStatusInvalid string = "invalid"
 )
@@ -415,14 +338,19 @@ func init() {
 }
 
 const (
+
 	// InvoiceImportInvoiceRequestStatusFuture captures enum value "future"
 	InvoiceImportInvoiceRequestStatusFuture string = "future"
+
 	// InvoiceImportInvoiceRequestStatusInTrial captures enum value "in_trial"
 	InvoiceImportInvoiceRequestStatusInTrial string = "in_trial"
+
 	// InvoiceImportInvoiceRequestStatusActive captures enum value "active"
 	InvoiceImportInvoiceRequestStatusActive string = "active"
+
 	// InvoiceImportInvoiceRequestStatusNonRenewing captures enum value "non_renewing"
 	InvoiceImportInvoiceRequestStatusNonRenewing string = "non_renewing"
+
 	// InvoiceImportInvoiceRequestStatusCancelled captures enum value "cancelled"
 	InvoiceImportInvoiceRequestStatusCancelled string = "cancelled"
 )
@@ -462,8 +390,10 @@ func init() {
 }
 
 const (
+
 	// InvoiceImportInvoiceRequestTaxOverrideReasonIDExempt captures enum value "id_exempt"
 	InvoiceImportInvoiceRequestTaxOverrideReasonIDExempt string = "id_exempt"
+
 	// InvoiceImportInvoiceRequestTaxOverrideReasonCustomerExempt captures enum value "customer_exempt"
 	InvoiceImportInvoiceRequestTaxOverrideReasonCustomerExempt string = "customer_exempt"
 )

@@ -17,7 +17,6 @@ import (
 
 // LineItemTax line item tax
 // swagger:model LineItemTax
-
 type LineItemTax struct {
 
 	// line item id
@@ -41,20 +40,6 @@ type LineItemTax struct {
 	// tax rate
 	TaxRate float64 `json:"tax_rate,omitempty"`
 }
-
-/* polymorph LineItemTax line_item_id false */
-
-/* polymorph LineItemTax tax_amount false */
-
-/* polymorph LineItemTax tax_juris_code false */
-
-/* polymorph LineItemTax tax_juris_name false */
-
-/* polymorph LineItemTax tax_juris_type false */
-
-/* polymorph LineItemTax tax_name false */
-
-/* polymorph LineItemTax tax_rate false */
 
 // Validate validates this line item tax
 func (m *LineItemTax) Validate(formats strfmt.Registry) error {
@@ -84,16 +69,22 @@ func init() {
 }
 
 const (
+
 	// LineItemTaxTaxJurisTypeCountry captures enum value "country"
 	LineItemTaxTaxJurisTypeCountry string = "country"
+
 	// LineItemTaxTaxJurisTypeState captures enum value "state"
 	LineItemTaxTaxJurisTypeState string = "state"
+
 	// LineItemTaxTaxJurisTypeCounty captures enum value "county"
 	LineItemTaxTaxJurisTypeCounty string = "county"
+
 	// LineItemTaxTaxJurisTypeCity captures enum value "city"
 	LineItemTaxTaxJurisTypeCity string = "city"
+
 	// LineItemTaxTaxJurisTypeSpecial captures enum value "special"
 	LineItemTaxTaxJurisTypeSpecial string = "special"
+
 	// LineItemTaxTaxJurisTypeOther captures enum value "other"
 	LineItemTaxTaxJurisTypeOther string = "other"
 )

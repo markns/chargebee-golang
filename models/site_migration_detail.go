@@ -17,7 +17,6 @@ import (
 
 // SiteMigrationDetail site migration detail
 // swagger:model SiteMigrationDetail
-
 type SiteMigrationDetail struct {
 
 	// entity id
@@ -38,18 +37,6 @@ type SiteMigrationDetail struct {
 	// status
 	Status string `json:"status,omitempty"`
 }
-
-/* polymorph SiteMigrationDetail entity_id false */
-
-/* polymorph SiteMigrationDetail entity_id_at_other_site false */
-
-/* polymorph SiteMigrationDetail entity_type false */
-
-/* polymorph SiteMigrationDetail migrated_at false */
-
-/* polymorph SiteMigrationDetail other_site_name false */
-
-/* polymorph SiteMigrationDetail status false */
 
 // Validate validates this site migration detail
 func (m *SiteMigrationDetail) Validate(formats strfmt.Registry) error {
@@ -84,20 +71,28 @@ func init() {
 }
 
 const (
+
 	// SiteMigrationDetailEntityTypeCustomer captures enum value "customer"
 	SiteMigrationDetailEntityTypeCustomer string = "customer"
+
 	// SiteMigrationDetailEntityTypeSubscription captures enum value "subscription"
 	SiteMigrationDetailEntityTypeSubscription string = "subscription"
+
 	// SiteMigrationDetailEntityTypeInvoice captures enum value "invoice"
 	SiteMigrationDetailEntityTypeInvoice string = "invoice"
+
 	// SiteMigrationDetailEntityTypeCreditNote captures enum value "credit_note"
 	SiteMigrationDetailEntityTypeCreditNote string = "credit_note"
+
 	// SiteMigrationDetailEntityTypeTransaction captures enum value "transaction"
 	SiteMigrationDetailEntityTypeTransaction string = "transaction"
+
 	// SiteMigrationDetailEntityTypePlan captures enum value "plan"
 	SiteMigrationDetailEntityTypePlan string = "plan"
+
 	// SiteMigrationDetailEntityTypeAddon captures enum value "addon"
 	SiteMigrationDetailEntityTypeAddon string = "addon"
+
 	// SiteMigrationDetailEntityTypeCoupon captures enum value "coupon"
 	SiteMigrationDetailEntityTypeCoupon string = "coupon"
 )
@@ -137,14 +132,19 @@ func init() {
 }
 
 const (
+
 	// SiteMigrationDetailStatusFuture captures enum value "future"
 	SiteMigrationDetailStatusFuture string = "future"
+
 	// SiteMigrationDetailStatusInTrial captures enum value "in_trial"
 	SiteMigrationDetailStatusInTrial string = "in_trial"
+
 	// SiteMigrationDetailStatusActive captures enum value "active"
 	SiteMigrationDetailStatusActive string = "active"
+
 	// SiteMigrationDetailStatusNonRenewing captures enum value "non_renewing"
 	SiteMigrationDetailStatusNonRenewing string = "non_renewing"
+
 	// SiteMigrationDetailStatusCancelled captures enum value "cancelled"
 	SiteMigrationDetailStatusCancelled string = "cancelled"
 )

@@ -14,14 +14,11 @@ import (
 
 // PaymentSourceResponse payment source response
 // swagger:model PaymentSourceResponse
-
 type PaymentSourceResponse struct {
 
 	// paymentsource
 	Paymentsource *PaymentSource `json:"paymentsource,omitempty"`
 }
-
-/* polymorph PaymentSourceResponse paymentsource false */
 
 // Validate validates this payment source response
 func (m *PaymentSourceResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *PaymentSourceResponse) validatePaymentsource(formats strfmt.Registry) e
 			}
 			return err
 		}
+
 	}
 
 	return nil

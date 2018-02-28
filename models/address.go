@@ -17,7 +17,6 @@ import (
 
 // Address address
 // swagger:model Address
-
 type Address struct {
 
 	// addr
@@ -69,38 +68,6 @@ type Address struct {
 	Zip string `json:"zip,omitempty"`
 }
 
-/* polymorph Address addr false */
-
-/* polymorph Address city false */
-
-/* polymorph Address company false */
-
-/* polymorph Address country false */
-
-/* polymorph Address email false */
-
-/* polymorph Address extended_addr false */
-
-/* polymorph Address extended_addr2 false */
-
-/* polymorph Address first_name false */
-
-/* polymorph Address label false */
-
-/* polymorph Address last_name false */
-
-/* polymorph Address phone false */
-
-/* polymorph Address state false */
-
-/* polymorph Address state_code false */
-
-/* polymorph Address subscription_id false */
-
-/* polymorph Address validation_status false */
-
-/* polymorph Address zip false */
-
 // Validate validates this address
 func (m *Address) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -129,12 +96,16 @@ func init() {
 }
 
 const (
+
 	// AddressValidationStatusNotValidated captures enum value "not_validated"
 	AddressValidationStatusNotValidated string = "not_validated"
+
 	// AddressValidationStatusValid captures enum value "valid"
 	AddressValidationStatusValid string = "valid"
+
 	// AddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	AddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// AddressValidationStatusInvalid captures enum value "invalid"
 	AddressValidationStatusInvalid string = "invalid"
 )

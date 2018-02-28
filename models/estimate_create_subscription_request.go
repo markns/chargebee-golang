@@ -17,7 +17,6 @@ import (
 
 // EstimateCreateSubscriptionRequest estimate create subscription request
 // swagger:model EstimateCreateSubscriptionRequest
-
 type EstimateCreateSubscriptionRequest struct {
 
 	// billing address city
@@ -123,74 +122,6 @@ type EstimateCreateSubscriptionRequest struct {
 	TermsToCharge int32 `json:"terms_to_charge,omitempty"`
 }
 
-/* polymorph EstimateCreateSubscriptionRequest billing_address[city] false */
-
-/* polymorph EstimateCreateSubscriptionRequest billing_address[country] false */
-
-/* polymorph EstimateCreateSubscriptionRequest billing_address[line1] false */
-
-/* polymorph EstimateCreateSubscriptionRequest billing_address[line2] false */
-
-/* polymorph EstimateCreateSubscriptionRequest billing_address[line3] false */
-
-/* polymorph EstimateCreateSubscriptionRequest billing_address[state_code] false */
-
-/* polymorph EstimateCreateSubscriptionRequest billing_address[validation_status] false */
-
-/* polymorph EstimateCreateSubscriptionRequest billing_address[zip] false */
-
-/* polymorph EstimateCreateSubscriptionRequest billing_alignment_mode false */
-
-/* polymorph EstimateCreateSubscriptionRequest billing_cycles false */
-
-/* polymorph EstimateCreateSubscriptionRequest coupon_ids false */
-
-/* polymorph EstimateCreateSubscriptionRequest customer[entity_code] false */
-
-/* polymorph EstimateCreateSubscriptionRequest customer[exempt_number] false */
-
-/* polymorph EstimateCreateSubscriptionRequest customer[registered_for_gst] false */
-
-/* polymorph EstimateCreateSubscriptionRequest customer[taxability] false */
-
-/* polymorph EstimateCreateSubscriptionRequest customer[vat_number] false */
-
-/* polymorph EstimateCreateSubscriptionRequest invoice_immediately false */
-
-/* polymorph EstimateCreateSubscriptionRequest shipping_address[city] false */
-
-/* polymorph EstimateCreateSubscriptionRequest shipping_address[country] false */
-
-/* polymorph EstimateCreateSubscriptionRequest shipping_address[line1] false */
-
-/* polymorph EstimateCreateSubscriptionRequest shipping_address[line2] false */
-
-/* polymorph EstimateCreateSubscriptionRequest shipping_address[line3] false */
-
-/* polymorph EstimateCreateSubscriptionRequest shipping_address[state_code] false */
-
-/* polymorph EstimateCreateSubscriptionRequest shipping_address[validation_status] false */
-
-/* polymorph EstimateCreateSubscriptionRequest shipping_address[zip] false */
-
-/* polymorph EstimateCreateSubscriptionRequest subscription[coupon] false */
-
-/* polymorph EstimateCreateSubscriptionRequest subscription[id] false */
-
-/* polymorph EstimateCreateSubscriptionRequest subscription[plan_id] false */
-
-/* polymorph EstimateCreateSubscriptionRequest subscription[plan_quantity] false */
-
-/* polymorph EstimateCreateSubscriptionRequest subscription[plan_unit_price] false */
-
-/* polymorph EstimateCreateSubscriptionRequest subscription[setup_fee] false */
-
-/* polymorph EstimateCreateSubscriptionRequest subscription[start_date] false */
-
-/* polymorph EstimateCreateSubscriptionRequest subscription[trial_end] false */
-
-/* polymorph EstimateCreateSubscriptionRequest terms_to_charge false */
-
 // Validate validates this estimate create subscription request
 func (m *EstimateCreateSubscriptionRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -239,12 +170,16 @@ func init() {
 }
 
 const (
+
 	// EstimateCreateSubscriptionRequestBillingAddressValidationStatusNotValidated captures enum value "not_validated"
 	EstimateCreateSubscriptionRequestBillingAddressValidationStatusNotValidated string = "not_validated"
+
 	// EstimateCreateSubscriptionRequestBillingAddressValidationStatusValid captures enum value "valid"
 	EstimateCreateSubscriptionRequestBillingAddressValidationStatusValid string = "valid"
+
 	// EstimateCreateSubscriptionRequestBillingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	EstimateCreateSubscriptionRequestBillingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// EstimateCreateSubscriptionRequestBillingAddressValidationStatusInvalid captures enum value "invalid"
 	EstimateCreateSubscriptionRequestBillingAddressValidationStatusInvalid string = "invalid"
 )
@@ -284,8 +219,10 @@ func init() {
 }
 
 const (
+
 	// EstimateCreateSubscriptionRequestBillingAlignmentModeImmediate captures enum value "immediate"
 	EstimateCreateSubscriptionRequestBillingAlignmentModeImmediate string = "immediate"
+
 	// EstimateCreateSubscriptionRequestBillingAlignmentModeDelayed captures enum value "delayed"
 	EstimateCreateSubscriptionRequestBillingAlignmentModeDelayed string = "delayed"
 )
@@ -325,40 +262,58 @@ func init() {
 }
 
 const (
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeA captures enum value "a"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeA string = "a"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeB captures enum value "b"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeB string = "b"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeC captures enum value "c"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeC string = "c"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeD captures enum value "d"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeD string = "d"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeE captures enum value "e"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeE string = "e"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeF captures enum value "f"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeF string = "f"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeG captures enum value "g"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeG string = "g"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeH captures enum value "h"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeH string = "h"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeI captures enum value "i"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeI string = "i"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeJ captures enum value "j"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeJ string = "j"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeK captures enum value "k"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeK string = "k"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeL captures enum value "l"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeL string = "l"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeN captures enum value "n"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeN string = "n"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeP captures enum value "p"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeP string = "p"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeQ captures enum value "q"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeQ string = "q"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeR captures enum value "r"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeR string = "r"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeMed1 captures enum value "med1"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeMed1 string = "med1"
+
 	// EstimateCreateSubscriptionRequestCustomerEntityCodeMed2 captures enum value "med2"
 	EstimateCreateSubscriptionRequestCustomerEntityCodeMed2 string = "med2"
 )
@@ -398,8 +353,10 @@ func init() {
 }
 
 const (
+
 	// EstimateCreateSubscriptionRequestCustomerTaxabilityTaxable captures enum value "taxable"
 	EstimateCreateSubscriptionRequestCustomerTaxabilityTaxable string = "taxable"
+
 	// EstimateCreateSubscriptionRequestCustomerTaxabilityExempt captures enum value "exempt"
 	EstimateCreateSubscriptionRequestCustomerTaxabilityExempt string = "exempt"
 )
@@ -439,12 +396,16 @@ func init() {
 }
 
 const (
+
 	// EstimateCreateSubscriptionRequestShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	EstimateCreateSubscriptionRequestShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// EstimateCreateSubscriptionRequestShippingAddressValidationStatusValid captures enum value "valid"
 	EstimateCreateSubscriptionRequestShippingAddressValidationStatusValid string = "valid"
+
 	// EstimateCreateSubscriptionRequestShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	EstimateCreateSubscriptionRequestShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// EstimateCreateSubscriptionRequestShippingAddressValidationStatusInvalid captures enum value "invalid"
 	EstimateCreateSubscriptionRequestShippingAddressValidationStatusInvalid string = "invalid"
 )

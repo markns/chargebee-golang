@@ -18,7 +18,6 @@ import (
 
 // Invoice invoice
 // swagger:model Invoice
-
 type Invoice struct {
 
 	// adjustment credit notes
@@ -154,94 +153,6 @@ type Invoice struct {
 	WriteOffAmount int32 `json:"write_off_amount,omitempty"`
 }
 
-/* polymorph Invoice adjustment_credit_notes false */
-
-/* polymorph Invoice amount_adjusted false */
-
-/* polymorph Invoice amount_due false */
-
-/* polymorph Invoice amount_paid false */
-
-/* polymorph Invoice amount_to_collect false */
-
-/* polymorph Invoice applied_credits false */
-
-/* polymorph Invoice billing_address false */
-
-/* polymorph Invoice credits_applied false */
-
-/* polymorph Invoice currency_code false */
-
-/* polymorph Invoice customer_id false */
-
-/* polymorph Invoice date false */
-
-/* polymorph Invoice deleted false */
-
-/* polymorph Invoice discounts false */
-
-/* polymorph Invoice due_date false */
-
-/* polymorph Invoice dunning_status false */
-
-/* polymorph Invoice first_invoice false */
-
-/* polymorph Invoice has_advance_charges false */
-
-/* polymorph Invoice id false */
-
-/* polymorph Invoice issued_credit_notes false */
-
-/* polymorph Invoice line_item_discounts false */
-
-/* polymorph Invoice line_item_taxes false */
-
-/* polymorph Invoice line_items false */
-
-/* polymorph Invoice linked_orders false */
-
-/* polymorph Invoice linked_payments false */
-
-/* polymorph Invoice net_term_days false */
-
-/* polymorph Invoice next_retry_at false */
-
-/* polymorph Invoice notes false */
-
-/* polymorph Invoice paid_at false */
-
-/* polymorph Invoice po_number false */
-
-/* polymorph Invoice price_type false */
-
-/* polymorph Invoice recurring false */
-
-/* polymorph Invoice resource_version false */
-
-/* polymorph Invoice round_off_amount false */
-
-/* polymorph Invoice shipping_address false */
-
-/* polymorph Invoice status false */
-
-/* polymorph Invoice sub_total false */
-
-/* polymorph Invoice subscription_id false */
-
-/* polymorph Invoice tax false */
-
-/* polymorph Invoice taxes false */
-
-/* polymorph Invoice total false */
-
-/* polymorph Invoice updated_at false */
-
-/* polymorph Invoice vat_number false */
-
-/* polymorph Invoice voided_at false */
-
-/* polymorph Invoice write_off_amount false */
-
 // Validate validates this invoice
 func (m *Invoice) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -352,6 +263,7 @@ func (m *Invoice) validateAdjustmentCreditNotes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -379,6 +291,7 @@ func (m *Invoice) validateAppliedCredits(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -400,6 +313,7 @@ func (m *Invoice) validateBillingAddress(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -425,6 +339,7 @@ func (m *Invoice) validateDiscounts(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -445,12 +360,16 @@ func init() {
 }
 
 const (
+
 	// InvoiceDunningStatusInProgress captures enum value "in_progress"
 	InvoiceDunningStatusInProgress string = "in_progress"
+
 	// InvoiceDunningStatusExhausted captures enum value "exhausted"
 	InvoiceDunningStatusExhausted string = "exhausted"
+
 	// InvoiceDunningStatusStopped captures enum value "stopped"
 	InvoiceDunningStatusStopped string = "stopped"
+
 	// InvoiceDunningStatusSuccess captures enum value "success"
 	InvoiceDunningStatusSuccess string = "success"
 )
@@ -497,6 +416,7 @@ func (m *Invoice) validateIssuedCreditNotes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -524,6 +444,7 @@ func (m *Invoice) validateLineItemDiscounts(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -551,6 +472,7 @@ func (m *Invoice) validateLineItemTaxes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -578,6 +500,7 @@ func (m *Invoice) validateLineItems(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -605,6 +528,7 @@ func (m *Invoice) validateLinkedOrders(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -632,6 +556,7 @@ func (m *Invoice) validateLinkedPayments(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -659,6 +584,7 @@ func (m *Invoice) validateNotes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -679,8 +605,10 @@ func init() {
 }
 
 const (
+
 	// InvoicePriceTypeTaxExclusive captures enum value "tax_exclusive"
 	InvoicePriceTypeTaxExclusive string = "tax_exclusive"
+
 	// InvoicePriceTypeTaxInclusive captures enum value "tax_inclusive"
 	InvoicePriceTypeTaxInclusive string = "tax_inclusive"
 )
@@ -721,6 +649,7 @@ func (m *Invoice) validateShippingAddress(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -739,14 +668,19 @@ func init() {
 }
 
 const (
+
 	// InvoiceStatusFuture captures enum value "future"
 	InvoiceStatusFuture string = "future"
+
 	// InvoiceStatusInTrial captures enum value "in_trial"
 	InvoiceStatusInTrial string = "in_trial"
+
 	// InvoiceStatusActive captures enum value "active"
 	InvoiceStatusActive string = "active"
+
 	// InvoiceStatusNonRenewing captures enum value "non_renewing"
 	InvoiceStatusNonRenewing string = "non_renewing"
+
 	// InvoiceStatusCancelled captures enum value "cancelled"
 	InvoiceStatusCancelled string = "cancelled"
 )
@@ -793,6 +727,7 @@ func (m *Invoice) validateTaxes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}

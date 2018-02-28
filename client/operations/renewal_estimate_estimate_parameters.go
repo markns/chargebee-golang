@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewRenewalEstimateEstimateParams creates a new RenewalEstimateEstimateParams object
@@ -137,12 +137,10 @@ func (o *RenewalEstimateEstimateParams) WriteToRequest(r runtime.ClientRequest, 
 	}
 	var res []error
 
-	if o.EstimateRenewalEstimateRequest == nil {
-		o.EstimateRenewalEstimateRequest = new(models.EstimateRenewalEstimateRequest)
-	}
-
-	if err := r.SetBodyParam(o.EstimateRenewalEstimateRequest); err != nil {
-		return err
+	if o.EstimateRenewalEstimateRequest != nil {
+		if err := r.SetBodyParam(o.EstimateRenewalEstimateRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

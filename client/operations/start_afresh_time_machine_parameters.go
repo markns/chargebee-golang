@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewStartAfreshTimeMachineParams creates a new StartAfreshTimeMachineParams object
@@ -137,12 +137,10 @@ func (o *StartAfreshTimeMachineParams) WriteToRequest(r runtime.ClientRequest, r
 	}
 	var res []error
 
-	if o.TimeMachineStartAfreshRequest == nil {
-		o.TimeMachineStartAfreshRequest = new(models.TimeMachineStartAfreshRequest)
-	}
-
-	if err := r.SetBodyParam(o.TimeMachineStartAfreshRequest); err != nil {
-		return err
+	if o.TimeMachineStartAfreshRequest != nil {
+		if err := r.SetBodyParam(o.TimeMachineStartAfreshRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

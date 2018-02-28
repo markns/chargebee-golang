@@ -17,7 +17,6 @@ import (
 
 // PromotionalCredit promotional credit
 // swagger:model PromotionalCredit
-
 type PromotionalCredit struct {
 
 	// amount
@@ -50,26 +49,6 @@ type PromotionalCredit struct {
 	// type
 	Type string `json:"type,omitempty"`
 }
-
-/* polymorph PromotionalCredit amount false */
-
-/* polymorph PromotionalCredit closing_balance false */
-
-/* polymorph PromotionalCredit created_at false */
-
-/* polymorph PromotionalCredit credit_type false */
-
-/* polymorph PromotionalCredit currency_code false */
-
-/* polymorph PromotionalCredit customer_id false */
-
-/* polymorph PromotionalCredit description false */
-
-/* polymorph PromotionalCredit id false */
-
-/* polymorph PromotionalCredit reference false */
-
-/* polymorph PromotionalCredit type false */
 
 // Validate validates this promotional credit
 func (m *PromotionalCredit) Validate(formats strfmt.Registry) error {
@@ -104,10 +83,13 @@ func init() {
 }
 
 const (
+
 	// PromotionalCreditCreditTypeLoyaltyCredits captures enum value "loyalty_credits"
 	PromotionalCreditCreditTypeLoyaltyCredits string = "loyalty_credits"
+
 	// PromotionalCreditCreditTypeReferralRewards captures enum value "referral_rewards"
 	PromotionalCreditCreditTypeReferralRewards string = "referral_rewards"
+
 	// PromotionalCreditCreditTypeGeneral captures enum value "general"
 	PromotionalCreditCreditTypeGeneral string = "general"
 )
@@ -147,20 +129,28 @@ func init() {
 }
 
 const (
+
 	// PromotionalCreditTypeCard captures enum value "card"
 	PromotionalCreditTypeCard string = "card"
+
 	// PromotionalCreditTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	PromotionalCreditTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// PromotionalCreditTypeAmazonPayments captures enum value "amazon_payments"
 	PromotionalCreditTypeAmazonPayments string = "amazon_payments"
+
 	// PromotionalCreditTypeDirectDebit captures enum value "direct_debit"
 	PromotionalCreditTypeDirectDebit string = "direct_debit"
+
 	// PromotionalCreditTypeGeneric captures enum value "generic"
 	PromotionalCreditTypeGeneric string = "generic"
+
 	// PromotionalCreditTypeAlipay captures enum value "alipay"
 	PromotionalCreditTypeAlipay string = "alipay"
+
 	// PromotionalCreditTypeUnionpay captures enum value "unionpay"
 	PromotionalCreditTypeUnionpay string = "unionpay"
+
 	// PromotionalCreditTypeApplePay captures enum value "apple_pay"
 	PromotionalCreditTypeApplePay string = "apple_pay"
 )

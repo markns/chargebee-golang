@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewDeleteCustomerParams creates a new DeleteCustomerParams object
@@ -137,12 +137,10 @@ func (o *DeleteCustomerParams) WriteToRequest(r runtime.ClientRequest, reg strfm
 	}
 	var res []error
 
-	if o.CustomerDeleteRequest == nil {
-		o.CustomerDeleteRequest = new(models.CustomerDeleteRequest)
-	}
-
-	if err := r.SetBodyParam(o.CustomerDeleteRequest); err != nil {
-		return err
+	if o.CustomerDeleteRequest != nil {
+		if err := r.SetBodyParam(o.CustomerDeleteRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

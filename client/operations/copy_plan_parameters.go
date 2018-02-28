@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCopyPlanParams creates a new CopyPlanParams object
@@ -124,12 +124,10 @@ func (o *CopyPlanParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Regi
 	}
 	var res []error
 
-	if o.PlanCopyRequest == nil {
-		o.PlanCopyRequest = new(models.PlanCopyRequest)
-	}
-
-	if err := r.SetBodyParam(o.PlanCopyRequest); err != nil {
-		return err
+	if o.PlanCopyRequest != nil {
+		if err := r.SetBodyParam(o.PlanCopyRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

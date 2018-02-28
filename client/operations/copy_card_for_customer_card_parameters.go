@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCopyCardForCustomerCardParams creates a new CopyCardForCustomerCardParams object
@@ -137,12 +137,10 @@ func (o *CopyCardForCustomerCardParams) WriteToRequest(r runtime.ClientRequest, 
 	}
 	var res []error
 
-	if o.CardCopyCardForCustomerRequest == nil {
-		o.CardCopyCardForCustomerRequest = new(models.CardCopyCardForCustomerRequest)
-	}
-
-	if err := r.SetBodyParam(o.CardCopyCardForCustomerRequest); err != nil {
-		return err
+	if o.CardCopyCardForCustomerRequest != nil {
+		if err := r.SetBodyParam(o.CardCopyCardForCustomerRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

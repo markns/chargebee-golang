@@ -14,14 +14,11 @@ import (
 
 // SubscriptionRemoveScheduledCancellationRequest subscription remove scheduled cancellation request
 // swagger:model SubscriptionRemoveScheduledCancellationRequest
-
 type SubscriptionRemoveScheduledCancellationRequest struct {
 
 	// billing cycles
 	BillingCycles int32 `json:"billing_cycles,omitempty"`
 }
-
-/* polymorph SubscriptionRemoveScheduledCancellationRequest billing_cycles false */
 
 // Validate validates this subscription remove scheduled cancellation request
 func (m *SubscriptionRemoveScheduledCancellationRequest) Validate(formats strfmt.Registry) error {

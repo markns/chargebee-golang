@@ -17,7 +17,6 @@ import (
 
 // ResourceMigration resource migration
 // swagger:model ResourceMigration
-
 type ResourceMigration struct {
 
 	// created at
@@ -41,20 +40,6 @@ type ResourceMigration struct {
 	// updated at
 	UpdatedAt int64 `json:"updated_at,omitempty"`
 }
-
-/* polymorph ResourceMigration created_at false */
-
-/* polymorph ResourceMigration entity_id false */
-
-/* polymorph ResourceMigration entity_type false */
-
-/* polymorph ResourceMigration errors false */
-
-/* polymorph ResourceMigration from_site false */
-
-/* polymorph ResourceMigration status false */
-
-/* polymorph ResourceMigration updated_at false */
 
 // Validate validates this resource migration
 func (m *ResourceMigration) Validate(formats strfmt.Registry) error {
@@ -89,20 +74,28 @@ func init() {
 }
 
 const (
+
 	// ResourceMigrationEntityTypeCustomer captures enum value "customer"
 	ResourceMigrationEntityTypeCustomer string = "customer"
+
 	// ResourceMigrationEntityTypeSubscription captures enum value "subscription"
 	ResourceMigrationEntityTypeSubscription string = "subscription"
+
 	// ResourceMigrationEntityTypeInvoice captures enum value "invoice"
 	ResourceMigrationEntityTypeInvoice string = "invoice"
+
 	// ResourceMigrationEntityTypeCreditNote captures enum value "credit_note"
 	ResourceMigrationEntityTypeCreditNote string = "credit_note"
+
 	// ResourceMigrationEntityTypeTransaction captures enum value "transaction"
 	ResourceMigrationEntityTypeTransaction string = "transaction"
+
 	// ResourceMigrationEntityTypePlan captures enum value "plan"
 	ResourceMigrationEntityTypePlan string = "plan"
+
 	// ResourceMigrationEntityTypeAddon captures enum value "addon"
 	ResourceMigrationEntityTypeAddon string = "addon"
+
 	// ResourceMigrationEntityTypeCoupon captures enum value "coupon"
 	ResourceMigrationEntityTypeCoupon string = "coupon"
 )
@@ -142,14 +135,19 @@ func init() {
 }
 
 const (
+
 	// ResourceMigrationStatusFuture captures enum value "future"
 	ResourceMigrationStatusFuture string = "future"
+
 	// ResourceMigrationStatusInTrial captures enum value "in_trial"
 	ResourceMigrationStatusInTrial string = "in_trial"
+
 	// ResourceMigrationStatusActive captures enum value "active"
 	ResourceMigrationStatusActive string = "active"
+
 	// ResourceMigrationStatusNonRenewing captures enum value "non_renewing"
 	ResourceMigrationStatusNonRenewing string = "non_renewing"
+
 	// ResourceMigrationStatusCancelled captures enum value "cancelled"
 	ResourceMigrationStatusCancelled string = "cancelled"
 )

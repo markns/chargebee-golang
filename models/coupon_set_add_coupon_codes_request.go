@@ -14,14 +14,11 @@ import (
 
 // CouponSetAddCouponCodesRequest coupon set add coupon codes request
 // swagger:model CouponSetAddCouponCodesRequest
-
 type CouponSetAddCouponCodesRequest struct {
 
 	// code
 	Code string `json:"code,omitempty"`
 }
-
-/* polymorph CouponSetAddCouponCodesRequest code false */
 
 // Validate validates this coupon set add coupon codes request
 func (m *CouponSetAddCouponCodesRequest) Validate(formats strfmt.Registry) error {

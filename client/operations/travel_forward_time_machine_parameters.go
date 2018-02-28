@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewTravelForwardTimeMachineParams creates a new TravelForwardTimeMachineParams object
@@ -137,12 +137,10 @@ func (o *TravelForwardTimeMachineParams) WriteToRequest(r runtime.ClientRequest,
 	}
 	var res []error
 
-	if o.TimeMachineTravelForwardRequest == nil {
-		o.TimeMachineTravelForwardRequest = new(models.TimeMachineTravelForwardRequest)
-	}
-
-	if err := r.SetBodyParam(o.TimeMachineTravelForwardRequest); err != nil {
-		return err
+	if o.TimeMachineTravelForwardRequest != nil {
+		if err := r.SetBodyParam(o.TimeMachineTravelForwardRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

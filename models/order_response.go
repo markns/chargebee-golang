@@ -14,14 +14,11 @@ import (
 
 // OrderResponse order response
 // swagger:model OrderResponse
-
 type OrderResponse struct {
 
 	// order
 	Order *Order `json:"order,omitempty"`
 }
-
-/* polymorph OrderResponse order false */
 
 // Validate validates this order response
 func (m *OrderResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *OrderResponse) validateOrder(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

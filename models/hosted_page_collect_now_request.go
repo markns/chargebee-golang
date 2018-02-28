@@ -17,7 +17,6 @@ import (
 
 // HostedPageCollectNowRequest hosted page collect now request
 // swagger:model HostedPageCollectNowRequest
-
 type HostedPageCollectNowRequest struct {
 
 	// card gateway
@@ -32,14 +31,6 @@ type HostedPageCollectNowRequest struct {
 	// customer id
 	CustomerID string `json:"customer[id],omitempty"`
 }
-
-/* polymorph HostedPageCollectNowRequest card[gateway] false */
-
-/* polymorph HostedPageCollectNowRequest card[gateway_account_id] false */
-
-/* polymorph HostedPageCollectNowRequest currency_code false */
-
-/* polymorph HostedPageCollectNowRequest customer[id] false */
 
 // Validate validates this hosted page collect now request
 func (m *HostedPageCollectNowRequest) Validate(formats strfmt.Registry) error {
@@ -69,68 +60,100 @@ func init() {
 }
 
 const (
+
 	// HostedPageCollectNowRequestCardGatewayChargebee captures enum value "chargebee"
 	HostedPageCollectNowRequestCardGatewayChargebee string = "chargebee"
+
 	// HostedPageCollectNowRequestCardGatewayStripe captures enum value "stripe"
 	HostedPageCollectNowRequestCardGatewayStripe string = "stripe"
+
 	// HostedPageCollectNowRequestCardGatewayWepay captures enum value "wepay"
 	HostedPageCollectNowRequestCardGatewayWepay string = "wepay"
+
 	// HostedPageCollectNowRequestCardGatewayBraintree captures enum value "braintree"
 	HostedPageCollectNowRequestCardGatewayBraintree string = "braintree"
+
 	// HostedPageCollectNowRequestCardGatewayAuthorizeNet captures enum value "authorize_net"
 	HostedPageCollectNowRequestCardGatewayAuthorizeNet string = "authorize_net"
+
 	// HostedPageCollectNowRequestCardGatewayPaypalPro captures enum value "paypal_pro"
 	HostedPageCollectNowRequestCardGatewayPaypalPro string = "paypal_pro"
+
 	// HostedPageCollectNowRequestCardGatewayPin captures enum value "pin"
 	HostedPageCollectNowRequestCardGatewayPin string = "pin"
+
 	// HostedPageCollectNowRequestCardGatewayEway captures enum value "eway"
 	HostedPageCollectNowRequestCardGatewayEway string = "eway"
+
 	// HostedPageCollectNowRequestCardGatewayEwayRapid captures enum value "eway_rapid"
 	HostedPageCollectNowRequestCardGatewayEwayRapid string = "eway_rapid"
+
 	// HostedPageCollectNowRequestCardGatewayWorldpay captures enum value "worldpay"
 	HostedPageCollectNowRequestCardGatewayWorldpay string = "worldpay"
+
 	// HostedPageCollectNowRequestCardGatewayBalancedPayments captures enum value "balanced_payments"
 	HostedPageCollectNowRequestCardGatewayBalancedPayments string = "balanced_payments"
+
 	// HostedPageCollectNowRequestCardGatewayBeanstream captures enum value "beanstream"
 	HostedPageCollectNowRequestCardGatewayBeanstream string = "beanstream"
+
 	// HostedPageCollectNowRequestCardGatewayBluepay captures enum value "bluepay"
 	HostedPageCollectNowRequestCardGatewayBluepay string = "bluepay"
+
 	// HostedPageCollectNowRequestCardGatewayElavon captures enum value "elavon"
 	HostedPageCollectNowRequestCardGatewayElavon string = "elavon"
+
 	// HostedPageCollectNowRequestCardGatewayFirstDataGlobal captures enum value "first_data_global"
 	HostedPageCollectNowRequestCardGatewayFirstDataGlobal string = "first_data_global"
+
 	// HostedPageCollectNowRequestCardGatewayHdfc captures enum value "hdfc"
 	HostedPageCollectNowRequestCardGatewayHdfc string = "hdfc"
+
 	// HostedPageCollectNowRequestCardGatewayMigs captures enum value "migs"
 	HostedPageCollectNowRequestCardGatewayMigs string = "migs"
+
 	// HostedPageCollectNowRequestCardGatewayNmi captures enum value "nmi"
 	HostedPageCollectNowRequestCardGatewayNmi string = "nmi"
+
 	// HostedPageCollectNowRequestCardGatewayOgone captures enum value "ogone"
 	HostedPageCollectNowRequestCardGatewayOgone string = "ogone"
+
 	// HostedPageCollectNowRequestCardGatewayPaymill captures enum value "paymill"
 	HostedPageCollectNowRequestCardGatewayPaymill string = "paymill"
+
 	// HostedPageCollectNowRequestCardGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	HostedPageCollectNowRequestCardGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// HostedPageCollectNowRequestCardGatewaySagePay captures enum value "sage_pay"
 	HostedPageCollectNowRequestCardGatewaySagePay string = "sage_pay"
+
 	// HostedPageCollectNowRequestCardGatewayTco captures enum value "tco"
 	HostedPageCollectNowRequestCardGatewayTco string = "tco"
+
 	// HostedPageCollectNowRequestCardGatewayWirecard captures enum value "wirecard"
 	HostedPageCollectNowRequestCardGatewayWirecard string = "wirecard"
+
 	// HostedPageCollectNowRequestCardGatewayAmazonPayments captures enum value "amazon_payments"
 	HostedPageCollectNowRequestCardGatewayAmazonPayments string = "amazon_payments"
+
 	// HostedPageCollectNowRequestCardGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	HostedPageCollectNowRequestCardGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// HostedPageCollectNowRequestCardGatewayGocardless captures enum value "gocardless"
 	HostedPageCollectNowRequestCardGatewayGocardless string = "gocardless"
+
 	// HostedPageCollectNowRequestCardGatewayAdyen captures enum value "adyen"
 	HostedPageCollectNowRequestCardGatewayAdyen string = "adyen"
+
 	// HostedPageCollectNowRequestCardGatewayOrbital captures enum value "orbital"
 	HostedPageCollectNowRequestCardGatewayOrbital string = "orbital"
+
 	// HostedPageCollectNowRequestCardGatewayMonerisUs captures enum value "moneris_us"
 	HostedPageCollectNowRequestCardGatewayMonerisUs string = "moneris_us"
+
 	// HostedPageCollectNowRequestCardGatewayMoneris captures enum value "moneris"
 	HostedPageCollectNowRequestCardGatewayMoneris string = "moneris"
+
 	// HostedPageCollectNowRequestCardGatewayNotApplicable captures enum value "not_applicable"
 	HostedPageCollectNowRequestCardGatewayNotApplicable string = "not_applicable"
 )

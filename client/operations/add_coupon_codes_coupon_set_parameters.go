@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewAddCouponCodesCouponSetParams creates a new AddCouponCodesCouponSetParams object
@@ -137,12 +137,10 @@ func (o *AddCouponCodesCouponSetParams) WriteToRequest(r runtime.ClientRequest, 
 	}
 	var res []error
 
-	if o.CouponSetAddCouponCodesRequest == nil {
-		o.CouponSetAddCouponCodesRequest = new(models.CouponSetAddCouponCodesRequest)
-	}
-
-	if err := r.SetBodyParam(o.CouponSetAddCouponCodesRequest); err != nil {
-		return err
+	if o.CouponSetAddCouponCodesRequest != nil {
+		if err := r.SetBodyParam(o.CouponSetAddCouponCodesRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

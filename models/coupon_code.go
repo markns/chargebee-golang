@@ -17,7 +17,6 @@ import (
 
 // CouponCode coupon code
 // swagger:model CouponCode
-
 type CouponCode struct {
 
 	// code
@@ -35,16 +34,6 @@ type CouponCode struct {
 	// status
 	Status string `json:"status,omitempty"`
 }
-
-/* polymorph CouponCode code false */
-
-/* polymorph CouponCode coupon_id false */
-
-/* polymorph CouponCode coupon_set_id false */
-
-/* polymorph CouponCode coupon_set_name false */
-
-/* polymorph CouponCode status false */
 
 // Validate validates this coupon code
 func (m *CouponCode) Validate(formats strfmt.Registry) error {
@@ -74,14 +63,19 @@ func init() {
 }
 
 const (
+
 	// CouponCodeStatusFuture captures enum value "future"
 	CouponCodeStatusFuture string = "future"
+
 	// CouponCodeStatusInTrial captures enum value "in_trial"
 	CouponCodeStatusInTrial string = "in_trial"
+
 	// CouponCodeStatusActive captures enum value "active"
 	CouponCodeStatusActive string = "active"
+
 	// CouponCodeStatusNonRenewing captures enum value "non_renewing"
 	CouponCodeStatusNonRenewing string = "non_renewing"
+
 	// CouponCodeStatusCancelled captures enum value "cancelled"
 	CouponCodeStatusCancelled string = "cancelled"
 )

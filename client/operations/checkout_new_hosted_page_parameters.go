@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCheckoutNewHostedPageParams creates a new CheckoutNewHostedPageParams object
@@ -124,12 +124,10 @@ func (o *CheckoutNewHostedPageParams) WriteToRequest(r runtime.ClientRequest, re
 	}
 	var res []error
 
-	if o.HostedPageCheckoutNewRequest == nil {
-		o.HostedPageCheckoutNewRequest = new(models.HostedPageCheckoutNewRequest)
-	}
-
-	if err := r.SetBodyParam(o.HostedPageCheckoutNewRequest); err != nil {
-		return err
+	if o.HostedPageCheckoutNewRequest != nil {
+		if err := r.SetBodyParam(o.HostedPageCheckoutNewRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

@@ -14,7 +14,6 @@ import (
 
 // Tax tax
 // swagger:model Tax
-
 type Tax struct {
 
 	// amount
@@ -26,12 +25,6 @@ type Tax struct {
 	// name
 	Name string `json:"name,omitempty"`
 }
-
-/* polymorph Tax amount false */
-
-/* polymorph Tax description false */
-
-/* polymorph Tax name false */
 
 // Validate validates this tax
 func (m *Tax) Validate(formats strfmt.Registry) error {

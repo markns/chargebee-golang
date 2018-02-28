@@ -17,7 +17,6 @@ import (
 
 // AddonUpdateRequest addon update request
 // swagger:model AddonUpdateRequest
-
 type AddonUpdateRequest struct {
 
 	// accounting category1
@@ -81,46 +80,6 @@ type AddonUpdateRequest struct {
 	Unit string `json:"unit,omitempty"`
 }
 
-/* polymorph AddonUpdateRequest accounting_category1 false */
-
-/* polymorph AddonUpdateRequest accounting_category2 false */
-
-/* polymorph AddonUpdateRequest accounting_code false */
-
-/* polymorph AddonUpdateRequest charge_type false */
-
-/* polymorph AddonUpdateRequest currency_code false */
-
-/* polymorph AddonUpdateRequest description false */
-
-/* polymorph AddonUpdateRequest enabled_in_portal false */
-
-/* polymorph AddonUpdateRequest invoice_name false */
-
-/* polymorph AddonUpdateRequest invoice_notes false */
-
-/* polymorph AddonUpdateRequest meta_data false */
-
-/* polymorph AddonUpdateRequest name false */
-
-/* polymorph AddonUpdateRequest period false */
-
-/* polymorph AddonUpdateRequest period_unit false */
-
-/* polymorph AddonUpdateRequest price false */
-
-/* polymorph AddonUpdateRequest sku false */
-
-/* polymorph AddonUpdateRequest tax_code false */
-
-/* polymorph AddonUpdateRequest tax_profile_id false */
-
-/* polymorph AddonUpdateRequest taxable false */
-
-/* polymorph AddonUpdateRequest type false */
-
-/* polymorph AddonUpdateRequest unit false */
-
 // Validate validates this addon update request
 func (m *AddonUpdateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -159,8 +118,10 @@ func init() {
 }
 
 const (
+
 	// AddonUpdateRequestChargeTypeRecurring captures enum value "recurring"
 	AddonUpdateRequestChargeTypeRecurring string = "recurring"
+
 	// AddonUpdateRequestChargeTypeNonRecurring captures enum value "non_recurring"
 	AddonUpdateRequestChargeTypeNonRecurring string = "non_recurring"
 )
@@ -200,10 +161,13 @@ func init() {
 }
 
 const (
+
 	// AddonUpdateRequestPeriodUnitWeek captures enum value "week"
 	AddonUpdateRequestPeriodUnitWeek string = "week"
+
 	// AddonUpdateRequestPeriodUnitMonth captures enum value "month"
 	AddonUpdateRequestPeriodUnitMonth string = "month"
+
 	// AddonUpdateRequestPeriodUnitYear captures enum value "year"
 	AddonUpdateRequestPeriodUnitYear string = "year"
 )
@@ -243,20 +207,28 @@ func init() {
 }
 
 const (
+
 	// AddonUpdateRequestTypeCard captures enum value "card"
 	AddonUpdateRequestTypeCard string = "card"
+
 	// AddonUpdateRequestTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	AddonUpdateRequestTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// AddonUpdateRequestTypeAmazonPayments captures enum value "amazon_payments"
 	AddonUpdateRequestTypeAmazonPayments string = "amazon_payments"
+
 	// AddonUpdateRequestTypeDirectDebit captures enum value "direct_debit"
 	AddonUpdateRequestTypeDirectDebit string = "direct_debit"
+
 	// AddonUpdateRequestTypeGeneric captures enum value "generic"
 	AddonUpdateRequestTypeGeneric string = "generic"
+
 	// AddonUpdateRequestTypeAlipay captures enum value "alipay"
 	AddonUpdateRequestTypeAlipay string = "alipay"
+
 	// AddonUpdateRequestTypeUnionpay captures enum value "unionpay"
 	AddonUpdateRequestTypeUnionpay string = "unionpay"
+
 	// AddonUpdateRequestTypeApplePay captures enum value "apple_pay"
 	AddonUpdateRequestTypeApplePay string = "apple_pay"
 )

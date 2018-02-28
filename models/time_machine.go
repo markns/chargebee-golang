@@ -17,7 +17,6 @@ import (
 
 // TimeMachine time machine
 // swagger:model TimeMachine
-
 type TimeMachine struct {
 
 	// destination time
@@ -44,22 +43,6 @@ type TimeMachine struct {
 	// time travel status
 	TimeTravelStatus string `json:"time_travel_status,omitempty"`
 }
-
-/* polymorph TimeMachine destination_time false */
-
-/* polymorph TimeMachine error_json false */
-
-/* polymorph TimeMachine failure_code false */
-
-/* polymorph TimeMachine failure_reason false */
-
-/* polymorph TimeMachine genesis_time false */
-
-/* polymorph TimeMachine name false */
-
-/* polymorph TimeMachine null false */
-
-/* polymorph TimeMachine time_travel_status false */
 
 // Validate validates this time machine
 func (m *TimeMachine) Validate(formats strfmt.Registry) error {
@@ -95,6 +78,7 @@ func (m *TimeMachine) validateNull(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -113,12 +97,16 @@ func init() {
 }
 
 const (
+
 	// TimeMachineTimeTravelStatusNotEnabled captures enum value "not_enabled"
 	TimeMachineTimeTravelStatusNotEnabled string = "not_enabled"
+
 	// TimeMachineTimeTravelStatusInProgress captures enum value "in_progress"
 	TimeMachineTimeTravelStatusInProgress string = "in_progress"
+
 	// TimeMachineTimeTravelStatusSucceeded captures enum value "succeeded"
 	TimeMachineTimeTravelStatusSucceeded string = "succeeded"
+
 	// TimeMachineTimeTravelStatusFailed captures enum value "failed"
 	TimeMachineTimeTravelStatusFailed string = "failed"
 )

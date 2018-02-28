@@ -14,14 +14,11 @@ import (
 
 // CustomerDeleteContactRequest customer delete contact request
 // swagger:model CustomerDeleteContactRequest
-
 type CustomerDeleteContactRequest struct {
 
 	// contact id
 	ContactID string `json:"contact[id],omitempty"`
 }
-
-/* polymorph CustomerDeleteContactRequest contact[id] false */
 
 // Validate validates this customer delete contact request
 func (m *CustomerDeleteContactRequest) Validate(formats strfmt.Registry) error {

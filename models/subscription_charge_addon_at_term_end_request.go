@@ -14,7 +14,6 @@ import (
 
 // SubscriptionChargeAddonAtTermEndRequest subscription charge addon at term end request
 // swagger:model SubscriptionChargeAddonAtTermEndRequest
-
 type SubscriptionChargeAddonAtTermEndRequest struct {
 
 	// addon id
@@ -26,12 +25,6 @@ type SubscriptionChargeAddonAtTermEndRequest struct {
 	// addon unit price
 	AddonUnitPrice int32 `json:"addon_unit_price,omitempty"`
 }
-
-/* polymorph SubscriptionChargeAddonAtTermEndRequest addon_id false */
-
-/* polymorph SubscriptionChargeAddonAtTermEndRequest addon_quantity false */
-
-/* polymorph SubscriptionChargeAddonAtTermEndRequest addon_unit_price false */
 
 // Validate validates this subscription charge addon at term end request
 func (m *SubscriptionChargeAddonAtTermEndRequest) Validate(formats strfmt.Registry) error {

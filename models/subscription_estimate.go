@@ -17,7 +17,6 @@ import (
 
 // SubscriptionEstimate subscription estimate
 // swagger:model SubscriptionEstimate
-
 type SubscriptionEstimate struct {
 
 	// currency code
@@ -35,16 +34,6 @@ type SubscriptionEstimate struct {
 	// status
 	Status string `json:"status,omitempty"`
 }
-
-/* polymorph SubscriptionEstimate currency_code false */
-
-/* polymorph SubscriptionEstimate id false */
-
-/* polymorph SubscriptionEstimate next_billing_at false */
-
-/* polymorph SubscriptionEstimate shipping_address false */
-
-/* polymorph SubscriptionEstimate status false */
 
 // Validate validates this subscription estimate
 func (m *SubscriptionEstimate) Validate(formats strfmt.Registry) error {
@@ -80,6 +69,7 @@ func (m *SubscriptionEstimate) validateShippingAddress(formats strfmt.Registry) 
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -98,14 +88,19 @@ func init() {
 }
 
 const (
+
 	// SubscriptionEstimateStatusFuture captures enum value "future"
 	SubscriptionEstimateStatusFuture string = "future"
+
 	// SubscriptionEstimateStatusInTrial captures enum value "in_trial"
 	SubscriptionEstimateStatusInTrial string = "in_trial"
+
 	// SubscriptionEstimateStatusActive captures enum value "active"
 	SubscriptionEstimateStatusActive string = "active"
+
 	// SubscriptionEstimateStatusNonRenewing captures enum value "non_renewing"
 	SubscriptionEstimateStatusNonRenewing string = "non_renewing"
+
 	// SubscriptionEstimateStatusCancelled captures enum value "cancelled"
 	SubscriptionEstimateStatusCancelled string = "cancelled"
 )

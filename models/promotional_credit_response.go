@@ -14,14 +14,11 @@ import (
 
 // PromotionalCreditResponse promotional credit response
 // swagger:model PromotionalCreditResponse
-
 type PromotionalCreditResponse struct {
 
 	// promotionalcredit
 	Promotionalcredit *PromotionalCredit `json:"promotionalcredit,omitempty"`
 }
-
-/* polymorph PromotionalCreditResponse promotionalcredit false */
 
 // Validate validates this promotional credit response
 func (m *PromotionalCreditResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *PromotionalCreditResponse) validatePromotionalcredit(formats strfmt.Reg
 			}
 			return err
 		}
+
 	}
 
 	return nil

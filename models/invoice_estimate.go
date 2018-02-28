@@ -18,7 +18,6 @@ import (
 
 // InvoiceEstimate invoice estimate
 // swagger:model InvoiceEstimate
-
 type InvoiceEstimate struct {
 
 	// amount due
@@ -60,32 +59,6 @@ type InvoiceEstimate struct {
 	// total
 	Total int32 `json:"total,omitempty"`
 }
-
-/* polymorph InvoiceEstimate amount_due false */
-
-/* polymorph InvoiceEstimate amount_paid false */
-
-/* polymorph InvoiceEstimate credits_applied false */
-
-/* polymorph InvoiceEstimate currency_code false */
-
-/* polymorph InvoiceEstimate discounts false */
-
-/* polymorph InvoiceEstimate line_item_discounts false */
-
-/* polymorph InvoiceEstimate line_item_taxes false */
-
-/* polymorph InvoiceEstimate line_items false */
-
-/* polymorph InvoiceEstimate price_type false */
-
-/* polymorph InvoiceEstimate recurring false */
-
-/* polymorph InvoiceEstimate sub_total false */
-
-/* polymorph InvoiceEstimate taxes false */
-
-/* polymorph InvoiceEstimate total false */
 
 // Validate validates this invoice estimate
 func (m *InvoiceEstimate) Validate(formats strfmt.Registry) error {
@@ -147,6 +120,7 @@ func (m *InvoiceEstimate) validateDiscounts(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -174,6 +148,7 @@ func (m *InvoiceEstimate) validateLineItemDiscounts(formats strfmt.Registry) err
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -201,6 +176,7 @@ func (m *InvoiceEstimate) validateLineItemTaxes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -228,6 +204,7 @@ func (m *InvoiceEstimate) validateLineItems(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -248,8 +225,10 @@ func init() {
 }
 
 const (
+
 	// InvoiceEstimatePriceTypeTaxExclusive captures enum value "tax_exclusive"
 	InvoiceEstimatePriceTypeTaxExclusive string = "tax_exclusive"
+
 	// InvoiceEstimatePriceTypeTaxInclusive captures enum value "tax_inclusive"
 	InvoiceEstimatePriceTypeTaxInclusive string = "tax_inclusive"
 )
@@ -296,6 +275,7 @@ func (m *InvoiceEstimate) validateTaxes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}

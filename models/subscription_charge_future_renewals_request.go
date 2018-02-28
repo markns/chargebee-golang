@@ -14,14 +14,11 @@ import (
 
 // SubscriptionChargeFutureRenewalsRequest subscription charge future renewals request
 // swagger:model SubscriptionChargeFutureRenewalsRequest
-
 type SubscriptionChargeFutureRenewalsRequest struct {
 
 	// terms to charge
 	TermsToCharge int32 `json:"terms_to_charge,omitempty"`
 }
-
-/* polymorph SubscriptionChargeFutureRenewalsRequest terms_to_charge false */
 
 // Validate validates this subscription charge future renewals request
 func (m *SubscriptionChargeFutureRenewalsRequest) Validate(formats strfmt.Registry) error {

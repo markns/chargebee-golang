@@ -17,7 +17,6 @@ import (
 
 // LinkedRefund linked refund
 // swagger:model LinkedRefund
-
 type LinkedRefund struct {
 
 	// txn amount
@@ -32,14 +31,6 @@ type LinkedRefund struct {
 	// txn status
 	TxnStatus string `json:"txn_status,omitempty"`
 }
-
-/* polymorph LinkedRefund txn_amount false */
-
-/* polymorph LinkedRefund txn_date false */
-
-/* polymorph LinkedRefund txn_id false */
-
-/* polymorph LinkedRefund txn_status false */
 
 // Validate validates this linked refund
 func (m *LinkedRefund) Validate(formats strfmt.Registry) error {
@@ -69,14 +60,19 @@ func init() {
 }
 
 const (
+
 	// LinkedRefundTxnStatusFuture captures enum value "future"
 	LinkedRefundTxnStatusFuture string = "future"
+
 	// LinkedRefundTxnStatusInTrial captures enum value "in_trial"
 	LinkedRefundTxnStatusInTrial string = "in_trial"
+
 	// LinkedRefundTxnStatusActive captures enum value "active"
 	LinkedRefundTxnStatusActive string = "active"
+
 	// LinkedRefundTxnStatusNonRenewing captures enum value "non_renewing"
 	LinkedRefundTxnStatusNonRenewing string = "non_renewing"
+
 	// LinkedRefundTxnStatusCancelled captures enum value "cancelled"
 	LinkedRefundTxnStatusCancelled string = "cancelled"
 )

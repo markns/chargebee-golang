@@ -17,7 +17,6 @@ import (
 
 // SubscriptionOverrideBillingProfileRequest subscription override billing profile request
 // swagger:model SubscriptionOverrideBillingProfileRequest
-
 type SubscriptionOverrideBillingProfileRequest struct {
 
 	// auto collection
@@ -26,10 +25,6 @@ type SubscriptionOverrideBillingProfileRequest struct {
 	// payment source id
 	PaymentSourceID string `json:"payment_source_id,omitempty"`
 }
-
-/* polymorph SubscriptionOverrideBillingProfileRequest auto_collection false */
-
-/* polymorph SubscriptionOverrideBillingProfileRequest payment_source_id false */
 
 // Validate validates this subscription override billing profile request
 func (m *SubscriptionOverrideBillingProfileRequest) Validate(formats strfmt.Registry) error {
@@ -59,8 +54,10 @@ func init() {
 }
 
 const (
+
 	// SubscriptionOverrideBillingProfileRequestAutoCollectionOn captures enum value "on"
 	SubscriptionOverrideBillingProfileRequestAutoCollectionOn string = "on"
+
 	// SubscriptionOverrideBillingProfileRequestAutoCollectionOff captures enum value "off"
 	SubscriptionOverrideBillingProfileRequestAutoCollectionOff string = "off"
 )

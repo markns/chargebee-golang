@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCreateUsingPermanentTokenPaymentSourceParams creates a new CreateUsingPermanentTokenPaymentSourceParams object
@@ -124,12 +124,10 @@ func (o *CreateUsingPermanentTokenPaymentSourceParams) WriteToRequest(r runtime.
 	}
 	var res []error
 
-	if o.PaymentSourceCreateUsingPermanentTokenRequest == nil {
-		o.PaymentSourceCreateUsingPermanentTokenRequest = new(models.PaymentSourceCreateUsingPermanentTokenRequest)
-	}
-
-	if err := r.SetBodyParam(o.PaymentSourceCreateUsingPermanentTokenRequest); err != nil {
-		return err
+	if o.PaymentSourceCreateUsingPermanentTokenRequest != nil {
+		if err := r.SetBodyParam(o.PaymentSourceCreateUsingPermanentTokenRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

@@ -14,7 +14,6 @@ import (
 
 // CreditNoteRecordRefundRequest credit note record refund request
 // swagger:model CreditNoteRecordRefundRequest
-
 type CreditNoteRecordRefundRequest struct {
 
 	// comment
@@ -32,16 +31,6 @@ type CreditNoteRecordRefundRequest struct {
 	// transaction reference number
 	TransactionReferenceNumber string `json:"transaction[reference_number],omitempty"`
 }
-
-/* polymorph CreditNoteRecordRefundRequest comment false */
-
-/* polymorph CreditNoteRecordRefundRequest transaction[amount] false */
-
-/* polymorph CreditNoteRecordRefundRequest transaction[date] false */
-
-/* polymorph CreditNoteRecordRefundRequest transaction[payment_method] false */
-
-/* polymorph CreditNoteRecordRefundRequest transaction[reference_number] false */
 
 // Validate validates this credit note record refund request
 func (m *CreditNoteRecordRefundRequest) Validate(formats strfmt.Registry) error {
@@ -72,6 +61,7 @@ func (m *CreditNoteRecordRefundRequest) validateTransactionPaymentMethod(formats
 			}
 			return err
 		}
+
 	}
 
 	return nil

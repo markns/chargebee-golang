@@ -14,7 +14,6 @@ import (
 
 // AddressRetrieveRequest address retrieve request
 // swagger:model AddressRetrieveRequest
-
 type AddressRetrieveRequest struct {
 
 	// label
@@ -23,10 +22,6 @@ type AddressRetrieveRequest struct {
 	// subscription id
 	SubscriptionID string `json:"subscription_id,omitempty"`
 }
-
-/* polymorph AddressRetrieveRequest label false */
-
-/* polymorph AddressRetrieveRequest subscription_id false */
 
 // Validate validates this address retrieve request
 func (m *AddressRetrieveRequest) Validate(formats strfmt.Registry) error {

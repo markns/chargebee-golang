@@ -17,7 +17,6 @@ import (
 
 // HostedPageCheckoutNewRequest hosted page checkout new request
 // swagger:model HostedPageCheckoutNewRequest
-
 type HostedPageCheckoutNewRequest struct {
 
 	// billing address city
@@ -195,122 +194,6 @@ type HostedPageCheckoutNewRequest struct {
 	TermsToCharge int32 `json:"terms_to_charge,omitempty"`
 }
 
-/* polymorph HostedPageCheckoutNewRequest billing_address[city] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[company] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[country] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[email] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[first_name] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[last_name] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[line1] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[line2] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[line3] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[phone] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[state] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[state_code] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[validation_status] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_address[zip] false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_alignment_mode false */
-
-/* polymorph HostedPageCheckoutNewRequest billing_cycles false */
-
-/* polymorph HostedPageCheckoutNewRequest cancel_url false */
-
-/* polymorph HostedPageCheckoutNewRequest card[gateway] false */
-
-/* polymorph HostedPageCheckoutNewRequest card[gateway_account_id] false */
-
-/* polymorph HostedPageCheckoutNewRequest customer[company] false */
-
-/* polymorph HostedPageCheckoutNewRequest customer[consolidated_invoicing] false */
-
-/* polymorph HostedPageCheckoutNewRequest customer[email] false */
-
-/* polymorph HostedPageCheckoutNewRequest customer[first_name] false */
-
-/* polymorph HostedPageCheckoutNewRequest customer[id] false */
-
-/* polymorph HostedPageCheckoutNewRequest customer[last_name] false */
-
-/* polymorph HostedPageCheckoutNewRequest customer[locale] false */
-
-/* polymorph HostedPageCheckoutNewRequest customer[phone] false */
-
-/* polymorph HostedPageCheckoutNewRequest customer[taxability] false */
-
-/* polymorph HostedPageCheckoutNewRequest customer[vat_number] false */
-
-/* polymorph HostedPageCheckoutNewRequest embed false */
-
-/* polymorph HostedPageCheckoutNewRequest iframe_messaging false */
-
-/* polymorph HostedPageCheckoutNewRequest pass_thru_content false */
-
-/* polymorph HostedPageCheckoutNewRequest redirect_url false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[city] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[company] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[country] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[email] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[first_name] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[last_name] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[line1] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[line2] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[line3] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[phone] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[state] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[state_code] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[validation_status] false */
-
-/* polymorph HostedPageCheckoutNewRequest shipping_address[zip] false */
-
-/* polymorph HostedPageCheckoutNewRequest subscription[auto_collection] false */
-
-/* polymorph HostedPageCheckoutNewRequest subscription[coupon] false */
-
-/* polymorph HostedPageCheckoutNewRequest subscription[id] false */
-
-/* polymorph HostedPageCheckoutNewRequest subscription[invoice_notes] false */
-
-/* polymorph HostedPageCheckoutNewRequest subscription[plan_id] false */
-
-/* polymorph HostedPageCheckoutNewRequest subscription[plan_quantity] false */
-
-/* polymorph HostedPageCheckoutNewRequest subscription[plan_unit_price] false */
-
-/* polymorph HostedPageCheckoutNewRequest subscription[setup_fee] false */
-
-/* polymorph HostedPageCheckoutNewRequest subscription[start_date] false */
-
-/* polymorph HostedPageCheckoutNewRequest subscription[trial_end] false */
-
-/* polymorph HostedPageCheckoutNewRequest terms_to_charge false */
-
 // Validate validates this hosted page checkout new request
 func (m *HostedPageCheckoutNewRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -364,12 +247,16 @@ func init() {
 }
 
 const (
+
 	// HostedPageCheckoutNewRequestBillingAddressValidationStatusNotValidated captures enum value "not_validated"
 	HostedPageCheckoutNewRequestBillingAddressValidationStatusNotValidated string = "not_validated"
+
 	// HostedPageCheckoutNewRequestBillingAddressValidationStatusValid captures enum value "valid"
 	HostedPageCheckoutNewRequestBillingAddressValidationStatusValid string = "valid"
+
 	// HostedPageCheckoutNewRequestBillingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	HostedPageCheckoutNewRequestBillingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// HostedPageCheckoutNewRequestBillingAddressValidationStatusInvalid captures enum value "invalid"
 	HostedPageCheckoutNewRequestBillingAddressValidationStatusInvalid string = "invalid"
 )
@@ -409,8 +296,10 @@ func init() {
 }
 
 const (
+
 	// HostedPageCheckoutNewRequestBillingAlignmentModeImmediate captures enum value "immediate"
 	HostedPageCheckoutNewRequestBillingAlignmentModeImmediate string = "immediate"
+
 	// HostedPageCheckoutNewRequestBillingAlignmentModeDelayed captures enum value "delayed"
 	HostedPageCheckoutNewRequestBillingAlignmentModeDelayed string = "delayed"
 )
@@ -450,68 +339,100 @@ func init() {
 }
 
 const (
+
 	// HostedPageCheckoutNewRequestCardGatewayChargebee captures enum value "chargebee"
 	HostedPageCheckoutNewRequestCardGatewayChargebee string = "chargebee"
+
 	// HostedPageCheckoutNewRequestCardGatewayStripe captures enum value "stripe"
 	HostedPageCheckoutNewRequestCardGatewayStripe string = "stripe"
+
 	// HostedPageCheckoutNewRequestCardGatewayWepay captures enum value "wepay"
 	HostedPageCheckoutNewRequestCardGatewayWepay string = "wepay"
+
 	// HostedPageCheckoutNewRequestCardGatewayBraintree captures enum value "braintree"
 	HostedPageCheckoutNewRequestCardGatewayBraintree string = "braintree"
+
 	// HostedPageCheckoutNewRequestCardGatewayAuthorizeNet captures enum value "authorize_net"
 	HostedPageCheckoutNewRequestCardGatewayAuthorizeNet string = "authorize_net"
+
 	// HostedPageCheckoutNewRequestCardGatewayPaypalPro captures enum value "paypal_pro"
 	HostedPageCheckoutNewRequestCardGatewayPaypalPro string = "paypal_pro"
+
 	// HostedPageCheckoutNewRequestCardGatewayPin captures enum value "pin"
 	HostedPageCheckoutNewRequestCardGatewayPin string = "pin"
+
 	// HostedPageCheckoutNewRequestCardGatewayEway captures enum value "eway"
 	HostedPageCheckoutNewRequestCardGatewayEway string = "eway"
+
 	// HostedPageCheckoutNewRequestCardGatewayEwayRapid captures enum value "eway_rapid"
 	HostedPageCheckoutNewRequestCardGatewayEwayRapid string = "eway_rapid"
+
 	// HostedPageCheckoutNewRequestCardGatewayWorldpay captures enum value "worldpay"
 	HostedPageCheckoutNewRequestCardGatewayWorldpay string = "worldpay"
+
 	// HostedPageCheckoutNewRequestCardGatewayBalancedPayments captures enum value "balanced_payments"
 	HostedPageCheckoutNewRequestCardGatewayBalancedPayments string = "balanced_payments"
+
 	// HostedPageCheckoutNewRequestCardGatewayBeanstream captures enum value "beanstream"
 	HostedPageCheckoutNewRequestCardGatewayBeanstream string = "beanstream"
+
 	// HostedPageCheckoutNewRequestCardGatewayBluepay captures enum value "bluepay"
 	HostedPageCheckoutNewRequestCardGatewayBluepay string = "bluepay"
+
 	// HostedPageCheckoutNewRequestCardGatewayElavon captures enum value "elavon"
 	HostedPageCheckoutNewRequestCardGatewayElavon string = "elavon"
+
 	// HostedPageCheckoutNewRequestCardGatewayFirstDataGlobal captures enum value "first_data_global"
 	HostedPageCheckoutNewRequestCardGatewayFirstDataGlobal string = "first_data_global"
+
 	// HostedPageCheckoutNewRequestCardGatewayHdfc captures enum value "hdfc"
 	HostedPageCheckoutNewRequestCardGatewayHdfc string = "hdfc"
+
 	// HostedPageCheckoutNewRequestCardGatewayMigs captures enum value "migs"
 	HostedPageCheckoutNewRequestCardGatewayMigs string = "migs"
+
 	// HostedPageCheckoutNewRequestCardGatewayNmi captures enum value "nmi"
 	HostedPageCheckoutNewRequestCardGatewayNmi string = "nmi"
+
 	// HostedPageCheckoutNewRequestCardGatewayOgone captures enum value "ogone"
 	HostedPageCheckoutNewRequestCardGatewayOgone string = "ogone"
+
 	// HostedPageCheckoutNewRequestCardGatewayPaymill captures enum value "paymill"
 	HostedPageCheckoutNewRequestCardGatewayPaymill string = "paymill"
+
 	// HostedPageCheckoutNewRequestCardGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	HostedPageCheckoutNewRequestCardGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// HostedPageCheckoutNewRequestCardGatewaySagePay captures enum value "sage_pay"
 	HostedPageCheckoutNewRequestCardGatewaySagePay string = "sage_pay"
+
 	// HostedPageCheckoutNewRequestCardGatewayTco captures enum value "tco"
 	HostedPageCheckoutNewRequestCardGatewayTco string = "tco"
+
 	// HostedPageCheckoutNewRequestCardGatewayWirecard captures enum value "wirecard"
 	HostedPageCheckoutNewRequestCardGatewayWirecard string = "wirecard"
+
 	// HostedPageCheckoutNewRequestCardGatewayAmazonPayments captures enum value "amazon_payments"
 	HostedPageCheckoutNewRequestCardGatewayAmazonPayments string = "amazon_payments"
+
 	// HostedPageCheckoutNewRequestCardGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	HostedPageCheckoutNewRequestCardGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// HostedPageCheckoutNewRequestCardGatewayGocardless captures enum value "gocardless"
 	HostedPageCheckoutNewRequestCardGatewayGocardless string = "gocardless"
+
 	// HostedPageCheckoutNewRequestCardGatewayAdyen captures enum value "adyen"
 	HostedPageCheckoutNewRequestCardGatewayAdyen string = "adyen"
+
 	// HostedPageCheckoutNewRequestCardGatewayOrbital captures enum value "orbital"
 	HostedPageCheckoutNewRequestCardGatewayOrbital string = "orbital"
+
 	// HostedPageCheckoutNewRequestCardGatewayMonerisUs captures enum value "moneris_us"
 	HostedPageCheckoutNewRequestCardGatewayMonerisUs string = "moneris_us"
+
 	// HostedPageCheckoutNewRequestCardGatewayMoneris captures enum value "moneris"
 	HostedPageCheckoutNewRequestCardGatewayMoneris string = "moneris"
+
 	// HostedPageCheckoutNewRequestCardGatewayNotApplicable captures enum value "not_applicable"
 	HostedPageCheckoutNewRequestCardGatewayNotApplicable string = "not_applicable"
 )
@@ -551,8 +472,10 @@ func init() {
 }
 
 const (
+
 	// HostedPageCheckoutNewRequestCustomerTaxabilityTaxable captures enum value "taxable"
 	HostedPageCheckoutNewRequestCustomerTaxabilityTaxable string = "taxable"
+
 	// HostedPageCheckoutNewRequestCustomerTaxabilityExempt captures enum value "exempt"
 	HostedPageCheckoutNewRequestCustomerTaxabilityExempt string = "exempt"
 )
@@ -592,12 +515,16 @@ func init() {
 }
 
 const (
+
 	// HostedPageCheckoutNewRequestShippingAddressValidationStatusNotValidated captures enum value "not_validated"
 	HostedPageCheckoutNewRequestShippingAddressValidationStatusNotValidated string = "not_validated"
+
 	// HostedPageCheckoutNewRequestShippingAddressValidationStatusValid captures enum value "valid"
 	HostedPageCheckoutNewRequestShippingAddressValidationStatusValid string = "valid"
+
 	// HostedPageCheckoutNewRequestShippingAddressValidationStatusPartiallyValid captures enum value "partially_valid"
 	HostedPageCheckoutNewRequestShippingAddressValidationStatusPartiallyValid string = "partially_valid"
+
 	// HostedPageCheckoutNewRequestShippingAddressValidationStatusInvalid captures enum value "invalid"
 	HostedPageCheckoutNewRequestShippingAddressValidationStatusInvalid string = "invalid"
 )
@@ -637,8 +564,10 @@ func init() {
 }
 
 const (
+
 	// HostedPageCheckoutNewRequestSubscriptionAutoCollectionOn captures enum value "on"
 	HostedPageCheckoutNewRequestSubscriptionAutoCollectionOn string = "on"
+
 	// HostedPageCheckoutNewRequestSubscriptionAutoCollectionOff captures enum value "off"
 	HostedPageCheckoutNewRequestSubscriptionAutoCollectionOff string = "off"
 )

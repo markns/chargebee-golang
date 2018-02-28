@@ -17,7 +17,6 @@ import (
 
 // ReferralURL referral Url
 // swagger:model ReferralUrl
-
 type ReferralURL struct {
 
 	// created at
@@ -44,22 +43,6 @@ type ReferralURL struct {
 	// updated at
 	UpdatedAt int64 `json:"updated_at,omitempty"`
 }
-
-/* polymorph ReferralUrl created_at false */
-
-/* polymorph ReferralUrl external_customer_id false */
-
-/* polymorph ReferralUrl referral_account_id false */
-
-/* polymorph ReferralUrl referral_campaign_id false */
-
-/* polymorph ReferralUrl referral_external_campaign_id false */
-
-/* polymorph ReferralUrl referral_sharing_url false */
-
-/* polymorph ReferralUrl referral_system false */
-
-/* polymorph ReferralUrl updated_at false */
 
 // Validate validates this referral Url
 func (m *ReferralURL) Validate(formats strfmt.Registry) error {
@@ -89,10 +72,13 @@ func init() {
 }
 
 const (
+
 	// ReferralURLReferralSystemReferralCandy captures enum value "referral_candy"
 	ReferralURLReferralSystemReferralCandy string = "referral_candy"
+
 	// ReferralURLReferralSystemReferralSaasquatch captures enum value "referral_saasquatch"
 	ReferralURLReferralSystemReferralSaasquatch string = "referral_saasquatch"
+
 	// ReferralURLReferralSystemFriendbuy captures enum value "friendbuy"
 	ReferralURLReferralSystemFriendbuy string = "friendbuy"
 )

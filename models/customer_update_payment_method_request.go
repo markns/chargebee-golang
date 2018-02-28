@@ -17,7 +17,6 @@ import (
 
 // CustomerUpdatePaymentMethodRequest customer update payment method request
 // swagger:model CustomerUpdatePaymentMethodRequest
-
 type CustomerUpdatePaymentMethodRequest struct {
 
 	// payment method gateway
@@ -38,18 +37,6 @@ type CustomerUpdatePaymentMethodRequest struct {
 	// payment method type
 	PaymentMethodType string `json:"payment_method[type],omitempty"`
 }
-
-/* polymorph CustomerUpdatePaymentMethodRequest payment_method[gateway] false */
-
-/* polymorph CustomerUpdatePaymentMethodRequest payment_method[gateway_account_id] false */
-
-/* polymorph CustomerUpdatePaymentMethodRequest payment_method[issuing_country] false */
-
-/* polymorph CustomerUpdatePaymentMethodRequest payment_method[reference_id] false */
-
-/* polymorph CustomerUpdatePaymentMethodRequest payment_method[tmp_token] false */
-
-/* polymorph CustomerUpdatePaymentMethodRequest payment_method[type] false */
 
 // Validate validates this customer update payment method request
 func (m *CustomerUpdatePaymentMethodRequest) Validate(formats strfmt.Registry) error {
@@ -84,68 +71,100 @@ func init() {
 }
 
 const (
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayChargebee captures enum value "chargebee"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayChargebee string = "chargebee"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayStripe captures enum value "stripe"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayStripe string = "stripe"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayWepay captures enum value "wepay"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayWepay string = "wepay"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayBraintree captures enum value "braintree"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayBraintree string = "braintree"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayAuthorizeNet captures enum value "authorize_net"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayAuthorizeNet string = "authorize_net"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayPaypalPro captures enum value "paypal_pro"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayPaypalPro string = "paypal_pro"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayPin captures enum value "pin"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayPin string = "pin"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayEway captures enum value "eway"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayEway string = "eway"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayEwayRapid captures enum value "eway_rapid"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayEwayRapid string = "eway_rapid"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayWorldpay captures enum value "worldpay"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayWorldpay string = "worldpay"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayBalancedPayments captures enum value "balanced_payments"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayBalancedPayments string = "balanced_payments"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayBeanstream captures enum value "beanstream"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayBeanstream string = "beanstream"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayBluepay captures enum value "bluepay"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayBluepay string = "bluepay"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayElavon captures enum value "elavon"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayElavon string = "elavon"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayFirstDataGlobal captures enum value "first_data_global"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayFirstDataGlobal string = "first_data_global"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayHdfc captures enum value "hdfc"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayHdfc string = "hdfc"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayMigs captures enum value "migs"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayMigs string = "migs"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayNmi captures enum value "nmi"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayNmi string = "nmi"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayOgone captures enum value "ogone"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayOgone string = "ogone"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayPaymill captures enum value "paymill"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayPaymill string = "paymill"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewaySagePay captures enum value "sage_pay"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewaySagePay string = "sage_pay"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayTco captures enum value "tco"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayTco string = "tco"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayWirecard captures enum value "wirecard"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayWirecard string = "wirecard"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayAmazonPayments captures enum value "amazon_payments"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayAmazonPayments string = "amazon_payments"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayGocardless captures enum value "gocardless"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayGocardless string = "gocardless"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayAdyen captures enum value "adyen"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayAdyen string = "adyen"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayOrbital captures enum value "orbital"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayOrbital string = "orbital"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayMonerisUs captures enum value "moneris_us"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayMonerisUs string = "moneris_us"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayMoneris captures enum value "moneris"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayMoneris string = "moneris"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodGatewayNotApplicable captures enum value "not_applicable"
 	CustomerUpdatePaymentMethodRequestPaymentMethodGatewayNotApplicable string = "not_applicable"
 )
@@ -185,20 +204,28 @@ func init() {
 }
 
 const (
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodTypeCard captures enum value "card"
 	CustomerUpdatePaymentMethodRequestPaymentMethodTypeCard string = "card"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CustomerUpdatePaymentMethodRequestPaymentMethodTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodTypeAmazonPayments captures enum value "amazon_payments"
 	CustomerUpdatePaymentMethodRequestPaymentMethodTypeAmazonPayments string = "amazon_payments"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodTypeDirectDebit captures enum value "direct_debit"
 	CustomerUpdatePaymentMethodRequestPaymentMethodTypeDirectDebit string = "direct_debit"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodTypeGeneric captures enum value "generic"
 	CustomerUpdatePaymentMethodRequestPaymentMethodTypeGeneric string = "generic"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodTypeAlipay captures enum value "alipay"
 	CustomerUpdatePaymentMethodRequestPaymentMethodTypeAlipay string = "alipay"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodTypeUnionpay captures enum value "unionpay"
 	CustomerUpdatePaymentMethodRequestPaymentMethodTypeUnionpay string = "unionpay"
+
 	// CustomerUpdatePaymentMethodRequestPaymentMethodTypeApplePay captures enum value "apple_pay"
 	CustomerUpdatePaymentMethodRequestPaymentMethodTypeApplePay string = "apple_pay"
 )

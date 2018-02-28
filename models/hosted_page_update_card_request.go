@@ -17,7 +17,6 @@ import (
 
 // HostedPageUpdateCardRequest hosted page update card request
 // swagger:model HostedPageUpdateCardRequest
-
 type HostedPageUpdateCardRequest struct {
 
 	// cancel url
@@ -48,24 +47,6 @@ type HostedPageUpdateCardRequest struct {
 	RedirectURL string `json:"redirect_url,omitempty"`
 }
 
-/* polymorph HostedPageUpdateCardRequest cancel_url false */
-
-/* polymorph HostedPageUpdateCardRequest card[gateway] false */
-
-/* polymorph HostedPageUpdateCardRequest card[gateway_account_id] false */
-
-/* polymorph HostedPageUpdateCardRequest customer[id] false */
-
-/* polymorph HostedPageUpdateCardRequest customer[vat_number] false */
-
-/* polymorph HostedPageUpdateCardRequest embed false */
-
-/* polymorph HostedPageUpdateCardRequest iframe_messaging false */
-
-/* polymorph HostedPageUpdateCardRequest pass_thru_content false */
-
-/* polymorph HostedPageUpdateCardRequest redirect_url false */
-
 // Validate validates this hosted page update card request
 func (m *HostedPageUpdateCardRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -94,68 +75,100 @@ func init() {
 }
 
 const (
+
 	// HostedPageUpdateCardRequestCardGatewayChargebee captures enum value "chargebee"
 	HostedPageUpdateCardRequestCardGatewayChargebee string = "chargebee"
+
 	// HostedPageUpdateCardRequestCardGatewayStripe captures enum value "stripe"
 	HostedPageUpdateCardRequestCardGatewayStripe string = "stripe"
+
 	// HostedPageUpdateCardRequestCardGatewayWepay captures enum value "wepay"
 	HostedPageUpdateCardRequestCardGatewayWepay string = "wepay"
+
 	// HostedPageUpdateCardRequestCardGatewayBraintree captures enum value "braintree"
 	HostedPageUpdateCardRequestCardGatewayBraintree string = "braintree"
+
 	// HostedPageUpdateCardRequestCardGatewayAuthorizeNet captures enum value "authorize_net"
 	HostedPageUpdateCardRequestCardGatewayAuthorizeNet string = "authorize_net"
+
 	// HostedPageUpdateCardRequestCardGatewayPaypalPro captures enum value "paypal_pro"
 	HostedPageUpdateCardRequestCardGatewayPaypalPro string = "paypal_pro"
+
 	// HostedPageUpdateCardRequestCardGatewayPin captures enum value "pin"
 	HostedPageUpdateCardRequestCardGatewayPin string = "pin"
+
 	// HostedPageUpdateCardRequestCardGatewayEway captures enum value "eway"
 	HostedPageUpdateCardRequestCardGatewayEway string = "eway"
+
 	// HostedPageUpdateCardRequestCardGatewayEwayRapid captures enum value "eway_rapid"
 	HostedPageUpdateCardRequestCardGatewayEwayRapid string = "eway_rapid"
+
 	// HostedPageUpdateCardRequestCardGatewayWorldpay captures enum value "worldpay"
 	HostedPageUpdateCardRequestCardGatewayWorldpay string = "worldpay"
+
 	// HostedPageUpdateCardRequestCardGatewayBalancedPayments captures enum value "balanced_payments"
 	HostedPageUpdateCardRequestCardGatewayBalancedPayments string = "balanced_payments"
+
 	// HostedPageUpdateCardRequestCardGatewayBeanstream captures enum value "beanstream"
 	HostedPageUpdateCardRequestCardGatewayBeanstream string = "beanstream"
+
 	// HostedPageUpdateCardRequestCardGatewayBluepay captures enum value "bluepay"
 	HostedPageUpdateCardRequestCardGatewayBluepay string = "bluepay"
+
 	// HostedPageUpdateCardRequestCardGatewayElavon captures enum value "elavon"
 	HostedPageUpdateCardRequestCardGatewayElavon string = "elavon"
+
 	// HostedPageUpdateCardRequestCardGatewayFirstDataGlobal captures enum value "first_data_global"
 	HostedPageUpdateCardRequestCardGatewayFirstDataGlobal string = "first_data_global"
+
 	// HostedPageUpdateCardRequestCardGatewayHdfc captures enum value "hdfc"
 	HostedPageUpdateCardRequestCardGatewayHdfc string = "hdfc"
+
 	// HostedPageUpdateCardRequestCardGatewayMigs captures enum value "migs"
 	HostedPageUpdateCardRequestCardGatewayMigs string = "migs"
+
 	// HostedPageUpdateCardRequestCardGatewayNmi captures enum value "nmi"
 	HostedPageUpdateCardRequestCardGatewayNmi string = "nmi"
+
 	// HostedPageUpdateCardRequestCardGatewayOgone captures enum value "ogone"
 	HostedPageUpdateCardRequestCardGatewayOgone string = "ogone"
+
 	// HostedPageUpdateCardRequestCardGatewayPaymill captures enum value "paymill"
 	HostedPageUpdateCardRequestCardGatewayPaymill string = "paymill"
+
 	// HostedPageUpdateCardRequestCardGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	HostedPageUpdateCardRequestCardGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// HostedPageUpdateCardRequestCardGatewaySagePay captures enum value "sage_pay"
 	HostedPageUpdateCardRequestCardGatewaySagePay string = "sage_pay"
+
 	// HostedPageUpdateCardRequestCardGatewayTco captures enum value "tco"
 	HostedPageUpdateCardRequestCardGatewayTco string = "tco"
+
 	// HostedPageUpdateCardRequestCardGatewayWirecard captures enum value "wirecard"
 	HostedPageUpdateCardRequestCardGatewayWirecard string = "wirecard"
+
 	// HostedPageUpdateCardRequestCardGatewayAmazonPayments captures enum value "amazon_payments"
 	HostedPageUpdateCardRequestCardGatewayAmazonPayments string = "amazon_payments"
+
 	// HostedPageUpdateCardRequestCardGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	HostedPageUpdateCardRequestCardGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// HostedPageUpdateCardRequestCardGatewayGocardless captures enum value "gocardless"
 	HostedPageUpdateCardRequestCardGatewayGocardless string = "gocardless"
+
 	// HostedPageUpdateCardRequestCardGatewayAdyen captures enum value "adyen"
 	HostedPageUpdateCardRequestCardGatewayAdyen string = "adyen"
+
 	// HostedPageUpdateCardRequestCardGatewayOrbital captures enum value "orbital"
 	HostedPageUpdateCardRequestCardGatewayOrbital string = "orbital"
+
 	// HostedPageUpdateCardRequestCardGatewayMonerisUs captures enum value "moneris_us"
 	HostedPageUpdateCardRequestCardGatewayMonerisUs string = "moneris_us"
+
 	// HostedPageUpdateCardRequestCardGatewayMoneris captures enum value "moneris"
 	HostedPageUpdateCardRequestCardGatewayMoneris string = "moneris"
+
 	// HostedPageUpdateCardRequestCardGatewayNotApplicable captures enum value "not_applicable"
 	HostedPageUpdateCardRequestCardGatewayNotApplicable string = "not_applicable"
 )

@@ -329,7 +329,7 @@ def main(chargebee_java_path):
             "https"
         ],
         "consumes": [
-            "application/json"
+            "application/x-www-form-urlencoded"
         ],
         "produces": [
             "application/json"

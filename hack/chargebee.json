@@ -1,7 +1,7 @@
 {
     "basePath": "/api/v2",
     "consumes": [
-        "application/json"
+        "application/x-www-form-urlencoded"
     ],
     "definitions": {
         "Addon": {

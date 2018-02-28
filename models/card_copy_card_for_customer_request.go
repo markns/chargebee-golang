@@ -14,14 +14,11 @@ import (
 
 // CardCopyCardForCustomerRequest card copy card for customer request
 // swagger:model CardCopyCardForCustomerRequest
-
 type CardCopyCardForCustomerRequest struct {
 
 	// gateway account id
 	GatewayAccountID string `json:"gateway_account_id,omitempty"`
 }
-
-/* polymorph CardCopyCardForCustomerRequest gateway_account_id false */
 
 // Validate validates this card copy card for customer request
 func (m *CardCopyCardForCustomerRequest) Validate(formats strfmt.Registry) error {

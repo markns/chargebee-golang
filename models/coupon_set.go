@@ -14,7 +14,6 @@ import (
 
 // CouponSet coupon set
 // swagger:model CouponSet
-
 type CouponSet struct {
 
 	// archived count
@@ -38,20 +37,6 @@ type CouponSet struct {
 	// total count
 	TotalCount int32 `json:"total_count,omitempty"`
 }
-
-/* polymorph CouponSet archived_count false */
-
-/* polymorph CouponSet coupon_id false */
-
-/* polymorph CouponSet id false */
-
-/* polymorph CouponSet meta_data false */
-
-/* polymorph CouponSet name false */
-
-/* polymorph CouponSet redeemed_count false */
-
-/* polymorph CouponSet total_count false */
 
 // Validate validates this coupon set
 func (m *CouponSet) Validate(formats strfmt.Registry) error {

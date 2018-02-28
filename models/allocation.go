@@ -17,7 +17,6 @@ import (
 
 // Allocation allocation
 // swagger:model Allocation
-
 type Allocation struct {
 
 	// allocated amount
@@ -35,16 +34,6 @@ type Allocation struct {
 	// invoice status
 	InvoiceStatus string `json:"invoice_status,omitempty"`
 }
-
-/* polymorph Allocation allocated_amount false */
-
-/* polymorph Allocation allocated_at false */
-
-/* polymorph Allocation invoice_date false */
-
-/* polymorph Allocation invoice_id false */
-
-/* polymorph Allocation invoice_status false */
 
 // Validate validates this allocation
 func (m *Allocation) Validate(formats strfmt.Registry) error {
@@ -74,14 +63,19 @@ func init() {
 }
 
 const (
+
 	// AllocationInvoiceStatusFuture captures enum value "future"
 	AllocationInvoiceStatusFuture string = "future"
+
 	// AllocationInvoiceStatusInTrial captures enum value "in_trial"
 	AllocationInvoiceStatusInTrial string = "in_trial"
+
 	// AllocationInvoiceStatusActive captures enum value "active"
 	AllocationInvoiceStatusActive string = "active"
+
 	// AllocationInvoiceStatusNonRenewing captures enum value "non_renewing"
 	AllocationInvoiceStatusNonRenewing string = "non_renewing"
+
 	// AllocationInvoiceStatusCancelled captures enum value "cancelled"
 	AllocationInvoiceStatusCancelled string = "cancelled"
 )

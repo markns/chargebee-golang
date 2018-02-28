@@ -14,7 +14,6 @@ import (
 
 // CustomerRecordExcessPaymentRequest customer record excess payment request
 // swagger:model CustomerRecordExcessPaymentRequest
-
 type CustomerRecordExcessPaymentRequest struct {
 
 	// comment
@@ -35,18 +34,6 @@ type CustomerRecordExcessPaymentRequest struct {
 	// transaction reference number
 	TransactionReferenceNumber string `json:"transaction[reference_number],omitempty"`
 }
-
-/* polymorph CustomerRecordExcessPaymentRequest comment false */
-
-/* polymorph CustomerRecordExcessPaymentRequest transaction[amount] false */
-
-/* polymorph CustomerRecordExcessPaymentRequest transaction[currency_code] false */
-
-/* polymorph CustomerRecordExcessPaymentRequest transaction[date] false */
-
-/* polymorph CustomerRecordExcessPaymentRequest transaction[payment_method] false */
-
-/* polymorph CustomerRecordExcessPaymentRequest transaction[reference_number] false */
 
 // Validate validates this customer record excess payment request
 func (m *CustomerRecordExcessPaymentRequest) Validate(formats strfmt.Registry) error {
@@ -77,6 +64,7 @@ func (m *CustomerRecordExcessPaymentRequest) validateTransactionPaymentMethod(fo
 			}
 			return err
 		}
+
 	}
 
 	return nil

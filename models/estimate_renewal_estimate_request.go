@@ -14,7 +14,6 @@ import (
 
 // EstimateRenewalEstimateRequest estimate renewal estimate request
 // swagger:model EstimateRenewalEstimateRequest
-
 type EstimateRenewalEstimateRequest struct {
 
 	// ignore scheduled cancellation
@@ -29,14 +28,6 @@ type EstimateRenewalEstimateRequest struct {
 	// use existing balances
 	UseExistingBalances bool `json:"use_existing_balances,omitempty"`
 }
-
-/* polymorph EstimateRenewalEstimateRequest ignore_scheduled_cancellation false */
-
-/* polymorph EstimateRenewalEstimateRequest ignore_scheduled_changes false */
-
-/* polymorph EstimateRenewalEstimateRequest include_delayed_charges false */
-
-/* polymorph EstimateRenewalEstimateRequest use_existing_balances false */
 
 // Validate validates this estimate renewal estimate request
 func (m *EstimateRenewalEstimateRequest) Validate(formats strfmt.Registry) error {

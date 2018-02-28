@@ -14,14 +14,11 @@ import (
 
 // HostedPageResponse hosted page response
 // swagger:model HostedPageResponse
-
 type HostedPageResponse struct {
 
 	// hostedpage
 	Hostedpage *HostedPage `json:"hostedpage,omitempty"`
 }
-
-/* polymorph HostedPageResponse hostedpage false */
 
 // Validate validates this hosted page response
 func (m *HostedPageResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *HostedPageResponse) validateHostedpage(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

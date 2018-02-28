@@ -18,7 +18,6 @@ import (
 
 // CreditNoteEstimate credit note estimate
 // swagger:model CreditNoteEstimate
-
 type CreditNoteEstimate struct {
 
 	// amount allocated
@@ -60,32 +59,6 @@ type CreditNoteEstimate struct {
 	// type
 	Type string `json:"type,omitempty"`
 }
-
-/* polymorph CreditNoteEstimate amount_allocated false */
-
-/* polymorph CreditNoteEstimate amount_available false */
-
-/* polymorph CreditNoteEstimate currency_code false */
-
-/* polymorph CreditNoteEstimate discounts false */
-
-/* polymorph CreditNoteEstimate line_item_discounts false */
-
-/* polymorph CreditNoteEstimate line_item_taxes false */
-
-/* polymorph CreditNoteEstimate line_items false */
-
-/* polymorph CreditNoteEstimate price_type false */
-
-/* polymorph CreditNoteEstimate reference_invoice_id false */
-
-/* polymorph CreditNoteEstimate sub_total false */
-
-/* polymorph CreditNoteEstimate taxes false */
-
-/* polymorph CreditNoteEstimate total false */
-
-/* polymorph CreditNoteEstimate type false */
 
 // Validate validates this credit note estimate
 func (m *CreditNoteEstimate) Validate(formats strfmt.Registry) error {
@@ -152,6 +125,7 @@ func (m *CreditNoteEstimate) validateDiscounts(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -179,6 +153,7 @@ func (m *CreditNoteEstimate) validateLineItemDiscounts(formats strfmt.Registry) 
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -206,6 +181,7 @@ func (m *CreditNoteEstimate) validateLineItemTaxes(formats strfmt.Registry) erro
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -233,6 +209,7 @@ func (m *CreditNoteEstimate) validateLineItems(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -253,8 +230,10 @@ func init() {
 }
 
 const (
+
 	// CreditNoteEstimatePriceTypeTaxExclusive captures enum value "tax_exclusive"
 	CreditNoteEstimatePriceTypeTaxExclusive string = "tax_exclusive"
+
 	// CreditNoteEstimatePriceTypeTaxInclusive captures enum value "tax_inclusive"
 	CreditNoteEstimatePriceTypeTaxInclusive string = "tax_inclusive"
 )
@@ -301,6 +280,7 @@ func (m *CreditNoteEstimate) validateTaxes(formats strfmt.Registry) error {
 				}
 				return err
 			}
+
 		}
 
 	}
@@ -321,20 +301,28 @@ func init() {
 }
 
 const (
+
 	// CreditNoteEstimateTypeCard captures enum value "card"
 	CreditNoteEstimateTypeCard string = "card"
+
 	// CreditNoteEstimateTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	CreditNoteEstimateTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// CreditNoteEstimateTypeAmazonPayments captures enum value "amazon_payments"
 	CreditNoteEstimateTypeAmazonPayments string = "amazon_payments"
+
 	// CreditNoteEstimateTypeDirectDebit captures enum value "direct_debit"
 	CreditNoteEstimateTypeDirectDebit string = "direct_debit"
+
 	// CreditNoteEstimateTypeGeneric captures enum value "generic"
 	CreditNoteEstimateTypeGeneric string = "generic"
+
 	// CreditNoteEstimateTypeAlipay captures enum value "alipay"
 	CreditNoteEstimateTypeAlipay string = "alipay"
+
 	// CreditNoteEstimateTypeUnionpay captures enum value "unionpay"
 	CreditNoteEstimateTypeUnionpay string = "unionpay"
+
 	// CreditNoteEstimateTypeApplePay captures enum value "apple_pay"
 	CreditNoteEstimateTypeApplePay string = "apple_pay"
 )

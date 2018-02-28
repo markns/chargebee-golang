@@ -17,7 +17,6 @@ import (
 
 // HostedPage hosted page
 // swagger:model HostedPage
-
 type HostedPage struct {
 
 	// checkout info
@@ -54,28 +53,6 @@ type HostedPage struct {
 	URL string `json:"url,omitempty"`
 }
 
-/* polymorph HostedPage checkout_info false */
-
-/* polymorph HostedPage created_at false */
-
-/* polymorph HostedPage embed false */
-
-/* polymorph HostedPage expires_at false */
-
-/* polymorph HostedPage id false */
-
-/* polymorph HostedPage pass_thru_content false */
-
-/* polymorph HostedPage resource_version false */
-
-/* polymorph HostedPage state false */
-
-/* polymorph HostedPage type false */
-
-/* polymorph HostedPage updated_at false */
-
-/* polymorph HostedPage url false */
-
 // Validate validates this hosted page
 func (m *HostedPage) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -109,16 +86,22 @@ func init() {
 }
 
 const (
+
 	// HostedPageStateCreated captures enum value "created"
 	HostedPageStateCreated string = "created"
+
 	// HostedPageStateRequested captures enum value "requested"
 	HostedPageStateRequested string = "requested"
+
 	// HostedPageStateSucceeded captures enum value "succeeded"
 	HostedPageStateSucceeded string = "succeeded"
+
 	// HostedPageStateCancelled captures enum value "cancelled"
 	HostedPageStateCancelled string = "cancelled"
+
 	// HostedPageStateFailed captures enum value "failed"
 	HostedPageStateFailed string = "failed"
+
 	// HostedPageStateAcknowledged captures enum value "acknowledged"
 	HostedPageStateAcknowledged string = "acknowledged"
 )
@@ -158,20 +141,28 @@ func init() {
 }
 
 const (
+
 	// HostedPageTypeCard captures enum value "card"
 	HostedPageTypeCard string = "card"
+
 	// HostedPageTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	HostedPageTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// HostedPageTypeAmazonPayments captures enum value "amazon_payments"
 	HostedPageTypeAmazonPayments string = "amazon_payments"
+
 	// HostedPageTypeDirectDebit captures enum value "direct_debit"
 	HostedPageTypeDirectDebit string = "direct_debit"
+
 	// HostedPageTypeGeneric captures enum value "generic"
 	HostedPageTypeGeneric string = "generic"
+
 	// HostedPageTypeAlipay captures enum value "alipay"
 	HostedPageTypeAlipay string = "alipay"
+
 	// HostedPageTypeUnionpay captures enum value "unionpay"
 	HostedPageTypeUnionpay string = "unionpay"
+
 	// HostedPageTypeApplePay captures enum value "apple_pay"
 	HostedPageTypeApplePay string = "apple_pay"
 )

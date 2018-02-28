@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCreateCouponSetParams creates a new CreateCouponSetParams object
@@ -124,12 +124,10 @@ func (o *CreateCouponSetParams) WriteToRequest(r runtime.ClientRequest, reg strf
 	}
 	var res []error
 
-	if o.CouponSetCreateRequest == nil {
-		o.CouponSetCreateRequest = new(models.CouponSetCreateRequest)
-	}
-
-	if err := r.SetBodyParam(o.CouponSetCreateRequest); err != nil {
-		return err
+	if o.CouponSetCreateRequest != nil {
+		if err := r.SetBodyParam(o.CouponSetCreateRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

@@ -14,14 +14,11 @@ import (
 
 // InvoiceWriteOffRequest invoice write off request
 // swagger:model InvoiceWriteOffRequest
-
 type InvoiceWriteOffRequest struct {
 
 	// comment
 	Comment string `json:"comment,omitempty"`
 }
-
-/* polymorph InvoiceWriteOffRequest comment false */
 
 // Validate validates this invoice write off request
 func (m *InvoiceWriteOffRequest) Validate(formats strfmt.Registry) error {

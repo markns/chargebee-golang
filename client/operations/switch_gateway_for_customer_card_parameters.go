@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewSwitchGatewayForCustomerCardParams creates a new SwitchGatewayForCustomerCardParams object
@@ -137,12 +137,10 @@ func (o *SwitchGatewayForCustomerCardParams) WriteToRequest(r runtime.ClientRequ
 	}
 	var res []error
 
-	if o.CardSwitchGatewayForCustomerRequest == nil {
-		o.CardSwitchGatewayForCustomerRequest = new(models.CardSwitchGatewayForCustomerRequest)
-	}
-
-	if err := r.SetBodyParam(o.CardSwitchGatewayForCustomerRequest); err != nil {
-		return err
+	if o.CardSwitchGatewayForCustomerRequest != nil {
+		if err := r.SetBodyParam(o.CardSwitchGatewayForCustomerRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

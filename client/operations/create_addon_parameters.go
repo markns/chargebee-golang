@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewCreateAddonParams creates a new CreateAddonParams object
@@ -124,12 +124,10 @@ func (o *CreateAddonParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.R
 	}
 	var res []error
 
-	if o.AddonCreateRequest == nil {
-		o.AddonCreateRequest = new(models.AddonCreateRequest)
-	}
-
-	if err := r.SetBodyParam(o.AddonCreateRequest); err != nil {
-		return err
+	if o.AddonCreateRequest != nil {
+		if err := r.SetBodyParam(o.AddonCreateRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

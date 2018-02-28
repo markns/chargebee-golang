@@ -14,14 +14,11 @@ import (
 
 // CustomerDeleteRequest customer delete request
 // swagger:model CustomerDeleteRequest
-
 type CustomerDeleteRequest struct {
 
 	// delete payment method
 	DeletePaymentMethod bool `json:"delete_payment_method,omitempty"`
 }
-
-/* polymorph CustomerDeleteRequest delete_payment_method false */
 
 // Validate validates this customer delete request
 func (m *CustomerDeleteRequest) Validate(formats strfmt.Registry) error {

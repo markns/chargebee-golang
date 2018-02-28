@@ -14,14 +14,11 @@ import (
 
 // PortalSessionResponse portal session response
 // swagger:model PortalSessionResponse
-
 type PortalSessionResponse struct {
 
 	// portalsession
 	Portalsession *PortalSession `json:"portalsession,omitempty"`
 }
-
-/* polymorph PortalSessionResponse portalsession false */
 
 // Validate validates this portal session response
 func (m *PortalSessionResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *PortalSessionResponse) validatePortalsession(formats strfmt.Registry) e
 			}
 			return err
 		}
+
 	}
 
 	return nil

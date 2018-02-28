@@ -14,7 +14,6 @@ import (
 
 // Coupon coupon
 // swagger:model Coupon
-
 type Coupon struct {
 
 	// applied count
@@ -29,14 +28,6 @@ type Coupon struct {
 	// coupon id
 	CouponID string `json:"coupon_id,omitempty"`
 }
-
-/* polymorph Coupon applied_count false */
-
-/* polymorph Coupon apply_till false */
-
-/* polymorph Coupon coupon_code false */
-
-/* polymorph Coupon coupon_id false */
 
 // Validate validates this coupon
 func (m *Coupon) Validate(formats strfmt.Registry) error {

@@ -17,7 +17,6 @@ import (
 
 // AddonCreateRequest addon create request
 // swagger:model AddonCreateRequest
-
 type AddonCreateRequest struct {
 
 	// accounting category1
@@ -87,50 +86,6 @@ type AddonCreateRequest struct {
 	Unit string `json:"unit,omitempty"`
 }
 
-/* polymorph AddonCreateRequest accounting_category1 false */
-
-/* polymorph AddonCreateRequest accounting_category2 false */
-
-/* polymorph AddonCreateRequest accounting_code false */
-
-/* polymorph AddonCreateRequest charge_type false */
-
-/* polymorph AddonCreateRequest currency_code false */
-
-/* polymorph AddonCreateRequest description false */
-
-/* polymorph AddonCreateRequest enabled_in_portal false */
-
-/* polymorph AddonCreateRequest id false */
-
-/* polymorph AddonCreateRequest invoice_name false */
-
-/* polymorph AddonCreateRequest invoice_notes false */
-
-/* polymorph AddonCreateRequest meta_data false */
-
-/* polymorph AddonCreateRequest name false */
-
-/* polymorph AddonCreateRequest period false */
-
-/* polymorph AddonCreateRequest period_unit false */
-
-/* polymorph AddonCreateRequest price false */
-
-/* polymorph AddonCreateRequest sku false */
-
-/* polymorph AddonCreateRequest status false */
-
-/* polymorph AddonCreateRequest tax_code false */
-
-/* polymorph AddonCreateRequest tax_profile_id false */
-
-/* polymorph AddonCreateRequest taxable false */
-
-/* polymorph AddonCreateRequest type false */
-
-/* polymorph AddonCreateRequest unit false */
-
 // Validate validates this addon create request
 func (m *AddonCreateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
@@ -174,8 +129,10 @@ func init() {
 }
 
 const (
+
 	// AddonCreateRequestChargeTypeRecurring captures enum value "recurring"
 	AddonCreateRequestChargeTypeRecurring string = "recurring"
+
 	// AddonCreateRequestChargeTypeNonRecurring captures enum value "non_recurring"
 	AddonCreateRequestChargeTypeNonRecurring string = "non_recurring"
 )
@@ -215,10 +172,13 @@ func init() {
 }
 
 const (
+
 	// AddonCreateRequestPeriodUnitWeek captures enum value "week"
 	AddonCreateRequestPeriodUnitWeek string = "week"
+
 	// AddonCreateRequestPeriodUnitMonth captures enum value "month"
 	AddonCreateRequestPeriodUnitMonth string = "month"
+
 	// AddonCreateRequestPeriodUnitYear captures enum value "year"
 	AddonCreateRequestPeriodUnitYear string = "year"
 )
@@ -258,14 +218,19 @@ func init() {
 }
 
 const (
+
 	// AddonCreateRequestStatusFuture captures enum value "future"
 	AddonCreateRequestStatusFuture string = "future"
+
 	// AddonCreateRequestStatusInTrial captures enum value "in_trial"
 	AddonCreateRequestStatusInTrial string = "in_trial"
+
 	// AddonCreateRequestStatusActive captures enum value "active"
 	AddonCreateRequestStatusActive string = "active"
+
 	// AddonCreateRequestStatusNonRenewing captures enum value "non_renewing"
 	AddonCreateRequestStatusNonRenewing string = "non_renewing"
+
 	// AddonCreateRequestStatusCancelled captures enum value "cancelled"
 	AddonCreateRequestStatusCancelled string = "cancelled"
 )
@@ -305,20 +270,28 @@ func init() {
 }
 
 const (
+
 	// AddonCreateRequestTypeCard captures enum value "card"
 	AddonCreateRequestTypeCard string = "card"
+
 	// AddonCreateRequestTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	AddonCreateRequestTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// AddonCreateRequestTypeAmazonPayments captures enum value "amazon_payments"
 	AddonCreateRequestTypeAmazonPayments string = "amazon_payments"
+
 	// AddonCreateRequestTypeDirectDebit captures enum value "direct_debit"
 	AddonCreateRequestTypeDirectDebit string = "direct_debit"
+
 	// AddonCreateRequestTypeGeneric captures enum value "generic"
 	AddonCreateRequestTypeGeneric string = "generic"
+
 	// AddonCreateRequestTypeAlipay captures enum value "alipay"
 	AddonCreateRequestTypeAlipay string = "alipay"
+
 	// AddonCreateRequestTypeUnionpay captures enum value "unionpay"
 	AddonCreateRequestTypeUnionpay string = "unionpay"
+
 	// AddonCreateRequestTypeApplePay captures enum value "apple_pay"
 	AddonCreateRequestTypeApplePay string = "apple_pay"
 )

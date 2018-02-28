@@ -14,14 +14,11 @@ import (
 
 // InvoiceRemoveCreditNoteRequest invoice remove credit note request
 // swagger:model InvoiceRemoveCreditNoteRequest
-
 type InvoiceRemoveCreditNoteRequest struct {
 
 	// credit note id
 	CreditNoteID string `json:"credit_note[id],omitempty"`
 }
-
-/* polymorph InvoiceRemoveCreditNoteRequest credit_note[id] false */
 
 // Validate validates this invoice remove credit note request
 func (m *InvoiceRemoveCreditNoteRequest) Validate(formats strfmt.Registry) error {

@@ -14,14 +14,11 @@ import (
 
 // CreditNoteResponse credit note response
 // swagger:model CreditNoteResponse
-
 type CreditNoteResponse struct {
 
 	// creditnote
 	Creditnote *CreditNote `json:"creditnote,omitempty"`
 }
-
-/* polymorph CreditNoteResponse creditnote false */
 
 // Validate validates this credit note response
 func (m *CreditNoteResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *CreditNoteResponse) validateCreditnote(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

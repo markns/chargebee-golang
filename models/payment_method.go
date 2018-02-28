@@ -17,7 +17,6 @@ import (
 
 // PaymentMethod payment method
 // swagger:model PaymentMethod
-
 type PaymentMethod struct {
 
 	// gateway
@@ -35,16 +34,6 @@ type PaymentMethod struct {
 	// type
 	Type string `json:"type,omitempty"`
 }
-
-/* polymorph PaymentMethod gateway false */
-
-/* polymorph PaymentMethod gateway_account_id false */
-
-/* polymorph PaymentMethod reference_id false */
-
-/* polymorph PaymentMethod status false */
-
-/* polymorph PaymentMethod type false */
 
 // Validate validates this payment method
 func (m *PaymentMethod) Validate(formats strfmt.Registry) error {
@@ -84,68 +73,100 @@ func init() {
 }
 
 const (
+
 	// PaymentMethodGatewayChargebee captures enum value "chargebee"
 	PaymentMethodGatewayChargebee string = "chargebee"
+
 	// PaymentMethodGatewayStripe captures enum value "stripe"
 	PaymentMethodGatewayStripe string = "stripe"
+
 	// PaymentMethodGatewayWepay captures enum value "wepay"
 	PaymentMethodGatewayWepay string = "wepay"
+
 	// PaymentMethodGatewayBraintree captures enum value "braintree"
 	PaymentMethodGatewayBraintree string = "braintree"
+
 	// PaymentMethodGatewayAuthorizeNet captures enum value "authorize_net"
 	PaymentMethodGatewayAuthorizeNet string = "authorize_net"
+
 	// PaymentMethodGatewayPaypalPro captures enum value "paypal_pro"
 	PaymentMethodGatewayPaypalPro string = "paypal_pro"
+
 	// PaymentMethodGatewayPin captures enum value "pin"
 	PaymentMethodGatewayPin string = "pin"
+
 	// PaymentMethodGatewayEway captures enum value "eway"
 	PaymentMethodGatewayEway string = "eway"
+
 	// PaymentMethodGatewayEwayRapid captures enum value "eway_rapid"
 	PaymentMethodGatewayEwayRapid string = "eway_rapid"
+
 	// PaymentMethodGatewayWorldpay captures enum value "worldpay"
 	PaymentMethodGatewayWorldpay string = "worldpay"
+
 	// PaymentMethodGatewayBalancedPayments captures enum value "balanced_payments"
 	PaymentMethodGatewayBalancedPayments string = "balanced_payments"
+
 	// PaymentMethodGatewayBeanstream captures enum value "beanstream"
 	PaymentMethodGatewayBeanstream string = "beanstream"
+
 	// PaymentMethodGatewayBluepay captures enum value "bluepay"
 	PaymentMethodGatewayBluepay string = "bluepay"
+
 	// PaymentMethodGatewayElavon captures enum value "elavon"
 	PaymentMethodGatewayElavon string = "elavon"
+
 	// PaymentMethodGatewayFirstDataGlobal captures enum value "first_data_global"
 	PaymentMethodGatewayFirstDataGlobal string = "first_data_global"
+
 	// PaymentMethodGatewayHdfc captures enum value "hdfc"
 	PaymentMethodGatewayHdfc string = "hdfc"
+
 	// PaymentMethodGatewayMigs captures enum value "migs"
 	PaymentMethodGatewayMigs string = "migs"
+
 	// PaymentMethodGatewayNmi captures enum value "nmi"
 	PaymentMethodGatewayNmi string = "nmi"
+
 	// PaymentMethodGatewayOgone captures enum value "ogone"
 	PaymentMethodGatewayOgone string = "ogone"
+
 	// PaymentMethodGatewayPaymill captures enum value "paymill"
 	PaymentMethodGatewayPaymill string = "paymill"
+
 	// PaymentMethodGatewayPaypalPayflowPro captures enum value "paypal_payflow_pro"
 	PaymentMethodGatewayPaypalPayflowPro string = "paypal_payflow_pro"
+
 	// PaymentMethodGatewaySagePay captures enum value "sage_pay"
 	PaymentMethodGatewaySagePay string = "sage_pay"
+
 	// PaymentMethodGatewayTco captures enum value "tco"
 	PaymentMethodGatewayTco string = "tco"
+
 	// PaymentMethodGatewayWirecard captures enum value "wirecard"
 	PaymentMethodGatewayWirecard string = "wirecard"
+
 	// PaymentMethodGatewayAmazonPayments captures enum value "amazon_payments"
 	PaymentMethodGatewayAmazonPayments string = "amazon_payments"
+
 	// PaymentMethodGatewayPaypalExpressCheckout captures enum value "paypal_express_checkout"
 	PaymentMethodGatewayPaypalExpressCheckout string = "paypal_express_checkout"
+
 	// PaymentMethodGatewayGocardless captures enum value "gocardless"
 	PaymentMethodGatewayGocardless string = "gocardless"
+
 	// PaymentMethodGatewayAdyen captures enum value "adyen"
 	PaymentMethodGatewayAdyen string = "adyen"
+
 	// PaymentMethodGatewayOrbital captures enum value "orbital"
 	PaymentMethodGatewayOrbital string = "orbital"
+
 	// PaymentMethodGatewayMonerisUs captures enum value "moneris_us"
 	PaymentMethodGatewayMonerisUs string = "moneris_us"
+
 	// PaymentMethodGatewayMoneris captures enum value "moneris"
 	PaymentMethodGatewayMoneris string = "moneris"
+
 	// PaymentMethodGatewayNotApplicable captures enum value "not_applicable"
 	PaymentMethodGatewayNotApplicable string = "not_applicable"
 )
@@ -185,14 +206,19 @@ func init() {
 }
 
 const (
+
 	// PaymentMethodStatusFuture captures enum value "future"
 	PaymentMethodStatusFuture string = "future"
+
 	// PaymentMethodStatusInTrial captures enum value "in_trial"
 	PaymentMethodStatusInTrial string = "in_trial"
+
 	// PaymentMethodStatusActive captures enum value "active"
 	PaymentMethodStatusActive string = "active"
+
 	// PaymentMethodStatusNonRenewing captures enum value "non_renewing"
 	PaymentMethodStatusNonRenewing string = "non_renewing"
+
 	// PaymentMethodStatusCancelled captures enum value "cancelled"
 	PaymentMethodStatusCancelled string = "cancelled"
 )
@@ -232,20 +258,28 @@ func init() {
 }
 
 const (
+
 	// PaymentMethodTypeCard captures enum value "card"
 	PaymentMethodTypeCard string = "card"
+
 	// PaymentMethodTypePaypalExpressCheckout captures enum value "paypal_express_checkout"
 	PaymentMethodTypePaypalExpressCheckout string = "paypal_express_checkout"
+
 	// PaymentMethodTypeAmazonPayments captures enum value "amazon_payments"
 	PaymentMethodTypeAmazonPayments string = "amazon_payments"
+
 	// PaymentMethodTypeDirectDebit captures enum value "direct_debit"
 	PaymentMethodTypeDirectDebit string = "direct_debit"
+
 	// PaymentMethodTypeGeneric captures enum value "generic"
 	PaymentMethodTypeGeneric string = "generic"
+
 	// PaymentMethodTypeAlipay captures enum value "alipay"
 	PaymentMethodTypeAlipay string = "alipay"
+
 	// PaymentMethodTypeUnionpay captures enum value "unionpay"
 	PaymentMethodTypeUnionpay string = "unionpay"
+
 	// PaymentMethodTypeApplePay captures enum value "apple_pay"
 	PaymentMethodTypeApplePay string = "apple_pay"
 )

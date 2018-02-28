@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewRecordExcessPaymentCustomerParams creates a new RecordExcessPaymentCustomerParams object
@@ -137,12 +137,10 @@ func (o *RecordExcessPaymentCustomerParams) WriteToRequest(r runtime.ClientReque
 	}
 	var res []error
 
-	if o.CustomerRecordExcessPaymentRequest == nil {
-		o.CustomerRecordExcessPaymentRequest = new(models.CustomerRecordExcessPaymentRequest)
-	}
-
-	if err := r.SetBodyParam(o.CustomerRecordExcessPaymentRequest); err != nil {
-		return err
+	if o.CustomerRecordExcessPaymentRequest != nil {
+		if err := r.SetBodyParam(o.CustomerRecordExcessPaymentRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

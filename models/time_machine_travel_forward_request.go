@@ -14,14 +14,11 @@ import (
 
 // TimeMachineTravelForwardRequest time machine travel forward request
 // swagger:model TimeMachineTravelForwardRequest
-
 type TimeMachineTravelForwardRequest struct {
 
 	// destination time
 	DestinationTime int64 `json:"destination_time,omitempty"`
 }
-
-/* polymorph TimeMachineTravelForwardRequest destination_time false */
 
 // Validate validates this time machine travel forward request
 func (m *TimeMachineTravelForwardRequest) Validate(formats strfmt.Registry) error {

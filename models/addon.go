@@ -14,7 +14,6 @@ import (
 
 // Addon addon
 // swagger:model Addon
-
 type Addon struct {
 
 	// id
@@ -32,16 +31,6 @@ type Addon struct {
 	// unit price
 	UnitPrice int32 `json:"unit_price,omitempty"`
 }
-
-/* polymorph Addon id false */
-
-/* polymorph Addon quantity false */
-
-/* polymorph Addon remaining_billing_cycles false */
-
-/* polymorph Addon trial_end false */
-
-/* polymorph Addon unit_price false */
 
 // Validate validates this addon
 func (m *Addon) Validate(formats strfmt.Registry) error {

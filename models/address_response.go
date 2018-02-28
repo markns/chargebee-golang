@@ -14,14 +14,11 @@ import (
 
 // AddressResponse address response
 // swagger:model AddressResponse
-
 type AddressResponse struct {
 
 	// address
 	Address *Address `json:"address,omitempty"`
 }
-
-/* polymorph AddressResponse address false */
 
 // Validate validates this address response
 func (m *AddressResponse) Validate(formats strfmt.Registry) error {
@@ -52,6 +49,7 @@ func (m *AddressResponse) validateAddress(formats strfmt.Registry) error {
 			}
 			return err
 		}
+
 	}
 
 	return nil

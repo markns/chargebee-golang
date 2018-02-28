@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewChangeBillingDateCustomerParams creates a new ChangeBillingDateCustomerParams object
@@ -137,12 +137,10 @@ func (o *ChangeBillingDateCustomerParams) WriteToRequest(r runtime.ClientRequest
 	}
 	var res []error
 
-	if o.CustomerChangeBillingDateRequest == nil {
-		o.CustomerChangeBillingDateRequest = new(models.CustomerChangeBillingDateRequest)
-	}
-
-	if err := r.SetBodyParam(o.CustomerChangeBillingDateRequest); err != nil {
-		return err
+	if o.CustomerChangeBillingDateRequest != nil {
+		if err := r.SetBodyParam(o.CustomerChangeBillingDateRequest); err != nil {
+			return err
+		}
 	}
 
 	// path param id

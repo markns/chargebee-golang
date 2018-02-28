@@ -14,14 +14,11 @@ import (
 
 // SubscriptionRemoveCouponsRequest subscription remove coupons request
 // swagger:model SubscriptionRemoveCouponsRequest
-
 type SubscriptionRemoveCouponsRequest struct {
 
 	// coupon ids
 	CouponIds string `json:"coupon_ids,omitempty"`
 }
-
-/* polymorph SubscriptionRemoveCouponsRequest coupon_ids false */
 
 // Validate validates this subscription remove coupons request
 func (m *SubscriptionRemoveCouponsRequest) Validate(formats strfmt.Registry) error {

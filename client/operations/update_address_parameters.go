@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/markns/chargebee-golang/models"
+	models "github.com/markns/chargebee-golang/models"
 )
 
 // NewUpdateAddressParams creates a new UpdateAddressParams object
@@ -124,12 +124,10 @@ func (o *UpdateAddressParams) WriteToRequest(r runtime.ClientRequest, reg strfmt
 	}
 	var res []error
 
-	if o.AddressUpdateRequest == nil {
-		o.AddressUpdateRequest = new(models.AddressUpdateRequest)
-	}
-
-	if err := r.SetBodyParam(o.AddressUpdateRequest); err != nil {
-		return err
+	if o.AddressUpdateRequest != nil {
+		if err := r.SetBodyParam(o.AddressUpdateRequest); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

@@ -14,14 +14,11 @@ import (
 
 // TimeMachineStartAfreshRequest time machine start afresh request
 // swagger:model TimeMachineStartAfreshRequest
-
 type TimeMachineStartAfreshRequest struct {
 
 	// genesis time
 	GenesisTime int64 `json:"genesis_time,omitempty"`
 }
-
-/* polymorph TimeMachineStartAfreshRequest genesis_time false */
 
 // Validate validates this time machine start afresh request
 func (m *TimeMachineStartAfreshRequest) Validate(formats strfmt.Registry) error {

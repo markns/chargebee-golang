@@ -17,7 +17,6 @@ import (
 
 // EstimateCancelSubscriptionRequest estimate cancel subscription request
 // swagger:model EstimateCancelSubscriptionRequest
-
 type EstimateCancelSubscriptionRequest struct {
 
 	// account receivables handling
@@ -35,16 +34,6 @@ type EstimateCancelSubscriptionRequest struct {
 	// unbilled charges option
 	UnbilledChargesOption string `json:"unbilled_charges_option,omitempty"`
 }
-
-/* polymorph EstimateCancelSubscriptionRequest account_receivables_handling false */
-
-/* polymorph EstimateCancelSubscriptionRequest credit_option_for_current_term_charges false */
-
-/* polymorph EstimateCancelSubscriptionRequest end_of_term false */
-
-/* polymorph EstimateCancelSubscriptionRequest refundable_credits_handling false */
-
-/* polymorph EstimateCancelSubscriptionRequest unbilled_charges_option false */
 
 // Validate validates this estimate cancel subscription request
 func (m *EstimateCancelSubscriptionRequest) Validate(formats strfmt.Registry) error {
@@ -89,10 +78,13 @@ func init() {
 }
 
 const (
+
 	// EstimateCancelSubscriptionRequestAccountReceivablesHandlingNoAction captures enum value "no_action"
 	EstimateCancelSubscriptionRequestAccountReceivablesHandlingNoAction string = "no_action"
+
 	// EstimateCancelSubscriptionRequestAccountReceivablesHandlingSchedulePaymentCollection captures enum value "schedule_payment_collection"
 	EstimateCancelSubscriptionRequestAccountReceivablesHandlingSchedulePaymentCollection string = "schedule_payment_collection"
+
 	// EstimateCancelSubscriptionRequestAccountReceivablesHandlingWriteOff captures enum value "write_off"
 	EstimateCancelSubscriptionRequestAccountReceivablesHandlingWriteOff string = "write_off"
 )
@@ -132,10 +124,13 @@ func init() {
 }
 
 const (
+
 	// EstimateCancelSubscriptionRequestCreditOptionForCurrentTermChargesNone captures enum value "none"
 	EstimateCancelSubscriptionRequestCreditOptionForCurrentTermChargesNone string = "none"
+
 	// EstimateCancelSubscriptionRequestCreditOptionForCurrentTermChargesProrate captures enum value "prorate"
 	EstimateCancelSubscriptionRequestCreditOptionForCurrentTermChargesProrate string = "prorate"
+
 	// EstimateCancelSubscriptionRequestCreditOptionForCurrentTermChargesFull captures enum value "full"
 	EstimateCancelSubscriptionRequestCreditOptionForCurrentTermChargesFull string = "full"
 )
@@ -175,8 +170,10 @@ func init() {
 }
 
 const (
+
 	// EstimateCancelSubscriptionRequestRefundableCreditsHandlingNoAction captures enum value "no_action"
 	EstimateCancelSubscriptionRequestRefundableCreditsHandlingNoAction string = "no_action"
+
 	// EstimateCancelSubscriptionRequestRefundableCreditsHandlingScheduleRefund captures enum value "schedule_refund"
 	EstimateCancelSubscriptionRequestRefundableCreditsHandlingScheduleRefund string = "schedule_refund"
 )
@@ -216,8 +213,10 @@ func init() {
 }
 
 const (
+
 	// EstimateCancelSubscriptionRequestUnbilledChargesOptionInvoice captures enum value "invoice"
 	EstimateCancelSubscriptionRequestUnbilledChargesOptionInvoice string = "invoice"
+
 	// EstimateCancelSubscriptionRequestUnbilledChargesOptionDelete captures enum value "delete"
 	EstimateCancelSubscriptionRequestUnbilledChargesOptionDelete string = "delete"
 )
