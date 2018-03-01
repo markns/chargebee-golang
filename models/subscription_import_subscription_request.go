@@ -179,7 +179,7 @@ type SubscriptionImportSubscriptionRequest struct {
 	InvoiceNotes string `json:"invoice_notes,omitempty"`
 
 	// meta data
-	MetaData string `json:"meta_data,omitempty"`
+	MetaData interface{} `json:"meta_data,omitempty"`
 
 	// payment method gateway
 	PaymentMethodGateway string `json:"payment_method[gateway],omitempty"`

@@ -90,7 +90,7 @@ type Subscription struct {
 	InvoiceNotes string `json:"invoice_notes,omitempty"`
 
 	// meta data
-	MetaData string `json:"meta_data,omitempty"`
+	MetaData interface{} `json:"meta_data,omitempty"`
 
 	// mrr
 	Mrr int32 `json:"mrr,omitempty"`

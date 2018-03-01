@@ -96,7 +96,7 @@ type Customer struct {
 	Locale string `json:"locale,omitempty"`
 
 	// meta data
-	MetaData string `json:"meta_data,omitempty"`
+	MetaData interface{} `json:"meta_data,omitempty"`
 
 	// net term days
 	NetTermDays int32 `json:"net_term_days,omitempty"`

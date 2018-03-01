@@ -44,7 +44,7 @@ type SubscriptionImportForCustomerRequest struct {
 	InvoiceNotes string `json:"invoice_notes,omitempty"`
 
 	// meta data
-	MetaData string `json:"meta_data,omitempty"`
+	MetaData interface{} `json:"meta_data,omitempty"`
 
 	// payment source id
 	PaymentSourceID string `json:"payment_source_id,omitempty"`

@@ -62,7 +62,7 @@ type CouponCreateRequest struct {
 	MaxRedemptions int32 `json:"max_redemptions,omitempty"`
 
 	// meta data
-	MetaData string `json:"meta_data,omitempty"`
+	MetaData interface{} `json:"meta_data,omitempty"`
 
 	// name
 	Name string `json:"name,omitempty"`

@@ -17,7 +17,7 @@ import (
 type CouponSetUpdateRequest struct {
 
 	// meta data
-	MetaData string `json:"meta_data,omitempty"`
+	MetaData interface{} `json:"meta_data,omitempty"`
 
 	// name
 	Name string `json:"name,omitempty"`

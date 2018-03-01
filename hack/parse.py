@@ -18,7 +18,7 @@ type_map = dict(
     Date=dict(type="date", format="date"),
     DateTime=dict(type="dateTime", format="date-time"),
     Timestamp=(dict(type="integer", format="int64")),
-    JSONObject=(dict(type="string")),
+    JSONObject=(dict(type="object")),
     BigDecimal=(dict(type="number")),
 )
 

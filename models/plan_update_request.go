@@ -59,7 +59,7 @@ type PlanUpdateRequest struct {
 	InvoiceNotes string `json:"invoice_notes,omitempty"`
 
 	// meta data
-	MetaData string `json:"meta_data,omitempty"`
+	MetaData interface{} `json:"meta_data,omitempty"`
 
 	// name
 	Name string `json:"name,omitempty"`

@@ -23,7 +23,7 @@ func URLEncodedProducer() runtime.Producer {
 				return err
 			}
 
-			var jsonMap map[string]string
+			var jsonMap map[string]interface{}
 			err = json.Unmarshal(b, &jsonMap)
 			if err != nil {
 				return err
@@ -31,7 +31,7 @@ func URLEncodedProducer() runtime.Producer {
 
 			form := url.Values{}
 			for k, v := range jsonMap {
-				form.Add(k, v)
+				form.Add(k, fmt.Sprintf("%v", v))
 			}
 
 			_, err = writer.Write([]byte(form.Encode()))
